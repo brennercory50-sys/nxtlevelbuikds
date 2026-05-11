@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8f7f4;
+  --bg2: #ffffff;
+  --bg3: #f0efe9;
+  --dark: #16161a;
+  --accent: #1a6eff;
+  --accent2: #0047cc;
+  --green: #00b87a;
+  --border: #e2e0d8;
+  --border2: #c8c6bc;
+  --muted: #72726e;
+  --light-muted: #9e9d98;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--dark); line-height: 1.6; }
+
+@layer utilities {
+  .font-display { font-family: var(--font-bebas), sans-serif; }
+  .container-site { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
