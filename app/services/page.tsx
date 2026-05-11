@@ -91,6 +91,87 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      {/* PAYMENT PLANS */}
+      <section className="bg-dark">
+        <div className="container-site py-20">
+          <p className="text-xs font-semibold tracking-widest uppercase text-green mb-3">Flexible Financing</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end mb-14">
+            <h2 className="font-display text-6xl lg:text-7xl text-white leading-none">
+              Payment Plans <span className="text-accent">That Work</span> For You
+            </h2>
+            <p className="text-white/50 text-base leading-relaxed max-w-md">
+              We know investing in your digital presence is a big step. That&apos;s why we offer flexible payment options so you can get started without breaking the bank — and start seeing returns before you&apos;ve finished paying.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            {/* Plan 1 */}
+            <div className="rounded-2xl p-8 border border-white/10 hover:border-accent/40 transition-all hover:-translate-y-1" style={{ background: 'rgba(255,255,255,0.04)' }}>
+              <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-2xl mb-6">⚡</div>
+              <div className="font-cond text-xl font-bold tracking-widest uppercase text-white mb-1">50 / 50 Split</div>
+              <div className="font-display text-4xl text-accent leading-none mb-4">2 Payments</div>
+              <p className="text-sm text-white/45 leading-relaxed mb-6">
+                Pay 50% upfront to kick off your project and the remaining 50% on launch day. Simple, fair, and keeps both sides accountable.
+              </p>
+              <ul className="space-y-2.5">
+                {['50% due at project kickoff','50% due on launch day','Works for all one-time projects','No interest, no fees'].map(f => (
+                  <li key={f} className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                    <span className="text-green font-bold text-base">✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Plan 2 — featured */}
+            <div className="rounded-2xl p-8 border-2 border-accent -translate-y-2 relative" style={{ background: 'rgba(26,110,255,0.07)' }}>
+              <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full">Most Flexible</span>
+              <div className="w-12 h-12 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-2xl mb-6">📅</div>
+              <div className="font-cond text-xl font-bold tracking-widest uppercase text-white mb-1">3-Payment Plan</div>
+              <div className="font-display text-4xl text-accent leading-none mb-4">3 Installments</div>
+              <p className="text-sm text-white/45 leading-relaxed mb-6">
+                Split your total into 3 equal payments — one at start, one at the midpoint, and one at launch. Spread the cost without slowing down the work.
+              </p>
+              <ul className="space-y-2.5">
+                {['⅓ due at project kickoff','⅓ due at design approval','⅓ due on launch day','Zero interest, always'].map(f => (
+                  <li key={f} className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                    <span className="text-green font-bold text-base">✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Plan 3 */}
+            <div className="rounded-2xl p-8 border border-white/10 hover:border-accent/40 transition-all hover:-translate-y-1" style={{ background: 'rgba(255,255,255,0.04)' }}>
+              <div className="w-12 h-12 rounded-xl bg-green/10 border border-green/20 flex items-center justify-center text-2xl mb-6">🔄</div>
+              <div className="font-cond text-xl font-bold tracking-widest uppercase text-white mb-1">Monthly Retainer</div>
+              <div className="font-display text-4xl text-accent leading-none mb-4">Month-to-Month</div>
+              <p className="text-sm text-white/45 leading-relaxed mb-6">
+                For ongoing services like ads, SEO, and AI automation — pay monthly, cancel anytime. No annual contracts, no lock-in. Just results every month.
+              </p>
+              <ul className="space-y-2.5">
+                {['No long-term contracts','Cancel with 30-day notice','Scales with your budget','Covers all ongoing services'].map(f => (
+                  <li key={f} className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                    <span className="text-green font-bold text-base">✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom trust strip */}
+          <div className="rounded-2xl px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 border border-white/08" style={{ background: 'rgba(255,255,255,0.03)' }}>
+            <div className="flex flex-wrap items-center gap-8 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              <span className="flex items-center gap-2"><span className="text-green">✓</span> 0% interest on all plans</span>
+              <span className="flex items-center gap-2"><span className="text-green">✓</span> No hidden fees ever</span>
+              <span className="flex items-center gap-2"><span className="text-green">✓</span> Custom plans available on request</span>
+            </div>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-semibold text-sm px-6 py-3 rounded-md transition-all whitespace-nowrap hover:shadow-[0_0_20px_rgba(26,110,255,0.4)]">
+              Discuss Payment Options <span className="btn-arrow">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
