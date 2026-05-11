@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import FloatingCTA from '@/components/FloatingCTA'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: { default: 'NXT Level Builds — Digital Agency | Daytona Beach FL', template: '%s | NXT Level Builds' },
@@ -15,6 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main>{children}</main>
         <Footer />
+        <FloatingCTA />
+        <ScrollReveal />
       </body>
     </html>
   )

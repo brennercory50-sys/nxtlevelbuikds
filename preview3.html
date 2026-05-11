@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>NXT Level Builds — Style 4</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --cream:#f7f5f0;
+  --cream2:#eeeae3;
+  --ink:#111010;
+  --ink2:#1e1e1e;
+  --gold:#b8952a;
+  --gold2:#9a7a20;
+  --muted:#888580;
+  --line:#d8d4cb;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+
+.container{max-width:1280px;margin:0 auto;padding:0 64px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 64px; height:72px;
+  background:rgba(247,245,240,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;color:var(--ink);text-decoration:none;}
+.nav-logo em{color:var(--gold);font-style:normal;}
+.nav-links{display:flex;gap:40px;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;
+  border-bottom:1px solid var(--gold);padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.nav-cta:hover{color:var(--gold2);border-color:var(--gold2);}
+
+/* ── HERO — full viewport ── */
+.hero{
+  min-height:100vh;padding-top:72px;
+  display:grid;grid-template-rows:1fr auto;
+  background:var(--cream);
+  position:relative;overflow:hidden;
+}
+/* faint gold circle watermark */
+.hero-circle{
+  position:absolute;right:-10%;top:10%;
+  width:700px;height:700px;border-radius:50%;
+  border:1px solid rgba(184,149,42,0.12);
+  pointer-events:none;
+}
+.hero-circle2{
+  position:absolute;right:-5%;top:15%;
+  width:500px;height:500px;border-radius:50%;
+  border:1px solid rgba(184,149,42,0.08);
+  pointer-events:none;
+}
+.hero-body{
+  display:grid;grid-template-columns:1fr 480px;
+  align-items:end;gap:48px;
+  padding:80px 64px 60px;
+}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:14px;
+  font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:36px;
+}
+.hero-eyebrow-line{width:40px;height:1px;background:var(--gold);}
+.hero-h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(90px,11vw,160px);
+  line-height:0.86;letter-spacing:1px;
+  color:var(--ink);
+}
+.hero-h1 .serif{
+  font-family:'DM Serif Display',serif;
+  font-style:italic;
+  font-size:0.72em;
+  color:var(--gold);
+  display:block;
+  line-height:1;
+}
+.hero-right{padding-bottom:8px;}
+.hero-sub{
+  font-size:17px;font-weight:300;color:var(--muted);
+  line-height:1.8;margin-bottom:48px;
+}
+.hero-btns{display:flex;flex-direction:column;gap:14px;}
+.btn-gold{
+  background:var(--ink);color:var(--cream);
+  font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  padding:18px 32px;text-decoration:none;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .2s;
+}
+.btn-gold:hover{background:var(--gold);}
+.btn-line{
+  background:transparent;color:var(--ink);
+  font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:18px 32px;text-decoration:none;
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:border-color .2s;
+}
+.btn-line:hover{border-color:var(--ink);}
+/* hero bottom strip */
+.hero-strip{
+  border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(4,1fr);
+  padding:0 64px;
+}
+.hero-stat{
+  padding:28px 0;border-right:1px solid var(--line);
+  padding-right:32px;padding-left:32px;
+}
+.hero-stat:first-child{padding-left:0;}
+.hero-stat:last-child{border-right:none;}
+.hero-stat-num{
+  font-family:'DM Serif Display',serif;font-style:italic;
+  font-size:42px;color:var(--gold);line-height:1;
+}
+.hero-stat-lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+
+/* ── TICKER ── */
+.ticker{
+  background:var(--ink);padding:16px 0;
+  overflow:hidden;white-space:nowrap;
+  border-top:2px solid var(--gold);
+}
+.ticker-track{display:inline-flex;animation:ticker 25s linear infinite;}
+.ticker-word{
+  font-family:'DM Sans',sans-serif;
+  font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);padding:0 28px;
+}
+.ticker-gem{color:var(--gold);padding:0 8px;}
+
+/* ── SERVICES — full width rows ── */
+.services{background:var(--cream);}
+.services-intro{
+  padding:100px 64px 64px;
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;
+  border-bottom:1px solid var(--line);
+}
+.services-intro h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(60px,7vw,96px);line-height:0.9;
+}
+.services-intro h2 em{
+  font-family:'DM Serif Display',serif;font-style:italic;
+  color:var(--gold);display:block;font-size:0.75em;
+}
+.services-intro-right{padding-bottom:8px;}
+.services-intro-right p{font-size:16px;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:32px;}
+.services-number-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+
+.svc-item{
+  display:grid;grid-template-columns:100px 1fr 1fr 60px;
+  align-items:center;gap:48px;
+  padding:48px 64px;
+  border-bottom:1px solid var(--line);
+  cursor:pointer;transition:background .25s;
+  text-decoration:none;color:inherit;
+}
+.svc-item:hover{background:var(--cream2);}
+.svc-item:hover .svc-item-arrow{transform:rotate(-45deg);color:var(--gold);}
+.svc-item-num{
+  font-family:'DM Serif Display',serif;font-style:italic;
+  font-size:52px;color:var(--line);line-height:1;
+}
+.svc-item-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(32px,4vw,52px);letter-spacing:1px;line-height:1;
+}
+.svc-item-desc{font-size:14px;font-weight:300;color:var(--muted);line-height:1.75;}
+.svc-item-arrow{
+  font-size:28px;color:var(--line);
+  transition:transform .25s,color .25s;justify-self:end;
+}
+
+/* ── QUOTE BREAK ── */
+.quote-break{
+  background:var(--ink);
+  padding:120px 64px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.quote-break::before{
+  content:'"';
+  position:absolute;top:-40px;left:50%;transform:translateX(-50%);
+  font-family:'DM Serif Display',serif;font-size:400px;
+  color:rgba(255,255,255,0.03);line-height:1;pointer-events:none;
+}
+.quote-text{
+  font-family:'DM Serif Display',serif;font-style:italic;
+  font-size:clamp(32px,4vw,56px);color:var(--cream);
+  line-height:1.3;max-width:900px;margin:0 auto 32px;
+  position:relative;z-index:1;
+}
+.quote-text em{color:var(--gold);font-style:normal;}
+.quote-source{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);}
+
+/* ── PORTFOLIO — editorial layout ── */
+.portfolio{background:var(--cream2);}
+.portfolio-header{
+  padding:80px 64px 48px;
+  display:flex;align-items:flex-end;justify-content:space-between;
+  border-bottom:1px solid var(--line);
+}
+.portfolio-header h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(60px,7vw,96px);line-height:0.9;
+}
+.portfolio-header h2 em{
+  font-family:'DM Serif Display',serif;font-style:italic;color:var(--gold);
+}
+.portfolio-header a{
+  font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:4px;
+  transition:color .2s,border-color .2s;white-space:nowrap;margin-bottom:12px;
+}
+.portfolio-header a:hover{color:var(--ink);border-color:var(--ink);}
+
+/* featured + two small */
+.port-layout{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);}
+.port-featured{
+  border-right:1px solid var(--line);
+  cursor:pointer;transition:background .2s;
+}
+.port-featured:hover{background:var(--cream);}
+.port-featured-thumb{
+  height:340px;
+  background:linear-gradient(135deg,#1a1a2e,#0d1030);
+  display:flex;align-items:center;justify-content:center;
+  font-size:80px;
+  border-bottom:1px solid var(--line);
+}
+.port-featured-body{padding:36px;}
+.port-featured-tag{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.port-featured-title{font-family:'DM Serif Display',serif;font-size:28px;margin-bottom:10px;}
+.port-featured-desc{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.port-result-pill{
+  display:inline-block;
+  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  background:var(--ink);color:var(--cream);padding:8px 16px;
+}
+
+.port-side{display:grid;grid-template-rows:1fr 1fr;}
+.port-small{
+  padding:32px;border-bottom:1px solid var(--line);
+  cursor:pointer;transition:background .2s;
+  display:grid;grid-template-columns:80px 1fr;gap:20px;align-items:center;
+}
+.port-small:last-child{border-bottom:none;}
+.port-small:hover{background:var(--cream);}
+.port-small-thumb{
+  width:80px;height:80px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;border:1px solid var(--line);
+}
+.port-small-tag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.port-small-title{font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:4px;}
+.port-small-result{font-size:12px;font-weight:600;color:var(--muted);}
+
+/* ── PROCESS — numbered ── */
+.process{background:var(--cream);padding:100px 64px;border-top:1px solid var(--line);}
+.process-header{margin-bottom:64px;}
+.process-header h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(52px,6vw,80px);line-height:0.9;
+}
+.process-header h2 em{font-family:'DM Serif Display',serif;font-style:italic;color:var(--gold);}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);}
+.process-step{padding:40px 40px 40px 0;border-right:1px solid var(--line);}
+.process-step:last-child{border-right:none;padding-right:0;}
+.process-step:not(:first-child){padding-left:40px;}
+.process-step-n{
+  font-family:'DM Serif Display',serif;font-style:italic;
+  font-size:56px;color:var(--gold);line-height:1;margin-bottom:20px;
+}
+.process-step-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;margin-bottom:12px;}
+.process-step-desc{font-size:13px;font-weight:300;color:var(--muted);line-height:1.75;}
+
+/* ── CTA — full screen ── */
+.cta{
+  min-height:80vh;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;text-align:center;
+  padding:80px 64px;
+}
+.cta-bg{
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    90deg,
+    rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 1px,
+    transparent 1px, transparent 80px
+  );
+}
+.cta-inner{position:relative;z-index:2;}
+.cta-label{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(0,0,0,0.45);margin-bottom:28px;}
+.cta-h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(70px,10vw,140px);line-height:0.88;
+  color:var(--cream);letter-spacing:1px;margin-bottom:32px;
+}
+.cta-h2 em{
+  font-family:'DM Serif Display',serif;font-style:italic;
+  color:var(--ink);
+}
+.cta-sub{font-size:18px;font-weight:300;color:rgba(0,0,0,0.5);max-width:440px;margin:0 auto 48px;line-height:1.7;}
+.btn-dark{
+  background:var(--ink);color:var(--cream);
+  font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  padding:20px 52px;text-decoration:none;display:inline-block;
+  transition:background .2s,transform .2s;
+}
+.btn-dark:hover{background:#333;transform:translateY(-2px);}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:64px 0 36px;border-top:3px solid var(--gold);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.footer-logo-mark{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:5px;color:var(--cream);margin-bottom:12px;}
+.footer-logo-mark em{color:var(--gold);font-style:normal;}
+.footer-tagline{font-size:13px;font-weight:300;color:rgba(255,255,255,0.3);line-height:1.7;max-width:220px;}
+.footer-col h5{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:20px;}
+.footer-col a{display:block;font-size:13px;font-weight:300;color:rgba(255,255,255,0.4);text-decoration:none;margin-bottom:12px;transition:color .15s;}
+.footer-col a:hover{color:rgba(255,255,255,0.85);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.18);}
+.footer-link{font-size:12px;color:var(--gold);text-decoration:none;letter-spacing:1px;}
+
+/* Preview banner */
+.preview-banner{
+  background:var(--gold);color:var(--ink);
+  text-align:center;padding:13px;
+  font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+}
+
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+</style>
+</head>
+<body>
+
+<div class="preview-banner">✦ Style Option 4 — Luxury Immersive / Cream + Gold</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">NXT <em>LEVEL</em> BUILDS</a>
+  <ul class="nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Work</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <a href="#" class="nav-cta">Get a Free Quote →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-circle"></div>
+  <div class="hero-circle2"></div>
+  <div class="hero-body">
+    <div>
+      <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span> Daytona Beach, FL — Digital Agency</div>
+      <h1 class="hero-h1">
+        WE BUILD<br>
+        <em class="serif">Digital</em><br>
+        THAT WINS
+      </h1>
+    </div>
+    <div class="hero-right">
+      <p class="hero-sub">Websites that convert. Ads that hit. SEO that compounds. AI automation that runs 24/7 — so you don't have to.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-gold">Start a Project <span>→</span></a>
+        <a href="#" class="btn-line">View Our Work <span>→</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="hero-stat"><div class="hero-stat-num">150+</div><div class="hero-stat-lbl">Projects Delivered</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">3.8×</div><div class="hero-stat-lbl">Average Ad ROAS</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">98%</div><div class="hero-stat-lbl">Client Retention</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">7 Day</div><div class="hero-stat-lbl">Avg Launch Time</div></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-word">Web Design</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Google Ads</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">SEO</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">AI Automation</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Lead Generation</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">E-Commerce</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Branding</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Landing Pages</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Web Design</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Google Ads</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">SEO</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">AI Automation</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Lead Generation</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">E-Commerce</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Branding</span><span class="ticker-gem">◆</span>
+    <span class="ticker-word">Landing Pages</span><span class="ticker-gem">◆</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="services-intro">
+    <div>
+      <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span> What We Do</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,7vw,96px);line-height:0.9;">
+        BUILT TO<br><em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--gold);">Perform</em>
+      </h2>
+    </div>
+    <div class="services-intro-right">
+      <p>Everything your business needs to win online — web, ads, SEO, and AI — all under one roof. No middlemen. No retainers for nothing. Just results.</p>
+      <div class="services-number-label">04 Core Services</div>
+    </div>
+  </div>
+  <div>
+    <a href="#" class="svc-item">
+      <div class="svc-item-num">01</div>
+      <div class="svc-item-title">Web Design & Development</div>
+      <div class="svc-item-desc">Fast, custom websites built to convert visitors into customers. No templates, no shortcuts — ever.</div>
+      <div class="svc-item-arrow">↗</div>
+    </a>
+    <a href="#" class="svc-item">
+      <div class="svc-item-num">02</div>
+      <div class="svc-item-title">Google Ads Management</div>
+      <div class="svc-item-desc">Search, LSA & display campaigns with singular focus on ROI. Every dollar tracked and accounted for.</div>
+      <div class="svc-item-arrow">↗</div>
+    </a>
+    <a href="#" class="svc-item">
+      <div class="svc-item-num">03</div>
+      <div class="svc-item-title">Search Engine Optimization</div>
+      <div class="svc-item-desc">Local rankings, technical SEO, and content that builds organic traffic month over month.</div>
+      <div class="svc-item-arrow">↗</div>
+    </a>
+    <a href="#" class="svc-item" style="border-bottom:none;">
+      <div class="svc-item-num">04</div>
+      <div class="svc-item-title">AI Automation</div>
+      <div class="svc-item-desc">Workflows that handle follow-ups, bookings, and CRM while you sleep. Real automation, not hype.</div>
+      <div class="svc-item-arrow">↗</div>
+    </a>
+  </div>
+</section>
+
+<!-- QUOTE BREAK -->
+<div class="quote-break">
+  <p class="quote-text">
+    We don't do <em>average</em>.<br>
+    Every project is built to be the best thing<br>in its market.
+  </p>
+  <p class="quote-source">— NXT Level Builds, Daytona Beach FL</p>
+</div>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <div class="portfolio-header container" style="padding-left:64px;padding-right:64px;">
+    <h2>
+      RECENT<br><em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--gold);">Work</em>
+    </h2>
+    <a href="#">View All Projects →</a>
+  </div>
+  <div class="port-layout">
+    <div class="port-featured">
+      <div class="port-featured-thumb">🏊</div>
+      <div class="port-featured-body">
+        <div class="port-featured-tag">Web Design + SEO</div>
+        <div class="port-featured-title">Miller's Screen & Pool Enclosures</div>
+        <p class="port-featured-desc">Cinematic dark-themed site with custom scroll animations and full local SEO targeting Volusia County homeowners.</p>
+        <span class="port-result-pill">↑ 190% Organic Leads</span>
+      </div>
+    </div>
+    <div class="port-side">
+      <div class="port-small">
+        <div class="port-small-thumb" style="background:#edfaf0;">🏠</div>
+        <div>
+          <div class="port-small-tag">Google Ads</div>
+          <div class="port-small-title">Daytona Roofing Co.</div>
+          <div class="port-small-result">$28 avg CPL · -40% cost per lead</div>
+        </div>
+      </div>
+      <div class="port-small">
+        <div class="port-small-thumb" style="background:#faf3ed;">🛒</div>
+        <div>
+          <div class="port-small-tag">E-Commerce + AI</div>
+          <div class="port-small-title">Local Retail Brand</div>
+          <div class="port-small-result">4.2× ROAS · 62% conversion lift</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="process-header">
+    <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span> How We Work</div>
+    <h2>The <em>Process</em></h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="process-step-n">01</div>
+      <div class="process-step-title">DISCOVERY</div>
+      <p class="process-step-desc">We learn your business, goals, and competition before we ever touch a design file or write a single ad.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-n">02</div>
+      <div class="process-step-title">STRATEGY</div>
+      <p class="process-step-desc">Every campaign and website is built on a data-backed strategy — not guesswork or templates.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-n">03</div>
+      <div class="process-step-title">BUILD</div>
+      <p class="process-step-desc">We build fast. Most websites launch in 7 days. Ad campaigns go live in 48 hours with full tracking in place.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-n">04</div>
+      <div class="process-step-title">GROW</div>
+      <p class="process-step-desc">We optimize constantly. Monthly reports, bi-weekly check-ins, and a team that treats your revenue like our own.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-bg"></div>
+  <div class="cta-inner">
+    <p class="cta-label">Ready to grow?</p>
+    <h2 class="cta-h2">READY TO GO<br><em>NXT Level?</em></h2>
+    <p class="cta-sub">Whether you need a site, better ads, or smarter systems — we'll build it right.</p>
+    <a href="#" class="btn-dark">Book a Free Strategy Call →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-mark">NXT <em>LEVEL</em> BUILDS</div>
+        <p class="footer-tagline">Web design, Google Ads, SEO & AI automation for Florida businesses ready to grow.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#">Web Design</a>
+        <a href="#">Google Ads</a>
+        <a href="#">SEO</a>
+        <a href="#">AI Automation</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Our Work</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="#">hello@nxtlevelbuilds.com</a>
+        <a href="#">(386) 000-0000</a>
+        <a href="#">Daytona Beach, FL</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 NXT Level Builds. All rights reserved.</p>
+      <a href="#" class="footer-link">Start a project →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

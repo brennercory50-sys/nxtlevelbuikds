@@ -14,7 +14,7 @@ const links = [
 export default function Navbar() {
   const path = usePathname();
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-t-2 border-t-accent border-b border-border bg-bg/95 backdrop-blur-md">
       <div className="container-site flex items-center justify-between h-16">
         <Link href="/" aria-label="NXT Level Builds home">
           <Logo variant="light" size="sm" />
@@ -37,7 +37,7 @@ export default function Navbar() {
         </ul>
         <Link
           href="/contact"
-          className="bg-accent hover:bg-accent2 text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-colors"
+          className="bg-accent hover:bg-accent2 text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-all hover:shadow-[0_0_20px_rgba(26,110,255,0.4)]"
         >
           Get a Free Quote
         </Link>
