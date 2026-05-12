@@ -27,9 +27,9 @@
     position: relative;
   }
   .photo-about {
-    background-image: url('/images/about-bg.jpg');
+    background-image: url('/images/about-bg.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     position: relative;
   }
   .photo-services {

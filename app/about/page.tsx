@@ -15,17 +15,41 @@ const values = [
 export default function About() {
   return (
     <main>
-      {/* Hero with photo background */}
-      <section className="photo-about relative py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
-        <div className="container-site relative z-10">
-          <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>About</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
-            Built in Daytona.<br />Focused on <span className="text-accent">Results.</span>
-          </h1>
-          <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
-            A small team with a big track record. We know the Florida market and we know what works.
-          </p>
+      {/* Hero — full branded office shot */}
+      <section className="photo-about relative overflow-hidden" style={{minHeight:'88vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
+        {/* Subtle bottom vignette — lets the top of the photo (logo wall) stay fully visible */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
+        {/* Left edge fade for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+
+        <div className="container-site relative z-10 pb-20 pt-40">
+          <div className="max-w-2xl">
+            <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>About NXT Level Builds</p>
+            <h1 className="text-[clamp(36px,5.5vw,72px)] font-extrabold text-white leading-tight mb-5" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+              Built Different.<br />Built to <span className="text-accent">Win.</span>
+            </h1>
+            <p className="text-white/60 text-[16px] leading-relaxed max-w-lg mb-8">
+              We&apos;re a Daytona Beach digital agency that builds websites, automations, and systems for businesses that want to scale — not just look good online.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
+                <div className="text-[26px] font-extrabold text-white leading-none">150+</div>
+                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">Projects</div>
+              </div>
+              <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
+                <div className="text-[26px] font-extrabold text-white leading-none">98%</div>
+                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">Retention</div>
+              </div>
+              <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
+                <div className="text-[26px] font-extrabold text-white leading-none">7 Day</div>
+                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">Avg Launch</div>
+              </div>
+              <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
+                <div className="text-[26px] font-extrabold text-accent leading-none">FL</div>
+                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">Based</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
