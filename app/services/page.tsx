@@ -22,46 +22,50 @@ const services = [
     tags:['AI Workflows','Make','Zapier','GoHighLevel','Chatbots'] },
 ];
 
-const plans = [
-  { name:'Starter', price:'$750', per:'/mo', desc:'For small businesses getting started online.',
-    features:['5-Page Custom Website','Google Business Profile Setup','Basic On-Page SEO','Monthly Performance Report','Email Support'] },
-  { name:'Growth', price:'$1,800', per:'/mo', desc:'For businesses serious about digital growth.', featured:true,
-    features:['Custom Website (10+ Pages)','Google Ads Management','Full SEO Package','CallRail Call Tracking','Bi-Weekly Reporting','Direct Slack Access'] },
-  { name:'Enterprise', price:'Custom', per:'', desc:'Full-stack digital for scaling businesses.',
-    features:['Everything in Growth','AI Automation Buildout','E-Commerce Integration','Weekly Strategy Calls','Priority Support','Dedicated Account Manager'] },
-];
-
 export default function Services() {
   return (
-    <>
-      <section className="bg-dark py-20 text-center">
-        <div className="container-site">
-          <p className="text-xs font-semibold tracking-widest uppercase text-green mb-3">What We Offer</p>
-          <h1 className="font-display text-7xl lg:text-9xl text-white leading-none">OUR <span className="text-accent">SERVICES</span></h1>
-          <p className="text-white/50 text-lg mt-4 max-w-md mx-auto">Everything your business needs to grow online — under one roof.</p>
+    <main>
+      {/* Hero with photo background */}
+      <section className="photo-services relative py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
+        <div className="container-site relative z-10">
+          <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Services</p>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+            Everything You Need<br />To <span className="text-accent">Scale & Automate.</span>
+          </h1>
+          <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
+            From high-converting websites to advanced automations, we provide end-to-end digital solutions for Florida businesses.
+          </p>
         </div>
       </section>
 
-      <section className="bg-bg">
-        <div className="container-site py-20 space-y-6">
+      {/* Services grid */}
+      <section className="bg-white py-20">
+        <div className="container-site space-y-6">
           {services.map(s => (
-            <div key={s.n} className="bg-bg2 border border-border hover:border-border2 rounded-2xl p-10 grid grid-cols-1 lg:grid-cols-3 gap-10 transition-colors">
+            <div key={s.n} className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start border-b border-[#e5e7eb] pb-8 last:border-0">
               <div>
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-4">{s.icon}</div>
-                <div className="font-display text-7xl text-border leading-none">{s.n}</div>
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-3">{s.icon}</div>
+                <h3 className="font-bold text-[18px] text-dark mb-2">{s.title}</h3>
               </div>
               <div className="lg:col-span-2">
-                <h2 className="font-cond text-3xl font-bold tracking-wide uppercase text-dark mb-3">{s.title}</h2>
-                <p className="text-muted text-sm leading-relaxed mb-5">{s.desc}</p>
-                <ul className="grid grid-cols-2 gap-2 mb-5">
+                <p className="text-[14px] text-muted leading-relaxed mb-4">{s.desc}</p>
+                <div className="space-y-2">
                   {s.bullets.map(b => (
-                    <li key={b} className="flex items-center gap-2 text-sm text-muted">
-                      <span className="text-accent font-bold">→</span>{b}
-                    </li>
+                    <div key={b} className="flex items-center gap-2.5 text-[13px] text-dark">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                      {b}
+                    </div>
                   ))}
-                </ul>
+                </div>
+              </div>
+              <div>
                 <div className="flex flex-wrap gap-2">
-                  {s.tags.map(t => <span key={t} className="text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full bg-bg3 text-muted border border-border">{t}</span>)}
+                  {s.tags.map(t => (
+                    <span key={t} className="text-[11px] font-semibold text-accent bg-blue-50 px-3 py-1.5 rounded-full">
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -69,109 +73,20 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="bg-bg2">
-        <div className="container-site py-20">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Pricing</p>
-          <h2 className="font-display text-6xl lg:text-7xl text-dark leading-none mb-12">Simple, <span className="text-light-muted">Transparent</span> Pricing</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {plans.map(p => (
-              <div key={p.name} className={`rounded-2xl p-8 transition-all hover:-translate-y-1 ${p.featured ? 'border-2 border-accent -translate-y-1.5' : 'border border-border'} bg-bg2`}>
-                {p.featured && <span className="bg-accent text-white text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full inline-block mb-4">Most Popular</span>}
-                <div className="font-cond text-2xl font-bold tracking-wide uppercase text-dark mb-2">{p.name}</div>
-                <div className="font-display text-5xl text-dark leading-none mb-1">{p.price}<span className="text-lg font-body font-normal text-muted">{p.per}</span></div>
-                <p className="text-sm text-muted mb-5 pb-5 border-b border-border">{p.desc}</p>
-                <ul className="space-y-3 mb-6">
-                  {p.features.map(f => <li key={f} className="flex items-center gap-2 text-sm text-muted"><span className="text-green font-bold">✓</span>{f}</li>)}
-                </ul>
-                <Link href="/contact" className={`block text-center font-semibold text-sm py-3.5 rounded-md transition-colors ${p.featured ? 'bg-accent hover:bg-accent2 text-white' : 'border border-border2 hover:border-accent hover:text-accent text-dark'}`}>
-                  {p.name === 'Enterprise' ? "Let's Talk" : 'Get Started'}
-                </Link>
-              </div>
-            ))}
-          </div>
+      {/* CTA */}
+      <section className="bg-accent py-16">
+        <div className="container-site text-center">
+          <h2 className="text-[28px] font-bold text-white mb-3" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+            Ready to get started?
+          </h2>
+          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">
+            Let's talk about your goals and build a custom plan that drives real results.
+          </p>
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">
+            Book a Free Strategy Call →
+          </Link>
         </div>
       </section>
-
-      {/* PAYMENT PLANS */}
-      <section className="bg-dark">
-        <div className="container-site py-20">
-          <p className="text-xs font-semibold tracking-widest uppercase text-green mb-3">Flexible Financing</p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end mb-14">
-            <h2 className="font-display text-6xl lg:text-7xl text-white leading-none">
-              Payment Plans <span className="text-accent">That Work</span> For You
-            </h2>
-            <p className="text-white/50 text-base leading-relaxed max-w-md">
-              We know investing in your digital presence is a big step. That&apos;s why we offer flexible payment options so you can get started without breaking the bank — and start seeing returns before you&apos;ve finished paying.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-            {/* Plan 1 */}
-            <div className="rounded-2xl p-8 border border-white/10 hover:border-accent/40 transition-all hover:-translate-y-1" style={{ background: 'rgba(255,255,255,0.04)' }}>
-              <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-2xl mb-6">⚡</div>
-              <div className="font-cond text-xl font-bold tracking-widest uppercase text-white mb-1">50 / 50 Split</div>
-              <div className="font-display text-4xl text-accent leading-none mb-4">2 Payments</div>
-              <p className="text-sm text-white/45 leading-relaxed mb-6">
-                Pay 50% upfront to kick off your project and the remaining 50% on launch day. Simple, fair, and keeps both sides accountable.
-              </p>
-              <ul className="space-y-2.5">
-                {['50% due at project kickoff','50% due on launch day','Works for all one-time projects','No interest, no fees'].map(f => (
-                  <li key={f} className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                    <span className="text-green font-bold text-base">✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Plan 2 — featured */}
-            <div className="rounded-2xl p-8 border-2 border-accent -translate-y-2 relative" style={{ background: 'rgba(26,110,255,0.07)' }}>
-              <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full">Most Flexible</span>
-              <div className="w-12 h-12 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-2xl mb-6">📅</div>
-              <div className="font-cond text-xl font-bold tracking-widest uppercase text-white mb-1">3-Payment Plan</div>
-              <div className="font-display text-4xl text-accent leading-none mb-4">3 Installments</div>
-              <p className="text-sm text-white/45 leading-relaxed mb-6">
-                Split your total into 3 equal payments — one at start, one at the midpoint, and one at launch. Spread the cost without slowing down the work.
-              </p>
-              <ul className="space-y-2.5">
-                {['⅓ due at project kickoff','⅓ due at design approval','⅓ due on launch day','Zero interest, always'].map(f => (
-                  <li key={f} className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                    <span className="text-green font-bold text-base">✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Plan 3 */}
-            <div className="rounded-2xl p-8 border border-white/10 hover:border-accent/40 transition-all hover:-translate-y-1" style={{ background: 'rgba(255,255,255,0.04)' }}>
-              <div className="w-12 h-12 rounded-xl bg-green/10 border border-green/20 flex items-center justify-center text-2xl mb-6">🔄</div>
-              <div className="font-cond text-xl font-bold tracking-widest uppercase text-white mb-1">Monthly Retainer</div>
-              <div className="font-display text-4xl text-accent leading-none mb-4">Month-to-Month</div>
-              <p className="text-sm text-white/45 leading-relaxed mb-6">
-                For ongoing services like ads, SEO, and AI automation — pay monthly, cancel anytime. No annual contracts, no lock-in. Just results every month.
-              </p>
-              <ul className="space-y-2.5">
-                {['No long-term contracts','Cancel with 30-day notice','Scales with your budget','Covers all ongoing services'].map(f => (
-                  <li key={f} className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                    <span className="text-green font-bold text-base">✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom trust strip */}
-          <div className="rounded-2xl px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 border border-white/08" style={{ background: 'rgba(255,255,255,0.03)' }}>
-            <div className="flex flex-wrap items-center gap-8 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              <span className="flex items-center gap-2"><span className="text-green">✓</span> 0% interest on all plans</span>
-              <span className="flex items-center gap-2"><span className="text-green">✓</span> No hidden fees ever</span>
-              <span className="flex items-center gap-2"><span className="text-green">✓</span> Custom plans available on request</span>
-            </div>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-semibold text-sm px-6 py-3 rounded-md transition-all whitespace-nowrap hover:shadow-[0_0_20px_rgba(26,110,255,0.4)]">
-              Discuss Payment Options <span className="btn-arrow">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+    </main>
   );
 }
