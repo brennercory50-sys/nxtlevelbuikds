@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const projects = [
   { cat:'Websites', title:"Miller's Screen & Pool", type:'Website Design', result:'↑190% organic leads', bg:'from-slate-800 to-slate-900' },
@@ -18,7 +19,8 @@ export default function Work() {
   const filtered = active === 'All' ? projects : projects.filter(p => p.cat === active);
   return (
     <main>
-      <section className="photo-work relative py-28 overflow-hidden">
+      <section className="relative py-28 overflow-hidden">
+        <Image fill src="/images/work-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Our Work</p>

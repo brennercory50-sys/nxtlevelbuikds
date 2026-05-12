@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = { title: 'Services' };
 
@@ -26,7 +27,8 @@ export default function Services() {
   return (
     <main>
       {/* Hero with photo background */}
-      <section className="photo-services relative py-28 overflow-hidden">
+      <section className="relative py-28 overflow-hidden">
+        <Image fill src="/images/services-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Services</p>

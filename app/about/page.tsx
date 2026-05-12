@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = { title: 'About Us' };
 
@@ -16,8 +17,8 @@ export default function About() {
   return (
     <main>
       {/* Hero — full branded office shot */}
-      <section className="photo-about relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end', backgroundPosition:'center 20%'}}>
-        {/* Subtle bottom vignette — lets the top of the photo (logo wall) stay fully visible */}
+      <section className="relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
+        <Image fill src="/images/about-bg.png" alt="" className="object-cover object-[center_25%]" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
         {/* Left edge fade for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const clients = ['VISIONARY', 'ELEVATE', 'IRONCLAD', 'SUMMIT', 'PREMIER'];
 const services = [
@@ -14,7 +15,8 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="photo-hero min-h-[90vh] flex flex-col justify-between">
+      <section className="relative min-h-[90vh] flex flex-col justify-between overflow-hidden">
+        <Image fill src="/images/hero-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
         <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-20 pt-16">

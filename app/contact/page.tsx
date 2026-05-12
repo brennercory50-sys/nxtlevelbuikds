@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 export const metadata: Metadata = { title: 'Contact' };
 
 export default function Contact() {
@@ -7,7 +8,8 @@ export default function Contact() {
       <section className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Left — waterfront photo */}
-          <div className="photo-contact relative flex flex-col justify-end p-16">
+          <div className="relative flex flex-col justify-end p-16 overflow-hidden">
+            <Image fill src="/images/contact-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="50vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-dark/20" />
             <div className="relative z-10">
               <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Contact Us</p>
