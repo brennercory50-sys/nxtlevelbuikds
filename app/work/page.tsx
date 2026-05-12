@@ -1,47 +1,76 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = { title: 'Our Work' };
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
 
 const projects = [
-  { emoji:'🏊', bg:'#eef3ff', tags:['Web Design','SEO'], title:"Miller's Screen & Pool Enclosures", desc:"Premium dark-themed site with cinematic hero video, custom scroll animations, and full local SEO targeting Volusia County homeowners.", results:['↑ 190% organic leads','Page 1 for 22 keywords'] },
-  { emoji:'🏠', bg:'#f0fdf6', tags:['Google Ads'], title:'Daytona Roofing Co.', desc:'Full Google Search + Local Services Ads. Aggressive negative keyword strategy cut cost per lead by 40% in the first month.', results:['$28 avg CPL','-40% cost per lead'] },
-  { emoji:'🛒', bg:'#fff7ed', tags:['E-Commerce','AI Automation'], title:'Local Retail Brand', desc:'Custom Shopify build with AI-powered abandoned cart recovery, automated follow-up sequences, and Google Shopping integration.', results:['4.2× ROAS','62% conversion lift'] },
-  { emoji:'⚖️', bg:'#f5f3ff', tags:['Web Design','SEO'], title:'Law Firm Rebrand', desc:'Complete redesign with schema markup, location pages for 3 counties, and content targeting high-intent legal keywords in the Daytona area.', results:['Page 1 for 14 keywords','+85% form submissions'] },
-  { emoji:'🏋️', bg:'#1a1a20', tags:['AI Automation'], title:'Fitness Studio Chain', desc:'End-to-end automation: lead capture, class booking, no-show follow-ups, and membership re-engagement flows across 4 locations.', results:['12 hrs/week saved','+38% rebooking rate'] },
-  { emoji:'🦷', bg:'#fff1f0', tags:['Google Ads','Web Design'], title:'Dental Practice Group', desc:'New patient acquisition across 3 locations with dedicated landing pages, CallRail call tracking, and monthly dashboard reporting.', results:['+82 new patients/mo','3.1× ROAS'] },
+  { cat:'Websites', title:"Miller's Screen & Pool", type:'Website Design', result:'↑190% organic leads', bg:'from-slate-800 to-slate-900' },
+  { cat:'Websites', title:'Elevate Developments', type:'Website Design', result:'3× more inquiries', bg:'from-zinc-800 to-zinc-900' },
+  { cat:'Websites', title:'Summit Exteriors', type:'Website Design', result:'+85% form submissions', bg:'from-stone-800 to-stone-900' },
+  { cat:'Automations', title:'Ironclad Build', type:'AI Automation', result:'12 hrs/week saved', bg:'from-gray-800 to-gray-900' },
+  { cat:'Landing Pages', title:'Premier Solutions', type:'Landing Page', result:'4.2× ROAS', bg:'from-neutral-800 to-neutral-900' },
+  { cat:'Systems', title:'Peak Performance', type:'Systems & CRM', result:'+82 new clients/mo', bg:'from-slate-700 to-slate-900' },
 ];
 
+const filters = ['All','Websites','Automations','Landing Pages','Systems'];
+
 export default function Work() {
+  const [active, setActive] = useState('All');
+  const filtered = active === 'All' ? projects : projects.filter(p => p.cat === active);
   return (
-    <>
-      <section className="bg-dark py-20 text-center">
-        <div className="container-site">
-          <p className="text-xs font-semibold tracking-widest uppercase text-green mb-3">Portfolio</p>
-          <h1 className="font-display text-7xl lg:text-9xl text-white leading-none">OUR <span className="text-accent">WORK</span></h1>
-          <p className="text-white/50 text-lg mt-4 max-w-md mx-auto">Real projects, real results. Here's what we've built for clients across Florida.</p>
+    <main>
+      <section className="photo-work relative py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
+        <div className="container-site relative z-10">
+          <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Our Work</p>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+            Projects That<br />Drive <span className="text-accent">Real Results.</span>
+          </h1>
+          <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
+            From high-converting websites to advanced automations, a look at some of the systems we&apos;ve built for our clients.
+          </p>
         </div>
       </section>
-      <section className="bg-bg">
-        <div className="container-site py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map(p => (
-              <div key={p.title} className="group bg-bg2 border border-border hover:border-border2 rounded-2xl overflow-hidden transition-all hover:-translate-y-1">
-                <div className="h-52 flex items-center justify-center text-6xl" style={{ background: p.bg }}>{p.emoji}</div>
-                <div className="p-7">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {p.tags.map(t => <span key={t} className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-blue-50 text-accent">{t}</span>)}
+
+      <section className="bg-white py-20">
+        <div className="container-site">
+          <div className="flex gap-2 flex-wrap mb-10">
+            {filters.map(f => (
+              <button key={f} onClick={() => setActive(f)}
+                className={`text-[13px] font-semibold px-5 py-2 rounded-lg border transition-all ${active === f ? 'bg-accent text-white border-accent' : 'border-[#e5e7eb] text-muted hover:border-accent hover:text-accent bg-white'}`}>
+                {f}
+              </button>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {filtered.map(p => (
+              <div key={p.title} className="group rounded-2xl overflow-hidden border border-[#e5e7eb] hover:border-accent/30 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer bg-white">
+                <div className={`h-48 bg-gradient-to-br ${p.bg} relative flex items-end p-4`}>
+                  <div className="absolute inset-0 opacity-10">
+                    <svg width="100%" height="100%" viewBox="0 0 400 200" fill="none">
+                      <rect x="220" y="0" width="50" height="200" fill="white" rx="1"/>
+                      <rect x="280" y="40" width="40" height="160" fill="white" rx="1"/>
+                      <rect x="330" y="20" width="60" height="180" fill="white" rx="1"/>
+                      <rect x="160" y="60" width="50" height="140" fill="white" rx="1"/>
+                      <rect x="100" y="80" width="50" height="120" fill="white" rx="1"/>
+                    </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-dark mb-2">{p.title}</h3>
-                  <p className="text-sm text-muted leading-relaxed mb-4">{p.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {p.results.map(r => <span key={r} className="text-xs font-bold text-green bg-green/10 px-3 py-1.5 rounded-full">{r}</span>)}
-                  </div>
+                  <span className="relative z-10 text-[11px] font-bold text-white/80 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full">{p.result}</span>
+                </div>
+                <div className="p-5">
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-accent mb-1">{p.type}</p>
+                  <h4 className="font-bold text-[16px] text-dark mb-2">{p.title}</h4>
+                  <span className="text-[13px] font-semibold text-accent">View Project →</span>
                 </div>
               </div>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <Link href="/contact" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-8 py-3.5 rounded-lg transition-all">
+              Start Your Project →
+            </Link>
+          </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

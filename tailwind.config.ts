@@ -8,13 +8,14 @@ const config: Config = {
     extend: {
       fontFamily: {
         display: ['Bebas Neue', 'sans-serif'],
-        cond: ['Barlow Condensed', 'sans-serif'],
         sans: ['DM Sans', 'sans-serif'],
       },
       colors: {
         accent: '#1a6eff',
-        dark: '#16161a',
-        green: '#00b87a',
+        accent2: '#0047cc',
+        dark: '#0d0f14',
+        muted: '#6b7280',
+        green: '#00c47a',
       },
     },
   },

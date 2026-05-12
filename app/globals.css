@@ -2,82 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg: #f8f7f4;
-  --bg2: #ffffff;
-  --bg3: #f0efe9;
-  --dark: #16161a;
-  --accent: #1a6eff;
-  --accent2: #0047cc;
-  --green: #00b87a;
-  --border: #e2e0d8;
-  --border2: #c8c6bc;
-  --muted: #72726e;
-  --light-muted: #9e9d98;
+@layer base {
+  :root {
+    --accent: #1a6eff;
+    --accent2: #0047cc;
+    --green: #00c47a;
+    --dark: #0d0f14;
+    --font-bebas: 'Bebas Neue';
+    --font-dm: 'DM Sans';
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: #1a1a24; background: white; overflow-x: hidden; }
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--dark); line-height: 1.6; }
-
 @layer utilities {
-  .font-display { font-family: var(--font-bebas), sans-serif; }
   .container-site { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #1a6eff; display: block; margin-bottom: 12px; }
+  .section-title { font-weight: 800; line-height: 1.1; color: #1a1a24; }
+
+  .photo-hero {
+    background-image: url('/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .photo-about {
+    background-image: url('/images/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .photo-services {
+    background-image: url('/images/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .photo-work {
+    background-image: url('/images/work-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .photo-pricing {
+    background-image: url('/images/pricing-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .photo-contact {
+    background-image: url('/images/contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
 }
 
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
-
-/* Grain texture on hero */
-.hero-grain { position: relative; overflow: hidden; }
-.hero-grain::after {
-  content: '';
-  position: absolute; inset: 0; pointer-events: none; z-index: 1;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-}
-.hero-grain > * { position: relative; z-index: 2; }
-
-/* Gradient accent text */
-.text-grad {
-  background: linear-gradient(135deg, #1a6eff 0%, #7c3aed 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Card hover glow */
-.card-glow:hover {
-  box-shadow: 0 16px 48px rgba(26,110,255,0.12), 0 0 0 1px rgba(26,110,255,0.18) !important;
-  border-color: rgba(26,110,255,0.35) !important;
-}
-
-/* Scroll fade-up */
-.fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.fade-up.in-view { opacity: 1; transform: translateY(0); }
-.fade-up:nth-child(2) { transition-delay: 0.1s; }
-.fade-up:nth-child(3) { transition-delay: 0.2s; }
-.fade-up:nth-child(4) { transition-delay: 0.3s; }
-
-/* Button arrow */
-.btn-arrow { display: inline-block; transition: transform 0.2s ease; }
-a:hover .btn-arrow { transform: translateX(4px); }
-
-/* Stats gradient numbers */
-.stat-grad {
-  background: linear-gradient(135deg, var(--accent), #7aa8ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* CTA grid overlay */
-.cta-grid::before {
-  content: '';
-  position: absolute; inset: 0; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 60px 60px;
 }
