@@ -1,50 +1,57 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import BudgetMeter from '@/components/BudgetMeter';
+import BudgetMeterSmall from '@/components/BudgetMeterSmall';
 
 export const metadata: Metadata = { title: 'Pricing' };
 
 const plans = [
   {
     name: 'Starter',
-    price: '$599',
-    per: '/mo',
-    desc: 'For small businesses getting started online.',
+    price: '$997',
+    per: '',
+    label: 'one-time',
+    desc: 'A clean, fast website that puts your business on the map.',
     features: [
       '5-Page Custom Website',
+      'Mobile-First Design',
       'Google Business Profile Setup',
       'Basic On-Page SEO',
-      'Monthly Performance Report',
+      'Contact Form Integration',
       'Email Support',
     ],
   },
   {
     name: 'Growth',
-    price: '$1,597',
-    per: '/mo',
-    desc: 'For businesses serious about digital growth.',
+    price: '$2,497',
+    per: '',
+    label: 'one-time',
+    desc: 'A full custom site built to rank, convert, and scale.',
     featured: true,
     features: [
-      'Custom Website (10+ Pages)',
-      'Google Ads Management',
-      'Full SEO Package',
+      '10+ Page Custom Website',
+      'Full SEO Setup & Strategy',
+      'Google Ads Campaign Launch',
       'CallRail Call Tracking',
-      'Bi-Weekly Reporting',
+      'Speed & Core Web Vitals',
       'Direct Slack Access',
+      '30-Day Post-Launch Support',
     ],
   },
   {
     name: 'Enterprise',
     price: 'Custom',
     per: '',
-    desc: 'Full-stack digital for scaling businesses.',
+    label: '',
+    desc: 'Full digital system built end-to-end for your business.',
     features: [
       'Everything in Growth',
       'AI Automation & CRM Setup',
       'E-Commerce Integration',
+      'Custom API Integrations',
       'Dedicated Account Manager',
-      'Weekly Strategy Calls',
       'Priority Support',
+      'Ongoing Strategy Calls',
     ],
   },
 ];
@@ -53,22 +60,20 @@ const paymentPlans = [
   {
     icon: '⚡',
     title: '50/50 Split',
-    desc: '50% upfront, 50% on completion. Best for one-time projects.',
-    tag: null,
+    desc: '50% upfront, 50% on launch. The most common choice for one-time projects.',
     featured: false,
   },
   {
     icon: '📅',
     title: '3-Payment Plan',
-    desc: 'Split your project into 3 equal payments over 3 months. Zero interest.',
+    desc: 'Break your project into 3 equal payments over 3 months. Zero interest, no credit check.',
     tag: 'Most Flexible',
     featured: true,
   },
   {
     icon: '🔄',
     title: 'Monthly Retainer',
-    desc: 'One flat monthly rate covering design, maintenance, and ongoing work.',
-    tag: null,
+    desc: 'Prefer to spread it out? We offer ongoing monthly plans for maintenance and growth.',
     featured: false,
   },
 ];
@@ -85,27 +90,37 @@ export default function Pricing() {
             Transparent Pricing.<br /><span className="text-accent">No Surprises.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
-            Flexible plans built around your goals. No lock-in contracts — results keep clients around.
+            One-time project pricing. You own everything. No lock-in, no monthly fees unless you want them.
           </p>
         </div>
       </section>
 
-      {/* Budget Meter */}
+      {/* Two Budget Meters */}
       <section className="bg-[#f8f9fc] py-20 border-b border-[#e5e7eb]">
-        <div className="container-site max-w-3xl mx-auto">
-          <BudgetMeter />
+        <div className="container-site">
+          <p className="eyebrow text-center">Budget Calculators</p>
+          <h2 className="section-title text-[clamp(24px,3.5vw,38px)] text-center mb-4">
+            Find Your <span className="text-accent">Perfect Starting Point.</span>
+          </h2>
+          <p className="text-muted text-[14px] text-center mb-12 max-w-lg mx-auto">
+            Two meters — one for any budget starting at $100, one for full project builds. Drag the slider to see exactly what you get.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <BudgetMeterSmall />
+            <BudgetMeter />
+          </div>
         </div>
       </section>
 
       {/* Plans */}
       <section className="bg-white py-20">
         <div className="container-site">
-          <p className="eyebrow text-center">Monthly Plans</p>
+          <p className="eyebrow text-center">Project Packages</p>
           <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-4">
-            Pick the Plan That <span className="text-accent">Fits Your Goals.</span>
+            One-Time Builds. <span className="text-accent">You Own It All.</span>
           </h2>
           <p className="text-muted text-[14px] text-center mb-12 max-w-lg mx-auto">
-            Pricing based on local Daytona Beach market research. Competitive rates, no fluff, no hidden fees.
+            Pay once, own forever. No monthly fees, no contracts. Priced to match the Daytona Beach market.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {plans.map(p => (
@@ -121,10 +136,10 @@ export default function Pricing() {
                   </div>
                 )}
                 <p className="text-[12px] font-bold tracking-widest uppercase text-accent mb-2">{p.name}</p>
-                <div className="flex items-end gap-1 mb-2">
+                <div className="flex items-end gap-1.5 mb-1">
                   <span className="text-[42px] font-extrabold text-dark leading-none">{p.price}</span>
-                  {p.per && <span className="text-muted text-[14px] mb-1.5">{p.per}</span>}
                 </div>
+                {p.label && <p className="text-[12px] text-muted font-semibold mb-3">{p.label}</p>}
                 <p className="text-[13px] text-muted mb-6">{p.desc}</p>
                 <ul className="space-y-3 mb-8">
                   {p.features.map(f => (
@@ -160,7 +175,7 @@ export default function Pricing() {
             Payment Plans That Work For You.
           </h2>
           <p className="text-white/45 text-[15px] text-center max-w-lg mx-auto mb-12">
-            We get it — budget matters. That&apos;s why we offer flexible payment options so you can get started without the cash flow crunch.
+            Budget matters. We offer flexible ways to pay so you can get started without the cash flow crunch.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {paymentPlans.map(p => (
@@ -170,7 +185,7 @@ export default function Pricing() {
                     ? 'border-2 border-accent bg-accent/10 -translate-y-2'
                     : 'border-white/10 bg-white/5'
                 }`}>
-                {p.tag && (
+                {'tag' in p && p.tag && (
                   <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-white text-[11px] font-bold px-4 py-1 rounded-full whitespace-nowrap">
                     {p.tag}
                   </span>
@@ -192,11 +207,11 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* FAQ strip */}
+      {/* CTA */}
       <section className="bg-white py-16">
         <div className="container-site max-w-3xl mx-auto text-center">
-          <h3 className="font-bold text-[22px] text-dark mb-3">Still have questions?</h3>
-          <p className="text-muted text-[15px] mb-7">We&apos;re happy to walk you through exactly what&apos;s included and build a custom plan that fits your goals.</p>
+          <h3 className="font-bold text-[22px] text-dark mb-3">Not sure which package fits?</h3>
+          <p className="text-muted text-[15px] mb-7">Book a free 30-minute call and we&apos;ll put together a custom quote based on exactly what your business needs.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-8 py-4 rounded-lg transition-colors">
             Book a Free Strategy Call →
           </Link>
