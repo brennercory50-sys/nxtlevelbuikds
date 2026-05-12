@@ -16,7 +16,7 @@ export default function About() {
   return (
     <main>
       {/* Hero — full branded office shot */}
-      <section className="photo-about relative overflow-hidden" style={{minHeight:'88vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
+      <section className="photo-about relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end', backgroundPosition:'center 20%'}}>
         {/* Subtle bottom vignette — lets the top of the photo (logo wall) stay fully visible */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
         {/* Left edge fade for text legibility */}

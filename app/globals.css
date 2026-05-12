@@ -29,7 +29,7 @@
   .photo-about {
     background-image: url('/images/about-bg.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center 25%;
     position: relative;
   }
   .photo-services {
