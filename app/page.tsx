@@ -15,50 +15,62 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex flex-col justify-between overflow-hidden">
-        <Image fill src="/images/hero-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-20 pt-16">
-          <p className="eyebrow" style={{color:'rgba(255,255,255,0.6)'}}>AI Automations. Websites. Systems.</p>
-          <h1 className="text-[clamp(44px,6vw,76px)] font-extrabold leading-[1.05] text-white mb-5 max-w-2xl" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
-            Next-Level<br />Digital <span className="text-accent">Builds.</span>
+      <section className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden">
+        <Image fill src="/images/about-bg.png" alt="NXT Level Builds office" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        {/* Gradient — fades left side for text, leaves right side open to show the logo wall */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/55 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+
+        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-24">
+          <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent mb-5">
+            Websites. Automation. Growth.
+          </p>
+          <h1 className="text-[clamp(38px,5.5vw,72px)] font-extrabold leading-[1.08] text-white mb-6 max-w-2xl">
+            Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Local Businesses.</span>
           </h1>
           <p className="text-[16px] text-white/60 leading-relaxed max-w-md mb-10">
-            We help businesses scale with high-converting websites, powerful automations, and AI systems that save time and drive real results.
+            We build high-converting websites, automations, and growth systems that help local businesses get more leads, book more jobs, and scale with confidence.
           </p>
-          <div className="flex gap-3 flex-wrap mb-14">
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-semibold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5">Book a Call →</Link>
-            <Link href="/work" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-[14px] px-7 py-3.5 rounded-lg border border-white/25 transition-all">View Our Work</Link>
-          </div>
-          {/* Stats cards */}
           <div className="flex gap-3 flex-wrap">
-            <div className="bg-black/70 backdrop-blur-sm border border-white/10 rounded-2xl p-4 min-w-[180px]">
-              <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-3">AI Automation</p>
-              {[['Lead Capture','↑47%','text-green-400'],['Response Time','↓68%','text-accent'],['Conversions','↑36%','text-green-400'],['Avg. ROI','↑7.0×','text-green-400']].map(([k,v,c]) => (
-                <div key={k} className="flex justify-between items-center py-1 border-b border-white/5 last:border-0">
-                  <span className="text-[11px] text-white/45">{k}</span>
-                  <span className={`text-[11px] font-bold ${c}`}>{v}</span>
-                </div>
-              ))}
-            </div>
-            <div className="bg-black/70 backdrop-blur-sm border border-white/10 rounded-2xl p-4 min-w-[180px]">
-              <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-3">Website Performance</p>
-              {[['Monthly Visits','24.8K'],['New Leads','1.9K'],['Conv. Rate','7.6%'],['Avg. Session','7.0m']].map(([k,v]) => (
-                <div key={k} className="flex justify-between items-center py-1 border-b border-white/5 last:border-0">
-                  <span className="text-[11px] text-white/45">{k}</span>
-                  <span className="text-[11px] font-bold text-white">{v}</span>
-                </div>
-              ))}
-            </div>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">
+              Book A Strategy Call ↗
+            </Link>
+            <Link href="/work" className="inline-flex items-center gap-2 bg-transparent hover:bg-white/10 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg border border-white/30 transition-all">
+              See Our Work ↗
+            </Link>
           </div>
         </div>
-        {/* Trusted bar */}
-        <div className="relative z-10 border-t border-white/10 bg-black/60 backdrop-blur-sm py-4">
-          <div className="container-site flex items-center gap-10 flex-wrap">
-            <p className="text-[11px] font-semibold tracking-widest uppercase text-white/35 whitespace-nowrap">Trusted by businesses ready to scale</p>
-            <div className="flex items-center gap-8 flex-wrap">
-              {clients.map(c => <span key={c} className="text-[12px] font-bold tracking-widest text-white/25 uppercase">{c}</span>)}
+
+        {/* Stats bar */}
+        <div className="relative z-10 border-t border-white/10 bg-black/55 backdrop-blur-sm py-5">
+          <div className="container-site">
+            <div className="flex items-center gap-0 flex-wrap">
+              {[
+                { icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                  </svg>
+                ), number:'200+', label:'Businesses Helped' },
+                { icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                  </svg>
+                ), number:'2M+', label:'Leads Generated' },
+                { icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                  </svg>
+                ), number:'30%+', label:'Average Growth' },
+              ].map((s, i) => (
+                <div key={s.label} className={`flex items-center gap-3 py-1 ${i > 0 ? 'ml-10 pl-10 border-l border-white/10' : ''}`}>
+                  <span className="text-accent opacity-80">{s.icon}</span>
+                  <div>
+                    <div className="text-[22px] font-extrabold text-white leading-none">{s.number}</div>
+                    <div className="text-[11px] text-white/40 mt-0.5 font-medium">{s.label}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
