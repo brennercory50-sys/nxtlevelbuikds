@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import BudgetMeter from '@/components/BudgetMeter';
 
 export const metadata: Metadata = { title: 'Pricing' };
 
 const plans = [
   {
     name: 'Starter',
-    price: '$750',
+    price: '$599',
     per: '/mo',
     desc: 'For small businesses getting started online.',
     features: [
@@ -19,7 +20,7 @@ const plans = [
   },
   {
     name: 'Growth',
-    price: '$1,800',
+    price: '$1,597',
     per: '/mo',
     desc: 'For businesses serious about digital growth.',
     featured: true,
@@ -54,6 +55,7 @@ const paymentPlans = [
     title: '50/50 Split',
     desc: '50% upfront, 50% on completion. Best for one-time projects.',
     tag: null,
+    featured: false,
   },
   {
     icon: '📅',
@@ -67,6 +69,7 @@ const paymentPlans = [
     title: 'Monthly Retainer',
     desc: 'One flat monthly rate covering design, maintenance, and ongoing work.',
     tag: null,
+    featured: false,
   },
 ];
 
@@ -87,13 +90,23 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Budget Meter */}
+      <section className="bg-[#f8f9fc] py-20 border-b border-[#e5e7eb]">
+        <div className="container-site max-w-3xl mx-auto">
+          <BudgetMeter />
+        </div>
+      </section>
+
       {/* Plans */}
-      <section className="bg-[#f8f9fc] py-20">
+      <section className="bg-white py-20">
         <div className="container-site">
           <p className="eyebrow text-center">Monthly Plans</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-12">
+          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-4">
             Pick the Plan That <span className="text-accent">Fits Your Goals.</span>
           </h2>
+          <p className="text-muted text-[14px] text-center mb-12 max-w-lg mx-auto">
+            Pricing based on local Daytona Beach market research. Competitive rates, no fluff, no hidden fees.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {plans.map(p => (
               <div key={p.name}
@@ -152,9 +165,9 @@ export default function Pricing() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {paymentPlans.map(p => (
               <div key={p.title}
-                className={`rounded-2xl p-7 border transition-all ${
+                className={`rounded-2xl p-7 border transition-all relative ${
                   p.featured
-                    ? 'border-2 border-accent bg-accent/10 -translate-y-2 relative'
+                    ? 'border-2 border-accent bg-accent/10 -translate-y-2'
                     : 'border-white/10 bg-white/5'
                 }`}>
                 {p.tag && (
@@ -180,7 +193,7 @@ export default function Pricing() {
       </section>
 
       {/* FAQ strip */}
-      <section className="bg-white py-16 border-b border-[#e5e7eb]">
+      <section className="bg-white py-16">
         <div className="container-site max-w-3xl mx-auto text-center">
           <h3 className="font-bold text-[22px] text-dark mb-3">Still have questions?</h3>
           <p className="text-muted text-[15px] mb-7">We&apos;re happy to walk you through exactly what&apos;s included and build a custom plan that fits your goals.</p>
