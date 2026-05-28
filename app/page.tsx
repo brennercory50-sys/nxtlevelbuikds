@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 const clients = ['VISIONARY', 'ELEVATE', 'IRONCLAD', 'SUMMIT', 'PREMIER'];
 const services = [
-  { icon: '🖥️', title: 'Custom Websites', desc: 'High-converting, modern websites that represent your brand and turn visitors into customers.', href: '/services' },
-  { icon: '🤖', title: 'AI Automations', desc: 'Automate follow-ups, lead nurturing, and repetitive tasks with smart AI systems.', href: '/services' },
+  { icon: '🖥️', title: 'Custom Websites', desc: 'High-converting, modern websites that represent your brand and turn visitors into customers.', href: '/services/web-design' },
+  { icon: '🤖', title: 'AI Automations', desc: 'Automate follow-ups, lead nurturing, and repetitive tasks with smart AI systems.', href: '/services/ai-automation' },
   { icon: '🔗', title: 'Systems & Integrations', desc: 'We connect your tech stack and build custom integrations that work together seamlessly.', href: '/services' },
   { icon: '📊', title: 'CRM & Lead Management', desc: 'Organized pipeline, automated follow-ups, and real-time insights so you never miss a lead.', href: '/services' },
-  { icon: '🛬', title: 'Landing Pages', desc: 'Conversion-focused landing pages built for ads, offers, and rapid growth.', href: '/services' },
+  { icon: '🛬', title: 'Landing Pages', desc: 'Conversion-focused landing pages built for ads, offers, and rapid growth.', href: '/services/web-design' },
   { icon: '🛟', title: 'Ongoing Support', desc: "We're here to support, optimize, and scale with your business every step of the way.", href: '/contact' },
 ];
 

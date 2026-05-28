@@ -5,19 +5,19 @@ import Image from 'next/image';
 export const metadata: Metadata = { title: 'Services' };
 
 const services = [
-  { n:'01', icon:'⚡', title:'Web Design & Development',
+  { n:'01', icon:'⚡', title:'Web Design & Development', href:'/services/web-design',
     desc:'We build custom, fast-loading websites that represent your brand and convert visitors into paying customers. No page builders, no cookie-cutter templates — just clean code and intentional design built around your goals.',
     bullets:['Custom UI/UX Design','Next.js / React Development','Mobile-First Responsive','CMS Integration','Speed & Core Web Vitals','E-Commerce Ready'],
     tags:['Next.js','Custom Design','Shopify','WordPress','CMS'] },
-  { n:'02', icon:'🎯', title:'Google Ads Management',
+  { n:'02', icon:'🎯', title:'Google Ads Management', href:'/services/google-ads',
     desc:'We build and manage Google Search, Local Services Ads, and Display campaigns with a singular focus on ROI. Every dollar is tracked, every campaign is optimized, and every report is fully transparent.',
     bullets:['Campaign Strategy & Setup','Keyword Research','Local Services Ads (LSA)','Negative Keyword Management','CallRail Integration','Monthly Reporting'],
     tags:['Search Ads','LSA','Display','Remarketing','CallRail'] },
-  { n:'03', icon:'📈', title:'Search Engine Optimization',
+  { n:'03', icon:'📈', title:'Search Engine Optimization', href:'/services/seo',
     desc:'SEO is a long game and we play it well. We handle everything from technical audits to local map pack strategy to content that ranks — building organic traffic that compounds month over month.',
     bullets:['Technical SEO Audit','Google Business Profile','Local Map Pack Strategy','On-Page Optimization','Content & Blog Strategy','Link Building'],
     tags:['Local SEO','GMB','Schema','Content','Link Building'] },
-  { n:'04', icon:'🤖', title:'AI Automation',
+  { n:'04', icon:'🤖', title:'AI Automation', href:'/services/ai-automation',
     desc:'Stop doing manually what a system can handle. We design and build AI-powered workflows that automate lead follow-up, appointment scheduling, CRM updates, and customer communications.',
     bullets:['Lead Nurture Sequences','AI Chatbots','CRM Automation','Appointment Booking Flows','Review Request Systems','Make / Zapier Workflows'],
     tags:['AI Workflows','Make','Zapier','GoHighLevel','Chatbots'] },
@@ -49,6 +49,9 @@ export default function Services() {
               <div>
                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-3">{s.icon}</div>
                 <h3 className="font-bold text-[18px] text-dark mb-2">{s.title}</h3>
+                <Link href={s.href} className="inline-flex items-center gap-1 text-[13px] font-semibold text-accent hover:text-accent2 transition-colors">
+                  View Details →
+                </Link>
               </div>
               <div className="lg:col-span-2">
                 <p className="text-[14px] text-muted leading-relaxed mb-4">{s.desc}</p>
@@ -62,13 +65,17 @@ export default function Services() {
                 </div>
               </div>
               <div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {s.tags.map(t => (
                     <span key={t} className="text-[11px] font-semibold text-accent bg-blue-50 px-3 py-1.5 rounded-full">
                       {t}
                     </span>
                   ))}
                 </div>
+                <Link href={s.href}
+                  className="inline-flex items-center gap-1.5 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[13px] px-4 py-2 rounded-lg transition-all">
+                  Learn More →
+                </Link>
               </div>
             </div>
           ))}
