@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { icon:'🎯', title:'Results First', desc:'We measure everything. Revenue and leads are the only scorecard that matters.' },
-  { icon:'🤝', title:'Real Relationships', desc:"You'll have a direct line to us — not a ticket system. We treat every client like a business partner." },
-  { icon:'🚀', title:'Move Fast', desc:'Most agencies take 3 months to launch a site. We do it in 7 days without cutting corners.' },
-  { icon:'🔍', title:'Full Transparency', desc:"You own your accounts and data. We don't hide behind jargon or black-box reporting." },
-  { icon:'💡', title:'Always Learning', desc:'Digital moves fast. We stay ahead so our clients benefit from what we learn across every account.' },
-  { icon:'🌴', title:'Florida-Rooted', desc:'We know this market — the competition, the seasonality, and what local consumers respond to.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>, title:'Results First', desc:'We measure everything. Revenue and leads are the only scorecard that matters.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>, title:'Real Relationships', desc:"You'll have a direct line to us — not a ticket system. We treat every client like a business partner." },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, title:'Move Fast', desc:'Most agencies take 3 months to launch a site. We do it in 7 days without cutting corners.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>, title:'Full Transparency', desc:"You own your accounts and data. We don't hide behind jargon or black-box reporting." },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>, title:'Always Learning', desc:'Digital moves fast. We stay ahead so our clients benefit from what we learn across every account.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, title:'Florida-Rooted', desc:'We know this market — the competition, the seasonality, and what local consumers respond to.' },
 ];
 
 export default function About() {
@@ -99,7 +99,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {values.map(v => (
               <div key={v.title} className="bg-white border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-3xl mb-4">{v.icon}</div>
+                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-accent">{v.icon}</div>
                 <h4 className="font-bold text-[16px] text-dark mb-2 uppercase tracking-wide">{v.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{v.desc}</p>
               </div>
@@ -116,7 +116,9 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Cory — real */}
             <div className="border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all">
-              <div className="h-40 flex items-center justify-center text-5xl" style={{ background: '#eef3ff' }}>👨‍💻</div>
+              <div className="h-40 flex items-center justify-center" style={{ background: '#eef3ff' }}>
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
               <div className="p-6 text-center">
                 <h4 className="font-bold text-[16px] text-dark mb-1">Cory Brenner</h4>
                 <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Founder, CEO & Lead Strategist</p>
@@ -128,7 +130,9 @@ export default function About() {
 
             {/* Open roles */}
             <div className="border border-dashed border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
-              <div className="h-40 flex items-center justify-center text-5xl" style={{ background: '#f8f9fc' }}>🎨</div>
+              <div className="h-40 flex items-center justify-center" style={{ background: '#f8f9fc' }}>
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
               <div className="p-6 text-center">
                 <h4 className="font-bold text-[16px] text-dark mb-1">Designer & Developer</h4>
                 <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Position Open</p>
@@ -139,7 +143,9 @@ export default function About() {
             </div>
 
             <div className="border border-dashed border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
-              <div className="h-40 flex items-center justify-center text-5xl" style={{ background: '#f8f9fc' }}>📊</div>
+              <div className="h-40 flex items-center justify-center" style={{ background: '#f8f9fc' }}>
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+              </div>
               <div className="p-6 text-center">
                 <h4 className="font-bold text-[16px] text-dark mb-1">Paid Media & SEO Lead</h4>
                 <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Position Open</p>
