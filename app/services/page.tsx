@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const metadata: Metadata = { title: 'Services' };
+export const metadata: Metadata = {
+  title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
+  description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads management, local SEO, and AI automation for local businesses.',
+};
 
 const services = [
   { n:'01', icon:(<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>), title:'Web Design & Development', href:'/services/web-design',

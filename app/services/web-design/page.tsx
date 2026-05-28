@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const metadata: Metadata = { title: 'Web Design & Development' };
+export const metadata: Metadata = {
+  title: 'Web Design & Development Daytona Beach FL | Custom Websites',
+  description: 'Custom web design and development in Daytona Beach, FL. Fast-loading, mobile-first websites built to convert visitors into leads. Launched in 7 days.',
+};
 
 const deliverables = [
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>, title: 'Custom UI/UX Design', desc: 'Every pixel is intentional — built around your brand and your customer journey, not a template.' },

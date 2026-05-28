@@ -4,7 +4,10 @@ import Image from 'next/image';
 import BudgetMeter from '@/components/BudgetMeter';
 import BudgetMeterSmall from '@/components/BudgetMeterSmall';
 
-export const metadata: Metadata = { title: 'Pricing' };
+export const metadata: Metadata = {
+  title: 'Web Design Pricing Daytona Beach FL | Transparent Packages',
+  description: 'Transparent web design and digital marketing pricing for Daytona Beach businesses. One-time project builds with no monthly fees or lock-in contracts.',
+};
 
 const plans = [
   {

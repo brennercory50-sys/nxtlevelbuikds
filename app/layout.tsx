@@ -4,8 +4,24 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: { default: 'NXT Level Builds — Digital Agency Daytona Beach FL', template: '%s | NXT Level Builds' },
-  description: 'AI Automations, Websites & Systems. We help businesses scale with high-converting websites, powerful automations, and AI systems.',
+  title: {
+    default: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+    template: '%s | NXT Level Builds',
+  },
+  description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help local businesses get more leads and scale faster.',
+  keywords: ['web design Daytona Beach', 'Google Ads Daytona Beach', 'SEO Daytona Beach', 'AI automation Florida', 'digital marketing Daytona Beach', 'website design Volusia County'],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'NXT Level Builds',
+    title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+    description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses. Built to convert. Launched in 7 days.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NXT Level Builds — Web Design & Digital Marketing | Daytona Beach',
+    description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses.',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const metadata: Metadata = { title: 'Search Engine Optimization' };
+export const metadata: Metadata = {
+  title: 'SEO Services Daytona Beach FL | Local Search Optimization',
+  description: 'Local SEO services in Daytona Beach, FL. Technical audits, Google Business Profile optimization, and content strategy that drives organic leads month over month.',
+};
 
 const deliverables = [
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>, title: 'Technical SEO Audit', desc: 'We crawl your entire site for speed issues, broken links, indexing errors, and structural problems — then fix them.' },

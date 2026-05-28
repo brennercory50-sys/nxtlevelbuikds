@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = { title: 'Blog' };
+export const metadata: Metadata = {
+  title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
+  description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation — written by the team at NXT Level Builds in Daytona Beach, FL.',
+};
 
 const featured = {
   emoji:'💡', bg:'#eef3ff', cat:'Google Ads',

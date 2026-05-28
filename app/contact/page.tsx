@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-export const metadata: Metadata = { title: 'Contact' };
+export const metadata: Metadata = {
+  title: 'Contact | Web Design Agency Daytona Beach FL',
+  description: 'Get in touch with NXT Level Builds — Daytona Beach\'s web design and digital marketing agency. Call (386) 259-0178 or send us a message today.',
+};
 
 export default function Contact() {
   return (
