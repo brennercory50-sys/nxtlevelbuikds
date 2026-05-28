@@ -45,7 +45,7 @@ export default function Work() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map(p => (
-              <div key={p.title} className="group rounded-2xl overflow-hidden border border-[#e5e7eb] hover:border-accent/30 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer bg-white">
+              <div key={p.title} className="group rounded-2xl overflow-hidden border border-[#e5e7eb] hover:border-accent/30 hover:shadow-xl hover:-translate-y-1 transition-all bg-white">
                 <div className={`h-48 bg-gradient-to-br ${p.bg} relative flex items-end p-4`}>
                   <div className="absolute inset-0 opacity-10">
                     <svg width="100%" height="100%" viewBox="0 0 400 200" fill="none">
@@ -61,7 +61,6 @@ export default function Work() {
                 <div className="p-5">
                   <p className="text-[11px] font-bold tracking-widest uppercase text-accent mb-1">{p.type}</p>
                   <h4 className="font-bold text-[16px] text-dark mb-2">{p.title}</h4>
-                  <span className="text-[13px] font-semibold text-accent">View Project →</span>
                 </div>
               </div>
             ))}
