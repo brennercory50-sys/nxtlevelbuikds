@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Logo from './Logo';
 
 const services = [
-  'Custom Websites',
-  'AI Automations',
-  'Systems & Integrations',
-  'CRM & Lead Management',
-  'Landing Pages',
-  'Ongoing Support',
+  { label: 'Custom Websites', href: '/services/web-design' },
+  { label: 'AI Automations', href: '/services/ai-automation' },
+  { label: 'Google Ads', href: '/services/google-ads' },
+  { label: 'SEO', href: '/services/seo' },
+  { label: 'Landing Pages', href: '/services/web-design' },
+  { label: 'All Services', href: '/services' },
 ];
 const company = [
   { label: 'About', href: '/about' },
@@ -47,8 +47,8 @@ export default function Footer() {
             <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Services</h5>
             <ul className="space-y-2.5">
               {services.map(s => (
-                <li key={s}>
-                  <Link href="/services" className="text-[13px] hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.45)' }}>{s}</Link>
+                <li key={s.href + s.label}>
+                  <Link href={s.href} className="text-[13px] hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.45)' }}>{s.label}</Link>
                 </li>
               ))}
             </ul>
@@ -69,7 +69,7 @@ export default function Footer() {
             <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Contact</h5>
             <ul className="space-y-2.5 text-[13px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
               <li><a href="mailto:hello@nxtlevelbuilds.com" className="hover:text-white transition-colors">hello@nxtlevelbuilds.com</a></li>
-              <li><a href="tel:+13860000000" className="hover:text-white transition-colors">(386) 000-0000</a></li>
+              <li><a href="tel:+13862590178" className="hover:text-white transition-colors">(386) 259-0178</a></li>
               <li>Daytona Beach, FL</li>
             </ul>
             <Link href="/contact" className="mt-5 inline-block bg-accent hover:bg-accent2 text-white text-[12px] font-bold px-4 py-2.5 rounded-lg transition-colors">

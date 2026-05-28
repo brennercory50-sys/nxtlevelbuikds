@@ -115,12 +115,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PARTNERS */}
+      {/* TOOLS */}
       <section className="bg-white py-14 border-b border-[#e5e7eb]">
         <div className="container-site text-center">
-          <p className="eyebrow">Our Technology Partners</p>
-          <div className="flex items-center justify-center gap-12 flex-wrap mt-4">
-            {['Webflow','AWS','OpenAI','Make','Zapier'].map(p => <span key={p} className="text-[15px] font-bold text-[#9ca3af] tracking-wide">{p}</span>)}
+          <p className="eyebrow">Tools We Build With</p>
+          <div className="flex items-center justify-center gap-10 flex-wrap mt-6">
+            {[
+              { name: 'Next.js', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> },
+              { name: 'GoHighLevel', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> },
+              { name: 'Make', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg> },
+              { name: 'OpenAI', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg> },
+              { name: 'Zapier', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
+              { name: 'Google Ads', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> },
+            ].map(t => (
+              <div key={t.name} className="flex items-center gap-2 text-[#9ca3af]">
+                <span>{t.icon}</span>
+                <span className="text-[14px] font-bold tracking-wide">{t.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
