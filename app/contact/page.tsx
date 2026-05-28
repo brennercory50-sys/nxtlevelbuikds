@@ -21,7 +21,7 @@ export default function Contact() {
               </p>
               <div className="space-y-5">
                 {[
-                  { icon:'📞', label:'Phone', val:'(386) 000-0000' },
+                  { icon:'📞', label:'Phone', val:'(386) 259-0178' },
                   { icon:'📧', label:'Email', val:'hello@nxtlevelbuilds.com' },
                   { icon:'📍', label:'Location', val:'Daytona Beach, Florida' },
                   { icon:'🕐', label:'Business Hours', val:'Mon – Fri, 9AM – 6PM' },
