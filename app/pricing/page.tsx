@@ -62,20 +62,20 @@ const plans = [
 
 const paymentPlans = [
   {
-    icon: '⚡',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
     title: '50/50 Split',
     desc: '50% upfront, 50% on launch. The most common choice for one-time projects.',
     featured: false,
   },
   {
-    icon: '📅',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>,
     title: '3-Payment Plan',
     desc: 'Break your project into 3 equal payments over 3 months. Zero interest, no credit check.',
     tag: 'Most Flexible',
     featured: true,
   },
   {
-    icon: '🔄',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>,
     title: 'Monthly Retainer',
     desc: 'Prefer to spread it out? We offer ongoing monthly plans for maintenance and growth.',
     featured: false,
@@ -172,6 +172,37 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Guarantee Strip */}
+      <section className="bg-[#f0f6ff] border-y border-accent/20 py-10">
+        <div className="container-site">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            {[
+              {
+                icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+                title: 'Design Approval First',
+                desc: 'You sign off on every design before a single line of code gets written. No surprises.',
+              },
+              {
+                icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+                title: 'Unlimited Revisions',
+                desc: 'Not happy with the design? We revise until you are — included in every package.',
+              },
+              {
+                icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>,
+                title: 'You Own Everything',
+                desc: 'Code, domain, hosting — it all belongs to you. No lock-in, no monthly trap, ever.',
+              },
+            ].map(g => (
+              <div key={g.title} className="flex flex-col items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">{g.icon}</div>
+                <h4 className="font-bold text-[15px] text-dark">{g.title}</h4>
+                <p className="text-[13px] text-muted leading-relaxed max-w-xs">{g.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Payment Plans */}
       <section className="bg-dark py-20">
         <div className="container-site">
@@ -195,7 +226,7 @@ export default function Pricing() {
                     {p.tag}
                   </span>
                 )}
-                <div className="text-3xl mb-4">{p.icon}</div>
+                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center mb-4 text-accent">{p.icon}</div>
                 <h3 className="font-bold text-[18px] text-white mb-2">{p.title}</h3>
                 <p className="text-[14px] leading-relaxed" style={{color:'rgba(255,255,255,0.5)'}}>{p.desc}</p>
               </div>
