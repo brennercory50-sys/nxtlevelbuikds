@@ -4,10 +4,22 @@ import Link from 'next/link';
 import Logo from './Logo';
 
 const serviceItems = [
-  { icon: '🖥️', label: 'Web Design & Dev', desc: 'Custom sites that convert visitors', href: '/services/web-design' },
-  { icon: '🎯', label: 'Google Ads', desc: 'ROI-focused paid ad campaigns', href: '/services/google-ads' },
-  { icon: '📈', label: 'SEO', desc: 'Organic growth that compounds', href: '/services/seo' },
-  { icon: '🤖', label: 'AI Automation', desc: 'Systems that scale without you', href: '/services/ai-automation' },
+  {
+    icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
+    label: 'Web Design & Dev', desc: 'Custom sites that convert visitors', href: '/services/web-design',
+  },
+  {
+    icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
+    label: 'Google Ads', desc: 'ROI-focused paid ad campaigns', href: '/services/google-ads',
+  },
+  {
+    icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>,
+    label: 'SEO', desc: 'Organic growth that compounds', href: '/services/seo',
+  },
+  {
+    icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>,
+    label: 'AI Automation', desc: 'Systems that scale without you', href: '/services/ai-automation',
+  },
 ];
 
 const navLinks = [
@@ -79,7 +91,7 @@ export default function Navbar() {
                     className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/[0.05] transition-colors group"
                   >
                     <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center text-[15px] flex-shrink-0"
+                      className="w-8 h-8 rounded-lg flex items-center justify-center text-accent flex-shrink-0"
                       style={{ background: 'rgba(26,110,255,0.14)' }}
                     >
                       {s.icon}
@@ -161,7 +173,7 @@ export default function Navbar() {
                   {serviceItems.map(s => (
                     <Link key={s.href} href={s.href} onClick={() => setOpen(false)}
                       className="flex items-center gap-2.5 py-2 text-[13px] font-medium text-white/50 hover:text-white transition-colors">
-                      <span className="text-base">{s.icon}</span>
+                      <span className="w-5 h-5 flex items-center justify-center text-accent flex-shrink-0">{s.icon}</span>
                       {s.label}
                     </Link>
                   ))}
