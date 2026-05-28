@@ -5,12 +5,12 @@ import Image from 'next/image';
 export const metadata: Metadata = { title: 'AI Automation' };
 
 const deliverables = [
-  { icon: '🤖', title: 'AI Chatbots', desc: 'Conversational AI that qualifies leads, answers questions, and books appointments — around the clock without your team.' },
-  { icon: '📧', title: 'Lead Nurture Sequences', desc: 'Automated multi-channel follow-up via email and SMS that turns cold inquiries into booked jobs.' },
-  { icon: '📅', title: 'Appointment Booking Flows', desc: 'Fully automated scheduling that syncs with your calendar and sends reminders — zero manual booking.' },
-  { icon: '⭐', title: 'Review Request Systems', desc: 'Automated post-job review requests that build your Google reputation on autopilot.' },
-  { icon: '🔄', title: 'CRM Automation', desc: 'Leads flow in, contacts get tagged, pipelines update, and tasks get created — no manual data entry.' },
-  { icon: '⚡', title: 'Make / Zapier Workflows', desc: 'Custom multi-step automations that connect every tool in your stack and eliminate repetitive work.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>, title: 'AI Chatbots', desc: 'Conversational AI that qualifies leads, answers questions, and books appointments — around the clock without your team.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>, title: 'Lead Nurture Sequences', desc: 'Automated multi-channel follow-up via email and SMS that turns cold inquiries into booked jobs.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>, title: 'Appointment Booking Flows', desc: 'Fully automated scheduling that syncs with your calendar and sends reminders — zero manual booking.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>, title: 'Review Request Systems', desc: 'Automated post-job review requests that build your Google reputation on autopilot.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>, title: 'CRM Automation', desc: 'Leads flow in, contacts get tagged, pipelines update, and tasks get created — no manual data entry.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, title: 'Make / Zapier Workflows', desc: 'Custom multi-step automations that connect every tool in your stack and eliminate repetitive work.' },
 ];
 
 const process = [
@@ -73,7 +73,7 @@ export default function AIAutomation() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {deliverables.map(d => (
               <div key={d.title} className="border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg hover:-translate-y-1 transition-all">
-                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-xl mb-4">{d.icon}</div>
+                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-accent">{d.icon}</div>
                 <h4 className="font-bold text-[15px] text-dark mb-2">{d.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{d.desc}</p>
               </div>

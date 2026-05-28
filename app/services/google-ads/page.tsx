@@ -5,12 +5,12 @@ import Image from 'next/image';
 export const metadata: Metadata = { title: 'Google Ads Management' };
 
 const deliverables = [
-  { icon: '🗺️', title: 'Campaign Strategy & Setup', desc: 'Full account architecture built for your market — the right keywords, match types, and ad groups from day one.' },
-  { icon: '🔑', title: 'Keyword Research', desc: 'Deep competitive research to find the terms your customers search and your competitors miss.' },
-  { icon: '📍', title: 'Local Services Ads (LSA)', desc: 'Google Guaranteed placement at the very top. We set it up, optimize it, and dispute bad leads.' },
-  { icon: '🚫', title: 'Negative Keyword Management', desc: 'We cut the waste. Ongoing negative keyword management keeps your spend on buyers, not browsers.' },
-  { icon: '📞', title: 'CallRail Integration', desc: 'Full call tracking so you know exactly which keywords and ads are driving real phone leads.' },
-  { icon: '📊', title: 'Monthly Reporting', desc: 'Clear, jargon-free reports. You see your spend, leads, cost per lead, and ROAS every month.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>, title: 'Campaign Strategy & Setup', desc: 'Full account architecture built for your market — the right keywords, match types, and ad groups from day one.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>, title: 'Keyword Research', desc: 'Deep competitive research to find the terms your customers search and your competitors miss.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, title: 'Local Services Ads (LSA)', desc: 'Google Guaranteed placement at the very top. We set it up, optimize it, and dispute bad leads.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>, title: 'Negative Keyword Management', desc: 'We cut the waste. Ongoing negative keyword management keeps your spend on buyers, not browsers.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.2a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>, title: 'CallRail Integration', desc: 'Full call tracking so you know exactly which keywords and ads are driving real phone leads.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>, title: 'Monthly Reporting', desc: 'Clear, jargon-free reports. You see your spend, leads, cost per lead, and ROAS every month.' },
 ];
 
 const process = [
@@ -73,7 +73,7 @@ export default function GoogleAds() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {deliverables.map(d => (
               <div key={d.title} className="border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg hover:-translate-y-1 transition-all">
-                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-xl mb-4">{d.icon}</div>
+                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-accent">{d.icon}</div>
                 <h4 className="font-bold text-[15px] text-dark mb-2">{d.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{d.desc}</p>
               </div>

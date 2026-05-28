@@ -5,12 +5,12 @@ import Image from 'next/image';
 export const metadata: Metadata = { title: 'Search Engine Optimization' };
 
 const deliverables = [
-  { icon: '🔍', title: 'Technical SEO Audit', desc: 'We crawl your entire site for speed issues, broken links, indexing errors, and structural problems — then fix them.' },
-  { icon: '🗺️', title: 'Google Business Profile', desc: 'Full GBP optimization — categories, photos, posts, Q&A, and review strategy — to dominate local map pack results.' },
-  { icon: '📍', title: 'Local Map Pack Strategy', desc: 'Targeted local optimization to put your business in the 3-pack for the searches that matter most in your area.' },
-  { icon: '✍️', title: 'On-Page Optimization', desc: 'Title tags, meta descriptions, header structure, and internal linking — every page tuned for maximum ranking potential.' },
-  { icon: '📝', title: 'Content & Blog Strategy', desc: 'We research and create content that ranks for high-intent keywords and builds topical authority month over month.' },
-  { icon: '🔗', title: 'Link Building', desc: 'Earned, relevant backlinks from real sources that signal authority to Google and move the ranking needle.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>, title: 'Technical SEO Audit', desc: 'We crawl your entire site for speed issues, broken links, indexing errors, and structural problems — then fix them.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>, title: 'Google Business Profile', desc: 'Full GBP optimization — categories, photos, posts, Q&A, and review strategy — to dominate local map pack results.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, title: 'Local Map Pack Strategy', desc: 'Targeted local optimization to put your business in the 3-pack for the searches that matter most in your area.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>, title: 'On-Page Optimization', desc: 'Title tags, meta descriptions, header structure, and internal linking — every page tuned for maximum ranking potential.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>, title: 'Content & Blog Strategy', desc: 'We research and create content that ranks for high-intent keywords and builds topical authority month over month.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>, title: 'Link Building', desc: 'Earned, relevant backlinks from real sources that signal authority to Google and move the ranking needle.' },
 ];
 
 const process = [
@@ -73,7 +73,7 @@ export default function SEO() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {deliverables.map(d => (
               <div key={d.title} className="border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg hover:-translate-y-1 transition-all">
-                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-xl mb-4">{d.icon}</div>
+                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-accent">{d.icon}</div>
                 <h4 className="font-bold text-[15px] text-dark mb-2">{d.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{d.desc}</p>
               </div>

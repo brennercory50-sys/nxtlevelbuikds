@@ -5,19 +5,19 @@ import Image from 'next/image';
 export const metadata: Metadata = { title: 'Services' };
 
 const services = [
-  { n:'01', icon:'⚡', title:'Web Design & Development', href:'/services/web-design',
+  { n:'01', icon:(<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>), title:'Web Design & Development', href:'/services/web-design',
     desc:'We build custom, fast-loading websites that represent your brand and convert visitors into paying customers. No page builders, no cookie-cutter templates — just clean code and intentional design built around your goals.',
     bullets:['Custom UI/UX Design','Next.js / React Development','Mobile-First Responsive','CMS Integration','Speed & Core Web Vitals','E-Commerce Ready'],
     tags:['Next.js','Custom Design','Shopify','WordPress','CMS'] },
-  { n:'02', icon:'🎯', title:'Google Ads Management', href:'/services/google-ads',
+  { n:'02', icon:(<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>), title:'Google Ads Management', href:'/services/google-ads',
     desc:'We build and manage Google Search, Local Services Ads, and Display campaigns with a singular focus on ROI. Every dollar is tracked, every campaign is optimized, and every report is fully transparent.',
     bullets:['Campaign Strategy & Setup','Keyword Research','Local Services Ads (LSA)','Negative Keyword Management','CallRail Integration','Monthly Reporting'],
     tags:['Search Ads','LSA','Display','Remarketing','CallRail'] },
-  { n:'03', icon:'📈', title:'Search Engine Optimization', href:'/services/seo',
+  { n:'03', icon:(<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>), title:'Search Engine Optimization', href:'/services/seo',
     desc:'SEO is a long game and we play it well. We handle everything from technical audits to local map pack strategy to content that ranks — building organic traffic that compounds month over month.',
     bullets:['Technical SEO Audit','Google Business Profile','Local Map Pack Strategy','On-Page Optimization','Content & Blog Strategy','Link Building'],
     tags:['Local SEO','GMB','Schema','Content','Link Building'] },
-  { n:'04', icon:'🤖', title:'AI Automation', href:'/services/ai-automation',
+  { n:'04', icon:(<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>), title:'AI Automation', href:'/services/ai-automation',
     desc:'Stop doing manually what a system can handle. We design and build AI-powered workflows that automate lead follow-up, appointment scheduling, CRM updates, and customer communications.',
     bullets:['Lead Nurture Sequences','AI Chatbots','CRM Automation','Appointment Booking Flows','Review Request Systems','Make / Zapier Workflows'],
     tags:['AI Workflows','Make','Zapier','GoHighLevel','Chatbots'] },
@@ -47,7 +47,7 @@ export default function Services() {
           {services.map(s => (
             <div key={s.n} className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start border-b border-[#e5e7eb] pb-8 last:border-0">
               <div>
-                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-3">{s.icon}</div>
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-3 text-accent">{s.icon}</div>
                 <h3 className="font-bold text-[18px] text-dark mb-2">{s.title}</h3>
                 <Link href={s.href} className="inline-flex items-center gap-1 text-[13px] font-semibold text-accent hover:text-accent2 transition-colors">
                   View Details →
