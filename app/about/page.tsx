@@ -111,20 +111,40 @@ export default function About() {
           <p className="eyebrow text-center">The Team</p>
           <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-12">People Behind <span className="text-accent">the Work</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {[
-              { bg:'#eef3ff', emoji:'👨‍💻', name:'Cory B.', role:'Founder & CEO', bio:'Built his first business in Volusia County and got tired of bad agencies. Founded NXT Level to do it right. Handles strategy, client relationships, and growth.' },
-              { bg:'#f0fdf6', emoji:'🎨', name:'Your Designer', role:'Lead Designer & Developer', bio:'Builds every site from scratch. Obsessed with performance, clean code, and design that converts — not just looks good.' },
-              { bg:'#fff7ed', emoji:'📊', name:'Your Ads Lead', role:'Paid Media & SEO Lead', bio:'Manages all Google Ads and SEO. Has run over $500K in ad spend with a consistent focus on cost per acquisition.' },
-            ].map(t => (
-              <div key={t.name} className="border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="h-40 flex items-center justify-center text-5xl" style={{ background: t.bg }}>{t.emoji}</div>
-                <div className="p-6 text-center">
-                  <h4 className="font-bold text-[16px] text-dark mb-1">{t.name}</h4>
-                  <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">{t.role}</p>
-                  <p className="text-[13px] text-muted leading-relaxed">{t.bio}</p>
-                </div>
+            {/* Cory — real */}
+            <div className="border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all">
+              <div className="h-40 flex items-center justify-center text-5xl" style={{ background: '#eef3ff' }}>👨‍💻</div>
+              <div className="p-6 text-center">
+                <h4 className="font-bold text-[16px] text-dark mb-1">Cory Brenner</h4>
+                <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Founder, CEO & Lead Strategist</p>
+                <p className="text-[13px] text-muted leading-relaxed">
+                  Built his first business in Volusia County and got tired of seeing small businesses burned by agencies that overpromised. Founded NXT Level to do it right — handles strategy, client relationships, lead generation, and growth.
+                </p>
               </div>
-            ))}
+            </div>
+
+            {/* Open roles */}
+            <div className="border border-dashed border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
+              <div className="h-40 flex items-center justify-center text-5xl" style={{ background: '#f8f9fc' }}>🎨</div>
+              <div className="p-6 text-center">
+                <h4 className="font-bold text-[16px] text-dark mb-1">Designer & Developer</h4>
+                <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Position Open</p>
+                <p className="text-[13px] text-muted leading-relaxed">
+                  We&apos;re growing. Looking for a designer/developer obsessed with clean code and high-converting UI. Sound like you?
+                </p>
+              </div>
+            </div>
+
+            <div className="border border-dashed border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
+              <div className="h-40 flex items-center justify-center text-5xl" style={{ background: '#f8f9fc' }}>📊</div>
+              <div className="p-6 text-center">
+                <h4 className="font-bold text-[16px] text-dark mb-1">Paid Media & SEO Lead</h4>
+                <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Position Open</p>
+                <p className="text-[13px] text-muted leading-relaxed">
+                  Looking for someone who lives in Google Ads and local SEO data. ROI-obsessed, transparent, and results-driven.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
