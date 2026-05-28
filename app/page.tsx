@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 const clients = ['VISIONARY', 'ELEVATE', 'IRONCLAD', 'SUMMIT', 'PREMIER'];
 const services = [
-  { icon: '🖥️', title: 'Custom Websites', desc: 'High-converting, modern websites that represent your brand and turn visitors into customers.' },
-  { icon: '🤖', title: 'AI Automations', desc: 'Automate follow-ups, lead nurturing, and repetitive tasks with smart AI systems.' },
-  { icon: '🔗', title: 'Systems & Integrations', desc: 'We connect your tech stack and build custom integrations that work together seamlessly.' },
-  { icon: '📊', title: 'CRM & Lead Management', desc: 'Organized pipeline, automated follow-ups, and real-time insights so you never miss a lead.' },
-  { icon: '🛬', title: 'Landing Pages', desc: 'Conversion-focused landing pages built for ads, offers, and rapid growth.' },
-  { icon: '🛟', title: 'Ongoing Support', desc: "We're here to support, optimize, and scale with your business every step of the way." },
+  { icon: '🖥️', title: 'Custom Websites', desc: 'High-converting, modern websites that represent your brand and turn visitors into customers.', href: '/services' },
+  { icon: '🤖', title: 'AI Automations', desc: 'Automate follow-ups, lead nurturing, and repetitive tasks with smart AI systems.', href: '/services' },
+  { icon: '🔗', title: 'Systems & Integrations', desc: 'We connect your tech stack and build custom integrations that work together seamlessly.', href: '/services' },
+  { icon: '📊', title: 'CRM & Lead Management', desc: 'Organized pipeline, automated follow-ups, and real-time insights so you never miss a lead.', href: '/services' },
+  { icon: '🛬', title: 'Landing Pages', desc: 'Conversion-focused landing pages built for ads, offers, and rapid growth.', href: '/services' },
+  { icon: '🛟', title: 'Ongoing Support', desc: "We're here to support, optimize, and scale with your business every step of the way.", href: '/contact' },
 ];
 
 export default function Home() {
@@ -86,12 +86,12 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
             {services.map(s => (
-              <div key={s.title} className="group border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer">
+              <Link key={s.title} href={s.href} className="group border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg hover:-translate-y-1 transition-all block">
                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-5">{s.icon}</div>
                 <h3 className="font-bold text-[16px] text-dark mb-2">{s.title}</h3>
                 <p className="text-[14px] text-muted leading-relaxed mb-4">{s.desc}</p>
                 <span className="text-[13px] font-semibold text-accent">Learn More →</span>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="bg-accent rounded-2xl p-6 flex items-center justify-between">
