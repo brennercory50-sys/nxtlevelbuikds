@@ -6,7 +6,7 @@ const steps = [
   {
     range: [100, 299],
     label: 'Consultation',
-    emoji: '☎️',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.2a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>,
     price: 'Free',
     title: 'Strategy Call',
     accent: '#6b7280',
@@ -24,7 +24,7 @@ const steps = [
   {
     range: [300, 599],
     label: '$300–$599',
-    emoji: '📄',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>,
     price: '$397',
     title: 'Landing Page',
     accent: '#1a6eff',
@@ -42,7 +42,7 @@ const steps = [
   {
     range: [600, 999],
     label: '$600–$999',
-    emoji: '🌐',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
     price: '$797',
     title: 'Starter Website',
     accent: '#1a6eff',
@@ -62,7 +62,7 @@ const steps = [
   {
     range: [1000, 1999],
     label: '$1K–$1.9K',
-    emoji: '🏗️',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
     price: '$1,497',
     title: 'Professional Site',
     accent: '#1a6eff',
@@ -84,7 +84,7 @@ const steps = [
   {
     range: [2000, 3999],
     label: '$2K–$3.9K',
-    emoji: '📊',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>,
     price: '$2,997',
     title: 'Growth Website',
     accent: '#0047cc',
@@ -105,7 +105,7 @@ const steps = [
   {
     range: [4000, 10000],
     label: '$4K+',
-    emoji: '⚡',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>,
     price: 'Custom',
     title: 'Full Digital System',
     accent: '#1a6eff',
@@ -192,7 +192,7 @@ export default function BudgetMeterSmall() {
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-2xl">{step.emoji}</span>
+              <span className="w-7 h-7 flex items-center justify-center" style={{ color: step.dark ? '#7aa8ff' : step.accent }}>{step.emoji}</span>
               {step.featured && <span className="text-[10px] font-bold bg-accent text-white px-2.5 py-0.5 rounded-full">Most Popular</span>}
             </div>
             <h4 className={`font-extrabold text-[22px] leading-tight ${step.dark ? 'text-white' : 'text-dark'}`}>{step.title}</h4>

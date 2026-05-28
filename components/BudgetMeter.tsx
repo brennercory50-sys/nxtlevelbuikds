@@ -8,7 +8,7 @@ const tiers = [
     label: 'Entry',
     name: 'Free Consultation',
     price: "Let's Talk",
-    emoji: '💬',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
     accent: '#6b7280',
     bg: '#f9fafb',
     border: '#e5e7eb',
@@ -20,7 +20,7 @@ const tiers = [
     label: 'Starter',
     name: 'Starter Website',
     price: '$997',
-    emoji: '🚀',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
     accent: '#1a6eff',
     bg: '#eff6ff',
     border: '#bfdbfe',
@@ -32,7 +32,7 @@ const tiers = [
     label: 'Growth',
     name: 'Growth Build',
     price: '$2,497',
-    emoji: '📈',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>,
     accent: '#1a6eff',
     bg: '#eff6ff',
     border: '#1a6eff',
@@ -45,7 +45,7 @@ const tiers = [
     label: 'Enterprise',
     name: 'Enterprise Build',
     price: 'Custom',
-    emoji: '⚡',
+    emoji: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>,
     accent: '#1a6eff',
     bg: '#0d0f14',
     border: '#1a6eff',
@@ -117,7 +117,7 @@ export default function BudgetMeter() {
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-2xl">{tier.emoji}</span>
+              <span className="w-7 h-7 flex items-center justify-center" style={{ color: tier.dark ? '#7aa8ff' : tier.accent }}>{tier.emoji}</span>
               <p className="text-[12px] font-bold tracking-widest uppercase" style={{ color: tier.dark ? '#7aa8ff' : tier.accent }}>{tier.label}</p>
               {tier.featured && <span className="text-[10px] font-bold bg-accent text-white px-2.5 py-0.5 rounded-full">Most Popular</span>}
             </div>
