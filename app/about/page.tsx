@@ -34,11 +34,11 @@ export default function About() {
             </p>
             <div className="flex gap-4 flex-wrap">
               <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
-                <div className="text-[26px] font-extrabold text-white leading-none">150+</div>
-                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">Projects</div>
+                <div className="text-[26px] font-extrabold text-white leading-none">3 Yrs</div>
+                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">Experience</div>
               </div>
               <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
-                <div className="text-[26px] font-extrabold text-white leading-none">98%</div>
+                <div className="text-[26px] font-extrabold text-white leading-none">100%</div>
                 <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">Retention</div>
               </div>
               <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
@@ -77,7 +77,7 @@ export default function About() {
           </div>
           <div className="bg-[#f8f9fc] rounded-2xl p-8 border border-[#e5e7eb]">
             <div className="grid grid-cols-2 gap-4">
-              {[['2020','Founded'],['150+','Projects'],['98%','Retention'],['FL','Based']].map(([n,l]) => (
+              {[['2024','Founded'],['3 Yrs','Experience'],['100%','Retention'],['FL','Based']].map(([n,l]) => (
                 <div key={l} className="rounded-xl p-5 bg-white border border-[#e5e7eb]">
                   <div className="text-[32px] font-extrabold text-accent leading-none">{n}</div>
                   <div className="text-[11px] tracking-widest uppercase mt-2 text-muted font-semibold">{l}</div>

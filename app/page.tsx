@@ -48,20 +48,20 @@ export default function Home() {
               {[
                 { icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                   </svg>
-                ), number:'200+', label:'Businesses Helped' },
+                ), number:'7 Days', label:'Avg Website Launch' },
                 { icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
                   </svg>
-                ), number:'2M+', label:'Leads Generated' },
+                ), number:'100', label:'PageSpeed Target' },
                 { icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
                     <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
                   </svg>
-                ), number:'30%+', label:'Average Growth' },
+                ), number:'3 Yrs', label:'Web Design Experience' },
               ].map((s, i) => (
                 <div key={s.label} className={`flex items-center gap-3 py-1 ${i > 0 ? 'ml-10 pl-10 border-l border-white/10' : ''}`}>
                   <span className="text-accent opacity-80">{s.icon}</span>
@@ -107,7 +107,7 @@ export default function Home() {
       {/* STATS */}
       <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-16">
         <div className="container-site grid grid-cols-3 gap-0">
-          {[['250+','Projects Delivered'],['120+','Happy Clients'],['7+','Years Experience']].map(([n,l],i) => (
+          {[['7 Days','Avg Launch Time'],['100%','Client Retention'],['3 Yrs','Web Experience']].map(([n,l],i) => (
             <div key={l} className={`text-center py-4 ${i < 2 ? 'border-r border-[#e5e7eb]' : ''}`}>
               <div className="font-extrabold text-[clamp(36px,4vw,52px)] text-dark leading-none">{n}</div>
               <p className="text-muted text-[13px] mt-2">{l}</p>
