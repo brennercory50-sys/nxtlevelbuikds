@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const plans = [
   {
     name: 'Starter',
-    price: '$997',
+    price: '$1,497',
     per: '',
     label: 'one-time',
     desc: 'A clean, fast website that puts your business on the map.',
@@ -27,7 +27,7 @@ const plans = [
   },
   {
     name: 'Growth',
-    price: '$2,497',
+    price: '$2,997',
     per: '',
     label: 'one-time',
     desc: 'A full custom site built to rank, convert, and scale.',
