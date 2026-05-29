@@ -43,7 +43,7 @@ export default function Home() {
         {/* Stats bar */}
         <div className="relative z-10 border-t border-white/10 bg-black/55 backdrop-blur-sm py-5">
           <div className="container-site">
-            <div className="flex items-center gap-0 flex-wrap">
+            <div className="grid grid-cols-3 md:flex md:items-center md:gap-0">
               {[
                 { icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -62,11 +62,11 @@ export default function Home() {
                   </svg>
                 ), number:'3 Yrs', label:'Web Design Experience' },
               ].map((s, i) => (
-                <div key={s.label} className={`flex items-center gap-3 py-1 ${i > 0 ? 'ml-10 pl-10 border-l border-white/10' : ''}`}>
-                  <span className="text-accent opacity-80">{s.icon}</span>
+                <div key={s.label} className={`flex flex-col md:flex-row md:items-center md:gap-3 py-1 text-center md:text-left ${i > 0 ? 'border-l border-white/10 md:ml-10 md:pl-10 pl-2' : ''}`}>
+                  <span className="hidden md:block text-accent opacity-80">{s.icon}</span>
                   <div>
-                    <div className="text-[22px] font-extrabold text-white leading-none">{s.number}</div>
-                    <div className="text-[11px] text-white/40 mt-0.5 font-medium">{s.label}</div>
+                    <div className="text-[20px] md:text-[22px] font-extrabold text-white leading-none">{s.number}</div>
+                    <div className="text-[9px] md:text-[11px] text-white/40 mt-0.5 font-medium leading-tight">{s.label}</div>
                   </div>
                 </div>
               ))}
