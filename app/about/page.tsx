@@ -116,8 +116,8 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Cory — real */}
             <div className="border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all">
-              <div className="h-40 relative bg-[#eef3ff]">
-                <Image fill src="/images/cory.jpg" alt="Cory Brenner — Founder & CEO of NXT Level Builds" className="object-cover object-top" sizes="(max-width: 768px) 100vw, 33vw" />
+              <div className="h-40 relative bg-[#eef3ff] overflow-hidden">
+                <img src="/images/cory.jpg" alt="Cory Brenner — Founder & CEO of NXT Level Builds" className="w-full h-full object-cover object-top" />
               </div>
               <div className="p-6 text-center">
                 <h4 className="font-bold text-[16px] text-dark mb-1">Cory Brenner</h4>
