@@ -2,81 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const projects = [
-  {
-    cat: 'Websites',
-    title: "Miller's Screen & Pool",
-    type: 'Website Design',
-    location: 'Daytona Beach, FL',
-    result: '↑190% organic leads',
-    bg: 'from-blue-900 to-slate-900',
-    accent: '#60a5fa',
-    desc: 'Full rebrand and new website for a local pool screening company. Went from zero online presence to ranking page one for key Volusia County searches in under 60 days.',
-    tags: ['Next.js', 'On-Page SEO', 'Google Business'],
-    stat: { number: '190%', label: 'More Organic Leads' },
-  },
-  {
-    cat: 'Websites',
-    title: 'Elevate Developments',
-    type: 'Website Design',
-    location: 'Ormond Beach, FL',
-    result: '3× more inquiries',
-    bg: 'from-zinc-800 to-zinc-900',
-    accent: '#a3a3a3',
-    desc: 'Custom 8-page website for a residential developer. Redesigned their site to prioritize conversion with a lead capture funnel that tripled inbound inquiry volume.',
-    tags: ['Custom Design', 'Lead Capture', 'CRM Hook'],
-    stat: { number: '3×', label: 'Inquiry Volume' },
-  },
-  {
-    cat: 'Websites',
-    title: 'Summit Exteriors',
-    type: 'Website Design',
-    location: 'Port Orange, FL',
-    result: '+85% form submissions',
-    bg: 'from-stone-700 to-stone-900',
-    accent: '#d6b896',
-    desc: 'Speed-optimized site with a mobile-first design for a roofing and exterior company. Form submission rate nearly doubled after launch.',
-    tags: ['Mobile-First', 'Core Web Vitals', 'Contact Forms'],
-    stat: { number: '85%', label: 'More Form Submissions' },
-  },
-  {
-    cat: 'Automations',
-    title: 'Ironclad Build',
-    type: 'AI Automation',
-    location: 'Daytona Beach, FL',
-    result: '12 hrs/week saved',
-    bg: 'from-indigo-900 to-gray-900',
-    accent: '#818cf8',
-    desc: 'Built a full lead nurturing and follow-up automation using GoHighLevel + Make. Every new lead gets a personalized sequence — no manual work required.',
-    tags: ['GoHighLevel', 'Make', 'Lead Nurturing'],
-    stat: { number: '12 hrs', label: 'Saved Per Week' },
-  },
-  {
-    cat: 'Landing Pages',
-    title: 'Premier Solutions',
-    type: 'Landing Page + Ads',
-    location: 'New Smyrna Beach, FL',
-    result: '4.2× ROAS',
-    bg: 'from-emerald-900 to-neutral-900',
-    accent: '#34d399',
-    desc: 'High-converting landing page paired with a Google Ads campaign for a home services company. Achieved a 4.2× return on ad spend in the first 30 days.',
-    tags: ['Google Ads', 'Landing Page', 'Conversion Tracking'],
-    stat: { number: '4.2×', label: 'Return on Ad Spend' },
-  },
-  {
-    cat: 'Systems',
-    title: 'Peak Performance',
-    type: 'Systems & CRM',
-    location: 'Deland, FL',
-    result: '+82 new clients/mo',
-    bg: 'from-violet-900 to-slate-900',
-    accent: '#a78bfa',
-    desc: 'End-to-end CRM implementation and sales pipeline build for a fitness coaching brand. Automated intake, onboarding, and payment follow-up across all channels.',
-    tags: ['CRM Setup', 'Automations', 'Pipeline Build'],
-    stat: { number: '82', label: 'New Clients / Month' },
-  },
-];
+import { projects as allProjects } from '@/app/work/projects';
 
 const filters = ['All', 'Websites', 'Automations', 'Landing Pages', 'Systems'];
 
@@ -105,13 +31,13 @@ const stats = [
 
 export default function Work() {
   const [active, setActive] = useState('All');
-  const filtered = active === 'All' ? projects : projects.filter(p => p.cat === active);
+  const filtered = active === 'All' ? allProjects : allProjects.filter(p => p.cat === active);
 
   return (
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/work-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/work-bg.jpg" alt="Web design and digital marketing portfolio — NXT Level Builds Daytona Beach FL" className="object-cover object-center" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Our Work</p>
@@ -164,10 +90,10 @@ export default function Work() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map(p => (
-              <div key={p.title} className="group rounded-2xl overflow-hidden border border-[#e5e7eb] hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 transition-all bg-white flex flex-col">
+              <Link key={p.slug} href={`/work/${p.slug}`}
+                className="group rounded-2xl overflow-hidden border border-[#e5e7eb] hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 transition-all bg-white flex flex-col">
                 {/* Visual */}
                 <div className={`h-44 bg-gradient-to-br ${p.bg} relative flex items-end p-4 overflow-hidden`}>
-                  {/* Background pattern */}
                   <div className="absolute inset-0 opacity-10">
                     <svg width="100%" height="100%" viewBox="0 0 400 200" fill="none">
                       <rect x="220" y="0" width="50" height="200" fill="white" rx="1"/>
@@ -177,11 +103,9 @@ export default function Work() {
                       <rect x="100" y="80" width="50" height="120" fill="white" rx="1"/>
                     </svg>
                   </div>
-                  {/* Result badge */}
                   <span className="relative z-10 text-[11px] font-bold text-white bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
                     {p.result}
                   </span>
-                  {/* Category pill */}
                   <span className="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full" style={{ background: 'rgba(255,255,255,0.12)', color: p.accent }}>
                     {p.type}
                   </span>
@@ -195,21 +119,20 @@ export default function Work() {
                   </div>
                   <h4 className="font-bold text-[17px] text-dark mb-2">{p.title}</h4>
                   <p className="text-[13px] text-muted leading-relaxed mb-4 flex-1">{p.desc}</p>
-
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {p.tags.map(t => (
                       <span key={t} className="text-[11px] font-semibold bg-[#f0f4ff] text-accent px-2.5 py-0.5 rounded-full">{t}</span>
                     ))}
                   </div>
-
-                  {/* Stat */}
-                  <div className="flex items-center gap-3 pt-3 border-t border-[#f0f0f0]">
-                    <div className="text-[22px] font-extrabold text-dark leading-none">{p.stat.number}</div>
-                    <div className="text-[11px] text-muted font-medium leading-tight">{p.stat.label}</div>
+                  <div className="flex items-center justify-between pt-3 border-t border-[#f0f0f0]">
+                    <div className="flex items-center gap-2">
+                      <div className="text-[20px] font-extrabold text-dark leading-none">{p.stat.number}</div>
+                      <div className="text-[11px] text-muted font-medium leading-tight">{p.stat.label}</div>
+                    </div>
+                    <span className="text-[12px] font-semibold text-accent">Read Case Study →</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -224,7 +147,6 @@ export default function Work() {
           </h2>
           <div className="bg-white rounded-2xl border border-[#e5e7eb] overflow-hidden shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              {/* Visual side */}
               <div className="bg-gradient-to-br from-blue-900 to-slate-900 p-10 flex flex-col justify-between min-h-[320px]">
                 <div>
                   <span className="text-[10px] font-bold tracking-widest uppercase text-blue-300">Website Design + SEO</span>
@@ -240,8 +162,6 @@ export default function Work() {
                   ))}
                 </div>
               </div>
-
-              {/* Copy side */}
               <div className="p-10">
                 <div className="space-y-6">
                   <div>
@@ -251,11 +171,8 @@ export default function Work() {
                       </div>
                       <h4 className="text-[12px] font-bold uppercase tracking-widest text-muted">The Problem</h4>
                     </div>
-                    <p className="text-[13px] text-muted leading-relaxed">
-                      A well-established pool screening company in Volusia County with zero digital presence. Competitors were ranking for all the high-intent local search terms, and the business relied entirely on word-of-mouth.
-                    </p>
+                    <p className="text-[13px] text-muted leading-relaxed">A well-established pool screening company in Volusia County with zero digital presence. Competitors were ranking for all the high-intent local search terms, and the business relied entirely on word-of-mouth.</p>
                   </div>
-
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
@@ -263,11 +180,8 @@ export default function Work() {
                       </div>
                       <h4 className="text-[12px] font-bold uppercase tracking-widest text-muted">What We Built</h4>
                     </div>
-                    <p className="text-[13px] text-muted leading-relaxed">
-                      Custom 5-page website with full on-page SEO, Google Business Profile optimization, and local schema markup targeting Daytona Beach, Port Orange, and surrounding areas. Launched in 7 days.
-                    </p>
+                    <p className="text-[13px] text-muted leading-relaxed">Custom 5-page website with full on-page SEO, Google Business Profile optimization, and local schema markup targeting Daytona Beach, Port Orange, and surrounding areas. Launched in 7 days.</p>
                   </div>
-
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
@@ -275,14 +189,11 @@ export default function Work() {
                       </div>
                       <h4 className="text-[12px] font-bold uppercase tracking-widest text-muted">The Result</h4>
                     </div>
-                    <p className="text-[13px] text-muted leading-relaxed">
-                      Within 60 days, organic lead volume jumped 190%. The business now ranks on page one for &ldquo;screen enclosures Daytona Beach&rdquo; and its top 3 related terms. The owner closed 4 new jobs in the first month from website leads alone.
-                    </p>
+                    <p className="text-[13px] text-muted leading-relaxed">Within 60 days, organic lead volume jumped 190%. The business now ranks on page one for &ldquo;screen enclosures Daytona Beach&rdquo; and its top 3 related terms.</p>
                   </div>
                 </div>
-
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-6 py-3 rounded-lg transition-colors mt-8">
-                  Start a Similar Project →
+                <Link href="/work/millers-screen-pool" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-6 py-3 rounded-lg transition-colors mt-8">
+                  Read Full Case Study →
                 </Link>
               </div>
             </div>
@@ -290,7 +201,7 @@ export default function Work() {
         </div>
       </section>
 
-      {/* What Goes Into Every Project */}
+      {/* Process */}
       <section className="bg-dark py-20">
         <div className="container-site">
           <p className="eyebrow text-center" style={{ color: 'rgba(100,160,255,0.8)' }}>Our Process</p>
@@ -302,31 +213,11 @@ export default function Work() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              {
-                step: '01',
-                title: 'Discovery Call',
-                desc: 'We learn your goals, your market, and what success looks like. 30 minutes, no fluff.',
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.2a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>,
-              },
-              {
-                step: '02',
-                title: 'Design & Approval',
-                desc: 'We design every page first. You approve the look before we write a line of code.',
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
-              },
-              {
-                step: '03',
-                title: 'Build & Launch',
-                desc: 'We build it fast — typically 7 days — then walk you through every detail before going live.',
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
-              },
-              {
-                step: '04',
-                title: 'Results & Support',
-                desc: "We track performance after launch and stay available. You're not abandoned post-delivery.",
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>,
-              },
-            ].map((item) => (
+              { step:'01', title:'Discovery Call', desc:'We learn your goals, your market, and what success looks like. 30 minutes, no fluff.', icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.2a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> },
+              { step:'02', title:'Design & Approval', desc:'We design every page first. You approve the look before we write a line of code.', icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> },
+              { step:'03', title:'Build & Launch', desc:'We build it fast — typically 7 days — then walk you through every detail before going live.', icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
+              { step:'04', title:'Results & Support', desc:"We track performance after launch and stay available. You're not abandoned post-delivery.", icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg> },
+            ].map(item => (
               <div key={item.step} className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-accent/40 transition-all">
                 <div className="text-[11px] font-bold tracking-widest text-white/25 mb-4">{item.step}</div>
                 <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center mb-4 text-accent">{item.icon}</div>

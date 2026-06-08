@@ -34,7 +34,7 @@ export default function GoogleAds() {
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/services-bg.jpg" alt="Google Ads management Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <Link href="/services" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">

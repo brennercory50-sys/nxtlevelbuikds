@@ -75,6 +75,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUST STRIP */}
+      <section className="bg-white border-b border-[#e5e7eb] py-4">
+        <div className="container-site">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400 text-[16px] leading-none">★★★★★</span>
+              <span className="text-[13px] font-semibold text-dark">5.0 Google Rating</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span className="text-[13px] font-semibold text-dark">20+ Projects Completed</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span className="text-[13px] font-semibold text-dark">100% Client Retention</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span className="text-[13px] font-semibold text-dark">Live in 7 Days</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span className="text-[13px] font-semibold text-dark">Daytona Beach, FL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="bg-white py-20">
         <div className="container-site">

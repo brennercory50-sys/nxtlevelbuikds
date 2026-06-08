@@ -44,6 +44,11 @@ const localBusinessSchema = {
   },
   areaServed: [
     { '@type': 'City', name: 'Daytona Beach' },
+    { '@type': 'City', name: 'Port Orange' },
+    { '@type': 'City', name: 'Ormond Beach' },
+    { '@type': 'City', name: 'New Smyrna Beach' },
+    { '@type': 'City', name: 'DeLand' },
+    { '@type': 'City', name: 'Palm Coast' },
     { '@type': 'State', name: 'Florida' },
   ],
   serviceType: ['Web Design', 'Google Ads Management', 'Search Engine Optimization', 'AI Automation'],

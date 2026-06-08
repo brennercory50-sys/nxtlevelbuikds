@@ -6,22 +6,31 @@ const services = [
   { label: 'AI Automations', href: '/services/ai-automation' },
   { label: 'Google Ads', href: '/services/google-ads' },
   { label: 'SEO', href: '/services/seo' },
-  { label: 'Landing Pages', href: '/services/web-design' },
-  { label: 'All Services', href: '/services' },
+  { label: 'Web Design for Contractors', href: '/services/web-design-for-contractors' },
+  { label: 'Web Design for Home Services', href: '/services/web-design-for-home-services' },
 ];
 const company = [
   { label: 'About', href: '/about' },
   { label: 'Our Work', href: '/work' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
+];
+const locations = [
+  { label: 'Web Design Daytona Beach', href: '/services/web-design' },
+  { label: 'Web Design Port Orange', href: '/services/web-design-port-orange' },
+  { label: 'Web Design Ormond Beach', href: '/services/web-design-ormond-beach' },
+  { label: 'Web Design New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
+  { label: 'Web Design DeLand', href: '/services/web-design-deland' },
+  { label: 'Web Design Palm Coast', href: '/services/web-design-palm-coast' },
 ];
 
 export default function Footer() {
   return (
     <footer style={{ background: '#0d0f14' }} className="pt-14 pb-8">
       <div className="container-site">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
           <div className="md:col-span-1">
             <Logo variant="dark" size="sm" />
             <p className="mt-4 text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.35)' }}>
@@ -60,6 +69,17 @@ export default function Footer() {
               {company.map(c => (
                 <li key={c.href}>
                   <Link href={c.href} className="text-[13px] hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.45)' }}>{c.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Locations</h5>
+            <ul className="space-y-2.5">
+              {locations.map(l => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-[13px] hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.45)' }}>{l.label}</Link>
                 </li>
               ))}
             </ul>

@@ -87,7 +87,7 @@ export default function Pricing() {
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/pricing-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/pricing-bg.jpg" alt="Web design pricing Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Pricing</p>
@@ -97,6 +97,38 @@ export default function Pricing() {
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
             One-time project pricing. You own everything. No lock-in, no monthly fees unless you want them.
           </p>
+        </div>
+      </section>
+
+      {/* Trust Strip */}
+      <section className="bg-white border-b border-[#e5e7eb] py-4">
+        <div className="container-site">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400 text-[16px] leading-none">★★★★★</span>
+              <span className="text-[13px] font-semibold text-dark">5.0 Google Rating</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span className="text-[13px] font-semibold text-dark">20+ Projects Completed</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span className="text-[13px] font-semibold text-dark">100% Client Retention</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span className="text-[13px] font-semibold text-dark">Live in 7 Days</span>
+            </div>
+            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span className="text-[13px] font-semibold text-dark">No Lock-In Contracts</span>
+            </div>
+          </div>
         </div>
       </section>
 
