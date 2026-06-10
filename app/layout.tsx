@@ -16,11 +16,13 @@ export const metadata: Metadata = {
     siteName: 'NXT Level Builds',
     title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
     description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses. Built to convert. Launched in 7 days.',
+    images: [{ url: '/images/logo.png', width: 1536, height: 1024 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NXT Level Builds — Web Design & Digital Marketing | Daytona Beach',
     description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses.',
+    images: ['/images/logo.png'],
   },
 };
 
@@ -55,6 +57,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/images/logo.png" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet" />
