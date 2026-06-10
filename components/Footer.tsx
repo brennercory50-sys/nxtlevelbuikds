@@ -68,7 +68,7 @@ export default function Footer() {
           <div>
             <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Contact</h5>
             <ul className="space-y-2.5 text-[13px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              <li><a href="mailto:hello@nxtlevelbuilds.com" className="hover:text-white transition-colors">hello@nxtlevelbuilds.com</a></li>
+              <li><a href="mailto:support@nxtlevelbuilds.com" className="hover:text-white transition-colors">support@nxtlevelbuilds.com</a></li>
               <li><a href="tel:+13862590178" className="hover:text-white transition-colors">(386) 259-0178</a></li>
               <li>Daytona Beach, FL</li>
             </ul>
