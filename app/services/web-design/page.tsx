@@ -34,7 +34,7 @@ export default function WebDesign() {
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Custom web design and development Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/services-bg.jpg" alt="Custom web design and development Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <Link href="/services" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
@@ -123,6 +123,32 @@ export default function WebDesign() {
                 <h4 className="font-bold text-[14px] text-dark mb-2">{r.client}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{r.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Areas We Serve */}
+      <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-16">
+        <div className="container-site">
+          <p className="eyebrow text-center">Service Areas</p>
+          <h2 className="section-title text-[clamp(22px,3vw,36px)] text-center mb-10">
+            Web Design Across <span className="text-accent">Volusia County</span>
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { label: 'Daytona Beach', href: '/services/web-design', sub: 'Main service area' },
+              { label: 'Port Orange', href: '/services/web-design-port-orange', sub: 'Volusia County' },
+              { label: 'Ormond Beach', href: '/services/web-design-ormond-beach', sub: 'Volusia County' },
+              { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach', sub: 'Volusia County' },
+              { label: 'DeLand', href: '/services/web-design-deland', sub: 'West Volusia' },
+              { label: 'Palm Coast', href: '/services/web-design-palm-coast', sub: 'Flagler County' },
+            ].map(city => (
+              <Link key={city.href} href={city.href}
+                className="bg-white border border-[#e5e7eb] hover:border-accent/40 hover:shadow-md rounded-xl p-5 transition-all group">
+                <div className="font-bold text-[14px] text-dark group-hover:text-accent transition-colors">{city.label}</div>
+                <div className="text-[12px] text-muted mt-0.5">{city.sub}</div>
+              </Link>
             ))}
           </div>
         </div>

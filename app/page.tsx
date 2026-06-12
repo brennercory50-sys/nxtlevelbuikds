@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden">
-        <Image fill src="/images/about-bg.png" alt="NXT Level Builds office" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/about-bg.png" alt="NXT Level Builds office" className="object-cover object-center" priority quality={80} sizes="100vw" />
         {/* Gradient — fades left side for text, leaves right side open to show the logo wall */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/55 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />

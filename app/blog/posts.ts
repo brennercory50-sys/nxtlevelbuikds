@@ -3,7 +3,8 @@ export type PostSection =
   | { type: 'h2'; text: string }
   | { type: 'h3'; text: string }
   | { type: 'ul'; items: string[] }
-  | { type: 'callout'; title: string; text: string };
+  | { type: 'callout'; title: string; text: string }
+  | { type: 'cta_inline'; label: string; href: string; desc: string };
 
 export interface Post {
   slug: string;
@@ -11,12 +12,14 @@ export interface Post {
   desc: string;
   cat: string;
   date: string;
+  isoDate: string;
   readTime: string;
   iconColor: string;
   bg: string;
   metaTitle: string;
   metaDesc: string;
   featured?: boolean;
+  relatedService?: { label: string; href: string };
   body: PostSection[];
 }
 
@@ -27,10 +30,12 @@ export const posts: Post[] = [
     desc: 'Most small business campaigns waste 60% of their budget on the wrong keywords. We break down the most common mistakes and the step-by-step fix that works.',
     cat: 'Google Ads',
     date: 'May 2, 2026',
+    isoDate: '2026-05-02',
     readTime: '8 min read',
     iconColor: '#1a6eff',
     bg: '#eef3ff',
     featured: true,
+    relatedService: { label: 'Google Ads Management', href: '/services/google-ads' },
     metaTitle: "Why Your Google Ads Aren't Converting | NXT Level Builds",
     metaDesc: 'Most small business Google Ads campaigns waste 60% of their budget. Here are the exact mistakes we find in every audit — and how to fix them fast.',
     body: [
@@ -67,9 +72,11 @@ export const posts: Post[] = [
     desc: "The GBP strategy we used to land 3 clients in the local pack within 3 months. Step-by-step for Florida service businesses.",
     cat: 'Local SEO',
     date: 'April 18, 2026',
+    isoDate: '2026-04-18',
     readTime: '7 min read',
     iconColor: '#16a34a',
     bg: '#f0fdf6',
+    relatedService: { label: 'Local SEO', href: '/services/seo' },
     metaTitle: 'How to Dominate Google Maps in 90 Days | NXT Level Builds',
     metaDesc: 'A step-by-step Google Business Profile strategy to rank in the local map pack within 90 days — used by NXT Level Builds for clients across Daytona Beach and Volusia County.',
     body: [
@@ -102,9 +109,11 @@ export const posts: Post[] = [
     desc: 'Workflows saving clients 10+ hours a week — starting this week. No technical background required.',
     cat: 'AI Automation',
     date: 'April 5, 2026',
+    isoDate: '2026-04-05',
     readTime: '6 min read',
     iconColor: '#7c3aed',
     bg: '#f5f3ff',
+    relatedService: { label: 'AI Automation', href: '/services/ai-automation' },
     metaTitle: '5 Things to Automate With AI for Small Businesses | NXT Level Builds',
     metaDesc: 'Save 10+ hours a week with these 5 AI automation workflows. Lead follow-up, appointment booking, review requests, and more — practical and ready to deploy.',
     body: [
@@ -137,9 +146,11 @@ export const posts: Post[] = [
     desc: 'Page speed, trust signals, and above-the-fold copy — the silent conversion killers that most business owners never check.',
     cat: 'Web Design',
     date: 'March 22, 2026',
+    isoDate: '2026-03-22',
     readTime: '5 min read',
     iconColor: '#ea580c',
     bg: '#fff7ed',
+    relatedService: { label: 'Custom Web Design', href: '/services/web-design' },
     metaTitle: 'Why Your Website Is Losing Customers | NXT Level Builds',
     metaDesc: 'Most business websites kill conversions silently. Here are the 5 most common reasons your website is costing you leads — and what to fix first.',
     body: [
@@ -170,9 +181,11 @@ export const posts: Post[] = [
     desc: 'A side-by-side breakdown for Florida service businesses. When to use each — and when to run both.',
     cat: 'Google Ads',
     date: 'March 10, 2026',
+    isoDate: '2026-03-10',
     readTime: '6 min read',
     iconColor: '#dc2626',
     bg: '#fff1f0',
+    relatedService: { label: 'Google Ads Management', href: '/services/google-ads' },
     metaTitle: 'LSA vs Google Search Ads: Which Is Right for Your Business? | NXT Level Builds',
     metaDesc: 'Local Services Ads vs Google Search Ads — a plain-English comparison for Florida service businesses. Learn which one drives better ROI and when to use both.',
     body: [
@@ -201,9 +214,11 @@ export const posts: Post[] = [
     desc: 'We tested a dozen strategies. Here is the short list that actually moves rankings — and the ones that are just noise.',
     cat: 'SEO',
     date: 'Feb 28, 2026',
+    isoDate: '2026-02-28',
     readTime: '9 min read',
     iconColor: '#1a6eff',
     bg: '#eef3ff',
+    relatedService: { label: 'Local SEO', href: '/services/seo' },
     metaTitle: 'Link Building in 2026: What Works vs. What Wastes Time | NXT Level Builds',
     metaDesc: "Link building in 2026 is different. Here's what still works for local and small business SEO — and what's a complete waste of time.",
     body: [
@@ -237,9 +252,11 @@ export const posts: Post[] = [
     desc: 'A practical framework based on revenue, goals, and market competition. No generic percentages — a real answer.',
     cat: 'Business',
     date: 'Feb 14, 2026',
+    isoDate: '2026-02-14',
     readTime: '5 min read',
     iconColor: '#16a34a',
     bg: '#f0fdf6',
+    relatedService: { label: 'Free Strategy Call', href: '/contact' },
     metaTitle: 'How Much Should a Small Business Spend on Digital Marketing? | NXT Level Builds',
     metaDesc: 'A practical framework for setting your digital marketing budget — based on revenue goals and competition, not generic percentages.',
     body: [
@@ -268,9 +285,11 @@ export const posts: Post[] = [
     desc: "Most people use these terms interchangeably — they're not the same. Here's the plain-English breakdown and how to know what to hire for.",
     cat: 'Web Design',
     date: 'Jan 30, 2026',
+    isoDate: '2026-01-30',
     readTime: '5 min read',
     iconColor: '#ea580c',
     bg: '#fff7ed',
+    relatedService: { label: 'Custom Web Design', href: '/services/web-design' },
     metaTitle: 'Web Design vs Web Development: What Do You Actually Need? | NXT Level Builds',
     metaDesc: "Web design and web development are not the same thing. Here's the plain-English breakdown — and what a small business actually needs to get a site that converts.",
     body: [
@@ -296,9 +315,11 @@ export const posts: Post[] = [
     desc: 'Squarespace looks cheap until you factor in your time, lost leads, and the cost of a site that never converts. Here\'s the honest math.',
     cat: 'Web Design',
     date: 'Jan 15, 2026',
+    isoDate: '2026-01-15',
     readTime: '6 min read',
     iconColor: '#ea580c',
     bg: '#fff7ed',
+    relatedService: { label: 'Pricing & Packages', href: '/pricing' },
     metaTitle: 'DIY Website vs Hiring a Web Design Agency | True Cost Comparison | NXT Level Builds',
     metaDesc: "Is a DIY website (Squarespace, Wix, GoDaddy) actually cheaper than hiring an agency? Here's the true cost comparison — including what most people don't factor in.",
     body: [

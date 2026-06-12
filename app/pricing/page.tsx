@@ -82,12 +82,30 @@ const paymentPlans = [
   },
 ];
 
+const pricingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Web Design & Digital Marketing Packages',
+  itemListElement: plans.map((plan, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Offer',
+      name: plan.name,
+      ...(plan.price !== 'Custom' ? { price: plan.price.replace(/[$,]/g, ''), priceCurrency: 'USD' } : {}),
+      description: plan.desc,
+      seller: { '@type': 'Organization', name: 'NXT Level Builds' },
+    },
+  })),
+};
+
 export default function Pricing() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/pricing-bg.jpg" alt="Web design pricing Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/pricing-bg.jpg" alt="Web design pricing Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Pricing</p>

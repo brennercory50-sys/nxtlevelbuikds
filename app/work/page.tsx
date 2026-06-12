@@ -37,7 +37,7 @@ export default function Work() {
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/work-bg.jpg" alt="Web design and digital marketing portfolio — NXT Level Builds Daytona Beach FL" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/work-bg.jpg" alt="Web design and digital marketing portfolio — NXT Level Builds Daytona Beach FL" className="object-cover object-center" priority quality={80} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Our Work</p>

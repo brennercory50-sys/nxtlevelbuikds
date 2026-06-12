@@ -2,6 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projects, getProject } from '@/app/work/projects';
+import Breadcrumb from '@/components/Breadcrumb';
+
+const serviceCTAMap: Record<string, { label: string; href: string }> = {
+  'Website Design': { label: 'Need a High-Converting Website?', href: '/services/web-design' },
+  'SEO': { label: 'Want More Organic Leads?', href: '/services/seo' },
+  'Google Ads': { label: 'Ready to Run Profitable Ads?', href: '/services/google-ads' },
+  'Landing Page + Ads': { label: 'Ready to Run Profitable Ads?', href: '/services/google-ads' },
+  'AI Automation': { label: 'Want to Automate Your Business?', href: '/services/ai-automation' },
+  'Systems & CRM': { label: 'Want to Automate Your Business?', href: '/services/ai-automation' },
+};
 
 export function generateStaticParams() {
   return projects.map(p => ({ slug: p.slug }));
@@ -23,9 +33,26 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (!project) notFound();
 
   const others = projects.filter(p => p.slug !== slug).slice(0, 3);
+  const serviceCTA = serviceCTAMap[project.type];
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${project.title} — ${project.type} Case Study`,
+    description: project.desc,
+    author: { '@type': 'Organization', name: 'NXT Level Builds', url: 'https://nxtlevelbuilds.com' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'NXT Level Builds',
+      logo: { '@type': 'ImageObject', url: 'https://nxtlevelbuilds.com/images/logo.png' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nxtlevelbuilds.com/work/${project.slug}` },
+    image: 'https://nxtlevelbuilds.com/images/og-image.jpg',
+  };
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero */}
       <section className={`relative py-28 overflow-hidden bg-gradient-to-br ${project.bg}`}>
         <div className="absolute inset-0 opacity-10">
@@ -37,6 +64,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           </svg>
         </div>
         <div className="container-site relative z-10">
+          <Breadcrumb crumbs={[{ name: 'Home', href: '/' }, { name: 'Our Work', href: '/work' }, { name: project.title, href: `/work/${project.slug}` }]} />
           <Link href="/work" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← All Projects
           </Link>
@@ -113,6 +141,19 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
               </div>
             </div>
           </div>
+
+          {/* Service-specific CTA */}
+          {serviceCTA && (
+            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-[#f0f6ff] border border-accent/20 rounded-2xl p-5">
+              <div className="flex-1">
+                <p className="text-[12px] font-bold tracking-widest uppercase text-accent mb-1">Related Service</p>
+                <p className="text-[15px] font-semibold text-dark">{serviceCTA.label}</p>
+              </div>
+              <Link href={serviceCTA.href} className="flex-shrink-0 inline-flex items-center gap-1.5 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-5 py-2.5 rounded-lg transition-colors">
+                View Service →
+              </Link>
+            </div>
+          )}
 
           {/* CTA */}
           <div className="mt-12 bg-dark rounded-2xl p-8 text-center">
