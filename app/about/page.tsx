@@ -116,8 +116,8 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Cory — real */}
             <div className="border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all">
-              <div className="h-40 flex items-center justify-center" style={{ background: '#eef3ff' }}>
-                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <div className="relative bg-[#eef3ff]">
+                <img src="/images/cory.jpg" alt="Cory Brenner — Founder & CEO of NXT Level Builds" className="w-full aspect-[3/4] object-cover object-[center_20%]" />
               </div>
               <div className="p-6 text-center">
                 <h4 className="font-bold text-[16px] text-dark mb-1">Cory Brenner</h4>

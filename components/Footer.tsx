@@ -38,7 +38,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mt-5">
               {/* Facebook */}
-              <a href="#" aria-label="Facebook" className="w-8 h-8 rounded-lg flex items-center justify-center transition-opacity hover:opacity-100 opacity-60" style={{ background: 'rgba(255,255,255,0.08)' }}>
+              <a href="https://www.facebook.com/nxtlevelbuilds" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 rounded-lg flex items-center justify-center transition-opacity hover:opacity-100 opacity-60" style={{ background: 'rgba(255,255,255,0.08)' }}>
                 <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
               {/* LinkedIn */}
@@ -88,7 +88,7 @@ export default function Footer() {
           <div>
             <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Contact</h5>
             <ul className="space-y-2.5 text-[13px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              <li><a href="mailto:hello@nxtlevelbuilds.com" className="hover:text-white transition-colors">hello@nxtlevelbuilds.com</a></li>
+              <li><a href="mailto:support@nxtlevelbuilds.com" className="hover:text-white transition-colors">support@nxtlevelbuilds.com</a></li>
               <li><a href="tel:+13862590178" className="hover:text-white transition-colors">(386) 259-0178</a></li>
               <li>Daytona Beach, FL</li>
             </ul>
