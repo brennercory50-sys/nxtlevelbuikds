@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Web Design DeLand FL | Custom Websites | NXT Level Builds',
+  title: 'Web Design DeLand FL | Custom Websites',
   description: 'Custom web design in DeLand, FL. Mobile-first websites for attorneys, contractors, healthcare, and professional services. Rank faster than Daytona. Launched in 7 days.',
 };
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Contractors FL | NXT Level Builds',
+  title: 'Web Design for Contractors FL',
   description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs. Serving Volusia County.',
 };
 

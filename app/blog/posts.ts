@@ -36,7 +36,7 @@ export const posts: Post[] = [
     bg: '#eef3ff',
     featured: true,
     relatedService: { label: 'Google Ads Management', href: '/services/google-ads' },
-    metaTitle: "Why Your Google Ads Aren't Converting | NXT Level Builds",
+    metaTitle: "Why Your Google Ads Aren't Converting",
     metaDesc: 'Most small business Google Ads campaigns waste 60% of their budget. Here are the exact mistakes we find in every audit — and how to fix them fast.',
     body: [
       { type: 'p', text: "If you're running Google Ads and not seeing results, you're not alone. The majority of small business campaigns we audit are burning through budget on traffic that was never going to convert — and most owners have no idea it's happening." },
@@ -77,7 +77,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Local SEO', href: '/services/seo' },
-    metaTitle: 'How to Dominate Google Maps in 90 Days | NXT Level Builds',
+    metaTitle: 'How to Dominate Google Maps in 90 Days',
     metaDesc: 'A step-by-step Google Business Profile strategy to rank in the local map pack within 90 days — used by NXT Level Builds for clients across Daytona Beach and Volusia County.',
     body: [
       { type: 'p', text: "Google Maps ranking (also called the \"local pack\") is the most valuable real estate for any service business. When someone searches \"electrician near me\" or \"web design Daytona Beach,\" the three businesses shown in the map section get the majority of clicks — often 70%+ of all search traffic." },
@@ -114,7 +114,7 @@ export const posts: Post[] = [
     iconColor: '#7c3aed',
     bg: '#f5f3ff',
     relatedService: { label: 'AI Automation', href: '/services/ai-automation' },
-    metaTitle: '5 Things to Automate With AI for Small Businesses | NXT Level Builds',
+    metaTitle: '5 Things to Automate With AI for Small Businesses',
     metaDesc: 'Save 10+ hours a week with these 5 AI automation workflows. Lead follow-up, appointment booking, review requests, and more — practical and ready to deploy.',
     body: [
       { type: 'p', text: "\"AI automation\" sounds expensive and complicated. It's not. The workflows we build for clients often take 1–2 days to set up and start saving them 8–15 hours a week immediately." },
@@ -151,7 +151,7 @@ export const posts: Post[] = [
     iconColor: '#ea580c',
     bg: '#fff7ed',
     relatedService: { label: 'Custom Web Design', href: '/services/web-design' },
-    metaTitle: 'Why Your Website Is Losing Customers | NXT Level Builds',
+    metaTitle: 'Why Your Website Is Losing Customers',
     metaDesc: 'Most business websites kill conversions silently. Here are the 5 most common reasons your website is costing you leads — and what to fix first.',
     body: [
       { type: 'p', text: "You paid for a website. You have a website. And you assume it's working for your business. But for most small business websites we audit, the site is quietly driving away customers every day — and the owner never knows because there's no tracking in place." },
@@ -186,7 +186,7 @@ export const posts: Post[] = [
     iconColor: '#dc2626',
     bg: '#fff1f0',
     relatedService: { label: 'Google Ads Management', href: '/services/google-ads' },
-    metaTitle: 'LSA vs Google Search Ads: Which Is Right for Your Business? | NXT Level Builds',
+    metaTitle: 'LSA vs Google Search Ads: Which Is Right for Your Business?',
     metaDesc: 'Local Services Ads vs Google Search Ads — a plain-English comparison for Florida service businesses. Learn which one drives better ROI and when to use both.',
     body: [
       { type: 'p', text: "If you run a service business in Florida, you've likely heard about both Local Services Ads (LSA) and Google Search Ads — and you might be wondering which one is actually worth your budget. They look similar but they work very differently." },
@@ -219,7 +219,7 @@ export const posts: Post[] = [
     iconColor: '#1a6eff',
     bg: '#eef3ff',
     relatedService: { label: 'Local SEO', href: '/services/seo' },
-    metaTitle: 'Link Building in 2026: What Works vs. What Wastes Time | NXT Level Builds',
+    metaTitle: 'Link Building in 2026: What Works vs. What Wastes Time',
     metaDesc: "Link building in 2026 is different. Here's what still works for local and small business SEO — and what's a complete waste of time.",
     body: [
       { type: 'p', text: "Link building has evolved more than any other part of SEO over the past 5 years. Tactics that used to work reliably — guest post networks, directory spam, private blog networks — are now either useless or actively harmful. Meanwhile, the tactics that do work are more accessible than ever for local businesses." },
@@ -257,7 +257,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Free Strategy Call', href: '/contact' },
-    metaTitle: 'How Much Should a Small Business Spend on Digital Marketing? | NXT Level Builds',
+    metaTitle: 'How Much Should a Small Business Spend on Digital Marketing?',
     metaDesc: 'A practical framework for setting your digital marketing budget — based on revenue goals and competition, not generic percentages.',
     body: [
       { type: 'p', text: "\"What should I budget for digital marketing?\" is the most common question we get on initial calls. And the honest answer is: it depends. But \"it depends\" isn't useful — so here's a real framework." },
@@ -290,7 +290,7 @@ export const posts: Post[] = [
     iconColor: '#ea580c',
     bg: '#fff7ed',
     relatedService: { label: 'Custom Web Design', href: '/services/web-design' },
-    metaTitle: 'Web Design vs Web Development: What Do You Actually Need? | NXT Level Builds',
+    metaTitle: 'Web Design vs Web Development: What Do You Actually Need?',
     metaDesc: "Web design and web development are not the same thing. Here's the plain-English breakdown — and what a small business actually needs to get a site that converts.",
     body: [
       { type: 'p', text: "If you've ever shopped for a website, you've seen both terms: web design and web development. Sometimes they're used interchangeably. Sometimes agencies offer both under one umbrella. And most business owners aren't sure what they actually need or what they're paying for." },
@@ -320,7 +320,7 @@ export const posts: Post[] = [
     iconColor: '#ea580c',
     bg: '#fff7ed',
     relatedService: { label: 'Pricing & Packages', href: '/pricing' },
-    metaTitle: 'DIY Website vs Hiring a Web Design Agency | True Cost Comparison | NXT Level Builds',
+    metaTitle: 'DIY Website vs Hiring a Web Design Agency | True Cost Comparison',
     metaDesc: "Is a DIY website (Squarespace, Wix, GoDaddy) actually cheaper than hiring an agency? Here's the true cost comparison — including what most people don't factor in.",
     body: [
       { type: 'p', text: "\"I'll just build it on Squarespace\" is something we hear from prospective clients all the time. And honestly? For some businesses, it's the right call. But for most small businesses trying to generate leads and rank on Google, the math doesn't add up the way people think." },

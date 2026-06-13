@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LeadMagnetForm from '@/components/LeadMagnetForm';
 
 export const metadata: Metadata = {
-  title: 'Free Website Audit — Find Out Why Your Site Isn\'t Getting Leads | NXT Level Builds',
+  title: 'Free Website Audit — Find Out Why Your Site Isn\'t Getting Leads ',
   description: 'Get a free custom Loom video audit of your website. We\'ll show you exactly why you\'re not getting leads and what to fix first. Delivered in 48 hours.',
 };
 

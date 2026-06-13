@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = getProject(slug);
   if (!project) return {};
   return {
-    title: `${project.title} Case Study — ${project.type} | NXT Level Builds`,
+    title: `${project.title} Case Study — ${project.type}`,
     description: `How NXT Level Builds helped ${project.title} achieve ${project.result}. A case study in ${project.type.toLowerCase()} for a ${project.industry.toLowerCase()} business in ${project.location}.`,
   };
 }

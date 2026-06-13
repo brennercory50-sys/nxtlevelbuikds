@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Web Design Palm Coast FL | Custom Websites | NXT Level Builds',
+  title: 'Web Design Palm Coast FL | Custom Websites',
   description: 'Custom web design in Palm Coast, FL. One of Florida\'s fastest-growing cities — get your SEO foundation in place before the market matures. Launched in 7 days.',
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LeadMagnetForm from '@/components/LeadMagnetForm';
 
 export const metadata: Metadata = {
-  title: 'Free SEO Audit — See Where You Rank vs. Your Competitors | NXT Level Builds',
+  title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
   description: 'Get a free local SEO ranking report for your business. See exactly where you rank vs. competitors in your city and the 3 quick wins to move up fast.',
 };
 

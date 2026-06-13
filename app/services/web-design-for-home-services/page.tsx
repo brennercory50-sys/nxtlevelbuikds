@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Home Service Companies FL | NXT Level Builds',
+  title: 'Web Design for Home Service Companies FL',
   description: 'Custom websites for home service businesses in Florida — HVAC, plumbing, cleaning, landscaping, and more. Built to rank locally and book more jobs.',
 };
 

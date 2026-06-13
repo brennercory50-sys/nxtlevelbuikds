@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Web Design Ormond Beach FL | Custom Websites | NXT Level Builds',
+  title: 'Web Design Ormond Beach FL | Custom Websites',
   description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads. Launched in 7 days. Serving zip codes 32174 & 32176.',
 };
 

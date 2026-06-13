@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Web Design Port Orange FL | Custom Websites | NXT Level Builds',
+  title: 'Web Design Port Orange FL | Custom Websites',
   description: 'Custom web design in Port Orange, FL. Fast-loading, mobile-first websites built to convert visitors into leads. Launched in 7 days. Serving Volusia County businesses.',
 };
 
