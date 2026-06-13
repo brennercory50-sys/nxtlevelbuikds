@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { posts, getPost, getRelatedPosts } from '@/app/blog/posts';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }));
@@ -24,11 +25,30 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   const related = getRelatedPosts(slug, 3);
 
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.metaDesc,
+    datePublished: post.isoDate,
+    dateModified: post.isoDate,
+    author: { '@type': 'Person', name: 'Cory Brenner', url: 'https://nxtlevelbuilds.com/about' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'NXT Level Builds',
+      logo: { '@type': 'ImageObject', url: 'https://nxtlevelbuilds.com/images/logo.png' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nxtlevelbuilds.com/blog/${post.slug}` },
+    image: 'https://nxtlevelbuilds.com/images/og-image.jpg',
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* Hero */}
       <section className="bg-dark py-20">
         <div className="container-site max-w-3xl">
+          <Breadcrumb crumbs={[{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: post.title, href: `/blog/${post.slug}` }]} />
           <Link href="/blog" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← Back to Blog
           </Link>
@@ -83,9 +103,35 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                   </div>
                 );
               }
+              if (section.type === 'cta_inline') {
+                return (
+                  <div key={i} className="bg-[#f8f9fc] border border-[#e5e7eb] rounded-2xl p-6 mb-6 flex items-start gap-4">
+                    <div className="flex-1">
+                      <p className="text-[13px] font-bold text-dark mb-1">{section.label}</p>
+                      <p className="text-[13px] text-muted">{section.desc}</p>
+                    </div>
+                    <Link href={section.href} className="flex-shrink-0 inline-flex items-center gap-1.5 bg-accent hover:bg-accent2 text-white font-bold text-[12px] px-4 py-2.5 rounded-lg transition-colors whitespace-nowrap">
+                      Learn More →
+                    </Link>
+                  </div>
+                );
+              }
               return null;
             })}
           </div>
+
+          {/* Related service inline link */}
+          {post.relatedService && (
+            <div className="mt-10 flex items-center gap-4 bg-[#f0f6ff] border border-accent/20 rounded-2xl p-5">
+              <div className="flex-1">
+                <p className="text-[12px] font-bold tracking-widest uppercase text-accent mb-1">Related Service</p>
+                <p className="text-[14px] font-semibold text-dark">{post.relatedService.label}</p>
+              </div>
+              <Link href={post.relatedService.href} className="flex-shrink-0 inline-flex items-center gap-1.5 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-5 py-2.5 rounded-lg transition-colors">
+                View Service →
+              </Link>
+            </div>
+          )}
 
           {/* CTA */}
           <div className="mt-14 bg-dark rounded-2xl p-8 text-center">

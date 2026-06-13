@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Contractors FL | NXT Level Builds',
+  title: 'Web Design for Contractors FL',
   description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs. Serving Volusia County.',
 };
 
@@ -38,7 +38,7 @@ export default function WebDesignForContractors() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Web design for contractors Florida — NXT Level Builds" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/services-bg.jpg" alt="Web design for contractors Florida — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <Link href="/services/web-design" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">← Web Design</Link>

@@ -128,6 +128,32 @@ export default function WebDesign() {
         </div>
       </section>
 
+      {/* Areas We Serve */}
+      <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-16">
+        <div className="container-site">
+          <p className="eyebrow text-center">Service Areas</p>
+          <h2 className="section-title text-[clamp(22px,3vw,36px)] text-center mb-10">
+            Web Design Across <span className="text-accent">Volusia County</span>
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { label: 'Daytona Beach', href: '/services/web-design', sub: 'Main service area' },
+              { label: 'Port Orange', href: '/services/web-design-port-orange', sub: 'Volusia County' },
+              { label: 'Ormond Beach', href: '/services/web-design-ormond-beach', sub: 'Volusia County' },
+              { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach', sub: 'Volusia County' },
+              { label: 'DeLand', href: '/services/web-design-deland', sub: 'West Volusia' },
+              { label: 'Palm Coast', href: '/services/web-design-palm-coast', sub: 'Flagler County' },
+            ].map(city => (
+              <Link key={city.href} href={city.href}
+                className="bg-white border border-[#e5e7eb] hover:border-accent/40 hover:shadow-md rounded-xl p-5 transition-all group">
+                <div className="font-bold text-[14px] text-dark group-hover:text-accent transition-colors">{city.label}</div>
+                <div className="text-[12px] text-muted mt-0.5">{city.sub}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-accent py-16">
         <div className="container-site text-center">

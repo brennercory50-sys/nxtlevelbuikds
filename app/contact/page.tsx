@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import ContactForm from '@/components/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact | Web Design Agency Daytona Beach FL',
   description: 'Get in touch with NXT Level Builds — Daytona Beach\'s web design and digital marketing agency. Call (386) 259-0178 or send us a message today.',
@@ -44,35 +45,7 @@ export default function Contact() {
           {/* Right — form */}
           <div className="bg-[#f8f9fc] p-12 lg:p-16 flex items-center">
             <div className="w-full max-w-lg">
-              <div className="bg-white border border-[#e5e7eb] rounded-2xl p-8 shadow-sm">
-                <h2 className="font-bold text-[22px] text-dark mb-6">Send Us a Message</h2>
-                <div className="space-y-4">
-                  <div>
-                    <label className="text-[12px] font-semibold text-dark block mb-1.5">Full Name</label>
-                    <input type="text" placeholder="Enter your name" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors"/>
-                  </div>
-                  <div>
-                    <label className="text-[12px] font-semibold text-dark block mb-1.5">Email Address</label>
-                    <input type="email" placeholder="Enter your email" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors"/>
-                  </div>
-                  <div>
-                    <label className="text-[12px] font-semibold text-dark block mb-1.5">What do you need help with?</label>
-                    <select className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors text-muted">
-                      <option value="">Select a service</option>
-                      <option>Custom Website</option>
-                      <option>AI Automation</option>
-                      <option>Google Ads</option>
-                      <option>SEO</option>
-                      <option>Full Package</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="text-[12px] font-semibold text-dark block mb-1.5">Your Message</label>
-                    <textarea rows={4} placeholder="Tell us about your project..." className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors resize-y"/>
-                  </div>
-                  <button className="w-full bg-accent hover:bg-accent2 text-white font-bold text-[15px] py-4 rounded-xl transition-colors">Send Message →</button>
-                </div>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>

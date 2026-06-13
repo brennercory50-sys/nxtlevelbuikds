@@ -2,6 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projects, getProject } from '@/app/work/projects';
+import Breadcrumb from '@/components/Breadcrumb';
+
+const serviceCTAMap: Record<string, { label: string; href: string }> = {
+  'Website Design': { label: 'Need a High-Converting Website?', href: '/services/web-design' },
+  'SEO': { label: 'Want More Organic Leads?', href: '/services/seo' },
+  'Google Ads': { label: 'Ready to Run Profitable Ads?', href: '/services/google-ads' },
+  'Landing Page + Ads': { label: 'Ready to Run Profitable Ads?', href: '/services/google-ads' },
+  'AI Automation': { label: 'Want to Automate Your Business?', href: '/services/ai-automation' },
+  'Systems & CRM': { label: 'Want to Automate Your Business?', href: '/services/ai-automation' },
+};
 
 export function generateStaticParams() {
   return projects.map(p => ({ slug: p.slug }));
@@ -12,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = getProject(slug);
   if (!project) return {};
   return {
-    title: `${project.title} Case Study — ${project.type} | NXT Level Builds`,
+    title: `${project.title} Case Study — ${project.type}`,
     description: `How NXT Level Builds helped ${project.title} achieve ${project.result}. A case study in ${project.type.toLowerCase()} for a ${project.industry.toLowerCase()} business in ${project.location}.`,
   };
 }
@@ -23,9 +33,26 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (!project) notFound();
 
   const others = projects.filter(p => p.slug !== slug).slice(0, 3);
+  const serviceCTA = serviceCTAMap[project.type];
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${project.title} — ${project.type} Case Study`,
+    description: project.desc,
+    author: { '@type': 'Organization', name: 'NXT Level Builds', url: 'https://nxtlevelbuilds.com' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'NXT Level Builds',
+      logo: { '@type': 'ImageObject', url: 'https://nxtlevelbuilds.com/images/logo.png' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nxtlevelbuilds.com/work/${project.slug}` },
+    image: 'https://nxtlevelbuilds.com/images/og-image.jpg',
+  };
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero */}
       <section className={`relative py-28 overflow-hidden bg-gradient-to-br ${project.bg}`}>
         <div className="absolute inset-0 opacity-10">
@@ -37,6 +64,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           </svg>
         </div>
         <div className="container-site relative z-10">
+          <Breadcrumb crumbs={[{ name: 'Home', href: '/' }, { name: 'Our Work', href: '/work' }, { name: project.title, href: `/work/${project.slug}` }]} />
           <Link href="/work" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← All Projects
           </Link>
@@ -94,6 +122,66 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             </div>
           </div>
 
+          {/* Process Timeline */}
+          {project.process && (
+            <div className="mt-12 pt-10 border-t border-[#e5e7eb]">
+              <h2 className="text-[13px] font-bold tracking-widest uppercase text-muted mb-6">How We Did It</h2>
+              <ol className="space-y-4">
+                {project.process.map((step, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-accent/10 flex items-center justify-center text-[11px] font-extrabold text-accent" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                    <p className="text-[14px] text-[#374151] leading-relaxed pt-0.5">{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {/* Before → After */}
+          {project.beforeState && (
+            <div className="mt-10">
+              <h2 className="text-[13px] font-bold tracking-widest uppercase text-muted mb-4">Before vs. After</h2>
+              <div className="rounded-2xl border border-[#e5e7eb] overflow-hidden">
+                <div className="grid grid-cols-3 bg-[#f8f9fc] px-5 py-2.5 border-b border-[#e5e7eb]">
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-muted">Metric</p>
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-red-400">Before</p>
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-green-500">After</p>
+                </div>
+                {project.beforeState.map((row, i) => {
+                  const afterMetric = project.metrics[i];
+                  return (
+                    <div key={row.label} className={`grid grid-cols-3 px-5 py-3.5 ${i < project.beforeState!.length - 1 ? 'border-b border-[#e5e7eb]' : ''}`}>
+                      <p className="text-[13px] font-semibold text-dark">{row.label}</p>
+                      <p className="text-[13px] text-muted">{row.value}</p>
+                      <p className="text-[13px] font-semibold text-green-600">{afterMetric?.number ?? '—'}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Testimonial */}
+          {project.testimonial && (
+            <div className="mt-10 bg-[#f8f9fc] border border-[#e5e7eb] rounded-2xl p-8">
+              <svg width="32" height="24" viewBox="0 0 32 24" fill="none" className="mb-4 text-accent/30">
+                <path d="M0 24V14.4C0 10.4 1.06667 7.06667 3.2 4.4C5.33333 1.6 8.4 0 12.4 0V4C10.5333 4 9.06667 4.66667 8 6C6.93333 7.2 6.4 8.93333 6.4 11.2V12H12.4V24H0ZM19.6 24V14.4C19.6 10.4 20.6667 7.06667 22.8 4.4C24.9333 1.6 28 0 32 0V4C30.1333 4 28.6667 4.66667 27.6 6C26.5333 7.2 26 8.93333 26 11.2V12H32V24H19.6Z" fill="currentColor"/>
+              </svg>
+              <p className="text-[16px] text-dark leading-relaxed italic mb-5">&ldquo;{project.testimonial.quote}&rdquo;</p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center text-[13px] font-bold text-accent">
+                  {project.testimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="text-[13px] font-bold text-dark">{project.testimonial.name}</p>
+                  <p className="text-[12px] text-muted">{project.testimonial.role}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Meta info */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 pt-10 border-t border-[#e5e7eb]">
             <div>
@@ -113,6 +201,19 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
               </div>
             </div>
           </div>
+
+          {/* Service-specific CTA */}
+          {serviceCTA && (
+            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-[#f0f6ff] border border-accent/20 rounded-2xl p-5">
+              <div className="flex-1">
+                <p className="text-[12px] font-bold tracking-widest uppercase text-accent mb-1">Related Service</p>
+                <p className="text-[15px] font-semibold text-dark">{serviceCTA.label}</p>
+              </div>
+              <Link href={serviceCTA.href} className="flex-shrink-0 inline-flex items-center gap-1.5 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-5 py-2.5 rounded-lg transition-colors">
+                View Service →
+              </Link>
+            </div>
+          )}
 
           {/* CTA */}
           <div className="mt-12 bg-dark rounded-2xl p-8 text-center">

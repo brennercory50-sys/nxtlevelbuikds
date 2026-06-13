@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -18,7 +18,7 @@ const categories = [
   {
     title: 'Pricing & Packages',
     items: [
-      { q: 'How much does a website cost?', a: 'Our websites start at $697 for a landing page, $997 for a 5-page Starter site, $1,997 for a Professional 8-page site, and $2,497 for a full Growth build with SEO and Google Ads setup. All prices are one-time — no monthly fees unless you want ongoing support.' },
+      { q: 'How much does a website cost?', a: <>Our websites start at $697 for a landing page, $997 for a 5-page Starter site, $1,997 for a Professional 8-page site, and $2,497 for a full Growth build with SEO and Google Ads setup. All prices are one-time — no monthly fees unless you want ongoing support. <Link href="/pricing" className="text-accent hover:underline">View full pricing →</Link></> },
       { q: 'Do you charge monthly fees?', a: "No — unless you want ongoing services like SEO management, Google Ads management, or monthly support. Every project is priced as a one-time build. You pay once, you own it forever." },
       { q: 'Do you offer payment plans?', a: 'Yes. We offer a 50/50 split (half upfront, half at launch), a 3-payment plan spread over 3 months, or a monthly retainer for ongoing work. All plans are 0% interest with no credit check required.' },
       { q: 'What is included in the price?', a: 'Every package includes design mockups, custom development, mobile-first build, contact form setup, basic on-page SEO, and 30 days of post-launch support. Higher tiers include more pages, Google Ads setup, Google Business Profile optimization, and extended support.' },
@@ -45,15 +45,15 @@ const categories = [
   {
     title: 'SEO & Google Ads',
     items: [
-      { q: 'How long does SEO take to work?', a: 'Local SEO (Google Maps / local pack rankings) typically shows movement within 60–90 days for most markets in Daytona Beach and Volusia County. Organic Google search rankings for competitive terms typically take 3–6 months of consistent work. We set expectations clearly upfront for every market.' },
+      { q: 'How long does SEO take to work?', a: <>Local SEO (Google Maps / local pack rankings) typically shows movement within 60–90 days for most markets in Daytona Beach and Volusia County. Organic Google search rankings for competitive terms typically take 3–6 months of consistent work. We set expectations clearly upfront for every market. <Link href="/blog/dominate-google-maps-90-days" className="text-accent hover:underline">See our 90-day Google Maps strategy →</Link></> },
       { q: 'What is the minimum Google Ads budget?', a: "We recommend a minimum of $600–$800/month in ad spend for Google Search Ads to get statistically meaningful data. Below that, campaigns don't get enough clicks to optimize effectively. For Local Services Ads (LSA), budgets can start lower since you're paying per lead." },
       { q: 'Do you guarantee Google rankings?', a: "No — and any agency that does is lying. Rankings depend on dozens of factors including competition, domain authority, content quality, and Google algorithm changes. What we guarantee is transparent work, clear reporting, and results we can both see and measure." },
-      { q: 'What areas do you serve for local SEO?', a: 'We serve Daytona Beach, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Palm Coast, and surrounding Volusia and Flagler County markets. We also provide SEO services for businesses across Florida and nationally.' },
+      { q: 'What areas do you serve for local SEO?', a: <>We serve <Link href="/services/web-design-port-orange" className="text-accent hover:underline">Port Orange</Link>, <Link href="/services/web-design-ormond-beach" className="text-accent hover:underline">Ormond Beach</Link>, <Link href="/services/web-design-new-smyrna-beach" className="text-accent hover:underline">New Smyrna Beach</Link>, <Link href="/services/web-design-deland" className="text-accent hover:underline">DeLand</Link>, <Link href="/services/web-design-palm-coast" className="text-accent hover:underline">Palm Coast</Link>, and surrounding Volusia and Flagler County markets. We also provide SEO services for businesses across Florida and nationally.</> },
     ],
   },
 ];
 
-function FaqItem({ q, a }: { q: string; a: string }) {
+function FaqItem({ q, a }: { q: string; a: string | ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="border-b border-[#e5e7eb] last:border-0">
@@ -68,7 +68,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       </button>
       {open && (
         <div className="pb-5">
-          <p className="text-[14px] text-muted leading-relaxed">{a}</p>
+          <div className="text-[14px] text-muted leading-relaxed">{a}</div>
         </div>
       )}
     </div>

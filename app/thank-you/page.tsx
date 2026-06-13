@@ -1,15 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ThankYouEvent from '@/components/ThankYouEvent';
 
 export const metadata: Metadata = {
-  title: "Message Received — We'll Be in Touch | NXT Level Builds",
+  title: "Message Received — We'll Be in Touch",
   description: "Your message has been received. A member of the NXT Level Builds team will reach out within 1 business day.",
   robots: { index: false, follow: false },
 };
 
 export default function ThankYou() {
   return (
-    <main className="min-h-screen bg-white flex items-center justify-center py-20">
+    <main className="min-h-screen bg-white flex items-center justify-center py-20 pb-36 md:pb-20">
+      <ThankYouEvent />
       <div className="container-site max-w-2xl text-center">
         {/* Icon */}
         <div className="w-20 h-20 bg-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
