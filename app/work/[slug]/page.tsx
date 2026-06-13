@@ -122,6 +122,66 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             </div>
           </div>
 
+          {/* Process Timeline */}
+          {project.process && (
+            <div className="mt-12 pt-10 border-t border-[#e5e7eb]">
+              <h2 className="text-[13px] font-bold tracking-widest uppercase text-muted mb-6">How We Did It</h2>
+              <ol className="space-y-4">
+                {project.process.map((step, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-accent/10 flex items-center justify-center text-[11px] font-extrabold text-accent" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                    <p className="text-[14px] text-[#374151] leading-relaxed pt-0.5">{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {/* Before → After */}
+          {project.beforeState && (
+            <div className="mt-10">
+              <h2 className="text-[13px] font-bold tracking-widest uppercase text-muted mb-4">Before vs. After</h2>
+              <div className="rounded-2xl border border-[#e5e7eb] overflow-hidden">
+                <div className="grid grid-cols-3 bg-[#f8f9fc] px-5 py-2.5 border-b border-[#e5e7eb]">
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-muted">Metric</p>
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-red-400">Before</p>
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-green-500">After</p>
+                </div>
+                {project.beforeState.map((row, i) => {
+                  const afterMetric = project.metrics[i];
+                  return (
+                    <div key={row.label} className={`grid grid-cols-3 px-5 py-3.5 ${i < project.beforeState!.length - 1 ? 'border-b border-[#e5e7eb]' : ''}`}>
+                      <p className="text-[13px] font-semibold text-dark">{row.label}</p>
+                      <p className="text-[13px] text-muted">{row.value}</p>
+                      <p className="text-[13px] font-semibold text-green-600">{afterMetric?.number ?? '—'}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Testimonial */}
+          {project.testimonial && (
+            <div className="mt-10 bg-[#f8f9fc] border border-[#e5e7eb] rounded-2xl p-8">
+              <svg width="32" height="24" viewBox="0 0 32 24" fill="none" className="mb-4 text-accent/30">
+                <path d="M0 24V14.4C0 10.4 1.06667 7.06667 3.2 4.4C5.33333 1.6 8.4 0 12.4 0V4C10.5333 4 9.06667 4.66667 8 6C6.93333 7.2 6.4 8.93333 6.4 11.2V12H12.4V24H0ZM19.6 24V14.4C19.6 10.4 20.6667 7.06667 22.8 4.4C24.9333 1.6 28 0 32 0V4C30.1333 4 28.6667 4.66667 27.6 6C26.5333 7.2 26 8.93333 26 11.2V12H32V24H19.6Z" fill="currentColor"/>
+              </svg>
+              <p className="text-[16px] text-dark leading-relaxed italic mb-5">&ldquo;{project.testimonial.quote}&rdquo;</p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center text-[13px] font-bold text-accent">
+                  {project.testimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="text-[13px] font-bold text-dark">{project.testimonial.name}</p>
+                  <p className="text-[12px] text-muted">{project.testimonial.role}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Meta info */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 pt-10 border-t border-[#e5e7eb]">
             <div>
