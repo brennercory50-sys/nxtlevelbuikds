@@ -69,7 +69,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             ← All Projects
           </Link>
           <span className="inline-block text-[10px] font-bold tracking-widest uppercase bg-white/15 text-white px-3 py-1 rounded-full mb-4">{project.type}</span>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>
             {project.title}
           </h1>
           <div className="flex items-center gap-2 mb-10">
@@ -129,7 +129,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
               <ol className="space-y-4">
                 {project.process.map((step, i) => (
                   <li key={i} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-accent/10 flex items-center justify-center text-[11px] font-extrabold text-accent" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-accent/10 flex items-center justify-center text-[11px] font-extrabold text-accent" style={{ fontFamily: 'var(--font-bebas)' }}>
                       {String(i + 1).padStart(2, '0')}
                     </div>
                     <p className="text-[14px] text-[#374151] leading-relaxed pt-0.5">{step}</p>

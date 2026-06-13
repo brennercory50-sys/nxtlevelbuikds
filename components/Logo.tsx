@@ -21,7 +21,6 @@ export default function Logo({ size = 'md' }: LogoProps) {
       width={width}
       height={height}
       className="object-contain"
-      priority
     />
   );
 }

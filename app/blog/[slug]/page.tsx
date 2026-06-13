@@ -53,7 +53,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             ← Back to Blog
           </Link>
           <span className="inline-block text-[10px] font-bold tracking-widest uppercase bg-accent/20 text-accent px-3 py-1 rounded-full mb-4">{post.cat}</span>
-          <h1 className="text-[clamp(24px,4vw,44px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(24px,4vw,44px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
             {post.title}
           </h1>
           <div className="flex items-center gap-4 text-[12px] text-white/40 font-medium">

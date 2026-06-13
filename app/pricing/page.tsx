@@ -105,11 +105,11 @@ export default function Pricing() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/pricing-bg.jpg" alt="Web design pricing packages — NXT Level Builds Daytona Beach" className="object-cover object-center" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/pricing-bg.jpg" alt="Web design pricing packages — NXT Level Builds Daytona Beach" className="object-cover object-center" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Pricing</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Transparent Pricing.<br /><span className="text-accent">No Surprises.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
@@ -257,7 +257,7 @@ export default function Pricing() {
       <section className="bg-dark py-20">
         <div className="container-site">
           <p className="eyebrow text-center" style={{color:'rgba(100,160,255,0.8)'}}>Flexible Payments</p>
-          <h2 className="text-[clamp(26px,3.5vw,40px)] font-extrabold text-white text-center leading-tight mb-4" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+          <h2 className="text-[clamp(26px,3.5vw,40px)] font-extrabold text-white text-center leading-tight mb-4" style={{ fontFamily: 'var(--font-bebas)' }}>
             Payment Plans That Work For You.
           </h2>
           <p className="text-white/45 text-[15px] text-center max-w-lg mx-auto mb-12">

@@ -25,7 +25,7 @@ export default function Blog() {
       <section className="bg-dark py-20 text-center">
         <div className="container-site">
           <p className="text-[11px] font-semibold tracking-widest uppercase text-green mb-3">Resources</p>
-          <h1 className="font-extrabold text-[clamp(52px,10vw,96px)] text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>THE <span className="text-accent">BLOG</span></h1>
+          <h1 className="font-extrabold text-[clamp(52px,10vw,96px)] text-white leading-none" style={{ fontFamily: 'var(--font-bebas)' }}>THE <span className="text-accent">BLOG</span></h1>
           <p className="text-white/50 text-[16px] mt-4 max-w-md mx-auto">No-fluff insights on digital marketing, web design, and AI — written by people who do the work.</p>
         </div>
       </section>

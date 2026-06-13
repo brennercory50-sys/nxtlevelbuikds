@@ -21,7 +21,7 @@ export default function About() {
     <main>
       {/* Hero — full branded office shot */}
       <section className="relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
-        <Image fill src="/images/about-bg.png" alt="NXT Level Builds team workspace — Daytona Beach digital agency" className="object-cover object-[center_25%]" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/about-bg.png" alt="NXT Level Builds team workspace — Daytona Beach digital agency" className="object-cover object-[center_25%]" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
         {/* Left edge fade for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
@@ -29,7 +29,7 @@ export default function About() {
         <div className="container-site relative z-10 pb-20 pt-40">
           <div className="max-w-2xl">
             <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>About NXT Level Builds</p>
-            <h1 className="text-[clamp(36px,5.5vw,72px)] font-extrabold text-white leading-tight mb-5" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+            <h1 className="text-[clamp(36px,5.5vw,72px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
               Built Different.<br />Built to <span className="text-accent">Win.</span>
             </h1>
             <p className="text-white/60 text-[16px] leading-relaxed max-w-lg mb-8">
@@ -62,7 +62,7 @@ export default function About() {
         <div className="container-site grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="eyebrow">Who We Are</p>
-            <h2 className="text-[clamp(24px,3.5vw,40px)] font-extrabold text-dark leading-tight mb-6" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+            <h2 className="text-[clamp(24px,3.5vw,40px)] font-extrabold text-dark leading-tight mb-6" style={{ fontFamily: 'var(--font-bebas)' }}>
               We're Not a<br />Big Agency.<br /><span className="text-accent">That's the Point.</span>
             </h2>
             <p className="text-muted text-[14px] leading-relaxed mb-4">
@@ -117,7 +117,7 @@ export default function About() {
             {/* Cory — real */}
             <div className="border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all">
               <div className="relative bg-[#eef3ff]">
-                <img src="/images/cory.jpg" alt="Cory Brenner — Founder & CEO of NXT Level Builds" className="w-full aspect-[3/4] object-cover object-[center_20%]" />
+                <Image src="/images/cory.jpg" alt="Cory Brenner — Founder & CEO of NXT Level Builds" width={300} height={400} className="w-full aspect-[3/4] object-cover object-[center_20%]" sizes="(max-width: 768px) 100vw, 33vw" loading="lazy" />
               </div>
               <div className="p-6 text-center">
                 <h4 className="font-bold text-[16px] text-dark mb-1">Cory Brenner</h4>
