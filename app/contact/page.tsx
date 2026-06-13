@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Left — waterfront photo */}
           <div className="relative flex flex-col justify-end p-16 overflow-hidden">
-            <Image fill src="/images/contact-bg.jpg" alt="" className="object-cover object-center" priority quality={95} sizes="50vw" />
+            <Image fill src="/images/contact-bg.jpg" alt="Contact NXT Level Builds — Daytona Beach digital agency" className="object-cover object-center" priority quality={95} sizes="50vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-dark/20" />
             <div className="relative z-10">
               <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Contact Us</p>

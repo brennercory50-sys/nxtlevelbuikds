@@ -21,7 +21,7 @@ export default function About() {
     <main>
       {/* Hero — full branded office shot */}
       <section className="relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
-        <Image fill src="/images/about-bg.png" alt="" className="object-cover object-[center_25%]" priority quality={95} sizes="100vw" />
+        <Image fill src="/images/about-bg.png" alt="NXT Level Builds team workspace — Daytona Beach digital agency" className="object-cover object-[center_25%]" priority quality={95} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
         {/* Left edge fade for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
