@@ -1,6 +1,4 @@
 import type { MetadataRoute } from 'next';
-import { posts } from '@/app/blog/posts';
-import { projects } from '@/app/work/projects';
 
 const base = 'https://nxtlevelbuilds.com';
 
