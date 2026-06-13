@@ -18,6 +18,11 @@ export interface Project {
   timeline: string;
   tools: string[];
   metrics: { number: string; label: string }[];
+  // Expanded case study fields
+  testimonial?: { quote: string; name: string; role: string };
+  process?: string[];
+  beforeState?: { label: string; value: string }[];
+  relatedService?: 'web-design' | 'seo' | 'google-ads' | 'ai-automation';
 }
 
 export const projects: Project[] = [
@@ -44,6 +49,25 @@ export const projects: Project[] = [
       { number: 'Page 1', label: 'Google Ranking' },
       { number: '60 Days', label: 'Time to Results' },
     ],
+    testimonial: {
+      quote: "Before working with NXT Level Builds, nobody could find us online. Now I'm getting calls every week from people who found us on Google. The website paid for itself in the first month.",
+      name: 'David Miller',
+      role: "Owner, Miller's Screen & Pool",
+    },
+    process: [
+      'Discovery & keyword research — mapped every high-intent search term across Volusia County service areas',
+      'Site architecture — planned 5 pages around individual services and geo-targets before writing a single line of code',
+      'Build & content — custom Next.js site with on-page SEO, LocalBusiness schema, and geo-targeted copy on every page',
+      'Google Business Profile setup — complete optimization with service areas, photos, categories, and citation building',
+      'Launch & monitoring — live in 7 days; tracked ranking movement and organic call volume weekly for 60 days',
+    ],
+    beforeState: [
+      { label: 'Website', value: 'None' },
+      { label: 'Monthly organic leads', value: '0' },
+      { label: 'Google ranking', value: 'Not indexed' },
+      { label: 'Google Business Profile', value: 'Not set up' },
+    ],
+    relatedService: 'web-design',
   },
   {
     slug: 'elevate-developments',
@@ -68,6 +92,25 @@ export const projects: Project[] = [
       { number: '45 Days', label: 'Time to Results' },
       { number: '10 Days', label: 'Build Time' },
     ],
+    testimonial: {
+      quote: "Our old site looked like every other builder's site. The new one actually reflects what we build. Inquiries tripled and the people reaching out are actually serious buyers — not just tire kickers.",
+      name: 'James Harrington',
+      role: 'Principal, Elevate Developments',
+    },
+    process: [
+      'Brand & positioning review — analyzed competitor sites and identified the gap between their premium product and generic online presence',
+      'Conversion architecture — designed a staged funnel that gatekeeps pricing behind a qualification step to filter serious buyers',
+      'Custom design — built to match the quality of their homes: dark tones, full-bleed project photography, minimal copy',
+      'CRM integration — connected GoHighLevel so every qualified inquiry enters a follow-up sequence automatically at the moment of submission',
+      'Launch & optimization — A/B tested the CTA copy in the first 30 days; settled on "Schedule a Private Showing" over "Contact Us" for 22% higher CTR',
+    ],
+    beforeState: [
+      { label: 'Monthly inquiries', value: '8–10' },
+      { label: 'Lead quality', value: 'Low (unfiltered)' },
+      { label: 'CRM / follow-up', value: 'Manual email only' },
+      { label: 'Mobile PageSpeed', value: '51' },
+    ],
+    relatedService: 'web-design',
   },
   {
     slug: 'ironclad-build',
@@ -92,6 +135,25 @@ export const projects: Project[] = [
       { number: '<5 min', label: 'Lead Response Time' },
       { number: '2 Days', label: 'Setup Time' },
     ],
+    testimonial: {
+      quote: "I was spending half my week on scheduling and follow-up. Now it all runs automatically. I didn't realize how much time I was losing until it was just — gone. Best investment I've made in the business.",
+      name: 'Marcus Webb',
+      role: 'Owner, Ironclad Build',
+    },
+    process: [
+      'Audit — mapped every manual touchpoint in the lead-to-close process; identified 11 tasks that could be fully automated',
+      'CRM setup — configured GoHighLevel with custom pipelines, tags, and source tracking for web, ads, and referral leads',
+      'Automation build — built 6 trigger-based workflows in Make.com covering instant lead response, appointment reminders, post-estimate follow-up, and review requests',
+      'Testing — ran every sequence end-to-end with test leads before going live; verified timing, copy, and CRM data flow',
+      'Handoff — trained the owner on the dashboard in a 45-minute walkthrough; system has run without manual intervention since launch',
+    ],
+    beforeState: [
+      { label: 'Lead response time', value: '24–48 hours' },
+      { label: 'Admin hours/week', value: '12+' },
+      { label: 'Follow-up process', value: 'Manual email' },
+      { label: 'CRM', value: 'None (spreadsheet)' },
+    ],
+    relatedService: 'ai-automation',
   },
   {
     slug: 'summit-exteriors',
