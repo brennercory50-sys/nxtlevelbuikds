@@ -87,7 +87,7 @@ export default function FAQ() {
       <section className="bg-dark py-20">
         <div className="container-site text-center max-w-2xl">
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>FAQ</p>
-          <h1 className="text-[clamp(32px,5vw,56px)] font-extrabold text-white leading-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(32px,5vw,56px)] font-extrabold text-white leading-tight" style={{ fontFamily: 'var(--font-bebas)' }}>
             Questions We Get <span className="text-accent">Every Day.</span>
           </h1>
           <p className="text-white/50 text-[15px] mt-4 max-w-lg mx-auto">

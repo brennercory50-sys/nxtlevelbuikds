@@ -5,6 +5,16 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Web Design for Contractors FL',
   description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs. Serving Volusia County.',
+  openGraph: {
+    title: 'Web Design for Contractors FL',
+    description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design for Contractors FL',
+    description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs.',
+  },
 };
 
 const schema = {
@@ -38,12 +48,12 @@ export default function WebDesignForContractors() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Web design for contractors Florida — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
+        <Image fill src="/images/services-bg.jpg" alt="Web design for contractors Florida — NXT Level Builds" className="object-cover object-center" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <Link href="/services/web-design" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">← Web Design</Link>
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Industry Vertical — Contractors</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Websites Built for<br /><span className="text-accent">Contractors.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
@@ -91,7 +101,7 @@ export default function WebDesignForContractors() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {results.map(r => (
               <div key={r.n} className="bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{r.n}</div>
+                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: 'var(--font-bebas)' }}>{r.n}</div>
                 <div className="text-[11px] font-bold tracking-widest uppercase text-muted mb-3">{r.l}</div>
                 <p className="text-[13px] text-muted">{r.c}</p>
               </div>
@@ -102,7 +112,7 @@ export default function WebDesignForContractors() {
 
       <section className="bg-accent py-16">
         <div className="container-site text-center">
-          <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Ready to Book More Jobs?</h2>
+          <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>Ready to Book More Jobs?</h2>
           <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">Free strategy call. We&apos;ll show you what&apos;s possible for your contracting business.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Book a Free Strategy Call →</Link>
         </div>

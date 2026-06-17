@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { canonical, ogImage } from '@/lib/seo';
 import { posts } from '@/app/blog/posts';
 
 export const metadata: Metadata = {
   title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
   description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation — written by the team at NXT Level Builds in Daytona Beach, FL.',
+  alternates: { canonical: canonical('/blog') },
+  openGraph: {
+    title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
+    description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation — written by the team at NXT Level Builds in Daytona Beach, FL.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
+    description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation from NXT Level Builds.',
+  },
 };
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -25,7 +37,7 @@ export default function Blog() {
       <section className="bg-dark py-20 text-center">
         <div className="container-site">
           <p className="text-[11px] font-semibold tracking-widest uppercase text-green mb-3">Resources</p>
-          <h1 className="font-extrabold text-[clamp(52px,10vw,96px)] text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>THE <span className="text-accent">BLOG</span></h1>
+          <h1 className="font-extrabold text-[clamp(52px,10vw,96px)] text-white leading-none" style={{ fontFamily: 'var(--font-bebas)' }}>THE <span className="text-accent">BLOG</span></h1>
           <p className="text-white/50 text-[16px] mt-4 max-w-md mx-auto">No-fluff insights on digital marketing, web design, and AI — written by people who do the work.</p>
         </div>
       </section>

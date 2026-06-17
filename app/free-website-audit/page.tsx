@@ -4,6 +4,16 @@ import LeadMagnetForm from '@/components/LeadMagnetForm';
 export const metadata: Metadata = {
   title: 'Free Website Audit — Find Out Why Your Site Isn\'t Getting Leads ',
   description: 'Get a free custom Loom video audit of your website. We\'ll show you exactly why you\'re not getting leads and what to fix first. Delivered in 48 hours.',
+  openGraph: {
+    title: 'Free Website Audit — Find Out Why Your Site Isn\'t Getting Leads',
+    description: 'Get a free custom Loom video audit of your website. We\'ll show you exactly why you\'re not getting leads and what to fix first.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Website Audit — Find Out Why Your Site Isn\'t Getting Leads',
+    description: 'Get a free custom Loom video audit of your website. Delivered in 48 hours.',
+  },
 };
 
 export default function FreeWebsiteAudit() {
@@ -12,7 +22,7 @@ export default function FreeWebsiteAudit() {
       <section className="bg-dark py-24">
         <div className="container-site max-w-2xl text-center">
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Free — No Commitment</p>
-          <h1 className="text-[clamp(28px,4vw,52px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(28px,4vw,52px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
             Find Out Exactly Why Your Website<br />
             <span className="text-accent">Isn&apos;t Getting You Leads.</span>
           </h1>

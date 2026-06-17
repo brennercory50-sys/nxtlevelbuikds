@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "Message Received — We'll Be in Touch",
   description: "Your message has been received. A member of the NXT Level Builds team will reach out within 1 business day.",
   robots: { index: false, follow: false },
+  openGraph: {
+    title: "Message Received — We'll Be in Touch",
+    description: "Your message has been received. A member of the NXT Level Builds team will reach out within 1 business day.",
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Message Received — We'll Be in Touch",
+    description: "Your message has been received. We'll be in touch within 1 business day.",
+  },
 };
 
 export default function ThankYou() {
@@ -21,7 +31,7 @@ export default function ThankYou() {
         </div>
 
         <p className="eyebrow text-center">Message Received</p>
-        <h1 className="text-[clamp(28px,4vw,48px)] font-extrabold text-dark leading-tight mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+        <h1 className="text-[clamp(28px,4vw,48px)] font-extrabold text-dark leading-tight mb-4" style={{ fontFamily: 'var(--font-bebas)' }}>
           We Got Your Message.<br /><span className="text-accent">We&apos;ll Be in Touch Soon.</span>
         </h1>
         <p className="text-muted text-[15px] leading-relaxed mb-10 max-w-lg mx-auto">
@@ -39,7 +49,7 @@ export default function ThankYou() {
               { step: '04', title: 'Custom proposal', desc: "We put together a specific plan and quote for your situation — tailored to your market and your budget." },
             ].map(item => (
               <div key={item.step} className="flex items-start gap-4">
-                <div className="text-[13px] font-extrabold text-accent/40 w-8 flex-shrink-0 mt-0.5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{item.step}</div>
+                <div className="text-[13px] font-extrabold text-accent/40 w-8 flex-shrink-0 mt-0.5" style={{ fontFamily: 'var(--font-bebas)' }}>{item.step}</div>
                 <div>
                   <p className="font-semibold text-[14px] text-dark">{item.title}</p>
                   <p className="text-[13px] text-muted mt-0.5">{item.desc}</p>

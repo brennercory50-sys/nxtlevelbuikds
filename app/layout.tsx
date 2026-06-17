@@ -1,11 +1,37 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import { Bebas_Neue, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
 import MobileBar from '@/components/MobileBar';
+import { ChatWidget } from '@/components/chat';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
+
+export const viewport: Viewport = {
+  themeColor: '#1a6eff',
+  width: 'device-width',
+  initialScale: 1,
+};
+
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-bebas',
+});
+
+const dmSans = DM_Sans({
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm',
+});
+
+const BASE = 'https://nxtlevelbuilds.com';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE),
   title: {
     default: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
     template: '%s | NXT Level Builds',
@@ -18,20 +44,17 @@ export const metadata: Metadata = {
     siteName: 'NXT Level Builds',
     title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
     description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses. Built to convert. Launched in 7 days.',
-    images: [
-      {
-        url: 'https://nxtlevelbuilds.com/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'NXT Level Builds — Web Design & Digital Marketing | Daytona Beach FL',
-      },
-    ],
+    images: ['/opengraph-image'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NXT Level Builds — Web Design & Digital Marketing | Daytona Beach',
     description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses.',
-    images: ['https://nxtlevelbuilds.com/images/og-image.jpg'],
+    images: ['/opengraph-image'],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -46,7 +69,7 @@ const schemaGraph = {
       url: 'https://nxtlevelbuilds.com',
       telephone: '+13862590178',
       email: 'hello@nxtlevelbuilds.com',
-      image: 'https://nxtlevelbuilds.com/images/og-image.jpg',
+      image: 'https://nxtlevelbuilds.com/opengraph-image',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Daytona Beach',
@@ -89,7 +112,7 @@ const schemaGraph = {
       url: 'https://nxtlevelbuilds.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://nxtlevelbuilds.com/images/og-image.jpg',
+        url: 'https://nxtlevelbuilds.com/opengraph-image',
       },
       founder: { '@type': 'Person', name: 'Cory Brenner' },
       sameAs: [
@@ -125,13 +148,12 @@ const schemaGraph = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${bebas.variable} ${dmSans.variable}`}>
       <head>
-        <link rel="icon" href="/images/logo.png" sizes="any" />
+        <link rel="icon" type="image/png" href="/images/logo-icon.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/images/logo.png" sizes="any" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet" />
+        <link rel="manifest" href="/manifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
@@ -143,6 +165,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <MobileBar />
         <Analytics />
+        <ChatWidget />
+        <ExitIntentPopup />
       </body>
     </html>
   );
