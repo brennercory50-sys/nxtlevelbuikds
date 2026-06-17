@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { canonical, ogImage } from '@/lib/seo';
 import { posts, getPost, getRelatedPosts } from '@/app/blog/posts';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -15,6 +16,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.metaTitle,
     description: post.metaDesc,
+    alternates: { canonical: canonical(`/blog/${slug}`) },
+    openGraph: {
+      title: post.metaTitle,
+      description: post.metaDesc,
+      images: [ogImage()],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.metaTitle,
+      description: post.metaDesc,
+    },
   };
 }
 

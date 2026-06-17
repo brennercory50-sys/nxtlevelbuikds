@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Google Ads Management Daytona Beach FL | PPC Agency',
   description: 'Google Ads management for Daytona Beach businesses. Search, LSA, and Display campaigns built for ROI — every dollar tracked, every campaign optimized.',
+  alternates: { canonical: canonical('/services/google-ads') },
+  openGraph: {
+    title: 'Google Ads Management Daytona Beach FL | PPC Agency',
+    description: 'Google Ads management for Daytona Beach businesses. Search, LSA, and Display campaigns built for ROI — every dollar tracked, every campaign optimized.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Google Ads Management Daytona Beach FL | PPC Agency',
+    description: 'Google Ads management for Daytona Beach businesses. Search, LSA, and Display campaigns built for ROI.',
+  },
 };
 
 const deliverables = [

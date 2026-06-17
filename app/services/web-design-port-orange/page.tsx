@@ -5,6 +5,16 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Web Design Port Orange FL | Custom Websites',
   description: 'Custom web design in Port Orange, FL. Fast-loading, mobile-first websites built to convert visitors into leads. Launched in 7 days. Serving Volusia County businesses.',
+  openGraph: {
+    title: 'Web Design Port Orange FL | Custom Websites',
+    description: 'Custom web design in Port Orange, FL. Fast-loading, mobile-first websites built to convert visitors into leads.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design Port Orange FL | Custom Websites',
+    description: 'Custom web design in Port Orange, FL. Fast-loading, mobile-first websites built to convert visitors into leads.',
+  },
 };
 
 const citySchema = {

@@ -5,6 +5,16 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Web Design for Contractors FL',
   description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs. Serving Volusia County.',
+  openGraph: {
+    title: 'Web Design for Contractors FL',
+    description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design for Contractors FL',
+    description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs.',
+  },
 };
 
 const schema = {

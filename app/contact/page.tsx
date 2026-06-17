@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 import ContactForm from '@/components/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact | Web Design Agency Daytona Beach FL',
   description: 'Get in touch with NXT Level Builds — Daytona Beach\'s web design and digital marketing agency. Call (386) 259-0178 or send us a message today.',
+  alternates: { canonical: canonical('/contact') },
+  openGraph: {
+    title: 'Contact | Web Design Agency Daytona Beach FL',
+    description: 'Get in touch with NXT Level Builds — Daytona Beach\'s web design and digital marketing agency. Call (386) 259-0178 or send us a message today.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact | Web Design Agency Daytona Beach FL',
+    description: 'Get in touch with NXT Level Builds — Daytona Beach web design and digital marketing agency. Call (386) 259-0178.',
+  },
 };
 
 export default function Contact() {

@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'About | Web Design Agency Daytona Beach FL',
   description: 'NXT Level Builds is a Daytona Beach digital agency founded by Cory Brenner. We build websites, run Google Ads, and automate systems for Florida businesses that want to scale.',
+  alternates: { canonical: canonical('/about') },
+  openGraph: {
+    title: 'About | Web Design Agency Daytona Beach FL',
+    description: 'NXT Level Builds is a Daytona Beach digital agency founded by Cory Brenner. We build websites, run Google Ads, and automate systems for Florida businesses that want to scale.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About | Web Design Agency Daytona Beach FL',
+    description: 'NXT Level Builds is a Daytona Beach digital agency. We build websites, run Google Ads, and automate systems for Florida businesses.',
+  },
 };
 
 const values = [

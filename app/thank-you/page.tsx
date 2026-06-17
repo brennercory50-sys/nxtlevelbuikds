@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "Message Received — We'll Be in Touch",
   description: "Your message has been received. A member of the NXT Level Builds team will reach out within 1 business day.",
   robots: { index: false, follow: false },
+  openGraph: {
+    title: "Message Received — We'll Be in Touch",
+    description: "Your message has been received. A member of the NXT Level Builds team will reach out within 1 business day.",
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Message Received — We'll Be in Touch",
+    description: "Your message has been received. We'll be in touch within 1 business day.",
+  },
 };
 
 export default function ThankYou() {

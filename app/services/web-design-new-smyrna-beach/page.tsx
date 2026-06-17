@@ -6,6 +6,16 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design New Smyrna Beach FL | Custom Websites',
   description: 'Custom web design in New Smyrna Beach, FL. Mobile-first websites built for tourism businesses, vacation rentals, art galleries, and local shops. Live in 7 days.',
+  openGraph: {
+    title: 'Web Design New Smyrna Beach FL | Custom Websites',
+    description: 'Custom web design in New Smyrna Beach, FL. Mobile-first websites built for tourism businesses, vacation rentals, art galleries, and local shops.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design New Smyrna Beach FL | Custom Websites',
+    description: 'Custom web design in New Smyrna Beach, FL. Mobile-first websites built for tourism businesses, vacation rentals, art galleries, and local shops.',
+  },
 };
 
 const citySchema = {

@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { canonical, ogImage } from '@/lib/seo';
 import { posts } from '@/app/blog/posts';
 
 export const metadata: Metadata = {
   title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
   description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation — written by the team at NXT Level Builds in Daytona Beach, FL.',
+  alternates: { canonical: canonical('/blog') },
+  openGraph: {
+    title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
+    description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation — written by the team at NXT Level Builds in Daytona Beach, FL.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
+    description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation from NXT Level Builds.',
+  },
 };
 
 const iconMap: Record<string, React.ReactNode> = {

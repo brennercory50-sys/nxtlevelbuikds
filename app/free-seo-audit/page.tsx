@@ -4,6 +4,16 @@ import LeadMagnetForm from '@/components/LeadMagnetForm';
 export const metadata: Metadata = {
   title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
   description: 'Get a free local SEO ranking report for your business. See exactly where you rank vs. competitors in your city and the 3 quick wins to move up fast.',
+  openGraph: {
+    title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
+    description: 'Get a free local SEO ranking report for your business. See exactly where you rank vs. competitors in your city.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
+    description: 'Get a free local SEO ranking report for your business.',
+  },
 };
 
 export default function FreeSEOAudit() {

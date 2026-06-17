@@ -5,6 +5,16 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Web Design for Home Service Companies FL',
   description: 'Custom websites for home service businesses in Florida — HVAC, plumbing, cleaning, landscaping, and more. Built to rank locally and book more jobs.',
+  openGraph: {
+    title: 'Web Design for Home Service Companies FL',
+    description: 'Custom websites for home service businesses in Florida — HVAC, plumbing, cleaning, landscaping, and more.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design for Home Service Companies FL',
+    description: 'Custom websites for home service businesses in Florida — HVAC, plumbing, cleaning, landscaping, and more.',
+  },
 };
 
 const schema = {

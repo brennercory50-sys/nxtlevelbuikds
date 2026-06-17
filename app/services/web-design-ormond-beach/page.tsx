@@ -6,6 +6,16 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design Ormond Beach FL | Custom Websites',
   description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads. Launched in 7 days. Serving zip codes 32174 & 32176.',
+  openGraph: {
+    title: 'Web Design Ormond Beach FL | Custom Websites',
+    description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design Ormond Beach FL | Custom Websites',
+    description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads.',
+  },
 };
 
 const citySchema = {

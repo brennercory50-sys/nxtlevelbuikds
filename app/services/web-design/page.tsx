@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Web Design & Development Daytona Beach FL | Custom Websites',
   description: 'Custom web design and development in Daytona Beach, FL. Fast-loading, mobile-first websites built to convert visitors into leads. Launched in 7 days.',
+  alternates: { canonical: canonical('/services/web-design') },
+  openGraph: {
+    title: 'Web Design & Development Daytona Beach FL | Custom Websites',
+    description: 'Custom web design and development in Daytona Beach, FL. Fast-loading, mobile-first websites built to convert visitors into leads. Launched in 7 days.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design & Development Daytona Beach FL | Custom Websites',
+    description: 'Custom web design and development in Daytona Beach, FL. Fast-loading, mobile-first websites built to convert visitors into leads.',
+  },
 };
 
 const deliverables = [

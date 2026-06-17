@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'SEO Services Daytona Beach FL | Local Search Optimization',
   description: 'Local SEO services in Daytona Beach, FL. Technical audits, Google Business Profile optimization, and content strategy that drives organic leads month over month.',
+  alternates: { canonical: canonical('/services/seo') },
+  openGraph: {
+    title: 'SEO Services Daytona Beach FL | Local Search Optimization',
+    description: 'Local SEO services in Daytona Beach, FL. Technical audits, Google Business Profile optimization, and content strategy that drives organic leads month over month.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO Services Daytona Beach FL | Local Search Optimization',
+    description: 'Local SEO services in Daytona Beach, FL. Technical audits, GBP optimization, and content strategy that drives organic leads.',
+  },
 };
 
 const deliverables = [

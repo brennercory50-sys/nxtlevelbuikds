@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'AI Automation Services Florida | Business Workflow Automation',
   description: 'AI-powered automation systems for Florida businesses. Lead nurturing, appointment booking, CRM automation, and chatbots built by NXT Level Builds.',
+  alternates: { canonical: canonical('/services/ai-automation') },
+  openGraph: {
+    title: 'AI Automation Services Florida | Business Workflow Automation',
+    description: 'AI-powered automation systems for Florida businesses. Lead nurturing, appointment booking, CRM automation, and chatbots built by NXT Level Builds.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Automation Services Florida | Business Workflow Automation',
+    description: 'AI-powered automation systems for Florida businesses. Lead nurturing, appointment booking, CRM automation, and chatbots.',
+  },
 };
 
 const deliverables = [

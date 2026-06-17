@@ -6,6 +6,16 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design Palm Coast FL | Custom Websites',
   description: 'Custom web design in Palm Coast, FL. One of Florida\'s fastest-growing cities — get your SEO foundation in place before the market matures. Launched in 7 days.',
+  openGraph: {
+    title: 'Web Design Palm Coast FL | Custom Websites',
+    description: 'Custom web design in Palm Coast, FL. One of Florida\'s fastest-growing cities — get your SEO foundation in place before the market matures.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design Palm Coast FL | Custom Websites',
+    description: 'Custom web design in Palm Coast, FL. One of Florida\'s fastest-growing cities.',
+  },
 };
 
 const citySchema = {

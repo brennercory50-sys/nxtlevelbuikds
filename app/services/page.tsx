@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
   description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads management, local SEO, and AI automation for local businesses.',
+  alternates: { canonical: canonical('/services') },
+  openGraph: {
+    title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
+    description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads management, local SEO, and AI automation for local businesses.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design, Google Ads, SEO & AI Automation | Daytona Beach FL',
+    description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads, SEO, and AI automation for local businesses.',
+  },
 };
 
 const services = [

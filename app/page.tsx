@@ -1,5 +1,24 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
+import TrustBar from '@/components/TrustBar';
+
+export const metadata: Metadata = {
+  title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+  description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help local businesses get more leads and scale faster.',
+  alternates: { canonical: canonical('') },
+  openGraph: {
+    title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+    description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses. Built to convert. Launched in 7 days.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NXT Level Builds — Web Design & Digital Marketing | Daytona Beach',
+    description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses.',
+  },
+};
 
 const services = [
   { icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>), title: 'Custom Websites', desc: 'High-converting, modern websites that represent your brand and turn visitors into customers.', href: '/services/web-design' },
@@ -135,17 +154,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-16">
-        <div className="container-site grid grid-cols-3 gap-0">
-          {[['7 Days','Avg Launch Time'],['100%','Client Retention'],['3 Yrs','Web Experience']].map(([n,l],i) => (
-            <div key={l} className={`text-center py-4 ${i < 2 ? 'border-r border-[#e5e7eb]' : ''}`}>
-              <div className="font-extrabold text-[clamp(36px,4vw,52px)] text-dark leading-none">{n}</div>
-              <p className="text-muted text-[13px] mt-2">{l}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ─── TRUST BUILDING SYSTEM ─── */}
+      <TrustBar mode="full" title="Results That Build Trust." subtitle="Real metrics from real client work. No fluff, no filler — just what we've delivered." />
 
       {/* TOOLS */}
       <section className="bg-white py-14 border-b border-[#e5e7eb]">
