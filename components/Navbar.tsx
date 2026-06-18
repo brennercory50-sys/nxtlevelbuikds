@@ -1,7 +1,8 @@
 'use client';
-import { useState, useRef, type ReactNode } from 'react';
+import { useState, useRef, useEffect, type ReactNode } from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
+import { events } from '@/lib/gtag';
 
 const serviceItems: { icon: ReactNode; label: string; desc: string; href: string; badge?: string }[] = [
   {
@@ -37,7 +38,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [showBar, setShowBar] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const onScroll = () => setShowBar(window.scrollY > 300);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const onServicesEnter = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -213,6 +221,25 @@ export default function Navbar() {
               Book A Strategy Call ↗
             </Link>
           </div>
+        </div>
+      )}
+
+      {/* Mobile floating CTA bar — appears after 300px scroll */}
+      {showBar && (
+        <div className="fixed bottom-0 left-0 right-0 md:hidden bg-[#0d0f14] border-t border-white/10 p-3 z-40 flex gap-3">
+          <a
+            href="tel:+13862590178"
+            onClick={() => events.phone_click('mobile_floating_bar')}
+            className="flex-1 bg-white/10 hover:bg-white/15 text-white rounded-lg py-3 text-[13px] font-bold text-center transition-colors"
+          >
+            📞 Call Now
+          </a>
+          <Link
+            href="/contact"
+            className="flex-1 bg-accent hover:bg-accent2 text-white rounded-lg py-3 text-[13px] font-bold text-center transition-colors"
+          >
+            Get a Quote →
+          </Link>
         </div>
       )}
     </nav>
