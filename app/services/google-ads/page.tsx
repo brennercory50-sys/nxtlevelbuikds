@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Google Ads Management Daytona Beach FL | PPC Agency',
   description: 'Google Ads management for Daytona Beach businesses. Search, LSA, and Display campaigns built for ROI — every dollar tracked, every campaign optimized.',
+  alternates: { canonical: canonical('/services/google-ads') },
+  openGraph: {
+    title: 'Google Ads Management Daytona Beach FL | PPC Agency',
+    description: 'Google Ads management for Daytona Beach businesses. Search, LSA, and Display campaigns built for ROI — every dollar tracked, every campaign optimized.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Google Ads Management Daytona Beach FL | PPC Agency',
+    description: 'Google Ads management for Daytona Beach businesses. Search, LSA, and Display campaigns built for ROI.',
+  },
 };
 
 const deliverables = [
@@ -34,14 +46,14 @@ export default function GoogleAds() {
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Google Ads management Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
+        <Image fill src="/images/services-bg.jpg" alt="Google Ads management — NXT Level Builds Daytona Beach" className="object-cover object-center" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <Link href="/services" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← All Services
           </Link>
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Google Ads Management</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Every Dollar.<br />Tracked. Optimized.<br /><span className="text-accent">Scaled.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
@@ -116,7 +128,7 @@ export default function GoogleAds() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {results.map(r => (
               <div key={r.client} className="border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: 'var(--font-bebas)' }}>
                   {r.result}
                 </div>
                 <div className="text-[11px] font-bold tracking-widest uppercase text-muted mb-4">{r.metric}</div>
@@ -131,7 +143,7 @@ export default function GoogleAds() {
       {/* CTA */}
       <section className="bg-accent py-16">
         <div className="container-site text-center">
-          <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>
             Stop burning ad spend. Start scaling.
           </h2>
           <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">

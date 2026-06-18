@@ -6,6 +6,16 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design Ormond Beach FL | Custom Websites',
   description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads. Launched in 7 days. Serving zip codes 32174 & 32176.',
+  openGraph: {
+    title: 'Web Design Ormond Beach FL | Custom Websites',
+    description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design Ormond Beach FL | Custom Websites',
+    description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads.',
+  },
 };
 
 const citySchema = {
@@ -35,7 +45,7 @@ export default function WebDesignOrmondBeach() {
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Web design Ormond Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
+        <Image fill src="/images/services-bg.jpg" alt="Web design Ormond Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <Breadcrumb crumbs={[
@@ -45,7 +55,7 @@ export default function WebDesignOrmondBeach() {
             { name: 'Ormond Beach', href: '/services/web-design-ormond-beach' },
           ]} />
           <p className="eyebrow mt-4" style={{ color: 'rgba(100,160,255,0.9)' }}>Web Design — Ormond Beach, FL</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Web Design for<br />Ormond Beach <span className="text-accent">Businesses.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
@@ -214,7 +224,7 @@ export default function WebDesignOrmondBeach() {
       {/* CTA */}
       <section className="bg-accent py-16">
         <div className="container-site text-center">
-          <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Ready to Grow Your Ormond Beach Business?</h2>
+          <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>Ready to Grow Your Ormond Beach Business?</h2>
           <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll audit your current online presence and show you exactly what&apos;s costing you leads.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Book a Free Strategy Call →</Link>
         </div>

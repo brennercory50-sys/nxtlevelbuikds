@@ -1,10 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
   description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads management, local SEO, and AI automation for local businesses.',
+  alternates: { canonical: canonical('/services') },
+  openGraph: {
+    title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
+    description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads management, local SEO, and AI automation for local businesses.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design, Google Ads, SEO & AI Automation | Daytona Beach FL',
+    description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads, SEO, and AI automation for local businesses.',
+  },
 };
 
 const services = [
@@ -31,11 +43,11 @@ export default function Services() {
     <main>
       {/* Hero with photo background */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Digital marketing services Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
+        <Image fill src="/images/services-bg.jpg" alt="NXT Level Builds services — web design, Google Ads, SEO, AI automation" className="object-cover object-center" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Services</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Everything You Need<br />To <span className="text-accent">Scale & Automate.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
@@ -88,7 +100,7 @@ export default function Services() {
       {/* CTA */}
       <section className="bg-accent py-16">
         <div className="container-site text-center">
-          <h2 className="text-[28px] font-bold text-white mb-3" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+          <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>
             Ready to get started?
           </h2>
           <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">

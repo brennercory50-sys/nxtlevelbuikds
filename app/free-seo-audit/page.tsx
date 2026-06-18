@@ -4,6 +4,16 @@ import LeadMagnetForm from '@/components/LeadMagnetForm';
 export const metadata: Metadata = {
   title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
   description: 'Get a free local SEO ranking report for your business. See exactly where you rank vs. competitors in your city and the 3 quick wins to move up fast.',
+  openGraph: {
+    title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
+    description: 'Get a free local SEO ranking report for your business. See exactly where you rank vs. competitors in your city.',
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
+    description: 'Get a free local SEO ranking report for your business.',
+  },
 };
 
 export default function FreeSEOAudit() {
@@ -12,7 +22,7 @@ export default function FreeSEOAudit() {
       <section className="bg-dark py-24">
         <div className="container-site max-w-2xl text-center">
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Free — No Commitment</p>
-          <h1 className="text-[clamp(28px,4vw,52px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(28px,4vw,52px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
             Find Out Where You Rank vs.<br />
             <span className="text-accent">Your Competitors in Your City.</span>
           </h1>

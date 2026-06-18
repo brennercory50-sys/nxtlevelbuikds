@@ -8,11 +8,11 @@
     --accent2: #0047cc;
     --green: #00c47a;
     --dark: #0d0f14;
-    --font-bebas: 'Bebas Neue';
-    --font-dm: 'DM Sans';
+    --font-bebas: 'Bebas Neue', sans-serif;
+    --font-dm: 'DM Sans', sans-serif;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', system-ui, sans-serif; color: #1a1a24; background: white; overflow-x: hidden; }
+  body { font-family: var(--font-dm), system-ui, sans-serif; color: #1a1a24; background: white; overflow-x: hidden; }
 }
 
 @layer utilities {
@@ -20,42 +20,6 @@
   .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #1a6eff; display: block; margin-bottom: 12px; }
   .section-title { font-weight: 800; line-height: 1.1; color: #1a1a24; }
 
-  .photo-hero {
-    background-image: url('/images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  .photo-about {
-    background-image: url('/images/about-bg.png');
-    background-size: cover;
-    background-position: center 25%;
-    position: relative;
-  }
-  .photo-services {
-    background-image: url('/images/services-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  .photo-work {
-    background-image: url('/images/work-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  .photo-pricing {
-    background-image: url('/images/pricing-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  .photo-contact {
-    background-image: url('/images/contact-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
 }
 
 @keyframes ticker {
@@ -81,4 +45,30 @@ input[type='range']::-moz-range-thumb {
   border: 3px solid white;
   box-shadow: 0 2px 8px rgba(26,110,255,0.4);
   cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid #1a6eff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  header, footer, .no-print { display: none !important; }
+  body { color: #000; background: #fff; }
+  a[href]::after { content: ' (' attr(href) ')'; font-size: 0.8em; }
+  a[href^="#"]::after, a[href^="tel:"]::after, a[href^="mailto:"]::after { content: none; }
 }

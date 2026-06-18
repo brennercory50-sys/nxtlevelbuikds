@@ -7,8 +7,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Bebas Neue', 'sans-serif'],
-        sans: ['DM Sans', 'sans-serif'],
+        display: ['var(--font-bebas)', 'sans-serif'],
+        sans: ['var(--font-dm)', 'sans-serif'],
       },
       colors: {
         accent: '#1a6eff',

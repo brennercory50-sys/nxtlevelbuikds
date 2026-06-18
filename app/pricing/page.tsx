@@ -1,64 +1,27 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { canonical, ogImage } from '@/lib/seo';
 import BudgetMeter from '@/components/BudgetMeter';
 import BudgetMeterSmall from '@/components/BudgetMeterSmall';
+import PricingComparison from '@/components/PricingComparison';
+import TrustBar from '@/components/TrustBar';
 
 export const metadata: Metadata = {
-  title: 'Web Design Pricing Daytona Beach FL | Transparent Packages',
-  description: 'Transparent web design and digital marketing pricing for Daytona Beach businesses. One-time project builds with no monthly fees or lock-in contracts.',
+  title: 'Web Design & Growth Packages Daytona Beach FL | NXT Level Builds',
+  description: 'Transparent growth packages for Daytona Beach businesses. Custom websites, SEO, AI automation, and full growth systems — one-time builds with no lock-in contracts.',
+  alternates: { canonical: canonical('/pricing') },
+  openGraph: {
+    title: 'Web Design & Growth Packages Daytona Beach FL | NXT Level Builds',
+    description: 'Transparent growth packages for Daytona Beach businesses. Custom websites, SEO, AI automation, and full growth systems — one-time builds with no lock-in contracts.',
+    images: [ogImage()],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design & Growth Packages Daytona Beach FL | NXT Level Builds',
+    description: 'Transparent growth packages for Daytona Beach businesses. Custom websites, SEO, AI automation, and full growth systems.',
+  },
 };
-
-const plans = [
-  {
-    name: 'Starter',
-    price: '$997',
-    per: '',
-    label: 'one-time',
-    desc: 'A clean, fast website that puts your business on the map.',
-    features: [
-      '5-Page Custom Website',
-      'Mobile-First Design',
-      'Google Business Profile Setup',
-      'Basic On-Page SEO',
-      'Contact Form Integration',
-      'Email Support',
-    ],
-  },
-  {
-    name: 'Growth',
-    price: '$2,497',
-    per: '',
-    label: 'one-time',
-    desc: 'A full custom site built to rank, convert, and scale.',
-    featured: true,
-    features: [
-      '10+ Page Custom Website',
-      'Full SEO Setup & Strategy',
-      'Google Ads Campaign Launch',
-      'CallRail Call Tracking',
-      'Speed & Core Web Vitals',
-      'Direct Slack Access',
-      '30-Day Post-Launch Support',
-    ],
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    per: '',
-    label: '',
-    desc: 'Full digital system built end-to-end for your business.',
-    features: [
-      'Everything in Growth',
-      'AI Automation & CRM Setup',
-      'E-Commerce Integration',
-      'Custom API Integrations',
-      'Dedicated Account Manager',
-      'Priority Support',
-      'Ongoing Strategy Calls',
-    ],
-  },
-];
 
 const paymentPlans = [
   {
@@ -86,39 +49,35 @@ const pricingSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Web Design & Digital Marketing Packages',
-  itemListElement: plans.map((plan, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    item: {
-      '@type': 'Offer',
-      name: plan.name,
-      ...(plan.price !== 'Custom' ? { price: plan.price.replace(/[$,]/g, ''), priceCurrency: 'USD' } : {}),
-      description: plan.desc,
-      seller: { '@type': 'Organization', name: 'NXT Level Builds' },
-    },
-  })),
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, item: { '@type': 'Offer', name: 'Website Growth Package', price: '1997', priceCurrency: 'USD', description: 'A fully custom website built to convert.', seller: { '@type': 'Organization', name: 'NXT Level Builds' } } },
+    { '@type': 'ListItem', position: 2, item: { '@type': 'Offer', name: 'SEO Growth Package', price: '997', priceCurrency: 'USD', description: 'Full SEO setup and Google Ads launch.', seller: { '@type': 'Organization', name: 'NXT Level Builds' } } },
+    { '@type': 'ListItem', position: 3, item: { '@type': 'Offer', name: 'AI Automation Package', price: '2997', priceCurrency: 'USD', description: 'CRM, AI chatbot, and workflow automation.', seller: { '@type': 'Organization', name: 'NXT Level Builds' } } },
+    { '@type': 'ListItem', position: 4, item: { '@type': 'Offer', name: 'Full Growth System', price: '4997', priceCurrency: 'USD', description: 'Complete end-to-end growth system.', seller: { '@type': 'Organization', name: 'NXT Level Builds' } } },
+  ],
 };
 
 export default function Pricing() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
-      {/* Hero */}
+
+      {/* ─── Hero ─── */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/pricing-bg.jpg" alt="Web design pricing Daytona Beach FL — NXT Level Builds" className="object-cover object-center" priority quality={80} sizes="100vw" />
+        <Image fill src="/images/pricing-bg.jpg" alt="Web design pricing packages — NXT Level Builds Daytona Beach" className="object-cover object-center" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
-          <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Pricing</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
-            Transparent Pricing.<br /><span className="text-accent">No Surprises.</span>
+          <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Growth Packages</p>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
+            Choose Your Growth.<br /><span className="text-accent">No Bloat. No Lock-In.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
-            One-time project pricing. You own everything. No lock-in, no monthly fees unless you want them.
+            One-time build pricing. You own everything. Pick a single package or go all-in with the Full Growth System.
           </p>
         </div>
       </section>
 
-      {/* Trust Strip */}
+      {/* ─── Trust Strip ─── */}
       <section className="bg-white border-b border-[#e5e7eb] py-4">
         <div className="container-site">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
@@ -150,7 +109,13 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Two Budget Meters */}
+      {/* ─── Interactive Packages + Comparison Table ─── */}
+      <PricingComparison />
+
+      {/* ─── Trust — overcome purchase hesitation ─── */}
+      <TrustBar mode="results" title="Real Results From Real Clients." subtitle="These aren't projections. They're verified outcomes from businesses we've built for." />
+
+      {/* ─── Budget Meters ─── */}
       <section className="bg-[#f8f9fc] py-20 border-b border-[#e5e7eb]">
         <div className="container-site">
           <p className="eyebrow text-center">Budget Calculators</p>
@@ -167,62 +132,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Plans */}
-      <section className="bg-white py-20">
-        <div className="container-site">
-          <p className="eyebrow text-center">Project Packages</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-4">
-            One-Time Builds. <span className="text-accent">You Own It All.</span>
-          </h2>
-          <p className="text-muted text-[14px] text-center mb-12 max-w-lg mx-auto">
-            Pay once, own forever. No monthly fees, no contracts. Priced to match the Daytona Beach market.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {plans.map(p => (
-              <div key={p.name}
-                className={`bg-white rounded-2xl p-8 border transition-all ${
-                  p.featured
-                    ? 'border-2 border-accent shadow-[0_8px_40px_rgba(26,110,255,0.15)] -translate-y-2 relative'
-                    : 'border-[#e5e7eb] hover:border-accent/30 hover:shadow-lg'
-                }`}>
-                {p.featured && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-white text-[11px] font-bold px-4 py-1 rounded-full whitespace-nowrap">
-                    Most Popular
-                  </div>
-                )}
-                <p className="text-[12px] font-bold tracking-widest uppercase text-accent mb-2">{p.name}</p>
-                <div className="flex items-end gap-1.5 mb-1">
-                  <span className="text-[42px] font-extrabold text-dark leading-none">{p.price}</span>
-                </div>
-                {p.label && <p className="text-[12px] text-muted font-semibold mb-3">{p.label}</p>}
-                <p className="text-[13px] text-muted mb-6">{p.desc}</p>
-                <ul className="space-y-3 mb-8">
-                  {p.features.map(f => (
-                    <li key={f} className="flex items-center gap-2.5 text-[13px] text-dark">
-                      <span className="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
-                          <path d="M2 5l2.5 2.5L8 3" stroke="#1a6eff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact"
-                  className={`block text-center font-bold text-[14px] py-3.5 rounded-xl transition-colors ${
-                    p.featured
-                      ? 'bg-accent hover:bg-accent2 text-white'
-                      : 'border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark'
-                  }`}>
-                  {p.price === 'Custom' ? 'Get a Quote →' : 'Get Started →'}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Guarantee Strip */}
+      {/* ─── Guarantee Strip ─── */}
       <section className="bg-[#f0f6ff] border-y border-accent/20 py-10">
         <div className="container-site">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -253,11 +163,11 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Payment Plans */}
+      {/* ─── Payment Plans ─── */}
       <section className="bg-dark py-20">
         <div className="container-site">
           <p className="eyebrow text-center" style={{color:'rgba(100,160,255,0.8)'}}>Flexible Payments</p>
-          <h2 className="text-[clamp(26px,3.5vw,40px)] font-extrabold text-white text-center leading-tight mb-4" style={{fontFamily:"'Bebas Neue', sans-serif"}}>
+          <h2 className="text-[clamp(26px,3.5vw,40px)] font-extrabold text-white text-center leading-tight mb-4" style={{ fontFamily: 'var(--font-bebas)' }}>
             Payment Plans That Work For You.
           </h2>
           <p className="text-white/45 text-[15px] text-center max-w-lg mx-auto mb-12">
@@ -293,9 +203,10 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ─── CTA ─── */}
       <section className="bg-white py-16">
         <div className="container-site max-w-3xl mx-auto text-center">
+          <p className="eyebrow text-center">Still Unsure?</p>
           <h3 className="font-bold text-[22px] text-dark mb-3">Not sure which package fits?</h3>
           <p className="text-muted text-[15px] mb-7">Book a free 30-minute call and we&apos;ll put together a custom quote based on exactly what your business needs.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-8 py-4 rounded-lg transition-colors">

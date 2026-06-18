@@ -3,45 +3,44 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { projects as allProjects } from '@/app/work/projects';
+import { CaseStudyCard, CaseStudyVideo } from '@/components/case-studies';
+import { trackEvent } from '@/lib/gtag';
 
 const filters = ['All', 'Websites', 'Automations', 'Landing Pages', 'Systems'];
 
 const stats = [
   {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>,
-    number: '6+',
-    label: 'Projects Delivered',
+    icon: <svg key="1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>,
+    number: '6+', label: 'Projects Delivered',
   },
   {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
-    number: '100%',
-    label: 'Client Retention',
+    icon: <svg key="2" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+    number: '100%', label: 'Client Retention',
   },
   {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
-    number: '7 Days',
-    label: 'Avg Website Launch',
+    icon: <svg key="3" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
+    number: '7 Days', label: 'Avg Website Launch',
   },
   {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
-    number: '100',
-    label: 'PageSpeed Target',
+    icon: <svg key="4" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
+    number: '200+', label: 'Combined Years of Client Experience',
   },
 ];
 
 export default function Work() {
   const [active, setActive] = useState('All');
   const filtered = active === 'All' ? allProjects : allProjects.filter(p => p.cat === active);
+  const featured = allProjects[0];
 
   return (
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/work-bg.jpg" alt="Web design and digital marketing portfolio — NXT Level Builds Daytona Beach FL" className="object-cover object-center" priority quality={80} sizes="100vw" />
+        <Image fill src="/images/work-bg.jpg" alt="Our work — NXT Level Builds portfolio" className="object-cover object-center" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
         <div className="container-site relative z-10">
           <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Our Work</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Projects That<br />Drive <span className="text-accent">Real Results.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
@@ -50,7 +49,7 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Results Stats */}
+      {/* Stats */}
       <section className="bg-dark border-b border-white/10 py-10">
         <div className="container-site">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
@@ -90,122 +89,64 @@ export default function Work() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map(p => (
-              <Link key={p.slug} href={`/work/${p.slug}`}
-                className="group rounded-2xl overflow-hidden border border-[#e5e7eb] hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 transition-all bg-white flex flex-col">
-                {/* Visual */}
-                <div className={`h-44 bg-gradient-to-br ${p.bg} relative flex items-end p-4 overflow-hidden`}>
-                  <div className="absolute inset-0 opacity-10">
-                    <svg width="100%" height="100%" viewBox="0 0 400 200" fill="none">
-                      <rect x="220" y="0" width="50" height="200" fill="white" rx="1"/>
-                      <rect x="280" y="40" width="40" height="160" fill="white" rx="1"/>
-                      <rect x="330" y="20" width="60" height="180" fill="white" rx="1"/>
-                      <rect x="160" y="60" width="50" height="140" fill="white" rx="1"/>
-                      <rect x="100" y="80" width="50" height="120" fill="white" rx="1"/>
-                    </svg>
-                  </div>
-                  <span className="relative z-10 text-[11px] font-bold text-white bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
-                    {p.result}
-                  </span>
-                  <span className="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full" style={{ background: 'rgba(255,255,255,0.12)', color: p.accent }}>
-                    {p.type}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="p-5 flex flex-col flex-1">
-                  <div className="flex items-center gap-1.5 mb-1">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span className="text-[10px] text-muted font-medium">{p.location}</span>
-                  </div>
-                  <h4 className="font-bold text-[17px] text-dark mb-2">{p.title}</h4>
-                  <p className="text-[13px] text-muted leading-relaxed mb-4 flex-1">{p.desc}</p>
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {p.tags.map(t => (
-                      <span key={t} className="text-[11px] font-semibold bg-[#f0f4ff] text-accent px-2.5 py-0.5 rounded-full">{t}</span>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between pt-3 border-t border-[#f0f0f0]">
-                    <div className="flex items-center gap-2">
-                      <div className="text-[20px] font-extrabold text-dark leading-none">{p.stat.number}</div>
-                      <div className="text-[11px] text-muted font-medium leading-tight">{p.stat.label}</div>
-                    </div>
-                    <span className="text-[12px] font-semibold text-accent">Read Case Study →</span>
-                  </div>
-                </div>
-              </Link>
+              <CaseStudyCard key={p.slug} project={p} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Case Study */}
-      <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-20">
-        <div className="container-site">
-          <p className="eyebrow text-center">Case Study</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-12">
-            A Closer Look at <span className="text-accent">What We Do.</span>
-          </h2>
-          <div className="bg-white rounded-2xl border border-[#e5e7eb] overflow-hidden shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="bg-gradient-to-br from-blue-900 to-slate-900 p-10 flex flex-col justify-between min-h-[320px]">
+      {/* Featured Case Study with Video */}
+      {featured && (
+        <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-20">
+          <div className="container-site">
+            <p className="eyebrow text-center">Featured Case Study</p>
+            <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-4">
+              A Closer Look at <span className="text-accent">What We Do.</span>
+            </h2>
+            <p className="text-muted text-[14px] text-center mb-10 max-w-lg mx-auto">
+              How we helped {featured.title} go from zero online presence to ranking page one in 60 days.
+            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Video */}
+              <CaseStudyVideo url={featured.videoUrl} title={`${featured.title} — Full Case Study Walkthrough`} />
+              {/* Summary */}
+              <div className="bg-white rounded-2xl border border-[#e5e7eb] p-8 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-blue-300">Website Design + SEO</span>
-                  <h3 className="text-[clamp(24px,3vw,36px)] font-extrabold text-white mt-2 leading-tight">Miller&apos;s Screen &amp; Pool</h3>
-                  <p className="text-white/50 text-[13px] mt-1">Daytona Beach, FL — Volusia County</p>
-                </div>
-                <div className="grid grid-cols-3 gap-4 mt-8">
-                  {[['190%','More Organic Leads'],['Page 1','Google Ranking'],['60 Days','Time to Results']].map(([n,l]) => (
-                    <div key={l}>
-                      <div className="text-[24px] font-extrabold text-white leading-none">{n}</div>
-                      <div className="text-[10px] text-white/40 mt-1 font-medium leading-tight">{l}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="p-10">
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                      </div>
-                      <h4 className="text-[12px] font-bold uppercase tracking-widest text-muted">The Problem</h4>
-                    </div>
-                    <p className="text-[13px] text-muted leading-relaxed">A well-established pool screening company in Volusia County with zero digital presence. Competitors were ranking for all the high-intent local search terms, and the business relied entirely on word-of-mouth.</p>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-accent">{featured.type}</span>
+                    <span className="text-[10px] text-muted">·</span>
+                    <span className="text-[10px] text-muted">{featured.location}</span>
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <h3 className="text-[22px] font-bold text-dark mb-3">{featured.title}</h3>
+                  <p className="text-[13px] text-muted leading-relaxed mb-6">{featured.desc}</p>
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    {featured.metrics.map(m => (
+                      <div key={m.label}>
+                        <div className="text-[22px] font-extrabold text-dark leading-none">{m.number}</div>
+                        <div className="text-[10px] text-muted mt-1 font-medium leading-tight uppercase tracking-wider">{m.label}</div>
                       </div>
-                      <h4 className="text-[12px] font-bold uppercase tracking-widest text-muted">What We Built</h4>
-                    </div>
-                    <p className="text-[13px] text-muted leading-relaxed">Custom 5-page website with full on-page SEO, Google Business Profile optimization, and local schema markup targeting Daytona Beach, Port Orange, and surrounding areas. Launched in 7 days.</p>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00c47a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                      </div>
-                      <h4 className="text-[12px] font-bold uppercase tracking-widest text-muted">The Result</h4>
-                    </div>
-                    <p className="text-[13px] text-muted leading-relaxed">Within 60 days, organic lead volume jumped 190%. The business now ranks on page one for &ldquo;screen enclosures Daytona Beach&rdquo; and its top 3 related terms.</p>
+                    ))}
                   </div>
                 </div>
-                <Link href="/work/millers-screen-pool" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-6 py-3 rounded-lg transition-colors mt-8">
-                  Read Full Case Study →
-                </Link>
+                <div className="flex gap-3">
+                  <Link href={`/work/${featured.slug}`} onClick={() => trackEvent('case_study_view', { project_slug: featured.slug, industry: featured.industry })} className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-6 py-3 rounded-lg transition-colors">
+                    Read Full Case Study →
+                  </Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[13px] px-6 py-3 rounded-lg transition-all">
+                    Get Similar Results
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Process */}
       <section className="bg-dark py-20">
         <div className="container-site">
           <p className="eyebrow text-center" style={{ color: 'rgba(100,160,255,0.8)' }}>Our Process</p>
-          <h2 className="text-[clamp(26px,3.5vw,40px)] font-extrabold text-white text-center leading-tight mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h2 className="text-[clamp(26px,3.5vw,40px)] font-extrabold text-white text-center leading-tight mb-4" style={{ fontFamily: 'var(--font-bebas)' }}>
             How Every Project Gets Built.
           </h2>
           <p className="text-white/40 text-[14px] text-center max-w-lg mx-auto mb-14">
@@ -213,10 +154,10 @@ export default function Work() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { step:'01', title:'Discovery Call', desc:'We learn your goals, your market, and what success looks like. 30 minutes, no fluff.', icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.2a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> },
-              { step:'02', title:'Design & Approval', desc:'We design every page first. You approve the look before we write a line of code.', icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> },
-              { step:'03', title:'Build & Launch', desc:'We build it fast — typically 7 days — then walk you through every detail before going live.', icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
-              { step:'04', title:'Results & Support', desc:"We track performance after launch and stay available. You're not abandoned post-delivery.", icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg> },
+              { step:'01', title:'Discovery Call', desc:'We learn your goals, your market, and what success looks like. 30 minutes, no fluff.', icon: <svg key="d1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.2a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> },
+              { step:'02', title:'Design & Approval', desc:'We design every page first. You approve the look before we write a line of code.', icon: <svg key="d2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> },
+              { step:'03', title:'Build & Launch', desc:'We build it fast — typically 7 days — then walk you through every detail before going live.', icon: <svg key="d3" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
+              { step:'04', title:'Results & Support', desc:"We track performance after launch and stay available. You're not abandoned post-delivery.", icon: <svg key="d4" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg> },
             ].map(item => (
               <div key={item.step} className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-accent/40 transition-all">
                 <div className="text-[11px] font-bold tracking-widest text-white/25 mb-4">{item.step}</div>

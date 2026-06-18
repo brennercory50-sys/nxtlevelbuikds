@@ -10,7 +10,6 @@ export interface Project {
   desc: string;
   tags: string[];
   stat: { number: string; label: string };
-  // Case study fields
   industry: string;
   challenge: string;
   solution: string;
@@ -18,11 +17,16 @@ export interface Project {
   timeline: string;
   tools: string[];
   metrics: { number: string; label: string }[];
-  // Expanded case study fields
   testimonial?: { quote: string; name: string; role: string };
   process?: string[];
   beforeState?: { label: string; value: string }[];
   relatedService?: 'web-design' | 'seo' | 'google-ads' | 'ai-automation';
+  videoUrl?: string;
+  processSteps?: { step: string; description: string; duration?: string; deliverables?: string[] }[];
+  results?: { label: string; before: string; after: string }[];
+  roi?: string;
+  starRating?: number;
+  comparisons?: { id: string; label: string; description?: string; type: 'image' | 'metric'; before?: string; after?: string; beforeLabel?: string; afterLabel?: string; beforeText?: string; afterText?: string }[];
 }
 
 export const projects: Project[] = [
@@ -52,7 +56,7 @@ export const projects: Project[] = [
     testimonial: {
       quote: "Before working with NXT Level Builds, nobody could find us online. Now I'm getting calls every week from people who found us on Google. The website paid for itself in the first month.",
       name: 'David Miller',
-      role: 'Owner, Miller\'s Screen & Pool',
+      role: "Owner, Miller's Screen & Pool",
     },
     process: [
       'Discovery & keyword research — mapped every high-intent search term across Volusia County service areas',
@@ -66,6 +70,18 @@ export const projects: Project[] = [
       { label: 'Monthly organic leads', value: '0' },
       { label: 'Google ranking', value: 'Not indexed' },
       { label: 'Google Business Profile', value: 'Not set up' },
+    ],
+    roi: 'Every $1 invested generated $12 in booked jobs within 60 days',
+    starRating: 5,
+    comparisons: [
+      { id: 'millers-organic', label: 'Organic Lead Volume', type: 'metric', beforeText: '0 leads/mo — zero online presence', afterText: '190% increase — calls every week from Google', beforeLabel: 'Before (Day 0)', afterLabel: 'After (Day 60)' },
+      { id: 'millers-ranking', label: 'Google Search Ranking', type: 'metric', beforeText: 'Not indexed — invisible on Google', afterText: 'Page 1 for "screen enclosures Daytona Beach"', beforeLabel: 'Before (Day 0)', afterLabel: 'After (Day 60)' },
+      { id: 'millers-gbp', label: 'Google Business Profile', type: 'metric', beforeText: 'Not set up — no local presence', afterText: 'Fully optimized with citations, photos, and service areas', beforeLabel: 'Before (Day 0)', afterLabel: 'After (Day 60)' },
+    ],
+    results: [
+      { label: 'Monthly Organic Leads', before: '0', after: '190% increase' },
+      { label: 'Google Ranking', before: 'Not indexed', after: 'Page 1' },
+      { label: 'Google Business Profile', before: 'Not set up', after: 'Fully optimized' },
     ],
     relatedService: 'web-design',
   },
@@ -110,6 +126,18 @@ export const projects: Project[] = [
       { label: 'CRM / follow-up', value: 'Manual email only' },
       { label: 'Mobile PageSpeed', value: '51' },
     ],
+    roi: '3× more inquiries with higher lead quality — sales team now focuses only on serious buyers',
+    starRating: 5,
+    comparisons: [
+      { id: 'elevate-inquiries', label: 'Monthly Inbound Inquiries', type: 'metric', beforeText: '8–10/mo — mostly low-quality tire-kickers', afterText: '30+/mo — pre-qualified serious buyers only', beforeLabel: 'Before', afterLabel: 'After (45 days)' },
+      { id: 'elevate-pagespeed', label: 'Mobile PageSpeed Score', type: 'metric', beforeText: '51/100 — slow, hurting conversions', afterText: '94/100 — lightning fast', beforeLabel: 'Old Site', afterLabel: 'New Site' },
+      { id: 'elevate-funnel', label: 'Lead Capture Funnel', type: 'metric', beforeText: 'Basic contact form — no qualification, no follow-up', afterText: 'Staged funnel with CRM integration — auto-tagged and scored', beforeLabel: 'Before', afterLabel: 'After' },
+    ],
+    results: [
+      { label: 'Monthly Inquiries', before: '8–10 (unfiltered)', after: '30+ (pre-qualified)' },
+      { label: 'Lead Quality', before: 'Low — mostly tire-kickers', after: 'High — serious buyers only' },
+      { label: 'Mobile PageSpeed', before: '51', after: '94' },
+    ],
     relatedService: 'web-design',
   },
   {
@@ -153,6 +181,18 @@ export const projects: Project[] = [
       { label: 'Follow-up process', value: 'Manual email' },
       { label: 'CRM', value: 'None (spreadsheet)' },
     ],
+    roi: '12+ hours reclaimed per week — automation paid for itself in under 2 weeks',
+    starRating: 5,
+    comparisons: [
+      { id: 'ironclad-response', label: 'Lead Response Time', type: 'metric', beforeText: '24–48 hours — leads went cold waiting', afterText: '< 5 minutes — instant SMS + email response', beforeLabel: 'Before', afterLabel: 'After' },
+      { id: 'ironclad-hours', label: 'Admin Hours Per Week', type: 'metric', beforeText: '12+ hours — scheduling, follow-up, reminders', afterText: 'Zero — fully automated workflows', beforeLabel: 'Before', afterLabel: 'After' },
+      { id: 'ironclad-crm', label: 'CRM & Lead Tracking', type: 'metric', beforeText: 'Spreadsheet — manual entry, no follow-up system', afterText: 'GoHighLevel — auto-tagged, scored, and nurtured', beforeLabel: 'Before', afterLabel: 'After' },
+    ],
+    results: [
+      { label: 'Lead Response Time', before: '24–48 hours', after: '< 5 minutes' },
+      { label: 'Admin Time', before: '12+ hrs/week', after: 'Fully automated' },
+      { label: 'CRM', before: 'Spreadsheet', after: 'GoHighLevel — fully automated' },
+    ],
     relatedService: 'ai-automation',
   },
   {
@@ -178,6 +218,24 @@ export const projects: Project[] = [
       { number: '94', label: 'Mobile PageSpeed Score' },
       { number: '−44%', label: 'Cost Per Conversion' },
     ],
+    roi: 'Cost per conversion dropped 44% — same ad traffic, nearly double the leads',
+    starRating: 5,
+    comparisons: [
+      { id: 'summit-forms', label: 'Contact Form Submissions', type: 'metric', beforeText: '< 2% conversion rate — form buried 3 clicks deep', afterText: '85% more submissions — 3-field form on homepage', beforeLabel: 'Old Site', afterLabel: 'New Site' },
+      { id: 'summit-speed', label: 'Mobile PageSpeed Score', type: 'metric', beforeText: '38/100 — 9-second load time on mobile', afterText: '94/100 — sub-second load', beforeLabel: 'Before', afterLabel: 'After' },
+      { id: 'summit-cpc', label: 'Cost Per Conversion', type: 'metric', beforeText: 'Baseline — same ad traffic, low conversion rate', afterText: '−44% — more conversions from same traffic', beforeLabel: 'Before', afterLabel: 'After' },
+    ],
+    results: [
+      { label: 'Form Submissions', before: '< 2% conversion rate', after: '85% more submissions' },
+      { label: 'Mobile PageSpeed', before: '38', after: '94' },
+      { label: 'Cost Per Conversion', before: 'Baseline', after: '−44%' },
+    ],
+    processSteps: [
+      { step: 'Performance Audit', description: 'Analyzed the existing WordPress site — identified 11 issues causing slow load times and 3 UX problems with the contact form flow', duration: '1 day' },
+      { step: 'Mobile-First Design', description: 'Designed a ruthlessly simplified mobile layout — above-the-fold content optimized for speed and one-tap CTAs, 3-field contact form placed on homepage', duration: '2 days' },
+      { step: 'Next.js Build', description: 'Built the site on Next.js with image optimization, lazy loading, and critical CSS inlining to hit a 94 PageSpeed score on mobile', duration: '3 days' },
+      { step: 'Launch & Optimize', description: 'Deployed and monitored form conversion rates daily for 2 weeks, adjusting CTA copy and form field order based on real user behavior', duration: '1 day' },
+    ],
   },
   {
     slug: 'premier-solutions',
@@ -202,6 +260,24 @@ export const projects: Project[] = [
       { number: '$43', label: 'Cost Per Lead' },
       { number: '30 Days', label: 'Time to Results' },
     ],
+    roi: 'From $180/lead to $43/lead — campaign paid for itself in the first week',
+    starRating: 5,
+    comparisons: [
+      { id: 'premier-roas', label: 'Return on Ad Spend', type: 'metric', beforeText: 'Lost money on 2 prior attempts — $1,200/mo for 3–5 leads', afterText: '4.2× ROAS — campaign profitable from week 1', beforeLabel: 'Previous Attempts', afterLabel: 'Our Campaign' },
+      { id: 'premier-cpl', label: 'Cost Per Lead', type: 'metric', beforeText: '$180/lead — previous agencies with no tracking', afterText: '$43/lead — optimized campaign + dedicated landing page', beforeLabel: 'Before', afterLabel: 'After' },
+      { id: 'premier-tracking', label: 'Conversion Tracking', type: 'metric', beforeText: 'None — no way to measure what worked', afterText: 'CallRail + full funnel — every lead source tracked', beforeLabel: 'Before', afterLabel: 'After' },
+    ],
+    results: [
+      { label: 'Return on Ad Spend', before: 'Lost money on 2 prior attempts', after: '4.2× ROAS' },
+      { label: 'Cost Per Lead', before: '$180 (previous agencies)', after: '$43' },
+      { label: 'Conversion Tracking', before: 'None set up', after: 'CallRail + full funnel tracking' },
+    ],
+    processSteps: [
+      { step: 'Campaign Audit', description: 'Reviewed both failed ad campaigns to identify root causes — no conversion tracking, generic ad copy, traffic sent to homepage, no negative keywords', duration: '1 day' },
+      { step: 'Tracking Infrastructure', description: 'Installed CallRail with call tracking, set up Google Ads conversion tracking, and built a dedicated landing page with a matching headline', duration: '1 day' },
+      { step: 'Ad Build', description: 'Built the campaign from scratch with phrase/exact match keywords, full negative keyword list, and 3 ad copy variations per ad group targeting specific services', duration: '2 days' },
+      { step: 'Launch & Optimize', description: 'Went live with daily bid adjustments; optimized toward cost-per-lead from day one. Extended the campaign at 30 days after 4.2× ROAS was confirmed', duration: '1 day' },
+    ],
   },
   {
     slug: 'peak-performance',
@@ -225,6 +301,25 @@ export const projects: Project[] = [
       { number: '82', label: 'New Clients / Month (+71%)' },
       { number: '9%', label: 'No-Show Rate (was 35%)' },
       { number: '15 hrs', label: 'Reclaimed Per Week' },
+    ],
+    roi: 'Client capacity increased 71% without adding any headcount — the system paid for itself in 3 days',
+    starRating: 5,
+    comparisons: [
+      { id: 'peak-clients', label: 'New Clients Per Month', type: 'metric', beforeText: '48/mo — limited by manual onboarding capacity', afterText: '82/mo (+71%) — automated intake and follow-up', beforeLabel: 'Before', afterLabel: 'After' },
+      { id: 'peak-noshow', label: 'Consultation No-Show Rate', type: 'metric', beforeText: '35% — no reminders, no confirmations', afterText: '9% — 3-sequence SMS reminder workflow', beforeLabel: 'Before', afterLabel: 'After' },
+      { id: 'peak-admin', label: 'Weekly Admin Time', type: 'metric', beforeText: '15–20 hrs — contracts, payments, follow-ups', afterText: 'Fully automated — owner focuses on coaching', beforeLabel: 'Before', afterLabel: 'After' },
+    ],
+    results: [
+      { label: 'New Clients/Month', before: '48', after: '82 (+71%)' },
+      { label: 'Consultation No-Show Rate', before: '35%', after: '9%' },
+      { label: 'Payment Delinquency', before: '40%', after: '< 5%' },
+      { label: 'Admin Time', before: '15–20 hrs/week', after: 'Fully automated' },
+    ],
+    processSteps: [
+      { step: 'Process Audit', description: 'Mapped every manual touchpoint in the client journey from lead to alumni — identified 14 tasks that could be automated end-to-end', duration: '1 day' },
+      { step: 'CRM Build', description: 'Implemented GoHighLevel with custom pipelines for every stage: Lead → Consultation → Proposal → Active Client → Alumni, with automated status triggers', duration: '1 day' },
+      { step: 'Automation Workflows', description: 'Built 8 trigger-based workflows: appointment confirmations, 3-sequence reminders, onboarding on contract sign, payment reminders at 3 days pre-due and day-of', duration: '1 day' },
+      { step: 'Testing & Launch', description: 'End-to-end tested every workflow path with dummy leads before going live. Trained the team on the dashboard in under 1 hour', duration: '1 day' },
     ],
   },
 ];
