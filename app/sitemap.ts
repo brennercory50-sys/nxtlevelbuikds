@@ -18,7 +18,7 @@ const staticRoutes = [
   { url: `${base}/services/web-design-for-contractors`, priority: 0.8, changeFrequency: 'monthly' as const },
   { url: `${base}/services/web-design-for-home-services`, priority: 0.8, changeFrequency: 'monthly' as const },
   { url: `${base}/work`, priority: 0.8, changeFrequency: 'monthly' as const },
-  { url: `${base}/pricing`, priority: 0.8, changeFrequency: 'monthly' as const },
+  { url: `${base}/contact`, priority: 0.8, changeFrequency: 'yearly' as const },
   { url: `${base}/about`, priority: 0.7, changeFrequency: 'monthly' as const },
   { url: `${base}/faq`, priority: 0.6, changeFrequency: 'monthly' as const },
   { url: `${base}/blog`, priority: 0.7, changeFrequency: 'weekly' as const },

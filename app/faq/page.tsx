@@ -18,7 +18,7 @@ const categories = [
   {
     title: 'Pricing & Packages',
     items: [
-      { q: 'How much does a website cost?', a: <>Our websites start at $697 for a landing page, $997 for a 5-page Starter site, $1,997 for a Professional 8-page site, and $2,497 for a full Growth build with SEO and Google Ads setup. All prices are one-time — no monthly fees unless you want ongoing support. <Link href="/pricing" className="text-accent hover:underline">View full pricing →</Link></> },
+      { q: 'How much does a website cost?', a: <>Websites start at just <strong>$599</strong> with a <strong>$150/mo</strong> growth plan — or you can pay upfront for a one-time build. Every project is custom, so we&apos;ll quote you based on exactly what you need. <Link href="/contact" className="text-accent hover:underline">Get a custom quote →</Link></> },
       { q: 'Do you charge monthly fees?', a: "No — unless you want ongoing services like SEO management, Google Ads management, or monthly support. Every project is priced as a one-time build. You pay once, you own it forever." },
       { q: 'Do you offer payment plans?', a: 'Yes. We offer a 50/50 split (half upfront, half at launch), a 3-payment plan spread over 3 months, or a monthly retainer for ongoing work. All plans are 0% interest with no credit check required.' },
       { q: 'What is included in the price?', a: 'Every package includes design mockups, custom development, mobile-first build, contact form setup, basic on-page SEO, and 30 days of post-launch support. Higher tiers include more pages, Google Ads setup, Google Business Profile optimization, and extended support.' },

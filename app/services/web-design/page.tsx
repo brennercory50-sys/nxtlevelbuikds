@@ -56,8 +56,11 @@ export default function WebDesign() {
           <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Websites That<br />Actually <span className="text-accent">Convert.</span>
           </h1>
-          <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
+          <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-4">
             Not another pretty template. Every site we build is custom-designed for your brand, engineered for speed, and optimized to turn visitors into leads and revenue.
+          </p>
+          <p className="text-[14px] text-accent/80 font-semibold mb-8">
+            Websites from <span className="text-white font-extrabold">$599</span><span className="text-white/50 font-normal"> with </span><span className="text-white font-extrabold">$150/mo</span> growth plan
           </p>
           <div className="flex gap-3 flex-wrap">
             <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">

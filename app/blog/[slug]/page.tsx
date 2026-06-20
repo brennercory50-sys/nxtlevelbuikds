@@ -156,8 +156,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[13px] px-6 py-3 rounded-lg transition-colors">
                 Book a Free Strategy Call →
               </Link>
-              <Link href="/pricing" className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white font-semibold text-[13px] px-6 py-3 rounded-lg transition-all">
-                View Pricing →
+              <Link href="/contact" className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white font-semibold text-[13px] px-6 py-3 rounded-lg transition-all">
+                Get a Custom Quote →
               </Link>
             </div>
           </div>

@@ -1,13 +1,8 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import Image from 'next/image';
-import { canonical, ogImage } from '@/lib/seo';
-import BudgetMeter from '@/components/BudgetMeter';
-import BudgetMeterSmall from '@/components/BudgetMeterSmall';
-import PricingComparison from '@/components/PricingComparison';
-import TrustBar from '@/components/TrustBar';
+import { redirect } from 'next/navigation';
 
-export const metadata: Metadata = {
+export default function PricingPage() {
+  redirect('/contact');
+}
   title: 'Web Design & Growth Packages Daytona Beach FL | NXT Level Builds',
   description: 'Transparent growth packages for Daytona Beach businesses. Custom websites, SEO, AI automation, and full growth systems — one-time builds with no lock-in contracts.',
   alternates: { canonical: canonical('/pricing') },

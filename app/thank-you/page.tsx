@@ -64,8 +64,8 @@ export default function ThankYou() {
           <Link href="/work" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-colors">
             See Our Work →
           </Link>
-          <Link href="/pricing" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-7 py-3.5 rounded-lg transition-all">
-            View Pricing →
+          <Link href="/contact" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-7 py-3.5 rounded-lg transition-all">
+            Get a Custom Quote →
           </Link>
         </div>
 
