@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -6,10 +7,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design DeLand FL | Custom Websites',
   description: 'Custom web design in DeLand, FL. Mobile-first websites for attorneys, contractors, healthcare, and professional services. Rank faster than Daytona. Launched in 7 days.',
+  alternates: { canonical: canonical('/services/web-design-deland') },
   openGraph: {
     title: 'Web Design DeLand FL | Custom Websites',
     description: 'Custom web design in DeLand, FL. Mobile-first websites for attorneys, contractors, healthcare, and professional services.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',

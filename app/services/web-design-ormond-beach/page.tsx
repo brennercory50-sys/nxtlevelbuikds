@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -6,10 +7,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design Ormond Beach FL | Custom Websites',
   description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads. Launched in 7 days. Serving zip codes 32174 & 32176.',
+  alternates: { canonical: canonical('/services/web-design-ormond-beach') },
   openGraph: {
     title: 'Web Design Ormond Beach FL | Custom Websites',
     description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',

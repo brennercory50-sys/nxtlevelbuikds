@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -6,10 +7,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design New Smyrna Beach FL | Custom Websites',
   description: 'Custom web design in New Smyrna Beach, FL. Mobile-first websites built for tourism businesses, vacation rentals, art galleries, and local shops. Live in 7 days.',
+  alternates: { canonical: canonical('/services/web-design-new-smyrna-beach') },
   openGraph: {
     title: 'Web Design New Smyrna Beach FL | Custom Websites',
     description: 'Custom web design in New Smyrna Beach, FL. Mobile-first websites built for tourism businesses, vacation rentals, art galleries, and local shops.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',

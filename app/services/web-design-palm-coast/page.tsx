@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -6,10 +7,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design Palm Coast FL | Custom Websites',
   description: 'Custom web design in Palm Coast, FL. One of Florida\'s fastest-growing cities — get your SEO foundation in place before the market matures. Launched in 7 days.',
+  alternates: { canonical: canonical('/services/web-design-palm-coast') },
   openGraph: {
     title: 'Web Design Palm Coast FL | Custom Websites',
     description: 'Custom web design in Palm Coast, FL. One of Florida\'s fastest-growing cities — get your SEO foundation in place before the market matures.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',

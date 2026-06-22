@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Web Design for Contractors FL',
   description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs. Serving Volusia County.',
+  alternates: { canonical: canonical('/services/web-design-for-contractors') },
   openGraph: {
     title: 'Web Design for Contractors FL',
     description: 'Custom websites for contractors in Florida. Mobile-first, fast-loading, built to rank on Google and convert visitors into booked jobs.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',

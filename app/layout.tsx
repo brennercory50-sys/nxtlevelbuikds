@@ -97,7 +97,7 @@ const schemaGraph = {
         { '@type': 'State', name: 'Florida' },
       ],
       serviceType: ['Web Design', 'Google Ads Management', 'Search Engine Optimization', 'AI Automation'],
-      priceRange: '$$',
+      priceRange: '$',
       founder: { '@type': 'Person', name: 'Cory Brenner' },
       sameAs: [
         'https://www.facebook.com/nxtlevelbuilds',

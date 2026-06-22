@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help local businesses get more leads and scale faster.',
   alternates: { canonical: canonical('') },
   openGraph: {
-    title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+  title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
     description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses. Built to convert. Launched in 7 days.',
     images: [ogImage()],
   },
@@ -82,7 +82,7 @@ export default function Home() {
                     <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
                     <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
                   </svg>
-                ), number:'3 Yrs', label:'Web Design Experience' },
+                ), number:'3 Yrs', label:'Industry Experience' },
               ].map((s, i) => (
                 <div key={s.label} className={`flex flex-col md:flex-row md:items-center md:gap-3 py-1 text-center md:text-left ${i > 0 ? 'border-l border-white/10 md:ml-10 md:pl-10 pl-2' : ''}`}>
                   <span className="hidden md:block text-accent opacity-80">{s.icon}</span>
