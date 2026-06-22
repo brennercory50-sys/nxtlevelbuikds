@@ -50,7 +50,7 @@ export default function Home() {
             We build high-converting websites, automations, and growth systems that help local businesses get more leads, book more jobs, and scale with confidence.
           </p>
           <p className="text-[14px] text-accent/80 font-semibold mb-8">
-            Websites from <span className="text-white font-extrabold">$599</span><span className="text-white/50 font-normal"> with </span><span className="text-white font-extrabold">$150/mo</span> growth plan
+            Simple sites from <span className="text-white font-extrabold">$599</span><span className="text-white/50 font-normal"> with </span><span className="text-white font-extrabold">$150/mo</span> — custom builds quoted individually
           </p>
           <div className="flex gap-3 flex-wrap">
             <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">
