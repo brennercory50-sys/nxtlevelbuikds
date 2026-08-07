@@ -23,13 +23,16 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://nxtlevelbuilds.com/services/web-design-palm-coast#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Palm Coast, FL.',
   url: 'https://nxtlevelbuilds.com/services/web-design-palm-coast',
   telephone: '+13862590178',
-  address: { '@type': 'PostalAddress', addressLocality: 'Palm Coast', addressRegion: 'FL', addressCountry: 'US' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
+  geo: { '@type': 'GeoCoordinates', latitude: 29.5845, longitude: -81.2079 },
   areaServed: { '@type': 'City', name: 'Palm Coast' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
+  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
 };
 
 const checkIcon = (
@@ -76,7 +79,7 @@ export default function WebDesignPalmCoast() {
           {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Score'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
             <div key={label}>
               <div className="text-[28px] font-extrabold text-white">{num}</div>
-              <div className="text-[11px] text-white/40 uppercase tracking-wider mt-0.5">{label}</div>
+              <div className="text-[11px] text-white/70 uppercase tracking-wider mt-0.5">{label}</div>
             </div>
           ))}
         </div>
@@ -215,6 +218,7 @@ export default function WebDesignPalmCoast() {
               { label: 'Ormond Beach', href: '/services/web-design-ormond-beach' },
               { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
               { label: 'DeLand', href: '/services/web-design-deland' },
+              { label: 'All of Volusia County', href: '/services/web-design-volusia-county' },
               { label: 'All Web Design Services', href: '/services/web-design' },
             ].map(({ label, href }) => (
               <Link key={href} href={href} className="group bg-[#f8f9fc] hover:bg-accent/5 border border-[#e5e7eb] hover:border-accent/30 rounded-xl px-4 py-3 text-[13px] font-semibold text-dark group-hover:text-accent transition-all text-center">
@@ -229,7 +233,7 @@ export default function WebDesignPalmCoast() {
       <section className="bg-accent py-16">
         <div className="container-site text-center">
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>Ready to Grow Your Palm Coast Business?</h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll map out exactly how to get your Palm Coast business ranking before the competition catches up.</p>
+          <p className="text-white text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll map out exactly how to get your Palm Coast business ranking before the competition catches up.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Book a Free Strategy Call →</Link>
           <a href="tel:+13862590178" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-[14px] font-semibold ml-4 transition-colors">or call (386) 259-0178</a>
         </div>

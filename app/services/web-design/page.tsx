@@ -71,10 +71,10 @@ export default function WebDesign() {
             </Link>
           </div>
           <div className="flex gap-4 flex-wrap mt-10">
-            {[['7 Days', 'Avg Launch Time'], ['100', 'PageSpeed Target'], ['3×', 'Avg Lead Increase']].map(([n, l]) => (
+            {[['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Score'], ['3×', 'Avg Lead Increase']].map(([n, l]) => (
               <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
                 <div className="text-[22px] font-extrabold text-white leading-none">{n}</div>
-                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">{l}</div>
+                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/70 mt-0.5">{l}</div>
               </div>
             ))}
           </div>
@@ -153,6 +153,7 @@ export default function WebDesign() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { label: 'Daytona Beach', href: '/services/web-design', sub: 'Main service area' },
+              { label: 'All of Volusia County', href: '/services/web-design-volusia-county', sub: 'Full coverage area' },
               { label: 'Port Orange', href: '/services/web-design-port-orange', sub: 'Volusia County' },
               { label: 'Ormond Beach', href: '/services/web-design-ormond-beach', sub: 'Volusia County' },
               { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach', sub: 'Volusia County' },
@@ -175,7 +176,7 @@ export default function WebDesign() {
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>
             Ready for a site that actually works?
           </h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">
+          <p className="text-white text-[15px] mb-8 max-w-md mx-auto">
             We&apos;ll build it in 7 days. No templates, no shortcuts — just results.
           </p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">

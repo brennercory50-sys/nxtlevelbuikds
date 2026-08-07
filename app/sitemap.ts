@@ -7,6 +7,7 @@ const staticRoutes = [
   { url: base, priority: 1.0, changeFrequency: 'weekly' as const },
   { url: `${base}/services`, priority: 0.9, changeFrequency: 'monthly' as const },
   { url: `${base}/services/web-design`, priority: 0.9, changeFrequency: 'monthly' as const },
+  { url: `${base}/services/web-design-volusia-county`, priority: 0.9, changeFrequency: 'monthly' as const },
   { url: `${base}/services/google-ads`, priority: 0.9, changeFrequency: 'monthly' as const },
   { url: `${base}/services/seo`, priority: 0.9, changeFrequency: 'monthly' as const },
   { url: `${base}/services/ai-automation`, priority: 0.9, changeFrequency: 'monthly' as const },

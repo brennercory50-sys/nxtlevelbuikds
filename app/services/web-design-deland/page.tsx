@@ -23,13 +23,16 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://nxtlevelbuilds.com/services/web-design-deland#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving DeLand, FL.',
   url: 'https://nxtlevelbuilds.com/services/web-design-deland',
   telephone: '+13862590178',
-  address: { '@type': 'PostalAddress', addressLocality: 'DeLand', addressRegion: 'FL', addressCountry: 'US' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
+  geo: { '@type': 'GeoCoordinates', latitude: 29.0283, longitude: -81.3031 },
   areaServed: { '@type': 'City', name: 'DeLand' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
+  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
 };
 
 const checkIcon = (
@@ -76,7 +79,7 @@ export default function WebDesignDeLand() {
           {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Score'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
             <div key={label}>
               <div className="text-[28px] font-extrabold text-white">{num}</div>
-              <div className="text-[11px] text-white/40 uppercase tracking-wider mt-0.5">{label}</div>
+              <div className="text-[11px] text-white/70 uppercase tracking-wider mt-0.5">{label}</div>
             </div>
           ))}
         </div>
@@ -133,7 +136,7 @@ export default function WebDesignDeLand() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             {[
               { name: 'Downtown Historic District', zip: '32720' },
-              { name: 'Stetson University Area', zip: '32723' },
+              { name: 'Stetson University Area', zip: '32720' },
               { name: 'W. Volusia Blvd Corridor', zip: '32720' },
               { name: 'Spring Hill', zip: '32724' },
               { name: 'Orange City Adjacent', zip: '32763' },
@@ -214,6 +217,7 @@ export default function WebDesignDeLand() {
               { label: 'Ormond Beach', href: '/services/web-design-ormond-beach' },
               { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
               { label: 'Palm Coast', href: '/services/web-design-palm-coast' },
+              { label: 'All of Volusia County', href: '/services/web-design-volusia-county' },
               { label: 'All Web Design Services', href: '/services/web-design' },
             ].map(({ label, href }) => (
               <Link key={href} href={href} className="group bg-[#f8f9fc] hover:bg-accent/5 border border-[#e5e7eb] hover:border-accent/30 rounded-xl px-4 py-3 text-[13px] font-semibold text-dark group-hover:text-accent transition-all text-center">
@@ -228,7 +232,7 @@ export default function WebDesignDeLand() {
       <section className="bg-accent py-16">
         <div className="container-site text-center">
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>Ready to Grow Your DeLand Business?</h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll show you what your competitors are doing and exactly how to outrank them.</p>
+          <p className="text-white text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll show you what your competitors are doing and exactly how to outrank them.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Book a Free Strategy Call →</Link>
           <a href="tel:+13862590178" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-[14px] font-semibold ml-4 transition-colors">or call (386) 259-0178</a>
         </div>

@@ -19,6 +19,7 @@ const company = [
 ];
 const locations = [
   { label: 'Web Design Daytona Beach', href: '/services/web-design' },
+  { label: 'Web Design Volusia County', href: '/services/web-design-volusia-county' },
   { label: 'Web Design Port Orange', href: '/services/web-design-port-orange' },
   { label: 'Web Design Ormond Beach', href: '/services/web-design-ormond-beach' },
   { label: 'Web Design New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },

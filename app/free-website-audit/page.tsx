@@ -52,7 +52,7 @@ export default function FreeWebsiteAudit() {
           </div>
 
           <p className="text-center text-[13px] text-muted mt-8">
-            We review 5–8 sites per week. You&apos;ll get specific, actionable feedback — not a generic checklist.
+            Every audit is specific and actionable — not a generic checklist.
           </p>
         </div>
       </section>
