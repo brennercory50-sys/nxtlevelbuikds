@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Web Design for Home Service Companies FL',
   description: 'Custom websites for home service businesses in Florida — HVAC, plumbing, cleaning, landscaping, and more. Built to rank locally and book more jobs.',
+  alternates: { canonical: canonical('/services/web-design-for-home-services') },
   openGraph: {
     title: 'Web Design for Home Service Companies FL',
     description: 'Custom websites for home service businesses in Florida — HVAC, plumbing, cleaning, landscaping, and more.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
@@ -131,7 +133,7 @@ export default function WebDesignForHomeServices() {
       <section className="bg-accent py-16">
         <div className="container-site text-center">
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>Ready to Get More Service Calls?</h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">Free strategy call. No commitment. We&apos;ll show you exactly what&apos;s possible.</p>
+          <p className="text-white text-[15px] mb-8 max-w-md mx-auto">Free strategy call. No commitment. We&apos;ll show you exactly what&apos;s possible.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Book a Free Strategy Call →</Link>
         </div>
       </section>

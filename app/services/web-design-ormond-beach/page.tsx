@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -6,10 +7,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Web Design Ormond Beach FL | Custom Websites',
   description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads. Launched in 7 days. Serving zip codes 32174 & 32176.',
+  alternates: { canonical: canonical('/services/web-design-ormond-beach') },
   openGraph: {
     title: 'Web Design Ormond Beach FL | Custom Websites',
     description: 'Custom web design in Ormond Beach, FL. Mobile-first websites built to rank locally and convert visitors into leads.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
@@ -21,13 +23,16 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://nxtlevelbuilds.com/services/web-design-ormond-beach#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Ormond Beach, FL.',
   url: 'https://nxtlevelbuilds.com/services/web-design-ormond-beach',
   telephone: '+13862590178',
-  address: { '@type': 'PostalAddress', addressLocality: 'Ormond Beach', addressRegion: 'FL', addressCountry: 'US' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
+  geo: { '@type': 'GeoCoordinates', latitude: 29.2858, longitude: -81.0559 },
   areaServed: { '@type': 'City', name: 'Ormond Beach' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
+  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
 };
 
 const checkIcon = (
@@ -74,7 +79,7 @@ export default function WebDesignOrmondBeach() {
           {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Score'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
             <div key={label}>
               <div className="text-[28px] font-extrabold text-white">{num}</div>
-              <div className="text-[11px] text-white/40 uppercase tracking-wider mt-0.5">{label}</div>
+              <div className="text-[11px] text-white/70 uppercase tracking-wider mt-0.5">{label}</div>
             </div>
           ))}
         </div>
@@ -185,7 +190,7 @@ export default function WebDesignOrmondBeach() {
               </p>
             </div>
             <div className="bg-white rounded-2xl border border-[#e5e7eb] p-7">
-              <h3 className="font-bold text-[16px] text-dark mb-3">Do Ormond Beach businesses really need a website in 2025?</h3>
+              <h3 className="font-bold text-[16px] text-dark mb-3">Do Ormond Beach businesses really need a website in 2026?</h3>
               <p className="text-muted text-[14px] leading-relaxed">
                 Yes — and the data backs it up. 78% of consumers search online before making a local purchase or booking a service. If your business isn't ranking in local search, you're invisible to the majority of your potential customers before they even decide who to call. In Ormond Beach specifically, the residential demographic skews toward higher-income homeowners who research before they buy. A professional, fast-loading website isn't optional — it's the first impression that decides whether someone calls you or your competitor.
               </p>
@@ -211,6 +216,7 @@ export default function WebDesignOrmondBeach() {
               { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
               { label: 'DeLand', href: '/services/web-design-deland' },
               { label: 'Palm Coast', href: '/services/web-design-palm-coast' },
+              { label: 'All of Volusia County', href: '/services/web-design-volusia-county' },
               { label: 'All Web Design Services', href: '/services/web-design' },
             ].map(({ label, href }) => (
               <Link key={href} href={href} className="group bg-[#f8f9fc] hover:bg-accent/5 border border-[#e5e7eb] hover:border-accent/30 rounded-xl px-4 py-3 text-[13px] font-semibold text-dark group-hover:text-accent transition-all text-center">
@@ -225,8 +231,9 @@ export default function WebDesignOrmondBeach() {
       <section className="bg-accent py-16">
         <div className="container-site text-center">
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>Ready to Grow Your Ormond Beach Business?</h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll audit your current online presence and show you exactly what&apos;s costing you leads.</p>
+          <p className="text-white text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll audit your current online presence and show you exactly what&apos;s costing you leads.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Book a Free Strategy Call →</Link>
+          <a href="tel:+13862590178" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-[14px] font-semibold ml-4 transition-colors">or call (386) 259-0178</a>
         </div>
       </section>
     </main>

@@ -146,7 +146,7 @@ export default function SEO() {
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>
             Start ranking. Start converting.
           </h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">
+          <p className="text-white text-[15px] mb-8 max-w-md mx-auto">
             Let&apos;s talk about your market, your competition, and what it takes to win locally.
           </p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">
