@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { canonical, ogImage } from '@/lib/seo';
 import { posts } from '@/app/blog/posts';
 
-export const revalidate = 3600;
-
 export const metadata: Metadata = {
   title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
   description: 'No-fluff insights on web design, Google Ads, local SEO, and AI automation — written by the team at NXT Level Builds in Daytona Beach, FL.',

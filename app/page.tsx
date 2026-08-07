@@ -5,11 +5,11 @@ import { canonical, ogImage } from '@/lib/seo';
 import TrustBar from '@/components/TrustBar';
 
 export const metadata: Metadata = {
-  title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+  title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
   description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help local businesses get more leads and scale faster.',
   alternates: { canonical: canonical('') },
   openGraph: {
-  title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
+    title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
     description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses. Built to convert. Launched in 7 days.',
     images: [ogImage()],
   },
