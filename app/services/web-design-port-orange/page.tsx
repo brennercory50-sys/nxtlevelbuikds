@@ -128,6 +128,7 @@ export default function WebDesignPortOrange() {
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">
             Book a Free Strategy Call →
           </Link>
+          <a href="tel:+13862590178" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-[14px] font-semibold ml-4 transition-colors">or call (386) 259-0178</a>
         </div>
       </section>
     </main>

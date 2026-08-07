@@ -22,10 +22,17 @@ const staticRoutes = [
   { url: `${base}/about`, priority: 0.7, changeFrequency: 'monthly' as const },
   { url: `${base}/faq`, priority: 0.6, changeFrequency: 'monthly' as const },
   { url: `${base}/blog`, priority: 0.7, changeFrequency: 'weekly' as const },
-  { url: `${base}/thank-you`, priority: 0.3, changeFrequency: 'yearly' as const },
 ];
 
 const blogSlugs = [
+  'contractor-website-checklist',
+  'home-services-website-checklist',
+  'google-business-profile-checklist-florida',
+  'web-design-deland-what-local-businesses-need',
+  'web-design-new-smyrna-beach-what-local-businesses-need',
+  'web-design-ormond-beach-what-local-businesses-need',
+  'web-design-palm-coast-what-local-businesses-need',
+  'web-design-port-orange-what-local-businesses-need',
   'why-google-ads-arent-converting',
   'dominate-google-maps-90-days',
   '5-things-automate-with-ai',

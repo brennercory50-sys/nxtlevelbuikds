@@ -59,7 +59,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
     author: { '@type': 'Organization', name: 'NXT Level Builds', url: 'https://nxtlevelbuilds.com' },
     publisher: { '@type': 'Organization', name: 'NXT Level Builds', logo: { '@type': 'ImageObject', url: 'https://nxtlevelbuilds.com/images/logo.png' } },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nxtlevelbuilds.com/work/${project.slug}` },
-    image: 'https://nxtlevelbuilds.com/images/og-image.jpg',
+    image: 'https://nxtlevelbuilds.com/opengraph-image',
   };
 
   return (

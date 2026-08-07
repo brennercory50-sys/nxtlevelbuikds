@@ -51,7 +51,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       logo: { '@type': 'ImageObject', url: 'https://nxtlevelbuilds.com/images/logo.png' },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nxtlevelbuilds.com/blog/${post.slug}` },
-    image: 'https://nxtlevelbuilds.com/images/og-image.jpg',
+    image: 'https://nxtlevelbuilds.com/opengraph-image',
   };
 
   return (

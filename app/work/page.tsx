@@ -106,9 +106,11 @@ export default function Work() {
             <p className="text-muted text-[14px] text-center mb-10 max-w-lg mx-auto">
               How we helped {featured.title} go from zero online presence to ranking page one in 60 days.
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className={`grid grid-cols-1 ${featured.videoUrl ? 'lg:grid-cols-2' : 'max-w-3xl mx-auto'} gap-6`}>
               {/* Video */}
-              <CaseStudyVideo url={featured.videoUrl} title={`${featured.title} — Full Case Study Walkthrough`} />
+              {featured.videoUrl && (
+                <CaseStudyVideo url={featured.videoUrl} title={`${featured.title} — Full Case Study Walkthrough`} />
+              )}
               {/* Summary */}
               <div className="bg-white rounded-2xl border border-[#e5e7eb] p-8 flex flex-col justify-between">
                 <div>
