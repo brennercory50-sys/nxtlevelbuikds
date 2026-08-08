@@ -23,16 +23,16 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://nxtlevelbuilds.com/services/web-design-port-orange#business',
+  '@id': 'https://www.nxtlevelbuilds.com/services/web-design-port-orange#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Port Orange, FL.',
-  url: 'https://nxtlevelbuilds.com/services/web-design-port-orange',
+  url: 'https://www.nxtlevelbuilds.com/services/web-design-port-orange',
   telephone: '+13862590178',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   geo: { '@type': 'GeoCoordinates', latitude: 29.1383, longitude: -80.9956 },
   areaServed: { '@type': 'City', name: 'Port Orange' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
-  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
+  parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
 };
 
 const checkIcon = (
@@ -219,6 +219,7 @@ export default function WebDesignPortOrange() {
               { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
               { label: 'DeLand', href: '/services/web-design-deland' },
               { label: 'Palm Coast', href: '/services/web-design-palm-coast' },
+              { label: 'All of Volusia County', href: '/services/web-design-volusia-county' },
               { label: 'All Web Design Services', href: '/services/web-design' },
             ].map(({ label, href }) => (
               <Link key={href} href={href} className="group bg-[#f8f9fc] hover:bg-accent/5 border border-[#e5e7eb] hover:border-accent/30 rounded-xl px-4 py-3 text-[13px] font-semibold text-dark group-hover:text-accent transition-all text-center">

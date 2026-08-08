@@ -23,16 +23,16 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://nxtlevelbuilds.com/services/web-design-ormond-beach#business',
+  '@id': 'https://www.nxtlevelbuilds.com/services/web-design-ormond-beach#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Ormond Beach, FL.',
-  url: 'https://nxtlevelbuilds.com/services/web-design-ormond-beach',
+  url: 'https://www.nxtlevelbuilds.com/services/web-design-ormond-beach',
   telephone: '+13862590178',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   geo: { '@type': 'GeoCoordinates', latitude: 29.2858, longitude: -81.0559 },
   areaServed: { '@type': 'City', name: 'Ormond Beach' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
-  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
+  parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
 };
 
 const checkIcon = (

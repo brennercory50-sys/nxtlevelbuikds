@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const base = 'https://nxtlevelbuilds.com';
+const base = 'https://www.nxtlevelbuilds.com';
 const now = new Date().toISOString().split('T')[0];
 
 const staticRoutes = [

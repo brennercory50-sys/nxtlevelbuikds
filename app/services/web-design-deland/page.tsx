@@ -23,16 +23,16 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://nxtlevelbuilds.com/services/web-design-deland#business',
+  '@id': 'https://www.nxtlevelbuilds.com/services/web-design-deland#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving DeLand, FL.',
-  url: 'https://nxtlevelbuilds.com/services/web-design-deland',
+  url: 'https://www.nxtlevelbuilds.com/services/web-design-deland',
   telephone: '+13862590178',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   geo: { '@type': 'GeoCoordinates', latitude: 29.0283, longitude: -81.3031 },
   areaServed: { '@type': 'City', name: 'DeLand' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
-  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
+  parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
 };
 
 const checkIcon = (

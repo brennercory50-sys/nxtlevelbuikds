@@ -23,16 +23,16 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://nxtlevelbuilds.com/services/web-design-palm-coast#business',
+  '@id': 'https://www.nxtlevelbuilds.com/services/web-design-palm-coast#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Palm Coast, FL.',
-  url: 'https://nxtlevelbuilds.com/services/web-design-palm-coast',
+  url: 'https://www.nxtlevelbuilds.com/services/web-design-palm-coast',
   telephone: '+13862590178',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   geo: { '@type': 'GeoCoordinates', latitude: 29.5845, longitude: -81.2079 },
   areaServed: { '@type': 'City', name: 'Palm Coast' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
-  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
+  parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
 };
 
 const checkIcon = (
