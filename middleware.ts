@@ -1,13 +1,21 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
-  const host = request.headers.get('host');
+const APEX_HOST = 'nxtlevelbuilds.com';
+const WWW_HOST = 'www.nxtlevelbuilds.com';
 
-  if (host === 'nxtlevelbuilds.com') {
-    const url = request.nextUrl.clone();
+export function middleware(request: NextRequest) {
+  const host = (request.headers.get('host') ?? '').split(':')[0].toLowerCase();
+  const url = request.nextUrl.clone();
+
+  if (host === APEX_HOST) {
     url.protocol = 'https';
-    url.host = 'www.nxtlevelbuilds.com';
+    url.host = WWW_HOST;
+    return NextResponse.redirect(url, 308);
+  }
+
+  if (host === WWW_HOST && request.nextUrl.protocol === 'http:') {
+    url.protocol = 'https';
     return NextResponse.redirect(url, 308);
   }
 
