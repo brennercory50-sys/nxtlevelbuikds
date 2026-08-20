@@ -212,7 +212,7 @@ export default function ChatWidget() {
         <button
           onClick={handleOpen}
           aria-label="Open chat"
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#1a6eff] hover:bg-[#0047cc] shadow-lg shadow-[#1a6eff]/25 hover:shadow-[#1a6eff]/40 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 group"
+          className="fixed bottom-[76px] md:bottom-6 right-4 md:right-6 z-50 w-14 h-14 rounded-full bg-[#1a6eff] hover:bg-[#0047cc] shadow-lg shadow-[#1a6eff]/25 hover:shadow-[#1a6eff]/40 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 group"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:scale-110 transition-transform">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
