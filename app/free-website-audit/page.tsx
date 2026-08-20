@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import LeadMagnetForm from '@/components/LeadMagnetForm';
 
 export const metadata: Metadata = {
   title: 'Free Website Audit — Find Out Why Your Site Isn\'t Getting Leads ',
   description: 'Get a free custom Loom video audit of your website. We\'ll show you exactly why you\'re not getting leads and what to fix first. Delivered in 48 hours.',
+  alternates: { canonical: canonical('/free-website-audit') },
   openGraph: {
     title: 'Free Website Audit — Find Out Why Your Site Isn\'t Getting Leads',
     description: 'Get a free custom Loom video audit of your website. We\'ll show you exactly why you\'re not getting leads and what to fix first.',
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
@@ -50,7 +52,7 @@ export default function FreeWebsiteAudit() {
           </div>
 
           <p className="text-center text-[13px] text-muted mt-8">
-            We review 5–8 sites per week. You&apos;ll get specific, actionable feedback — not a generic checklist.
+            Every audit is specific and actionable — not a generic checklist.
           </p>
         </div>
       </section>

@@ -29,7 +29,7 @@ const serviceItems: { icon: ReactNode; label: string; desc: string; href: string
 const navLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/work', label: 'Our Work' },
-  { href: '/pricing', label: 'Pricing' },
+  { href: '/contact', label: 'Book a Call' },
   { href: '/contact', label: 'Contact' },
 ];
 

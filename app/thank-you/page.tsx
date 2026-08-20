@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import ThankYouEvent from '@/components/ThankYouEvent';
 
@@ -6,10 +7,11 @@ export const metadata: Metadata = {
   title: "Message Received — We'll Be in Touch",
   description: "Your message has been received. A member of the NXT Level Builds team will reach out within 1 business day.",
   robots: { index: false, follow: false },
+  alternates: { canonical: canonical('/thank-you') },
   openGraph: {
     title: "Message Received — We'll Be in Touch",
     description: "Your message has been received. A member of the NXT Level Builds team will reach out within 1 business day.",
-    images: ['/opengraph-image'],
+    images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
@@ -64,8 +66,8 @@ export default function ThankYou() {
           <Link href="/work" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-colors">
             See Our Work →
           </Link>
-          <Link href="/pricing" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-7 py-3.5 rounded-lg transition-all">
-            View Pricing →
+          <Link href="/contact" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-7 py-3.5 rounded-lg transition-all">
+            Get a Custom Quote →
           </Link>
         </div>
 

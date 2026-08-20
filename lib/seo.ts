@@ -4,7 +4,7 @@ export function canonical(path: string): string {
   return `${BASE}${path}`;
 }
 
-export function ogImage(path: string = '/images/about-bg.png'): { url: string; width: number; height: number; alt: string } {
+export function ogImage(path: string = '/opengraph-image'): { url: string; width: number; height: number; alt: string } {
   return {
     url: `${BASE}${path}`,
     width: 1200,

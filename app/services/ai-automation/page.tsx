@@ -68,10 +68,10 @@ export default function AIAutomation() {
             </Link>
           </div>
           <div className="flex gap-4 flex-wrap mt-10">
-            {[['12 hrs', 'Avg Weekly Time Saved'], ['+82', 'New Clients/mo Record'], ['24/7', 'Systems That Never Sleep']].map(([n, l]) => (
+            {[['12 hrs', 'Avg Weekly Time Saved'], ['+82', 'New Clients/Month'], ['24/7', 'Systems That Never Sleep']].map(([n, l]) => (
               <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
                 <div className="text-[22px] font-extrabold text-white leading-none">{n}</div>
-                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">{l}</div>
+                <div className="text-[10px] font-semibold tracking-widest uppercase text-white/70 mt-0.5">{l}</div>
               </div>
             ))}
           </div>
@@ -146,7 +146,7 @@ export default function AIAutomation() {
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>
             Let automation do the heavy lifting.
           </h2>
-          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">
+          <p className="text-white text-[15px] mb-8 max-w-md mx-auto">
             Tell us what you&apos;re doing manually. We&apos;ll show you how to automate it.
           </p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">

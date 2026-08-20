@@ -106,9 +106,11 @@ export default function Work() {
             <p className="text-muted text-[14px] text-center mb-10 max-w-lg mx-auto">
               How we helped {featured.title} go from zero online presence to ranking page one in 60 days.
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className={`grid grid-cols-1 ${featured.videoUrl ? 'lg:grid-cols-2' : 'max-w-3xl mx-auto'} gap-6`}>
               {/* Video */}
-              <CaseStudyVideo url={featured.videoUrl} title={`${featured.title} — Full Case Study Walkthrough`} />
+              {featured.videoUrl && (
+                <CaseStudyVideo url={featured.videoUrl} title={`${featured.title} — Full Case Study Walkthrough`} />
+              )}
               {/* Summary */}
               <div className="bg-white rounded-2xl border border-[#e5e7eb] p-8 flex flex-col justify-between">
                 <div>
@@ -184,8 +186,8 @@ export default function Work() {
             <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-8 py-4 rounded-lg transition-colors shadow-[0_4px_20px_rgba(26,110,255,0.35)]">
               Book a Free Strategy Call →
             </Link>
-            <Link href="/pricing" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-8 py-4 rounded-lg transition-all">
-              View Pricing →
+            <Link href="/contact" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-8 py-4 rounded-lg transition-all">
+              Get a Custom Quote →
             </Link>
           </div>
         </div>

@@ -53,25 +53,25 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="text-[12px] font-semibold text-dark block mb-1.5">Full Name *</label>
-            <input name="name" required type="text" placeholder="Enter your name"
+            <label htmlFor="name" className="text-[12px] font-semibold text-dark block mb-1.5">Full Name *</label>
+            <input id="name" name="name" required type="text" placeholder="Enter your name"
               className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors"/>
           </div>
           <div>
-            <label className="text-[12px] font-semibold text-dark block mb-1.5">Phone Number *</label>
-            <input name="phone" required type="tel" placeholder="(386) 555-0100"
+            <label htmlFor="phone" className="text-[12px] font-semibold text-dark block mb-1.5">Phone Number *</label>
+            <input id="phone" name="phone" required type="tel" placeholder="(386) 555-0100"
               className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors"/>
           </div>
         </div>
         <div>
-          <label className="text-[12px] font-semibold text-dark block mb-1.5">Email Address *</label>
-          <input name="email" required type="email" placeholder="Enter your email"
+          <label htmlFor="email" className="text-[12px] font-semibold text-dark block mb-1.5">Email Address *</label>
+          <input id="email" name="email" required type="email" placeholder="Enter your email"
             className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors"/>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="text-[12px] font-semibold text-dark block mb-1.5">What do you need?</label>
-            <select name="service" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors text-muted">
+            <label htmlFor="service" className="text-[12px] font-semibold text-dark block mb-1.5">What do you need?</label>
+            <select id="service" name="service" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors text-muted">
               <option value="">Select a service</option>
               <option>Custom Website</option>
               <option>Google Ads</option>
@@ -81,8 +81,8 @@ export default function ContactForm() {
             </select>
           </div>
           <div>
-            <label className="text-[12px] font-semibold text-dark block mb-1.5">Budget Range</label>
-            <select name="budget" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors text-muted">
+            <label htmlFor="budget" className="text-[12px] font-semibold text-dark block mb-1.5">Budget Range</label>
+            <select id="budget" name="budget" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors text-muted">
               <option value="">Select a budget</option>
               <option>Under $1,000</option>
               <option>$1,000 – $3,000</option>
@@ -93,8 +93,8 @@ export default function ContactForm() {
           </div>
         </div>
         <div>
-          <label className="text-[12px] font-semibold text-dark block mb-1.5">Timeline</label>
-          <select name="timeline" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors text-muted">
+          <label htmlFor="timeline" className="text-[12px] font-semibold text-dark block mb-1.5">Timeline</label>
+          <select id="timeline" name="timeline" className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors text-muted">
             <option value="">When do you need this?</option>
             <option>ASAP (this month)</option>
             <option>1–3 months</option>
@@ -103,8 +103,8 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label className="text-[12px] font-semibold text-dark block mb-1.5">Your Message *</label>
-          <textarea name="message" required rows={4} placeholder="Tell us about your project..."
+          <label htmlFor="message" className="text-[12px] font-semibold text-dark block mb-1.5">Your Message *</label>
+          <textarea id="message" name="message" required rows={4} placeholder="Tell us about your project..."
             className="w-full bg-[#f8f9fc] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[14px] outline-none focus:border-accent transition-colors resize-y"/>
         </div>
         {error && (

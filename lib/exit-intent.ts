@@ -64,7 +64,7 @@ function setStorage(key: string, value: string): void {
 export function getOfferForPath(path: string): string {
   if (path.includes('/services/seo') || path.includes('/free-seo-audit')) return 'seo-audit';
   if (path.includes('/services/ai-automation') || path.includes('/services/google-ads')) return 'ai-assessment';
-  if (path.includes('/services/web-design') || path.includes('/work') || path.includes('/pricing')) return 'website-audit';
+  if (path.includes('/services/web-design') || path.includes('/work') || path.includes('/contact')) return 'website-audit';
   return 'website-audit';
 }
 

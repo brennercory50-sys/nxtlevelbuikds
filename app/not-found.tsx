@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '404 — Page Not Found | NXT Level Builds',
+  title: { absolute: '404 — Page Not Found' },
   description: 'The page you\'re looking for doesn\'t exist or has been moved. Let\'s get you back on track.',
   robots: { index: false, follow: false },
 };

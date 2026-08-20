@@ -5,7 +5,7 @@ import { canonical, ogImage } from '@/lib/seo';
 import TrustBar from '@/components/TrustBar';
 
 export const metadata: Metadata = {
-  title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+  title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
   description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help local businesses get more leads and scale faster.',
   alternates: { canonical: canonical('') },
   openGraph: {
@@ -91,19 +91,19 @@ export default function Home() {
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
                   </svg>
-                ), number:'100', label:'PageSpeed Target' },
+                ), number:'90+', label:'PageSpeed Score' },
                 { icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
                     <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
                   </svg>
-                ), number:'3 Yrs', label:'Web Design Experience' },
+                ), number:'3 Yrs', label:'Industry Experience' },
               ].map((s, i) => (
                 <div key={s.label} className={`flex flex-col md:flex-row md:items-center md:gap-3 py-1 text-center md:text-left ${i > 0 ? 'border-l border-white/10 md:ml-10 md:pl-10 pl-2' : ''}`}>
                   <span className="hidden md:block text-accent opacity-80">{s.icon}</span>
                   <div>
                     <div className="text-[20px] md:text-[22px] font-extrabold text-white leading-none">{s.number}</div>
-                    <div className="text-[9px] md:text-[11px] text-white/40 mt-0.5 font-medium leading-tight">{s.label}</div>
+                    <div className="text-[9px] md:text-[11px] text-white/70 mt-0.5 font-medium leading-tight">{s.label}</div>
                   </div>
                 </div>
               ))}
@@ -165,7 +165,7 @@ export default function Home() {
           <div className="bg-accent rounded-2xl p-6 flex items-center justify-between">
             <div>
               <p className="font-bold text-white text-[18px]">Ready To Scale Your Business?</p>
-              <p className="text-white/70 text-[14px]">Let&apos;s build your system.</p>
+              <p className="text-white text-[14px]">Let&apos;s build your system.</p>
             </div>
             <Link href="/contact" className="bg-white text-accent font-bold text-[14px] px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors whitespace-nowrap">Book a Call →</Link>
           </div>
