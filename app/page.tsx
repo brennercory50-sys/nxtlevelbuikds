@@ -33,28 +33,46 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden">
-        <Image fill src="/images/about-bg.png" alt="NXT Level Builds office" className="object-cover object-center" priority quality={75} sizes="100vw" />
-        {/* Gradient — fades left side for text, leaves right side open to show the logo wall */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/55 to-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+      <section className="relative min-h-[85vh] md:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#0d0f14]">
+        {/* Base layer — static image. Shows while the video loads, if it fails, and for reduced-motion users. */}
+        <Image fill src="/images/about-bg.png" alt="NXT Level Builds — Daytona Beach digital agency" className="object-cover object-center" priority quality={75} sizes="100vw" />
+        {/* Cinematic hero video — autoplay/loop/muted, hidden when the user prefers reduced motion */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover object-center motion-reduce:hidden pointer-events-none"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/images/about-bg.webp"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        {/* Cinematic gradients — darker behind the left/center text, lighter to the right; bottom fade for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25" />
 
-        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-24">
+        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-20 md:py-24">
           <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent mb-5">
             Websites. Automation. Growth.
           </p>
-          <h1 className="text-[clamp(38px,5.5vw,72px)] font-extrabold leading-[1.08] text-white mb-6 max-w-2xl">
+          <h1 className="text-[clamp(40px,5.6vw,74px)] font-extrabold leading-[1.05] tracking-tight text-white mb-6 max-w-2xl [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
             Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Local Businesses.</span>
           </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-md mb-10">
+          <p className="text-[16px] text-white/65 leading-relaxed max-w-md mb-5">
             We build high-converting websites, automations, and growth systems that help local businesses get more leads, book more jobs, and scale with confidence.
+          </p>
+          <p className="text-[13px] text-white/45 mb-9 max-w-md">
+            Simple sites from <span className="text-white/85 font-semibold">$599</span> with <span className="text-white/85 font-semibold">$150/mo</span> — custom builds quoted individually
           </p>
           <div className="flex gap-3 flex-wrap">
             <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">
-              Book A Strategy Call ↗
+              Book A Strategy Call →
             </Link>
-            <Link href="/work" className="inline-flex items-center gap-2 bg-transparent hover:bg-white/10 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg border border-white/30 transition-all">
-              See Our Work ↗
+            <Link href="/work" className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm hover:bg-white/15 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg border border-white/30 transition-all">
+              See Our Work →
             </Link>
           </div>
         </div>
