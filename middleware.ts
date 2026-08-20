@@ -6,17 +6,15 @@ const WWW_HOST = 'www.nxtlevelbuilds.com';
 
 export function middleware(request: NextRequest) {
   const host = (request.headers.get('host') ?? '').split(':')[0].toLowerCase();
-  const url = request.nextUrl.clone();
 
   if (host === APEX_HOST) {
-    url.protocol = 'https';
-    url.host = WWW_HOST;
-    return NextResponse.redirect(url, 308);
+    const target = `https://${WWW_HOST}${request.nextUrl.pathname}${request.nextUrl.search}`;
+    return NextResponse.redirect(target, 308);
   }
 
   if (host === WWW_HOST && request.nextUrl.protocol === 'http:') {
-    url.protocol = 'https';
-    return NextResponse.redirect(url, 308);
+    const target = `https://${WWW_HOST}${request.nextUrl.pathname}${request.nextUrl.search}`;
+    return NextResponse.redirect(target, 308);
   }
 
   return NextResponse.next();
