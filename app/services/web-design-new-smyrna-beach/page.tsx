@@ -35,6 +35,16 @@ const citySchema = {
   parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Can a website help my NSB vacation rental business get more direct bookings?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely — and the economics are compelling. Platforms like Airbnb and VRBO charge 20–30% commission on every booking. A direct booking website that ranks in local search and converts visitors eliminates that fee entirely. Even if your website captures just a fraction of your annual bookings directly, it pays for itself many times over. We build vacation rental sites with integrated booking widgets, high-quality photo galleries, and local SEO that targets searches like "New Smyrna Beach vacation rentals" and "NSB beachfront rentals" — the exact queries your future guests are typing.' } },
+    { '@type': 'Question', name: "What's different about web design for a tourism-driven business?", acceptedAnswer: { '@type': 'Answer', text: 'Tourism businesses have three requirements that most generic websites miss. First, mobile performance is non-negotiable — visitors are searching from their phones, often while already traveling. Second, visual storytelling matters more than in most industries: high-quality photo galleries and video backgrounds convert. Third, booking friction kills revenue — your site needs fast, intuitive booking or contact flows that work on a phone without pinching and zooming. We design every NSB site with all three of these in mind, because a beautiful site that loads slowly or buries the booking button is still a site that loses business.' } },
+    { '@type': 'Question', name: 'Do you work with art galleries and boutique shops on Flagler Ave?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we've built sites for creative and retail businesses in arts districts and have a strong understanding of what works for gallery, boutique, and experience-based businesses. For galleries, that means e-commerce or inquiry flows for artwork, artist portfolio pages, and event calendar integration. For boutiques, it means online shop functionality, Instagram feed integration, and seasonal landing pages for promotions. For any service-based business booking appointments — studios, instructors, therapists — we wire in scheduling tools that reduce no-shows and fill your calendar automatically." } },
+  ],
+};
+
 const checkIcon = (
   <span className="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
     <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
@@ -47,6 +57,7 @@ export default function WebDesignNewSmyrnaBeach() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">

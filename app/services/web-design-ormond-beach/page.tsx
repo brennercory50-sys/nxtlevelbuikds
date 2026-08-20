@@ -35,6 +35,16 @@ const citySchema = {
   parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'How long does it take to rank on Google in Ormond Beach?', acceptedAnswer: { '@type': 'Answer', text: 'For the Google local pack (the map results), most Ormond Beach businesses see meaningful movement within 60–90 days when starting from a properly optimized site and Google Business Profile. Organic rankings for service pages typically follow within 90–120 days. The local search landscape in Ormond Beach is less saturated than Daytona proper, which means well-optimized businesses move up faster. The key accelerators are on-page SEO, local citations, and consistent GBP activity — all of which we handle at launch.' } },
+    { '@type': 'Question', name: 'Do Ormond Beach businesses really need a website in 2026?', acceptedAnswer: { '@type': 'Answer', text: "Yes — and the data backs it up. 78% of consumers search online before making a local purchase or booking a service. If your business isn't ranking in local search, you're invisible to the majority of your potential customers before they even decide who to call. In Ormond Beach specifically, the residential demographic skews toward higher-income homeowners who research before they buy. A professional, fast-loading website isn't optional — it's the first impression that decides whether someone calls you or your competitor." } },
+    { '@type': 'Question', name: 'What types of businesses in Ormond Beach benefit most from a website?', acceptedAnswer: { '@type': 'Answer', text: 'Any business that depends on local customers benefits, but we see the strongest ROI for real estate agents and brokers, contractors and home services, medical and dental practices, marine services and boat dealers, and upscale retail boutiques. These categories all have high average transaction values, meaning a single customer acquired through search can justify the entire cost of the website. We build with those economics in mind — every page is designed to generate a phone call or form submission, not just traffic.' } },
+  ],
+};
+
 const checkIcon = (
   <span className="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
     <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
@@ -47,6 +57,7 @@ export default function WebDesignOrmondBeach() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">

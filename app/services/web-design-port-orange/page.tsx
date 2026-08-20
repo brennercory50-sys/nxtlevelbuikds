@@ -35,6 +35,16 @@ const citySchema = {
   parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'How competitive is web design SEO in Port Orange compared to Daytona?', acceptedAnswer: { '@type': 'Answer', text: "Less competitive than Daytona Beach proper for most service categories — and that's an advantage for Port Orange businesses that act now. Daytona has years of established competition and dozens of optimized sites fighting over the same keywords. Port Orange is earlier in that cycle. A well-built, properly optimized website in Port Orange can reach the top of local results in weeks rather than months for many service terms. The businesses that establish those rankings now will be extremely difficult to displace later, which is why the best time to invest in local SEO in Port Orange is before your competitors catch on." } },
+    { '@type': 'Question', name: 'Do you build websites for home services and contractors in Port Orange?', acceptedAnswer: { '@type': 'Answer', text: "Yes — contractors and home service companies are one of our strongest verticals. Port Orange's residential growth across Dunlawton, Taylor Road, and Spruce Creek means steady demand for roofing, HVAC, plumbing, landscaping, and pool services — and homeowners search before they hire. We build contractor sites with dedicated service pages that target high-intent searches, one-tap click-to-call buttons, and Google Business Profile optimization so you show up on the map when someone searches from the Dunlawton corridor." } },
+    { '@type': 'Question', name: 'Will my Port Orange business show up on Google Maps?', acceptedAnswer: { '@type': 'Answer', text: 'Ranking in the Google local pack depends on three things: a fully optimized Google Business Profile, consistent local citations, and a website with strong local relevance signals. We handle all three at launch — complete GBP setup with accurate categories, service areas, and photos; citation building across local directories; and LocalBusiness schema with Port Orange geo-targeting embedded in your site code. Most Port Orange businesses see meaningful local pack movement within 60–90 days of a properly optimized launch.' } },
+  ],
+};
+
 const checkIcon = (
   <span className="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
     <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
@@ -47,6 +57,7 @@ export default function WebDesignPortOrange() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
