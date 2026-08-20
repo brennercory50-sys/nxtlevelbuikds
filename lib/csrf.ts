@@ -5,7 +5,7 @@ export function validateOrigin(request: Request): boolean {
   const referer = request.headers.get('referer');
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
-  if (!siteUrl) return true;
+  if (!siteUrl) return false;
   if (!origin && !referer) return true;
 
   const allowedOrigins = [

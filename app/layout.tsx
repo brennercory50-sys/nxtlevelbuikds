@@ -134,14 +134,6 @@ const schemaGraph = {
       url: 'https://www.nxtlevelbuilds.com',
       name: 'NXT Level Builds',
       publisher: { '@id': 'https://www.nxtlevelbuilds.com/#org' },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://www.nxtlevelbuilds.com/blog?q={search_term_string}',
-        },
-        'query-input': 'required name=search_term_string',
-      },
     },
   ],
 };
