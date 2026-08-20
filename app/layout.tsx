@@ -28,7 +28,7 @@ const dmSans = DM_Sans({
   variable: '--font-dm',
 });
 
-const BASE = 'https://nxtlevelbuilds.com';
+const BASE = 'https://www.nxtlevelbuilds.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE),
@@ -63,13 +63,13 @@ const schemaGraph = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://nxtlevelbuilds.com/#business',
+      '@id': 'https://www.nxtlevelbuilds.com/#business',
       name: 'NXT Level Builds',
       description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation.',
-      url: 'https://nxtlevelbuilds.com',
+      url: 'https://www.nxtlevelbuilds.com',
       telephone: '+13862590178',
       email: 'hello@nxtlevelbuilds.com',
-      image: 'https://nxtlevelbuilds.com/opengraph-image',
+      image: 'https://www.nxtlevelbuilds.com/opengraph-image',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Daytona Beach',
@@ -107,12 +107,12 @@ const schemaGraph = {
     },
     {
       '@type': 'Organization',
-      '@id': 'https://nxtlevelbuilds.com/#org',
+      '@id': 'https://www.nxtlevelbuilds.com/#org',
       name: 'NXT Level Builds',
-      url: 'https://nxtlevelbuilds.com',
+      url: 'https://www.nxtlevelbuilds.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://nxtlevelbuilds.com/opengraph-image',
+        url: 'https://www.nxtlevelbuilds.com/opengraph-image',
       },
       founder: { '@type': 'Person', name: 'Cory Brenner' },
       sameAs: [
@@ -130,18 +130,10 @@ const schemaGraph = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://nxtlevelbuilds.com/#website',
-      url: 'https://nxtlevelbuilds.com',
+      '@id': 'https://www.nxtlevelbuilds.com/#website',
+      url: 'https://www.nxtlevelbuilds.com',
       name: 'NXT Level Builds',
-      publisher: { '@id': 'https://nxtlevelbuilds.com/#org' },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://nxtlevelbuilds.com/blog?q={search_term_string}',
-        },
-        'query-input': 'required name=search_term_string',
-      },
+      publisher: { '@id': 'https://www.nxtlevelbuilds.com/#org' },
     },
   ],
 };

@@ -44,14 +44,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     description: post.metaDesc,
     datePublished: post.isoDate,
     dateModified: post.isoDate,
-    author: { '@type': 'Person', name: 'Cory Brenner', url: 'https://nxtlevelbuilds.com/about' },
+    author: { '@type': 'Person', name: 'Cory Brenner', url: 'https://www.nxtlevelbuilds.com/about' },
     publisher: {
       '@type': 'Organization',
       name: 'NXT Level Builds',
-      logo: { '@type': 'ImageObject', url: 'https://nxtlevelbuilds.com/images/logo.png' },
+      logo: { '@type': 'ImageObject', url: 'https://www.nxtlevelbuilds.com/images/logo.png' },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nxtlevelbuilds.com/blog/${post.slug}` },
-    image: 'https://nxtlevelbuilds.com/opengraph-image',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.nxtlevelbuilds.com/blog/${post.slug}` },
+    image: 'https://www.nxtlevelbuilds.com/opengraph-image',
   };
 
   return (

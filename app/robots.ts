@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://nxtlevelbuilds.com/sitemap.xml',
+    sitemap: 'https://www.nxtlevelbuilds.com/sitemap.xml',
   };
 }
