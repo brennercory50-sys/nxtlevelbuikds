@@ -87,7 +87,7 @@ export default function WebDesignNewSmyrnaBeach() {
       {/* Stats Strip */}
       <section className="bg-[#0d1220] border-y border-white/10 py-8">
         <div className="container-site grid grid-cols-3 gap-4 text-center">
-          {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Score'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
+          {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
             <div key={label}>
               <div className="text-[28px] font-extrabold text-white">{num}</div>
               <div className="text-[11px] text-white/70 uppercase tracking-wider mt-0.5">{label}</div>
@@ -125,7 +125,7 @@ export default function WebDesignNewSmyrnaBeach() {
                   'Booking or reservation system integration',
                   'Google Business Profile setup & optimization',
                   'Contact forms + click-to-call',
-                  'PageSpeed-optimized for 90+ scores',
+                  'Performance-tuned to a 90+ PageSpeed target',
                   'Fast hosting, live in 7 business days',
                   '30-day post-launch support included',
                 ].map(f => (
