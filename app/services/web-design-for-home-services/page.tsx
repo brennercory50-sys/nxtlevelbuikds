@@ -23,7 +23,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Web Design for Home Service Companies',
-  provider: { '@type': 'LocalBusiness', name: 'NXT Level Builds', telephone: '+13862590178' },
+  provider: { '@type': 'LocalBusiness', name: 'NXT Level Builds', telephone: '+13863483072' },
   areaServed: { '@type': 'State', name: 'Florida' },
   description: 'Custom web design for home service businesses in Florida.',
   serviceType: 'Web Design',
