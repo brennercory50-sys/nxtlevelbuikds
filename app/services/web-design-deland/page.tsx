@@ -23,16 +23,26 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://nxtlevelbuilds.com/services/web-design-deland#business',
+  '@id': 'https://www.nxtlevelbuilds.com/services/web-design-deland#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving DeLand, FL.',
-  url: 'https://nxtlevelbuilds.com/services/web-design-deland',
+  url: 'https://www.nxtlevelbuilds.com/services/web-design-deland',
   telephone: '+13863483072',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   geo: { '@type': 'GeoCoordinates', latitude: 29.0283, longitude: -81.3031 },
   areaServed: { '@type': 'City', name: 'DeLand' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
-  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
+  parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'How competitive is web design SEO in DeLand compared to Daytona?', acceptedAnswer: { '@type': 'Answer', text: "Significantly less competitive — and that's a major advantage for DeLand businesses that act now. Daytona Beach has years of established competition, dozens of businesses with optimized sites, and agencies fighting over the same keywords. DeLand is earlier in that cycle. A well-built, properly optimized website in DeLand can reach the top of local search results in weeks rather than months for many service categories. The businesses that establish those rankings now will be extremely difficult to displace later, which is why the best time to invest in local SEO in DeLand is before your competitors catch on." } },
+    { '@type': 'Question', name: 'Do you serve businesses near Stetson University?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — we build websites for all types of DeLand businesses, including those catering to the Stetson University community and student population. That includes tutoring services, housing and property management, food and beverage businesses, retail, and any professional services that benefit from proximity to the university. Student-facing businesses have specific needs around social proof, mobile UX, and content that resonates with a younger demographic — we know how to design and write for that audience while still maintaining the professional credibility your brand requires.' } },
+    { '@type': 'Question', name: 'What industries in DeLand need better websites most?', acceptedAnswer: { '@type': 'Answer', text: 'Based on the local search landscape, the categories with the most obvious gaps between consumer demand and quality of available websites are: legal and attorney services (law firm sites are often outdated and non-mobile), medical and dental practices (patients search before they call), home services and contractors (high search volume with many competitors running weak sites), and professional services like accountants, financial advisors, and consultants. In all of these categories, a fast, credible, well-optimized site is often enough to become the clear first choice when a potential customer searches in DeLand.' } },
+  ],
 };
 
 const checkIcon = (
@@ -47,6 +57,7 @@ export default function WebDesignDeLand() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">

@@ -5,15 +5,15 @@
 NXT Level Builds is a web design and digital marketing agency based in Daytona Beach, Florida. We build custom websites, manage Google Ads, run local SEO campaigns, and build AI automation systems for local service businesses.
 
 ## Key pages
-- Homepage: https://nxtlevelbuilds.com/
-- Services: https://nxtlevelbuilds.com/services
-- Web Design: https://nxtlevelbuilds.com/services/web-design
-- SEO: https://nxtlevelbuilds.com/services/seo
-- Google Ads: https://nxtlevelbuilds.com/services/google-ads
-- AI Automation: https://nxtlevelbuilds.com/services/ai-automation
-- Portfolio: https://nxtlevelbuilds.com/work
-- Blog: https://nxtlevelbuilds.com/blog
-- FAQ: https://nxtlevelbuilds.com/faq
+- Homepage: https://www.nxtlevelbuilds.com/
+- Services: https://www.nxtlevelbuilds.com/services
+- Web Design: https://www.nxtlevelbuilds.com/services/web-design
+- SEO: https://www.nxtlevelbuilds.com/services/seo
+- Google Ads: https://www.nxtlevelbuilds.com/services/google-ads
+- AI Automation: https://www.nxtlevelbuilds.com/services/ai-automation
+- Portfolio: https://www.nxtlevelbuilds.com/work
+- Blog: https://www.nxtlevelbuilds.com/blog
+- FAQ: https://www.nxtlevelbuilds.com/faq
 
 ## Service Areas
 Daytona Beach, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Palm Coast â€” and all of Volusia County, Florida.
@@ -27,6 +27,6 @@ Daytona Beach, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Palm Coast â
 ## Contact
 - Phone: (386) 348-3072
 - Email: hello@nxtlevelbuilds.com
-- Contact page: https://nxtlevelbuilds.com/contact
-- Free Website Audit: https://nxtlevelbuilds.com/free-website-audit
-- Free SEO Audit: https://nxtlevelbuilds.com/free-seo-audit
+- Contact page: https://www.nxtlevelbuilds.com/contact
+- Free Website Audit: https://www.nxtlevelbuilds.com/free-website-audit
+- Free SEO Audit: https://www.nxtlevelbuilds.com/free-seo-audit

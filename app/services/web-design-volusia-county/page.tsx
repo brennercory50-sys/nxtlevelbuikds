@@ -26,7 +26,7 @@ const countySchema = {
   '@type': 'LocalBusiness',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Volusia County, FL.',
-  url: 'https://nxtlevelbuilds.com/services/web-design-volusia-county',
+  url: 'https://www.nxtlevelbuilds.com/services/web-design-volusia-county',
   telephone: '+13863483072',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   areaServed: [

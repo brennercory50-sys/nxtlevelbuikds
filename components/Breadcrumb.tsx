@@ -17,7 +17,7 @@ export default function Breadcrumb({ crumbs }: Props) {
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
-      item: `https://nxtlevelbuilds.com${c.href}`,
+      item: `https://www.nxtlevelbuilds.com${c.href}`,
     })),
   };
 

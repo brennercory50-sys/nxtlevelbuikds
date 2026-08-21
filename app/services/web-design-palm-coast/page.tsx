@@ -23,16 +23,26 @@ export const metadata: Metadata = {
 const citySchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://nxtlevelbuilds.com/services/web-design-palm-coast#business',
+  '@id': 'https://www.nxtlevelbuilds.com/services/web-design-palm-coast#business',
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Palm Coast, FL.',
-  url: 'https://nxtlevelbuilds.com/services/web-design-palm-coast',
+  url: 'https://www.nxtlevelbuilds.com/services/web-design-palm-coast',
   telephone: '+13863483072',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   geo: { '@type': 'GeoCoordinates', latitude: 29.5845, longitude: -81.2079 },
   areaServed: { '@type': 'City', name: 'Palm Coast' },
   serviceType: ['Web Design', 'SEO', 'Google Ads'],
-  parentOrganization: { '@id': 'https://nxtlevelbuilds.com/#business' },
+  parentOrganization: { '@id': 'https://www.nxtlevelbuilds.com/#business' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Is Palm Coast competitive for Google rankings right now?', acceptedAnswer: { '@type': 'Answer', text: "Growing but still early — and that makes now the best possible time to establish your rankings. Palm Coast's search volume is increasing every quarter as the population grows, but the number of businesses with fully optimized websites and Google Business Profiles hasn't kept pace. That gap is your opportunity. Businesses that invest in local SEO now will rank before the competition catches up, and Google tends to reward established, trusted sites — so early movers maintain an edge that gets harder to overcome as the market matures. In 24–36 months, the window will be much narrower. Right now it's wide open." } },
+    { '@type': 'Question', name: 'Do you do web design for Palm Coast contractors and builders?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — contractors and construction businesses are one of our strongest verticals. Palm Coast\'s building boom means the competition for construction-related searches is active, and contractor websites require specific elements to convert: project photo galleries, license and insurance proof, service area callouts, and clear call-to-action flows for estimates. We build contractor sites with dedicated service pages targeting specific search terms like "Palm Coast roofing contractor" or "Flagler County general contractor" — pages that capture high-intent searches from homeowners who are ready to hire. We also handle Google Business Profile optimization so your business shows up on the map when someone searches from a jobsite or model home.' } },
+    { '@type': 'Question', name: 'How do I get my Palm Coast business to show up on Google Maps?', acceptedAnswer: { '@type': 'Answer', text: "Ranking in the Google local pack (the map results) depends on three main factors: your Google Business Profile (GBP), local citations, and your website's local relevance signals. GBP optimization means fully completed profile, accurate categories, regular posts, and active review management. Local citations mean consistent NAP (name, address, phone) data across directories like Yelp, Apple Maps, and industry directories. Website signals mean proper schema markup, location-specific pages, and content that establishes your geographic relevance. We handle all three at launch — GBP setup and optimization, citation building across 50+ directories, and schema markup embedded directly in your website code so Google can trust your location data." } },
+  ],
 };
 
 const checkIcon = (
@@ -47,6 +57,7 @@ export default function WebDesignPalmCoast() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">

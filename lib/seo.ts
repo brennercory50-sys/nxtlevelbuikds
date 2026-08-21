@@ -1,4 +1,4 @@
-const BASE = 'https://nxtlevelbuilds.com';
+const BASE = 'https://www.nxtlevelbuilds.com';
 
 export function canonical(path: string): string {
   return `${BASE}${path}`;
