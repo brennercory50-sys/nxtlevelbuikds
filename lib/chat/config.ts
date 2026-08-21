@@ -284,7 +284,7 @@ const KNOWLEDGE_BASE: KnowledgeEntry[] = [
     category: 'general',
     triggers: ['book', 'consultation', 'meeting', 'call', 'talk', 'discuss', 'set up a call', 'schedule', 'free consultation', 'strategy call'],
     priority: 5,
-    response: "I'd love to set that up! We offer a **free strategy consultation** — no pressure, just a conversation about your goals and how we can help.\n\n👉 **nxtlevelbuilds.com/contact** or you can call us at **(386) 259-0178**\n\nWhat's the best way to reach you?",
+    response: "I'd love to set that up! We offer a **free strategy consultation** — no pressure, just a conversation about your goals and how we can help.\n\n👉 **nxtlevelbuilds.com/contact** or you can call us at **(386) 348-3072**\n\nWhat's the best way to reach you?",
   },
   {
     id: 'free-audit',
@@ -298,7 +298,7 @@ const KNOWLEDGE_BASE: KnowledgeEntry[] = [
     category: 'general',
     triggers: ['contact', 'email', 'phone', 'reach you', 'get in touch', 'call', 'message you', 'how to reach'],
     priority: 3,
-    response: "You can reach us anytime:\n\n📞 **(386) 259-0178**\n📧 **hello@nxtlevelbuilds.com**\n🌐 **nxtlevelbuilds.com/contact**\n\nOr I can help you right here! What can I assist you with?",
+    response: "You can reach us anytime:\n\n📞 **(386) 348-3072**\n📧 **hello@nxtlevelbuilds.com**\n🌐 **nxtlevelbuilds.com/contact**\n\nOr I can help you right here! What can I assist you with?",
   },
   {
     id: 'services-overview',

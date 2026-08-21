@@ -6,7 +6,7 @@ export default function MobileBar() {
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t border-white/10" style={{ background: '#0d0f14' }}>
       <a
-        href="tel:+13862590178"
+        href="tel:+13863483072"
         onClick={() => events.phone_click('mobile_bar')}
         className="flex-1 flex flex-col items-center justify-center py-3 gap-0.5 text-white/70 hover:text-white transition-colors"
       >

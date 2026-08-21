@@ -73,7 +73,7 @@ export default function ThankYou() {
 
         <p className="text-[12px] text-muted mt-8">
           Have a question right now? Call us at{' '}
-          <a href="tel:+13862590178" className="text-accent font-semibold hover:underline">(386) 259-0178</a>
+          <a href="tel:+13863483072" className="text-accent font-semibold hover:underline">(386) 348-3072</a>
         </p>
       </div>
     </main>

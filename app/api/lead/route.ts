@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
           <p>Got your ${isWebsite ? 'website audit' : 'SEO audit'} request — we're already on it.</p>
           <p>We'll ${isWebsite ? 'review your site and send back a custom Loom video' : 'pull your Google Maps rankings and put together your ranking report'} within 48 hours.</p>
           <p>In the meantime, feel free to call or text us directly:<br>
-          <strong><a href="tel:+13862590178" style="color:#1a6eff;">(386) 259-0178</a></strong></p>
+          <strong><a href="tel:+13863483072" style="color:#1a6eff;">(386) 348-3072</a></strong></p>
           <p>— Cory<br>NXT Level Builds</p>
         </div>
       `,
