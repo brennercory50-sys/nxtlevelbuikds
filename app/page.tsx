@@ -59,7 +59,7 @@ export default function Home() {
             Websites. Automation. Growth.
           </p>
           <h1 className="text-[clamp(40px,5.6vw,74px)] font-extrabold leading-[1.05] tracking-tight text-white mb-6 max-w-2xl [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
-            Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Local Businesses.</span>
+            Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Daytona Beach Businesses.</span>
           </h1>
           <p className="text-[16px] text-white/65 leading-relaxed max-w-md mb-5">
             We build high-converting websites, automations, and growth systems that help local businesses get more leads, book more jobs, and scale with confidence.
@@ -91,7 +91,7 @@ export default function Home() {
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
                   </svg>
-                ), number:'90+', label:'PageSpeed Score' },
+                ), number:'90+', label:'PageSpeed Target' },
                 { icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
