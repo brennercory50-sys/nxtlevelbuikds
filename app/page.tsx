@@ -59,7 +59,7 @@ export default function Home() {
             Websites. Automation. Growth.
           </p>
           <h1 className="text-[clamp(40px,5.6vw,74px)] font-extrabold leading-[1.05] tracking-tight text-white mb-6 max-w-2xl [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
-            Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Local Businesses.</span>
+            Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Daytona Beach Businesses.</span>
           </h1>
           <p className="text-[16px] text-white/65 leading-relaxed max-w-md mb-5">
             We build high-converting websites, automations, and growth systems that help local businesses get more leads, book more jobs, and scale with confidence.
