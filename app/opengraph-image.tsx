@@ -70,10 +70,9 @@ export default function OpenGraphImage() {
           }}
         >
           {[
-            ['20+', 'Projects'],
-            ['100%', 'Retention'],
-            ['5.0', 'Google Rating'],
             ['7 Days', 'Avg Launch'],
+            ['100%', 'Retention'],
+            ['3 Yrs', 'Experience'],
           ].map(([n, l]) => (
             <div key={l} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <span style={{ fontSize: 32, fontWeight: 800, color: '#1a6eff' }}>{n}</span>

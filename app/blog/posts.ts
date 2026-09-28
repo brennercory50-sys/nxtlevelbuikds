@@ -314,7 +314,7 @@ export const posts: Post[] = [
     metaDesc: 'A step-by-step Google Business Profile strategy to rank in the local map pack within 90 days — used by NXT Level Builds for clients across Daytona Beach and Volusia County.',
     body: [
       { type: 'p', text: "Google Maps ranking (also called the \"local pack\") is the most valuable real estate for any service business. When someone searches \"electrician near me\" or \"web design Daytona Beach,\" the three businesses shown in the map section get the majority of clicks — often 70%+ of all search traffic." },
-      { type: 'p', text: "Here's the exact process we used to move three of our clients into the local pack within 90 days of working together." },
+      { type: 'p', text: "Here's the step-by-step process we follow to move a local business into the map pack." },
       { type: 'h2', text: 'Step 1: Fully Complete Your Google Business Profile (Most People Skip This)' },
       { type: 'p', text: "Most GBP listings are 40–60% complete. Google rewards completeness. Go through every single field:" },
       { type: 'ul', items: ['Business name (exactly as it appears legally — no keyword stuffing)', 'Primary and secondary categories (choose the most specific primary category available)', 'Business hours (including holiday hours)', 'Phone number with local area code', 'Website URL', 'Service area (list every city and zip code you serve)', 'Products/Services with descriptions and prices', 'Business description (750 characters — use naturally)'] },
@@ -333,7 +333,6 @@ export const posts: Post[] = [
       { type: 'p', text: "Links from other Daytona Beach or Volusia County websites point to your site and signal local authority. The best sources: local news coverage (Daytona Beach News-Journal, Volusia News), local business associations, sponsor a local event and get listed on their site, and get featured in local business directories." },
       { type: 'h2', text: 'What 90 Days Looks Like' },
       { type: 'p', text: "Month 1: Profile completion, citation audit and cleanup, review acquisition system launched. Month 2: First local backlinks, weekly posting routine, Q&A section populated. Month 3: First movement in rankings, conversion rate optimizations to the listing (photos, offer posts)." },
-      { type: 'p', text: "One of our clients, a pool screening company in Daytona Beach, moved from page 3 to the local pack (#2 position) within 67 days using this exact process. Their inbound call volume from Google Maps went up 190%." },
     ],
   },
   {
@@ -359,7 +358,7 @@ export const posts: Post[] = [
       { type: 'h2', text: '2. Appointment Booking Without Back-and-Forth' },
       { type: 'p', text: "For businesses that rely on booked appointments — consultations, estimates, service calls — the scheduling back-and-forth is a massive time drain. \"What time works for you?\" \"How about Tuesday?\" \"Tuesday doesn't work, what about Thursday?\"" },
       { type: 'p', text: "The automation: A Calendly or GoHighLevel booking link sent automatically after a lead inquiry. They pick a time from your real availability, confirmation is sent automatically, reminders go out 24 hours and 1 hour before. You show up to calls that are already confirmed — no coordination needed." },
-      { type: 'callout', title: 'Real Impact', text: "One of our clients (a fitness coaching brand) went from booking 40 consultations a month manually to 82 per month after we automated their scheduling and follow-up system. Same leads, same budget — just no lost opportunities." },
+      { type: 'callout', title: 'Why It Matters', text: "Most booked appointments are lost in the gap between the first inquiry and the follow-up. Automating scheduling and reminders closes that gap — same leads, same budget, fewer lost opportunities." },
       { type: 'h2', text: '3. Review Request Sequences' },
       { type: 'p', text: "Most businesses lose reviews because they forget to ask — or they ask awkwardly in person. Automated review requests sent via text 2–3 hours after job completion get 3–5× more reviews than manual asking." },
       { type: 'p', text: "The automation: Job marked as complete in your CRM → triggers a text to the customer → text includes your direct Google Review link → 24-hour follow-up if no action taken. Simple, effective, runs without you touching it." },

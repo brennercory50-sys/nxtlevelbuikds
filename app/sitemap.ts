@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { projects } from '@/app/work/projects';
 
 const base = 'https://www.nxtlevelbuilds.com';
 const now = new Date().toISOString().split('T')[0];
@@ -45,15 +46,7 @@ const blogSlugs = [
   'diy-website-vs-hiring-agency',
 ];
 
-const workSlugs = [
-  'millers-screen-pool',
-  'elevate-developments',
-  'ironclad-build',
-  'summit-exteriors',
-  'premier-solutions',
-  'peak-performance',
-  'next-level-detailing',
-];
+const workSlugs = projects.map(p => p.slug);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const withDates = <T extends { url: string }>(routes: T[]) =>
