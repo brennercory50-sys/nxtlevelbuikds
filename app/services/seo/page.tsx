@@ -4,18 +4,18 @@ import Image from 'next/image';
 import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Services Daytona Beach FL | Local Search Optimization',
-  description: 'Local SEO services in Daytona Beach, FL. Technical audits, Google Business Profile optimization, and content strategy that drives organic leads month over month.',
+  title: 'Daytona Beach SEO Services | Local SEO in Volusia County',
+  description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets Volusia County businesses into the map pack. Month-to-month, with plain-English reporting.',
   alternates: { canonical: canonical('/services/seo') },
   openGraph: {
-    title: 'SEO Services Daytona Beach FL | Local Search Optimization',
-    description: 'Local SEO services in Daytona Beach, FL. Technical audits, Google Business Profile optimization, and content strategy that drives organic leads month over month.',
+    title: 'Daytona Beach SEO Services | Local SEO in Volusia County',
+    description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets Volusia County businesses into the map pack. Month-to-month, with plain-English reporting.',
     images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Services Daytona Beach FL | Local Search Optimization',
-    description: 'Local SEO services in Daytona Beach, FL. Technical audits, GBP optimization, and content strategy that drives organic leads.',
+    title: 'Daytona Beach SEO Services | Local SEO in Volusia County',
+    description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets you into the map pack.',
   },
 };
 
@@ -35,10 +35,30 @@ const process = [
   { n: '04', title: 'Track & Compound', desc: 'Monthly ranking reports with organic traffic data and new lead attribution. SEO compounds — we measure every gain.' },
 ];
 
+const localFactors = [
+  { title: 'The map pack is about distance', desc: 'Google weighs how close a business is to the person searching. A company in Port Orange can be invisible to someone searching from Ormond Beach. We give each city you serve its own page and set your Google Business Profile service areas to match.' },
+  { title: 'Search demand follows the calendar', desc: 'Speedweeks in February, Bike Week in March, Biketoberfest in October, and summer beach season all move what people search for here. Restaurants, bars, detailers, and rentals feel it most. We plan content and profile posts ahead of those peaks, not during them.' },
+  { title: 'Visitors and residents search differently', desc: 'Someone on A1A looking for dinner tonight wants something different from a Spruce Creek homeowner comparing HVAC companies. Your pages should speak to whichever one pays your bills.' },
+];
+
+const faqs = [
+  { q: 'How long does local SEO take in Daytona Beach?', a: 'Most local businesses see real movement in three to six months. Fixes to your Google Business Profile and technical problems can show up within weeks; competitive searches take longer. Anyone promising page one in 30 days is guessing.' },
+  { q: 'Do you guarantee rankings?', a: 'No. Google doesn\u2019t sell guarantees, so nobody can honestly offer one. What we commit to is the work itself, plus a plain-English monthly report showing where you rank, what changed, and where your calls and form fills came from.' },
+  { q: 'Do I have to sign a long contract?', a: 'No. SEO is month-to-month. If it isn\u2019t earning its keep, you can stop.' },
+  { q: 'Do I need a new website before doing SEO?', a: 'Not always. We start by auditing the site you have. If it\u2019s fixable, we fix it. If the platform itself is holding you back \u2014 slow, hard to edit, no room for service pages \u2014 we\u2019ll tell you and quote a rebuild separately.' },
+  { q: 'Do you only work with Daytona Beach businesses?', a: 'We\u2019re based in Daytona Beach and focus on Volusia and Flagler County \u2014 Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Palm Coast. Local SEO works the same way anywhere a business serves a defined area.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
 
 export default function SEO() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
         <Image fill src="/images/services-bg.jpg" alt="Local SEO services — NXT Level Builds Daytona Beach" className="object-cover object-center" priority quality={75} sizes="100vw" />
@@ -47,12 +67,12 @@ export default function SEO() {
           <Link href="/services" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← All Services
           </Link>
-          <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Search Engine Optimization</p>
+          <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Local SEO · Daytona Beach, FL</p>
           <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
-            Rankings That Compound.<br /><span className="text-accent">Traffic That Lasts.</span>
+            Daytona Beach SEO<br /><span className="text-accent">That Compounds.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
-            SEO is a long game and we play it well. From technical audits to local map pack domination, we build organic growth that keeps delivering long after you stop paying for clicks.
+            Local SEO for Daytona Beach and Volusia County businesses — technical fixes, Google Business Profile, and content that gets you into the map pack for the searches your customers actually make. Unlike ads, it keeps working after you stop paying.
           </p>
           <div className="flex gap-3 flex-wrap">
             <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">
@@ -107,6 +127,46 @@ export default function SEO() {
                 </div>
                 <h4 className="font-bold text-[15px] text-dark mb-2">{p.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local factors */}
+      <section className="bg-white py-20">
+        <div className="container-site">
+          <p className="eyebrow">Why Local Is Different</p>
+          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] mb-12">
+            Daytona Beach SEO Is<br /><span className="text-accent">Its Own Game.</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {localFactors.map(f => (
+              <div key={f.title} className="border border-[#e5e7eb] rounded-2xl p-7">
+                <h3 className="font-bold text-[15px] text-dark mb-2">{f.title}</h3>
+                <p className="text-[13px] text-muted leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-[14px] text-muted mt-8">
+            Further reading:{' '}
+            <Link href="/blog/dominate-google-maps-90-days" className="text-accent font-semibold hover:underline">How to dominate Google Maps in 90 days</Link>
+            {' · '}
+            <Link href="/blog/google-business-profile-checklist-florida" className="text-accent font-semibold hover:underline">The Google Business Profile checklist</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-[#f8f9fc] border-t border-[#e5e7eb] py-20">
+        <div className="container-site max-w-3xl">
+          <p className="eyebrow">FAQ</p>
+          <h2 className="section-title text-[clamp(22px,3vw,34px)] mb-10">Local SEO <span className="text-accent">Questions.</span></h2>
+          <div className="space-y-6">
+            {faqs.map(f => (
+              <div key={f.q} className="bg-white rounded-2xl border border-[#e5e7eb] p-7">
+                <h3 className="font-bold text-[16px] text-dark mb-3">{f.q}</h3>
+                <p className="text-muted text-[14px] leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
