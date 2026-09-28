@@ -44,7 +44,7 @@ export default function LeadMagnetForm({ type }: Props) {
       if (res.ok) {
         router.push(`/thank-you?type=${type}`);
       } else {
-        setError('Something went wrong. Please call us at (386) 348-3072.');
+        setError('Something went wrong. Please call us at (386) 316-4008.');
         setSubmitting(false);
       }
     } catch {
@@ -110,7 +110,7 @@ export default function LeadMagnetForm({ type }: Props) {
           {submitting ? 'Sending…' : isWebsite ? 'Send Me the Audit →' : 'Get My SEO Report →'}
         </button>
         <p className="text-[11px] text-muted text-center">
-          Or call us directly: <a href="tel:+13863483072" className="text-accent font-semibold">(386) 348-3072</a>
+          Or call us directly: <a href="tel:+13863164008" className="text-accent font-semibold">(386) 316-4008</a>
         </p>
       </form>
     </div>

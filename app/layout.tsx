@@ -67,7 +67,7 @@ const schemaGraph = {
       name: 'NXT Level Builds',
       description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation.',
       url: 'https://www.nxtlevelbuilds.com',
-      telephone: '+13863483072',
+      telephone: '+13863164008',
       email: 'hello@nxtlevelbuilds.com',
       image: 'https://www.nxtlevelbuilds.com/opengraph-image',
       address: {
@@ -122,7 +122,7 @@ const schemaGraph = {
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+13863483072',
+        telephone: '+13863164008',
         contactType: 'customer service',
         areaServed: 'US',
         availableLanguage: 'English',
