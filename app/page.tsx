@@ -36,29 +36,27 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-[85vh] md:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#0d0f14]">
         {/* Base layer — static image. Shows while the video loads, if it fails, and for reduced-motion users. */}
-        <Image fill src="/images/about-bg.png" alt="NXT Level Builds — Daytona Beach digital agency" className="object-cover object-center" priority quality={75} sizes="100vw" />
-        {/* Cinematic hero video — autoplay/loop/muted, hidden when the user prefers reduced motion.
-            Darkened/contrast-boosted via filter so the same footage reads as moodier and more
-            premium without re-encoding the source file. */}
+        <Image fill src="/images/hero-daytona.webp" alt="Aerial view of the Main Street Pier in Daytona Beach" className="object-cover object-center md:object-[center_15%]" priority quality={75} sizes="100vw" />
+        {/* Hero video — autoplay/loop/muted, hidden when the user prefers reduced motion.
+            Portrait source, so desktop shows a horizontal band; 15% keeps the pier in frame. */}
         <video
-          className="absolute inset-0 w-full h-full object-cover object-center motion-reduce:hidden pointer-events-none [filter:brightness(0.78)_contrast(1.15)_saturate(1.08)]"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] motion-reduce:hidden pointer-events-none [filter:brightness(0.92)_contrast(1.05)]"
           autoPlay
           loop
           muted
           playsInline
           preload="metadata"
-          poster="/images/about-bg.webp"
+          poster="/images/hero-daytona.webp"
           aria-hidden="true"
           tabIndex={-1}
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src="/videos/hero-daytona.mp4" type="video/mp4" />
         </video>
         {/* Cinematic gradients — darker behind the left/center text, lighter to the right; bottom fade for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25" />
-        {/* Radial vignette — pulls the frame edges into shadow so the center reads deeper and
-            more cinematic, closer to the moody reference look. */}
-        <div className="absolute inset-0 [background:radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
+        {/* Overlays — dark behind the text, opening up to the right on desktop so the pier
+            and water stay recognizable. Phones get an even wash since text spans the width. */}
+        <div className="absolute inset-0 bg-black/45 md:bg-transparent md:bg-gradient-to-r md:from-black/85 md:via-black/45 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/30" />
 
         <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-10 md:py-20">
           {/* Pill eyebrow */}
