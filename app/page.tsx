@@ -54,7 +54,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25" />
 
-        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-14 md:py-20">
+        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-10 md:py-20">
           {/* Pill eyebrow */}
           <div className="inline-flex items-center gap-2 self-start rounded-full border border-accent/50 bg-accent/10 backdrop-blur-sm px-4 py-1.5 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
@@ -67,7 +67,7 @@ export default function Home() {
               Keeps "Daytona Beach" in the H1: the reference hero this is modeled
               on has no city, but dropping it would undo the local SEO fix. */}
           <h1
-            className="font-normal uppercase text-white mb-6 max-w-[18ch] text-[clamp(50px,8.5vw,104px)] leading-[0.9] tracking-[0.01em] [text-shadow:0_2px_30px_rgba(0,0,0,0.5)]"
+            className="font-normal uppercase text-white max-w-[18ch] mb-5 md:mb-6 text-[clamp(44px,8.5vw,104px)] leading-[0.88] tracking-[0.01em] [text-shadow:0_2px_30px_rgba(0,0,0,0.5)]"
             style={{ fontFamily: 'var(--font-bebas)' }}
           >
             Take your Daytona Beach business
@@ -76,8 +76,12 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="text-[16px] md:text-[17px] text-white/75 leading-relaxed max-w-xl mb-8">
+          <p className="text-[16px] md:text-[17px] text-white/75 leading-relaxed max-w-xl mb-3">
             Websites, web apps, and local SEO for trades, salons, and bars across Volusia County — built to get you found and get the phone ringing.
+          </p>
+
+          <p className="text-[13px] md:text-[14px] text-white/50 mb-7 max-w-xl">
+            Simple sites from <span className="text-white font-semibold">$599</span> with <span className="text-white font-semibold">$150/mo</span> — custom builds quoted individually
           </p>
 
           {/* CTAs — phone is a first-class action, not a footnote */}
@@ -100,7 +104,7 @@ export default function Home() {
 
           {/* Founder signature — compact; the phone lives in the CTA row above.
               Right padding on mobile keeps it clear of the fixed chat bubble. */}
-          <div className="flex items-center gap-3 mt-8 pr-20 sm:pr-0">
+          <div className="flex items-center gap-3 mt-6 pr-20 sm:pr-0">
             <Image
               src="/images/cory.jpg"
               alt="Cory Brenner, founder of NXT Level Builds"
