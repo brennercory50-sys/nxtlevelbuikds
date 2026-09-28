@@ -4,17 +4,17 @@ import Image from 'next/image';
 import { canonical, ogImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Daytona Beach SEO Services | Local SEO in Volusia County',
-  description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets Volusia County businesses into the map pack. Month-to-month, with plain-English reporting.',
+  title: 'Daytona Beach SEO Services | Local SEO',
+  description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets Volusia County businesses into the map pack.',
   alternates: { canonical: canonical('/services/seo') },
   openGraph: {
-    title: 'Daytona Beach SEO Services | Local SEO in Volusia County',
-    description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets Volusia County businesses into the map pack. Month-to-month, with plain-English reporting.',
+    title: 'Daytona Beach SEO Services | Local SEO',
+    description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets Volusia County businesses into the map pack.',
     images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Daytona Beach SEO Services | Local SEO in Volusia County',
+    title: 'Daytona Beach SEO Services | Local SEO',
     description: 'Local SEO in Daytona Beach, FL — Google Business Profile, technical fixes, and content that gets you into the map pack.',
   },
 };
