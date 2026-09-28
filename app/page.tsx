@@ -144,6 +144,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FOUNDER STRIP */}
+      <section className="bg-white py-12 md:py-14 border-b border-[#e5e7eb]">
+        <div className="container-site">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 md:gap-8 max-w-3xl mx-auto">
+            <Image
+              src="/images/cory.jpg"
+              alt="Cory Brenner, founder of NXT Level Builds, Daytona Beach"
+              width={112}
+              height={112}
+              className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover object-[center_20%] flex-shrink-0 border border-[#e5e7eb]"
+              sizes="112px"
+              loading="lazy"
+            />
+            <div className="text-center sm:text-left">
+              <p className="text-[15px] md:text-[16px] text-dark leading-relaxed">
+                I&apos;m Cory Brenner. I build every site myself, here in Daytona Beach. For the last
+                three years I&apos;ve worked with trades, salons, and bars across Daytona and Port
+                Orange — building sites that load quickly on a phone, appear when someone nearby
+                searches your service, and make calling or booking a single tap.
+              </p>
+              <a
+                href="tel:+13863483072"
+                className="inline-flex items-center gap-2 mt-4 text-accent font-bold text-[16px] hover:underline"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Direct line: (386) 348-3072
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="bg-white py-20">
         <div className="container-site">

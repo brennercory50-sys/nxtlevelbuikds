@@ -137,22 +137,22 @@ export default function About() {
 
               <div className="space-y-4 text-[14px] text-muted leading-relaxed">
                 <p>
-                  I started NXT Level Builds in Daytona Beach after watching too many local owners get burned. A few thousand dollars for a template site. A monthly retainer for a report nobody read. And a phone that rang no more than it did before.
+                  I founded NXT Level Builds in Daytona Beach after seeing the same pattern repeat: an owner pays a few thousand dollars for a template site, then a monthly retainer for a report nobody reads — and the phone rings no more than it did before.
                 </p>
                 <p>
-                  Three years in, I still do the work myself. That means sites that load fast on a phone, Google Business Profiles set up so you actually turn up in the map pack, ad budgets someone is watching, and follow-up that catches a lead at 9pm while you&apos;re still on a job.
+                  Three years on, I still do the work myself. That means websites built to load quickly on a phone, Google Business Profiles configured so you appear in local map results, ad budgets that someone is actively managing, and follow-up that reaches a lead in the evening while you&apos;re still on a job.
                 </p>
                 <p>
-                  Trades, salons, and bars across Volusia and Flagler — people who need the phone to ring, not a brand deck. If something breaks, you text the person who built it.
+                  I work with trades, salons, and bars across Volusia and Flagler counties — owners who measure a website by whether the phone rings. When something needs attention, you reach the person who built it.
                 </p>
               </div>
 
               <ul className="mt-7 space-y-3">
                 {[
-                  ['You deal with me, start to finish.', 'Discovery, build, and the call six months later. No handoff, no account manager, no ticket queue.'],
-                  ['Design before code.', 'You approve how every page looks before I write a line of it. Revisions until it’s right.'],
-                  ['You own all of it.', 'Code, domain, content, ad accounts. Walk away whenever you want — nothing is locked to me.'],
-                  ['Plain numbers.', 'Calls, forms, and where they came from. No dashboard built to look busy.'],
+                  ['One point of contact.', 'Discovery, the build, and every conversation after launch — handled by me directly.'],
+                  ['Design approved before development.', 'You sign off on every page before a line of code is written, with revisions until it’s right.'],
+                  ['Full ownership.', 'The code, domain, content, and ad accounts are yours. Nothing is locked to me.'],
+                  ['Reporting in plain terms.', 'Calls, form submissions, and where they came from — not a dashboard built to look impressive.'],
                 ].map(([head, body]) => (
                   <li key={head} className="flex gap-3">
                     <svg className="flex-shrink-0 mt-0.5 text-accent" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
