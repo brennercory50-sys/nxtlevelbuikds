@@ -7,7 +7,7 @@ import { projects } from '@/app/work/projects';
 
 export const metadata: Metadata = {
   title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
-  description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help local businesses get more leads and scale faster.',
+  description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help Daytona Beach businesses get found and get more calls.',
   alternates: { canonical: canonical('') },
   openGraph: {
     title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
@@ -27,7 +27,7 @@ const services = [
   { icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>), title: 'Systems & Integrations', desc: 'We connect your tech stack and build custom integrations that work together seamlessly.', href: '/services' },
   { icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>), title: 'CRM & Lead Management', desc: 'Organized pipeline, automated follow-ups, and real-time insights so you never miss a lead.', href: '/services' },
   { icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>), title: 'Landing Pages', desc: 'Conversion-focused landing pages built for ads, offers, and rapid growth.', href: '/services/web-design' },
-  { icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>), title: 'Ongoing Support', desc: "We're here to support, optimize, and scale with your business every step of the way.", href: '/contact' },
+  { icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>), title: 'Ongoing Support', desc: "I stay on after launch — updates, fixes, and improvements as your business changes.", href: '/contact' },
 ];
 
 export default function Home() {
@@ -204,10 +204,10 @@ export default function Home() {
       {/* SERVICES */}
       <section className="bg-white py-20">
         <div className="container-site">
-          <p className="eyebrow">Our Services</p>
+          <p className="eyebrow">Services</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
-            <h2 className="section-title text-[clamp(28px,4vw,44px)]">Everything You Need<br />To <span className="text-accent">Scale And Automate.</span></h2>
-            <p className="text-muted text-[15px] leading-relaxed max-w-sm flex-shrink-0">We provide end-to-end digital solutions that help your business attract more leads, convert more customers, and save time.</p>
+            <h2 className="section-title text-[clamp(28px,4vw,44px)]">What I Build<br />For <span className="text-accent">Local Businesses.</span></h2>
+            <p className="text-muted text-[15px] leading-relaxed max-w-sm flex-shrink-0">Websites, web apps, and the systems behind them — built to get your phone ringing and take busywork off your plate.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
             {services.map(s => (
@@ -219,10 +219,10 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="bg-accent rounded-2xl p-6 flex items-center justify-between">
+          <div className="bg-accent rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <p className="font-bold text-white text-[18px]">Ready To Scale Your Business?</p>
-              <p className="text-white text-[14px]">Let&apos;s build your system.</p>
+              <p className="font-bold text-white text-[18px]">Not Sure What You Need?</p>
+              <p className="text-white text-[14px]">Tell me about your business and I&apos;ll tell you honestly what&apos;s worth building.</p>
             </div>
             <Link href="/contact" className="bg-white text-accent font-bold text-[14px] px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors whitespace-nowrap">Book a Call →</Link>
           </div>
