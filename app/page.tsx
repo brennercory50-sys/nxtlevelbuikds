@@ -36,21 +36,21 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-[85vh] md:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#0d0f14]">
         {/* Base layer — static image. Shows while the video loads, if it fails, and for reduced-motion users. */}
-        <Image fill src="/images/hero-daytona.webp" alt="Aerial view of the Main Street Pier in Daytona Beach" className="object-cover object-center md:object-[center_15%]" priority quality={75} sizes="100vw" />
+        <Image fill src="/images/hero-daytona-v2.webp" alt="Aerial view of the Main Street Pier in Daytona Beach" className="object-cover object-center md:object-[center_15%]" priority quality={75} sizes="100vw" />
         {/* Hero video — autoplay/loop/muted, hidden when the user prefers reduced motion.
             Portrait source, so desktop shows a horizontal band; 15% keeps the pier in frame. */}
         <video
-          className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] motion-reduce:hidden pointer-events-none [filter:brightness(0.92)_contrast(1.05)]"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] motion-reduce:hidden pointer-events-none [filter:contrast(1.05)]"
           autoPlay
           loop
           muted
           playsInline
           preload="metadata"
-          poster="/images/hero-daytona.webp"
+          poster="/images/hero-daytona-v2.webp"
           aria-hidden="true"
           tabIndex={-1}
         >
-          <source src="/videos/hero-daytona.mp4" type="video/mp4" />
+          <source src="/videos/hero-daytona-v2.mp4" type="video/mp4" />
         </video>
         {/* Cinematic gradients — darker behind the left/center text, lighter to the right; bottom fade for readability */}
         {/* Overlays — dark behind the text, opening up to the right on desktop so the pier
