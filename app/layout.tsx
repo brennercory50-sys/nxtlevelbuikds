@@ -96,7 +96,7 @@ const schemaGraph = {
         { '@type': 'City', name: 'Palm Coast' },
         { '@type': 'State', name: 'Florida' },
       ],
-      serviceType: ['Web Design', 'Google Ads Management', 'Search Engine Optimization', 'AI Automation'],
+      serviceType: ['Web Design', 'Web Application Development', 'Custom Software Development', 'Google Ads Management', 'Search Engine Optimization', 'AI Automation'],
       priceRange: '$$',
       founder: { '@type': 'Person', name: 'Cory Brenner' },
       sameAs: [

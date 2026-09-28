@@ -140,10 +140,10 @@ export default function About() {
                   I founded NXT Level Builds in Daytona Beach after seeing the same pattern repeat: an owner pays a few thousand dollars for a template site, then a monthly retainer for a report nobody reads — and the phone rings no more than it did before.
                 </p>
                 <p>
-                  Three years on, I still do the work myself. That means websites built to load quickly on a phone, Google Business Profiles configured so you appear in local map results, ad budgets that someone is actively managing, and follow-up that reaches a lead in the evening while you&apos;re still on a job.
+                  Three years on, I still do the work myself — websites, web apps, and the custom software behind them. In practice that means sites built to load quickly on a phone, Google Business Profiles configured so you appear in local map results, ad budgets that someone is actively managing, and booking, intake, or follow-up tools built to fit how a business already runs.
                 </p>
                 <p>
-                  I work with trades, salons, and bars across Volusia and Flagler counties — owners who measure a website by whether the phone rings. When something needs attention, you reach the person who built it.
+                  I work with trades, salons, and bars across Volusia and Flagler counties — owners who measure a website by whether the phone rings — and with businesses that have outgrown off-the-shelf software and need something built for them. When something needs attention, you reach the person who built it.
                 </p>
               </div>
 

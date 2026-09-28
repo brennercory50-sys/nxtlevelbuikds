@@ -159,10 +159,10 @@ export default function Home() {
             />
             <div className="text-center sm:text-left">
               <p className="text-[15px] md:text-[16px] text-dark leading-relaxed">
-                I&apos;m Cory Brenner. I build every site myself, here in Daytona Beach. For the last
-                three years I&apos;ve worked with trades, salons, and bars across Daytona and Port
-                Orange — building sites that load quickly on a phone, appear when someone nearby
-                searches your service, and make calling or booking a single tap.
+                I&apos;m Cory Brenner, and I build it all myself here in Daytona Beach — websites,
+                web apps, and custom software. For three years I&apos;ve worked with trades, salons,
+                and bars across Daytona and Port Orange, building the site or the system a business
+                actually needs, not whatever fits a template.
               </p>
               <a
                 href="tel:+13863483072"
