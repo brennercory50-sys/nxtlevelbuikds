@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { projects } from '@/app/work/projects';
+import { posts } from '@/app/blog/posts';
 
 const base = 'https://www.nxtlevelbuilds.com';
 const now = new Date().toISOString().split('T')[0];
@@ -26,25 +27,7 @@ const staticRoutes = [
   { url: `${base}/blog`, priority: 0.7, changeFrequency: 'weekly' as const },
 ];
 
-const blogSlugs = [
-  'contractor-website-checklist',
-  'home-services-website-checklist',
-  'google-business-profile-checklist-florida',
-  'web-design-deland-what-local-businesses-need',
-  'web-design-new-smyrna-beach-what-local-businesses-need',
-  'web-design-ormond-beach-what-local-businesses-need',
-  'web-design-palm-coast-what-local-businesses-need',
-  'web-design-port-orange-what-local-businesses-need',
-  'why-google-ads-arent-converting',
-  'dominate-google-maps-90-days',
-  '5-things-automate-with-ai',
-  'website-losing-customers',
-  'lsa-vs-google-search-ads',
-  'link-building-2026',
-  'how-much-small-business-spend-marketing',
-  'web-design-vs-web-development',
-  'diy-website-vs-hiring-agency',
-];
+const blogSlugs = posts.map(p => p.slug);
 
 const workSlugs = projects.map(p => p.slug);
 
