@@ -54,51 +54,64 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25" />
 
-        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-16 md:py-24">
-          <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent mb-5">
-            Daytona Beach · Port Orange · Volusia County
-          </p>
-          <h1 className="text-[clamp(40px,5.6vw,74px)] font-extrabold leading-[1.05] tracking-tight text-white mb-6 max-w-2xl [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
-            Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Daytona Beach Businesses.</span>
+        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-14 md:py-20">
+          {/* Pill eyebrow */}
+          <div className="inline-flex items-center gap-2 self-start rounded-full border border-accent/50 bg-accent/10 backdrop-blur-sm px-4 py-1.5 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
+            <span className="text-[11px] md:text-[12px] font-bold tracking-[0.22em] uppercase text-accent">
+              Daytona Beach Web Design
+            </span>
+          </div>
+
+          {/* Display headline — Bebas, already loaded for the other page H1s.
+              Keeps "Daytona Beach" in the H1: the reference hero this is modeled
+              on has no city, but dropping it would undo the local SEO fix. */}
+          <h1
+            className="font-normal uppercase text-white mb-6 max-w-[18ch] text-[clamp(50px,8.5vw,104px)] leading-[0.9] tracking-[0.01em] [text-shadow:0_2px_30px_rgba(0,0,0,0.5)]"
+            style={{ fontFamily: 'var(--font-bebas)' }}
+          >
+            Take your Daytona Beach business
+            <span className="block bg-gradient-to-r from-[#8ec5ff] via-[#3b8cff] to-[#1a6eff] bg-clip-text text-transparent [text-shadow:none]">
+              to the next level.
+            </span>
           </h1>
-          <p className="text-[16px] text-white/70 leading-relaxed max-w-md mb-4">
+
+          <p className="text-[16px] md:text-[17px] text-white/75 leading-relaxed max-w-xl mb-8">
             Websites, web apps, and local SEO for trades, salons, and bars across Volusia County — built to get you found and get the phone ringing.
           </p>
-          <p className="text-[13px] text-white/45 mb-7 max-w-md">
-            Simple sites from <span className="text-white/85 font-semibold">$599</span> with <span className="text-white/85 font-semibold">$150/mo</span> — custom builds quoted individually
-          </p>
-          <div className="flex gap-3 flex-wrap">
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">
-              Book A Strategy Call →
+
+          {/* CTAs — phone is a first-class action, not a footnote */}
+          <div className="flex gap-3 flex-wrap items-center">
+            <Link href="/contact" className="inline-flex items-center gap-2.5 bg-accent hover:bg-accent2 text-white font-bold text-[15px] px-8 py-4 rounded-full transition-all hover:-translate-y-0.5 shadow-[0_6px_28px_rgba(26,110,255,0.45)]">
+              Get a Quote
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </Link>
-            <Link href="/work" className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm hover:bg-white/15 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg border border-white/30 transition-all">
-              See Our Work →
+
+            <a href="tel:+13863164008" className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-[15px] px-8 py-4 rounded-full border border-white/25 transition-all">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (386) 316-4008
+            </a>
+
+            <Link href="/work" className="inline-flex items-center gap-2 text-white/80 hover:text-white font-bold text-[15px] px-3 py-4 transition-colors">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+              View Our Work
             </Link>
           </div>
 
-          {/* Founder signature — a face and a local number above the fold, where
-              the founder-led competitors put theirs. */}
-          <div className="flex items-center gap-3.5 mt-8 pt-7 border-t border-white/15 max-w-lg">
+          {/* Founder signature — compact; the phone lives in the CTA row above.
+              Right padding on mobile keeps it clear of the fixed chat bubble. */}
+          <div className="flex items-center gap-3 mt-8 pr-20 sm:pr-0">
             <Image
               src="/images/cory.jpg"
               alt="Cory Brenner, founder of NXT Level Builds"
-              width={54}
-              height={54}
-              className="w-[54px] h-[54px] rounded-full object-cover object-[center_20%] border border-white/25 flex-shrink-0"
-              sizes="54px"
+              width={44}
+              height={44}
+              className="w-11 h-11 rounded-full object-cover object-[center_20%] border border-white/25 flex-shrink-0"
+              sizes="44px"
             />
-            <div className="min-w-0">
-              <p className="text-[13px] text-white/70 leading-snug">
-                <span className="font-bold text-white">Cory Brenner</span> — I build every site myself.
-              </p>
-              <a
-                href="tel:+13863164008"
-                className="inline-flex items-center gap-1.5 text-accent font-bold text-[16px] leading-tight mt-1 hover:underline"
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                (386) 316-4008
-              </a>
-            </div>
+            <p className="text-[13px] text-white/65 leading-snug">
+              <span className="font-bold text-white">Cory Brenner</span> — I build every site myself.
+            </p>
           </div>
         </div>
 
