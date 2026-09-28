@@ -54,17 +54,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25" />
 
-        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-20 md:py-24">
+        <div className="container-site relative z-10 flex-1 flex flex-col justify-center py-16 md:py-24">
           <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent mb-5">
-            Websites. Automation. Growth.
+            Daytona Beach · Port Orange · Volusia County
           </p>
           <h1 className="text-[clamp(40px,5.6vw,74px)] font-extrabold leading-[1.05] tracking-tight text-white mb-6 max-w-2xl [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
             Websites &amp; Systems<br />Built To Grow<br /><span className="text-accent">Daytona Beach Businesses.</span>
           </h1>
-          <p className="text-[16px] text-white/65 leading-relaxed max-w-md mb-5">
-            We build high-converting websites, automations, and growth systems that help local businesses get more leads, book more jobs, and scale with confidence.
+          <p className="text-[16px] text-white/70 leading-relaxed max-w-md mb-4">
+            Websites, web apps, and local SEO for trades, salons, and bars across Volusia County — built to get you found and get the phone ringing.
           </p>
-          <p className="text-[13px] text-white/45 mb-9 max-w-md">
+          <p className="text-[13px] text-white/45 mb-7 max-w-md">
             Simple sites from <span className="text-white/85 font-semibold">$599</span> with <span className="text-white/85 font-semibold">$150/mo</span> — custom builds quoted individually
           </p>
           <div className="flex gap-3 flex-wrap">
@@ -74,6 +74,31 @@ export default function Home() {
             <Link href="/work" className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm hover:bg-white/15 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg border border-white/30 transition-all">
               See Our Work →
             </Link>
+          </div>
+
+          {/* Founder signature — a face and a local number above the fold, where
+              the founder-led competitors put theirs. */}
+          <div className="flex items-center gap-3.5 mt-8 pt-7 border-t border-white/15 max-w-lg">
+            <Image
+              src="/images/cory.jpg"
+              alt="Cory Brenner, founder of NXT Level Builds"
+              width={54}
+              height={54}
+              className="w-[54px] h-[54px] rounded-full object-cover object-[center_20%] border border-white/25 flex-shrink-0"
+              sizes="54px"
+            />
+            <div className="min-w-0">
+              <p className="text-[13px] text-white/70 leading-snug">
+                <span className="font-bold text-white">Cory Brenner</span> — I build every site myself.
+              </p>
+              <a
+                href="tel:+13863164008"
+                className="inline-flex items-center gap-1.5 text-accent font-bold text-[16px] leading-tight mt-1 hover:underline"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                (386) 316-4008
+              </a>
+            </div>
           </div>
         </div>
 
@@ -144,34 +169,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOUNDER STRIP */}
+      {/* WHAT I DO — carries the detail the hero signature can't hold */}
       <section className="bg-white py-12 md:py-14 border-b border-[#e5e7eb]">
         <div className="container-site">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 md:gap-8 max-w-3xl mx-auto">
-            <Image
-              src="/images/cory.jpg"
-              alt="Cory Brenner, founder of NXT Level Builds, Daytona Beach"
-              width={112}
-              height={112}
-              className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover object-[center_20%] flex-shrink-0 border border-[#e5e7eb]"
-              sizes="112px"
-              loading="lazy"
-            />
-            <div className="text-center sm:text-left">
-              <p className="text-[15px] md:text-[16px] text-dark leading-relaxed">
-                I&apos;m Cory Brenner, and I build it all myself here in Daytona Beach — websites,
-                web apps, and custom software. For three years I&apos;ve worked with trades, salons,
-                and bars across Daytona and Port Orange, building the site or the system a business
-                actually needs, not whatever fits a template.
-              </p>
-              <a
-                href="tel:+13863164008"
-                className="inline-flex items-center gap-2 mt-4 text-accent font-bold text-[16px] hover:underline"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Direct line: (386) 316-4008
-              </a>
-            </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-[15px] md:text-[16px] text-dark leading-relaxed">
+              I&apos;m Cory Brenner, and I build it all myself here in Daytona Beach — websites,
+              web apps, and custom software. For three years I&apos;ve worked with trades, salons,
+              and bars across Daytona and Port Orange, building the site or the system a business
+              actually needs, not whatever fits a template.
+            </p>
+            <a
+              href="tel:+13863164008"
+              className="inline-flex items-center gap-2 mt-4 text-accent font-bold text-[16px] hover:underline"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Direct line: (386) 316-4008
+            </a>
           </div>
         </div>
       </section>
