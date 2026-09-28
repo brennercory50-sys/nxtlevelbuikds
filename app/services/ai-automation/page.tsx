@@ -35,11 +35,6 @@ const process = [
   { n: '04', title: 'Train & Hand Off', desc: 'Full documentation and team training so you understand and own the systems we build for you.' },
 ];
 
-const results = [
-  { client: 'Ironclad Build', result: '12 hrs', metric: 'Saved Per Week', desc: 'Automated lead follow-up, appointment reminders, and review requests — 12 hours of manual work eliminated.' },
-  { client: 'Peak Performance', result: '+82', metric: 'New Clients / Month', desc: 'AI chatbot + CRM automation captured and converted leads 24/7, adding 82 net new clients monthly.' },
-  { client: 'Premier Solutions', result: '−40%', metric: 'Lead Response Time', desc: 'Automated intake reduced average response time from 4 hours to under 15 minutes.' },
-];
 
 export default function AIAutomation() {
   return (
@@ -68,7 +63,7 @@ export default function AIAutomation() {
             </Link>
           </div>
           <div className="flex gap-4 flex-wrap mt-10">
-            {[['12 hrs', 'Avg Weekly Time Saved'], ['+82', 'New Clients/Month'], ['24/7', 'Systems That Never Sleep']].map(([n, l]) => (
+            {[['24/7', 'Systems That Never Sleep'], ['Yours', 'You Own Every Workflow'], ['100%', 'Client Retention']].map(([n, l]) => (
               <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
                 <div className="text-[22px] font-extrabold text-white leading-none">{n}</div>
                 <div className="text-[10px] font-semibold tracking-widest uppercase text-white/70 mt-0.5">{l}</div>
@@ -112,28 +107,6 @@ export default function AIAutomation() {
                 </div>
                 <h4 className="font-bold text-[15px] text-dark mb-2">{p.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="bg-white py-20">
-        <div className="container-site">
-          <p className="eyebrow">Real Results</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] mb-12">
-            Automation That<br /><span className="text-accent">Actually Delivers.</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {results.map(r => (
-              <div key={r.client} className="border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: 'var(--font-bebas)' }}>
-                  {r.result}
-                </div>
-                <div className="text-[11px] font-bold tracking-widest uppercase text-muted mb-4">{r.metric}</div>
-                <h4 className="font-bold text-[14px] text-dark mb-2">{r.client}</h4>
-                <p className="text-[13px] text-muted leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>

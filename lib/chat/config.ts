@@ -79,7 +79,7 @@ const KNOWLEDGE_BASE: KnowledgeEntry[] = [
     category: 'web-design',
     triggers: ['examples', 'portfolio', 'show me', 'samples', 'past work', 'case studies', 'what have you done', 'previous work'],
     priority: 3,
-    response: "You can see our work on our portfolio page: **www.nxtlevelbuilds.com/work** — we've built sites for contractors, home services, professional services, and more. Each case study includes the challenge, solution, and real results.\n\nIs there a specific industry you'd like to see examples from?",
+    response: "You can see our work on our portfolio page: **www.nxtlevelbuilds.com/work** — each project links to the live site so you can click around yourself.\n\nWhat kind of business are you building for?",
     service: 'web-design',
   },
 
@@ -114,7 +114,7 @@ const KNOWLEDGE_BASE: KnowledgeEntry[] = [
     category: 'seo',
     triggers: ['guarantee', 'guaranteed results', 'do you guarantee', 'guaranteed rankings', 'rankings guarantee', 'promise'],
     priority: 4,
-    response: "We don't promise specific rankings (anyone who does is selling snake oil). What we guarantee is:\n\n• **100% ethical, white-hat SEO** — no risk of penalties\n• **Monthly progress reports** — full transparency\n• **Dedicated strategy** tailored to your business\n• **Proven process** that's worked for 20+ businesses\n\nThe results speak for themselves — check our case studies at www.nxtlevelbuilds.com/work.",
+    response: "We don't promise specific rankings (anyone who does is selling snake oil). What we guarantee is:\n\n• **100% ethical, white-hat SEO** — no risk of penalties\n• **Monthly progress reports** — full transparency\n• **Dedicated strategy** tailored to your business\n\nYou can see live sites we've built at www.nxtlevelbuilds.com/work.",
     service: 'seo',
   },
   {
@@ -157,7 +157,7 @@ const KNOWLEDGE_BASE: KnowledgeEntry[] = [
     category: 'google-ads',
     triggers: ['roi', 'return on investment', 'is it worth it', 'worth the money', 'do ads work', 'google ads worth', 'does ppc work', 'conversion rate ads'],
     priority: 4,
-    response: "Great question. Google Ads can deliver **3-5x ROI** when set up correctly. Here's the key: we track everything.\n\n• Every lead gets tagged so you know which ads drove it\n• We optimize for **cost per lead**, not just clicks\n• We'll show you exactly what you spent vs. what you earned\n\nOur clients typically see a positive ROI within **30-60 days** of campaign launch. Want to see some examples?",
+    response: "Great question. Google Ads can pay for itself when it's set up correctly — the key is tracking everything.\n\n• Every lead gets tagged so you know which ads drove it\n• We optimize for **cost per lead**, not just clicks\n• We'll show you exactly what you spent vs. what you earned\n\nWant to talk through what that could look like for your business?",
     service: 'google-ads',
   },
   {
@@ -248,7 +248,7 @@ const KNOWLEDGE_BASE: KnowledgeEntry[] = [
     category: 'general',
     triggers: ['who are you', 'about you', 'tell me about yourself', 'who is nxt level', 'what is nxt level builds', 'about the company', 'your background'],
     priority: 4,
-    response: "We're **NXTLEVELBUILDS** — a Daytona Beach-based digital agency founded by Cory Brenner. We help local businesses grow with:\n\n• Custom websites that convert\n• Google Ads that generate leads\n• SEO that brings organic traffic\n• AI automation that saves time\n\nWe've worked with 20+ businesses across Florida, from contractors to professional services. Our focus is **results, not fluff** — every strategy is tied to a measurable outcome.\n\nWhat brings you to us today?",
+    response: "We're **NXTLEVELBUILDS** — a Daytona Beach-based digital agency founded by Cory Brenner. We help local businesses grow with:\n\n• Custom websites that convert\n• Google Ads that generate leads\n• SEO that brings organic traffic\n• AI automation that saves time\n\nOur focus is **results, not fluff** — every strategy is tied to a measurable outcome.\n\nWhat brings you to us today?",
   },
   {
     id: 'location',
@@ -270,14 +270,14 @@ const KNOWLEDGE_BASE: KnowledgeEntry[] = [
     category: 'general',
     triggers: ['why you', 'why choose', 'different', 'better than', 'stand out', 'unique', 'what makes you different', 'compared to', 'vs other'],
     priority: 3,
-    response: "Great question. Here's what sets us apart:\n\n1. **Speed** — We launch websites in 7 days, not months\n2. **Results Focus** — Every strategy ties to a measurable outcome\n3. **Modern Tech** — We use cutting-edge tools (Next.js, AI, automation)\n4. **Local Expertise** — We know the Daytona Beach market inside out\n5. **Full Service** — Web design, SEO, ads, automation — all in one place\n6. **Transparency** — Monthly reporting, no hidden fees, no long-term contracts\n\nBut don't take our word for it — check our case studies at www.nxtlevelbuilds.com/work to see real results.",
+    response: "Great question. Here's what sets us apart:\n\n1. **Speed** — We launch websites in 7 days, not months\n2. **Results Focus** — Every strategy ties to a measurable outcome\n3. **Modern Tech** — We use cutting-edge tools (Next.js, AI, automation)\n4. **Local Expertise** — We know the Daytona Beach market inside out\n5. **Full Service** — Web design, SEO, ads, automation — all in one place\n6. **Transparency** — Monthly reporting, no hidden fees, no long-term contracts\n\nYou can see live sites we've built at www.nxtlevelbuilds.com/work.",
   },
   {
     id: 'testimonials',
     category: 'general',
     triggers: ['reviews', 'testimonials', 'what do customers say', 'references', 'social proof', 'ratings', 'feedback', 'previous clients'],
     priority: 3,
-    response: "We're proud of our track record:\n\n⭐ **5-Star Rating** across all platforms\n✅ **20+ Projects** completed\n🔄 **100% Client Retention** — every client from 2024 is still with us\n\nYou can read detailed case studies with real results at **www.nxtlevelbuilds.com/work**. Would you like to see examples from your industry?",
+    response: "We're a founder-led shop, so here's what we can honestly point to:\n\n🔄 **100% Client Retention** — every client is still with us\n⚡ **7-day average launch** for websites\n🔗 Live sites you can visit yourself at **www.nxtlevelbuilds.com/work**\n\nWe'd rather show you real work than quote a star rating. Want to set up a quick call with Cory?",
   },
   {
     id: 'booking',

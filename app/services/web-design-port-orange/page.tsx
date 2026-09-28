@@ -87,7 +87,7 @@ export default function WebDesignPortOrange() {
       {/* Stats Strip */}
       <section className="bg-[#0d1220] border-y border-white/10 py-8">
         <div className="container-site grid grid-cols-3 gap-4 text-center">
-          {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
+          {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['100%', 'Client Retention']] as [string, string][]).map(([num, label]) => (
             <div key={label}>
               <div className="text-[28px] font-extrabold text-white">{num}</div>
               <div className="text-[11px] text-white/70 uppercase tracking-wider mt-0.5">{label}</div>
@@ -236,23 +236,6 @@ export default function WebDesignPortOrange() {
               <Link key={href} href={href} className="group bg-[#f8f9fc] hover:bg-accent/5 border border-[#e5e7eb] hover:border-accent/30 rounded-xl px-4 py-3 text-[13px] font-semibold text-dark group-hover:text-accent transition-all text-center">
                 {label} <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-20">
-        <div className="container-site text-center">
-          <p className="eyebrow">Real Results</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] mb-12">What We&apos;ve Built for <span className="text-accent">Volusia County Businesses</span></h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {[{n:'190%',l:'More Organic Calls',c:"Miller's Screen & Pool — Daytona Beach"},{n:'85%',l:'More Form Submissions',c:'Summit Exteriors — Port Orange'},{n:'3×',l:'More Inquiries',c:'Elevate Developments — Ormond Beach'}].map(r => (
-              <div key={r.n} className="bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: 'var(--font-bebas)' }}>{r.n}</div>
-                <div className="text-[11px] font-bold tracking-widest uppercase text-muted mb-3">{r.l}</div>
-                <p className="text-[13px] text-muted">{r.c}</p>
-              </div>
             ))}
           </div>
         </div>

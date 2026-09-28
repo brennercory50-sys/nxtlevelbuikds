@@ -38,11 +38,6 @@ const features = [
   { title: 'Fast Load Speed', desc: 'Under 2 seconds on mobile. Slow contractor sites lose leads to whoever loads faster.' },
 ];
 
-const results = [
-  { n: '190%', l: 'More Organic Leads', c: "Miller's Screen & Pool — Daytona Beach" },
-  { n: '85%', l: 'More Quote Requests', c: 'Summit Exteriors — Port Orange' },
-  { n: '7 Days', l: 'Average Launch Time', c: 'All Contractor Projects' },
-];
 
 export default function WebDesignForContractors() {
   return (
@@ -96,21 +91,6 @@ export default function WebDesignForContractors() {
         </div>
       </section>
 
-      <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-20">
-        <div className="container-site text-center">
-          <p className="eyebrow">Contractor Results</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] mb-12">Real Numbers from <span className="text-accent">Contractor Clients</span></h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {results.map(r => (
-              <div key={r.n} className="bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: 'var(--font-bebas)' }}>{r.n}</div>
-                <div className="text-[11px] font-bold tracking-widest uppercase text-muted mb-3">{r.l}</div>
-                <p className="text-[13px] text-muted">{r.c}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="bg-accent py-16">
         <div className="container-site text-center">

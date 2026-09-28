@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = getProject(slug);
   if (!project) return {};
   const title = `${project.title} Case Study — ${project.type}`;
-  const description = `How NXT Level Builds helped ${project.title} achieve ${project.result}. A case study in ${project.type.toLowerCase()} for a ${project.industry.toLowerCase()} business in ${project.location}.`;
+  const description = `${project.desc} ${project.type} for a ${project.industry.toLowerCase()} business in ${project.location}.`;
   return {
     title,
     description,
@@ -94,6 +94,11 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span className="text-white/50 text-[13px]">{project.location} · {project.industry}</span>
           </div>
+          {project.url && (
+            <a href={project.url} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 -mt-6 mb-10 text-[13px] font-semibold text-white/80 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors">
+              Visit the live site ↗
+            </a>
+          )}
           <MetricsDisplay metrics={project.metrics} />
         </div>
       </section>
@@ -121,7 +126,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
               <div className="w-7 h-7 rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
-              <h2 className="text-[13px] font-bold tracking-widest uppercase text-muted">Client Overview</h2>
+              <h2 className="text-[13px] font-bold tracking-widest uppercase text-muted">Project Overview</h2>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[

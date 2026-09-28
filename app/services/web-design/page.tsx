@@ -35,11 +35,6 @@ const process = [
   { n: '04', title: 'Launch & Support', desc: 'We handle deployment, DNS, and go-live. Then we stay to support, optimize, and improve.' },
 ];
 
-const results = [
-  { client: "Miller's Screen & Pool", result: '↑190%', metric: 'Organic Leads', desc: 'New website with local SEO integration tripled inbound calls within 60 days of launch.' },
-  { client: 'Elevate Developments', result: '3×', metric: 'More Inquiries', desc: 'Rebuilt from a stale WordPress site to a conversion-focused Next.js build in under 2 weeks.' },
-  { client: 'Summit Exteriors', result: '+85%', metric: 'Form Submissions', desc: 'New site with an optimized quote form and Google Ads landing pages drove massive form lift.' },
-];
 
 export default function WebDesign() {
   return (
@@ -71,7 +66,7 @@ export default function WebDesign() {
             </Link>
           </div>
           <div className="flex gap-4 flex-wrap mt-10">
-            {[['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['3×', 'Avg Lead Increase']].map(([n, l]) => (
+            {[['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['100%', 'Client Retention']].map(([n, l]) => (
               <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
                 <div className="text-[22px] font-extrabold text-white leading-none">{n}</div>
                 <div className="text-[10px] font-semibold tracking-widest uppercase text-white/70 mt-0.5">{l}</div>
@@ -115,28 +110,6 @@ export default function WebDesign() {
                 </div>
                 <h4 className="font-bold text-[15px] text-dark mb-2">{p.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="bg-white py-20">
-        <div className="container-site">
-          <p className="eyebrow">Real Results</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] mb-12">
-            Sites That Actually<br /><span className="text-accent">Perform.</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {results.map(r => (
-              <div key={r.client} className="border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: 'var(--font-bebas)' }}>
-                  {r.result}
-                </div>
-                <div className="text-[11px] font-bold tracking-widest uppercase text-muted mb-4">{r.metric}</div>
-                <h4 className="font-bold text-[14px] text-dark mb-2">{r.client}</h4>
-                <p className="text-[13px] text-muted leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>

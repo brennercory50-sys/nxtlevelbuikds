@@ -20,6 +20,17 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  async redirects() {
+    // Retired placeholder case studies; may still be indexed or linked.
+    return [
+      'millers-screen-pool',
+      'elevate-developments',
+      'ironclad-build',
+      'summit-exteriors',
+      'premier-solutions',
+      'peak-performance',
+    ].map(slug => ({ source: `/work/${slug}`, destination: '/work', permanent: true }));
+  },
   async headers() {
     return [
       {

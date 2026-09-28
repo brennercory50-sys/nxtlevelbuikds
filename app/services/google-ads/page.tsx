@@ -35,11 +35,6 @@ const process = [
   { n: '04', title: 'Report & Scale', desc: 'Monthly reports with clear ROI. When the numbers are right, we scale the budget and compound your results.' },
 ];
 
-const results = [
-  { client: 'Premier Solutions', result: '4.2×', metric: 'Return on Ad Spend', desc: 'Google Search campaign rebuilt from scratch, targeting high-intent service keywords with optimized landing pages.' },
-  { client: 'Ironclad Build', result: '−65%', metric: 'Cost Per Lead', desc: 'Restructured a poorly-built legacy campaign and cut cost per lead by 65% in the first 60 days.' },
-  { client: 'Peak Performance', result: '3×', metric: 'Monthly Lead Volume', desc: 'Expanded from basic search to LSA + Display remarketing, tripling lead volume at a maintained CPA.' },
-];
 
 export default function GoogleAds() {
   return (
@@ -68,7 +63,7 @@ export default function GoogleAds() {
             </Link>
           </div>
           <div className="flex gap-4 flex-wrap mt-10">
-            {[['4.2×', 'Avg ROAS'], ['−65%', 'Avg CPL Reduction'], ['$500K+', 'Ad Spend Managed']].map(([n, l]) => (
+            {[['Yours', 'You Own the Ad Account'], ['Monthly', 'ROI Reporting'], ['100%', 'Client Retention']].map(([n, l]) => (
               <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
                 <div className="text-[22px] font-extrabold text-white leading-none">{n}</div>
                 <div className="text-[10px] font-semibold tracking-widest uppercase text-white/40 mt-0.5">{l}</div>
@@ -112,28 +107,6 @@ export default function GoogleAds() {
                 </div>
                 <h4 className="font-bold text-[15px] text-dark mb-2">{p.title}</h4>
                 <p className="text-[13px] text-muted leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="bg-white py-20">
-        <div className="container-site">
-          <p className="eyebrow">Real Results</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] mb-12">
-            Campaigns That<br /><span className="text-accent">Produce.</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {results.map(r => (
-              <div key={r.client} className="border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[40px] font-extrabold text-accent leading-none mb-1" style={{ fontFamily: 'var(--font-bebas)' }}>
-                  {r.result}
-                </div>
-                <div className="text-[11px] font-bold tracking-widest uppercase text-muted mb-4">{r.metric}</div>
-                <h4 className="font-bold text-[14px] text-dark mb-2">{r.client}</h4>
-                <p className="text-[13px] text-muted leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>

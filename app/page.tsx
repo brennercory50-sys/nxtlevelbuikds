@@ -2,7 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { canonical, ogImage } from '@/lib/seo';
-import TrustBar from '@/components/TrustBar';
+import { CaseStudyCard } from '@/components/case-studies';
+import { projects } from '@/app/work/projects';
 
 export const metadata: Metadata = {
   title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
@@ -163,16 +164,6 @@ export default function Home() {
       <section className="bg-white border-b border-[#e5e7eb] py-4">
         <div className="container-site">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
-            <div className="flex items-center gap-2">
-              <span className="text-yellow-400 text-[16px] leading-none">★★★★★</span>
-              <span className="text-[13px] font-semibold text-dark">5.0 Google Rating</span>
-            </div>
-            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
-            <div className="flex items-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span className="text-[13px] font-semibold text-dark">20+ Projects Completed</span>
-            </div>
-            <div className="w-px h-4 bg-[#e5e7eb] hidden sm:block" />
             <div className="flex items-center gap-1.5">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a6eff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               <span className="text-[13px] font-semibold text-dark">100% Client Retention</span>
@@ -240,8 +231,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── TRUST BUILDING SYSTEM ─── */}
-      <TrustBar mode="full" title="Results That Build Trust." subtitle="Real metrics from real client work. No fluff, no filler — just what we've delivered." />
+      {/* RECENT WORK */}
+      <section className="bg-[#f8f9fc] border-y border-[#e5e7eb] py-16 md:py-20">
+        <div className="container-site">
+          <p className="eyebrow text-center">Recent Work</p>
+          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-3">
+            Real Businesses. <span className="text-accent">Real Builds.</span>
+          </h2>
+          <p className="text-muted text-[14px] text-center mb-10 max-w-lg mx-auto">
+            A short list on purpose — every project here is real, including one of our own businesses.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {projects.slice(0, 2).map(p => (
+              <CaseStudyCard key={p.slug} project={p} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/work" className="text-[14px] font-semibold text-accent hover:underline">See all work →</Link>
+          </div>
+        </div>
+      </section>
 
       {/* TOOLS */}
       <section className="bg-white py-14 border-b border-[#e5e7eb]">
