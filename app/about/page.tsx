@@ -33,7 +33,7 @@ export default function About() {
     <main>
       {/* Hero — full branded office shot */}
       <section className="relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
-        <Image fill src="/images/about-bg.png" alt="NXT Level Builds team workspace — Daytona Beach digital agency" className="object-cover object-[center_25%]" priority quality={75} sizes="100vw" />
+        <Image fill src="/images/about-bg.png" alt="NXT Level Builds workspace — Daytona Beach digital agency" className="object-cover object-[center_25%]" priority quality={75} sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
         {/* Left edge fade for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
@@ -120,51 +120,48 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Founder */}
       <section className="bg-white py-20">
         <div className="container-site">
-          <p className="eyebrow text-center">The Team</p>
-          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-12">People Behind <span className="text-accent">the Work</span></h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* Cory — real */}
-            <div className="border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all">
-              <div className="relative bg-[#eef3ff]">
-                <Image src="/images/cory.jpg" alt="Cory Brenner — Founder & CEO of NXT Level Builds" width={300} height={400} className="w-full aspect-[3/4] object-cover object-[center_20%]" sizes="(max-width: 768px) 100vw, 33vw" loading="lazy" />
-              </div>
-              <div className="p-6 text-center">
-                <h4 className="font-bold text-[16px] text-dark mb-1">Cory Brenner</h4>
-                <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Founder, CEO & Lead Strategist</p>
-                <p className="text-[13px] text-muted leading-relaxed">
-                  Built his first business in Volusia County and got tired of seeing small businesses burned by agencies that overpromised. Founded NXT Level to do it right — handles strategy, client relationships, lead generation, and growth.
-                </p>
-              </div>
+          <p className="eyebrow text-center">Who You&apos;re Hiring</p>
+          <h2 className="section-title text-[clamp(26px,3.5vw,40px)] text-center mb-12">You Work With <span className="text-accent">Me.</span></h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 md:gap-10 items-start max-w-4xl mx-auto">
+            <div className="rounded-2xl overflow-hidden border border-[#e5e7eb] bg-[#eef3ff]">
+              <Image src="/images/cory.jpg" alt="Cory Brenner, founder of NXT Level Builds, Daytona Beach" width={300} height={400} className="w-full aspect-[3/4] object-cover object-[center_20%]" sizes="(max-width: 768px) 100vw, 300px" loading="lazy" />
             </div>
 
-            {/* Open roles */}
-            <div className="border border-dashed border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
-              <div className="h-40 flex items-center justify-center" style={{ background: '#f8f9fc' }}>
-                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              </div>
-              <div className="p-6 text-center">
-                <h4 className="font-bold text-[16px] text-dark mb-1">Designer & Developer</h4>
-                <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Position Open</p>
-                <p className="text-[13px] text-muted leading-relaxed">
-                  We&apos;re growing. Looking for a designer/developer obsessed with clean code and high-converting UI. Sound like you?
-                </p>
-              </div>
-            </div>
+            <div>
+              <h3 className="font-bold text-[20px] text-dark mb-1">Cory Brenner</h3>
+              <p className="text-accent text-[12px] font-semibold mb-5 uppercase tracking-wide">Founder — Daytona Beach, FL</p>
 
-            <div className="border border-dashed border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
-              <div className="h-40 flex items-center justify-center" style={{ background: '#f8f9fc' }}>
-                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
-              </div>
-              <div className="p-6 text-center">
-                <h4 className="font-bold text-[16px] text-dark mb-1">Paid Media & SEO Lead</h4>
-                <p className="text-accent text-[12px] font-semibold mb-3 uppercase tracking-wide">Position Open</p>
-                <p className="text-[13px] text-muted leading-relaxed">
-                  Looking for someone who lives in Google Ads and local SEO data. ROI-obsessed, transparent, and results-driven.
+              <div className="space-y-4 text-[14px] text-muted leading-relaxed">
+                <p>
+                  I founded NXT Level Builds in Daytona Beach after seeing the same pattern repeat: an owner pays a few thousand dollars for a template site, then a monthly retainer for a report nobody reads — and the phone rings no more than it did before.
+                </p>
+                <p>
+                  Three years on, I still do the work myself — websites, web apps, and the custom software behind them. In practice that means sites built to load quickly on a phone, Google Business Profiles configured so you appear in local map results, ad budgets that someone is actively managing, and booking, intake, or follow-up tools built to fit how a business already runs.
+                </p>
+                <p>
+                  I work with trades, salons, and bars across Volusia and Flagler counties — owners who measure a website by whether the phone rings — and with businesses that have outgrown off-the-shelf software and need something built for them. When something needs attention, you reach the person who built it.
                 </p>
               </div>
+
+              <ul className="mt-7 space-y-3">
+                {[
+                  ['One point of contact.', 'Discovery, the build, and every conversation after launch — handled by me directly.'],
+                  ['Design approved before development.', 'You sign off on every page before a line of code is written, with revisions until it’s right.'],
+                  ['Full ownership.', 'The code, domain, content, and ad accounts are yours. Nothing is locked to me.'],
+                  ['Reporting in plain terms.', 'Calls, form submissions, and where they came from — not a dashboard built to look impressive.'],
+                ].map(([head, body]) => (
+                  <li key={head} className="flex gap-3">
+                    <svg className="flex-shrink-0 mt-0.5 text-accent" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <p className="text-[14px] text-muted leading-relaxed">
+                      <span className="font-bold text-dark">{head}</span> {body}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

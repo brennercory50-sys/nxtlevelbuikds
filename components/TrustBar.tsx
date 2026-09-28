@@ -6,10 +6,13 @@ import { trackEvent } from '@/lib/gtag';
 
 /* ── Trust data ── */
 
+// A "5-Star Reviews" counter used to sit here. It was the only stat asserting
+// third-party validation, and the reviews aren't findable on Google — an
+// unverifiable proof claim undermines the three verifiable ones next to it.
+// Restore it once the Google Business Profile carries a matching review count.
 const STATS = [
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>, target: 20, suffix: '+', label: 'Projects Completed' },
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>, target: 100, suffix: '%', label: 'Client Retention' },
-  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>, target: 50, suffix: '+', label: '5-Star Reviews' },
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>, target: 500, suffix: 'K+', prefix: '$', label: 'Ad Spend Managed' },
 ];
 
@@ -72,11 +75,11 @@ export default function TrustBar({ mode = 'full', title, subtitle, className = '
         )}
 
         {/* ── Stats Row (all modes) ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 mb-10 md:mb-16">
+        <div className="grid grid-cols-3 gap-4 md:gap-0 mb-10 md:mb-16">
           {STATS.map((s, i) => (
             <div key={s.label} className={`text-center py-6 ${i > 0 ? 'md:border-l md:border-white/10' : ''}`}>
               <div className="text-accent/60 mb-3 hidden md:block">{s.icon}</div>
-              <div className="text-[clamp(32px,3vw,44px)] font-extrabold text-white leading-none">
+              <div className="text-[clamp(26px,3vw,44px)] font-extrabold text-white leading-none">
                 <Counter target={s.target} suffix={s.suffix} prefix={s.prefix} />
               </div>
               <p className="text-[12px] text-white/55 mt-2 font-medium">{s.label}</p>

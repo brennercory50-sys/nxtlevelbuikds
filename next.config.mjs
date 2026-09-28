@@ -3,9 +3,9 @@ const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "img-src 'self' data: blob: https://www.google-analytics.com https://*.facebook.com https://*.google.com",
+  "img-src 'self' data: blob: https://*.google-analytics.com https://*.analytics.google.com https://*.g.doubleclick.net https://*.facebook.com https://*.google.com",
   "font-src 'self' https://fonts.gstatic.com",
-  "connect-src 'self' https://www.google-analytics.com https://*.facebook.com https://*.google.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.g.doubleclick.net https://www.googletagmanager.com https://*.facebook.com https://*.google.com",
   "frame-src 'self' https://www.google.com",
   "base-uri 'self'",
   "form-action 'self'",
@@ -35,6 +35,12 @@ const nextConfig = {
       },
       {
         source: '/images/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/videos/(.*)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],

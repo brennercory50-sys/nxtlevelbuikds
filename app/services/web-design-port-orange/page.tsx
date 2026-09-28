@@ -27,7 +27,7 @@ const citySchema = {
   name: 'NXT Level Builds',
   description: 'Web design and digital marketing agency serving Port Orange, FL.',
   url: 'https://www.nxtlevelbuilds.com/services/web-design-port-orange',
-  telephone: '+13863483072',
+  telephone: '+13863164008',
   address: { '@type': 'PostalAddress', addressLocality: 'Daytona Beach', addressRegion: 'FL', addressCountry: 'US' },
   geo: { '@type': 'GeoCoordinates', latitude: 29.1383, longitude: -80.9956 },
   areaServed: { '@type': 'City', name: 'Port Orange' },
@@ -87,7 +87,7 @@ export default function WebDesignPortOrange() {
       {/* Stats Strip */}
       <section className="bg-[#0d1220] border-y border-white/10 py-8">
         <div className="container-site grid grid-cols-3 gap-4 text-center">
-          {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Score'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
+          {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['3×', 'Avg Lead Increase']] as [string, string][]).map(([num, label]) => (
             <div key={label}>
               <div className="text-[28px] font-extrabold text-white">{num}</div>
               <div className="text-[11px] text-white/70 uppercase tracking-wider mt-0.5">{label}</div>
@@ -123,7 +123,7 @@ export default function WebDesignPortOrange() {
                   'Local SEO targeting Port Orange (32127, 32128, 32129)',
                   'Google Business Profile setup & optimization',
                   'Contact forms + click-to-call integration',
-                  'PageSpeed-optimized for 90+ scores',
+                  'Performance-tuned to a 90+ PageSpeed target',
                   'Schema markup for local business',
                   'Fast hosting, live in 7 business days',
                   '30-day post-launch support included',
@@ -264,7 +264,7 @@ export default function WebDesignPortOrange() {
           <h2 className="text-[28px] font-bold text-white mb-3" style={{ fontFamily: 'var(--font-bebas)' }}>Ready to Grow Your Port Orange Business?</h2>
           <p className="text-white text-[15px] mb-8 max-w-md mx-auto">Free 30-minute strategy call. No commitment. We&apos;ll show you what your competitors are doing and exactly how to outrank them.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">Book a Free Strategy Call →</Link>
-          <a href="tel:+13863483072" className="inline-flex items-center gap-2 text-white/90 hover:text-white text-[14px] font-semibold ml-4 transition-colors">or call (386) 348-3072</a>
+          <a href="tel:+13863164008" className="inline-flex items-center gap-2 text-white/90 hover:text-white text-[14px] font-semibold ml-4 transition-colors">or call (386) 316-4008</a>
         </div>
       </section>
     </main>

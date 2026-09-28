@@ -52,6 +52,7 @@ const workSlugs = [
   'summit-exteriors',
   'premier-solutions',
   'peak-performance',
+  'next-level-detailing',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

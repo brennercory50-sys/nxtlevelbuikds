@@ -322,6 +322,31 @@ export const projects: Project[] = [
       { step: 'Testing & Launch', description: 'End-to-end tested every workflow path with dummy leads before going live. Trained the team on the dashboard in under 1 hour', duration: '1 day' },
     ],
   },
+  {
+    slug: 'next-level-detailing',
+    cat: 'Websites',
+    title: 'Next Level Detailing',
+    type: 'Website Design',
+    location: 'Daytona Beach, FL',
+    result: 'Custom mobile-first website',
+    bg: 'from-red-950 to-zinc-900',
+    accent: '#ef4444',
+    desc: 'Custom website for a Daytona Beach auto detailing business — dark, premium styling built to match the quality of the work, with a click-to-call header and service pages built for mobile search.',
+    tags: ['Next.js', 'Mobile-First', 'Local SEO'],
+    stat: { number: 'Live', label: 'Website Launched' },
+    industry: 'Auto Detailing',
+    challenge: 'Next Level Detailing had no dedicated website — customers found out about services by word of mouth or social media alone, with no central place to see service packages, pricing tiers, or book a job, and nothing built for the mobile searches most local customers actually use.',
+    solution: 'Built a custom Next.js site with a dark, premium look that matches the quality of the detailing work itself: individual service pages, clear pricing tiers, a click-to-call phone number in the header, and on-page local SEO targeting Daytona Beach and the surrounding Volusia County area.',
+    outcome: 'The site is live and serving as the business’s primary online presence and booking entry point. Results are being tracked; this entry will be updated with real metrics once there’s enough data to report honestly.',
+    timeline: 'Recently launched',
+    tools: ['Next.js', 'Mobile-First Design', 'Local SEO'],
+    metrics: [
+      { number: 'Next.js', label: 'Built On' },
+      { number: 'Mobile-First', label: 'Design Priority' },
+      { number: 'Local SEO', label: 'On-Page Targeting' },
+    ],
+    relatedService: 'web-design',
+  },
 ];
 
 export function getProject(slug: string): Project | undefined {

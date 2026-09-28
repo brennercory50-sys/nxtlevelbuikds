@@ -67,7 +67,7 @@ const schemaGraph = {
       name: 'NXT Level Builds',
       description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation.',
       url: 'https://www.nxtlevelbuilds.com',
-      telephone: '+13863483072',
+      telephone: '+13863164008',
       email: 'hello@nxtlevelbuilds.com',
       image: 'https://www.nxtlevelbuilds.com/opengraph-image',
       address: {
@@ -96,8 +96,8 @@ const schemaGraph = {
         { '@type': 'City', name: 'Palm Coast' },
         { '@type': 'State', name: 'Florida' },
       ],
-      serviceType: ['Web Design', 'Google Ads Management', 'Search Engine Optimization', 'AI Automation'],
-      priceRange: '$',
+      serviceType: ['Web Design', 'Web Application Development', 'Custom Software Development', 'Google Ads Management', 'Search Engine Optimization', 'AI Automation'],
+      priceRange: '$$',
       founder: { '@type': 'Person', name: 'Cory Brenner' },
       sameAs: [
         'https://www.facebook.com/nxtlevelbuilds',
@@ -122,7 +122,7 @@ const schemaGraph = {
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+13863483072',
+        telephone: '+13863164008',
         contactType: 'customer service',
         areaServed: 'US',
         availableLanguage: 'English',

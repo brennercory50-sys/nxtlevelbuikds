@@ -1,17 +1,33 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 type Props = { target: number; suffix?: string; prefix?: string; className?: string; };
 
+// useLayoutEffect warns when it runs during SSR; fall back to useEffect there.
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
 export default function Counter({ target, suffix = '', prefix = '', className = '' }: Props) {
-  const [value, setValue] = useState(0);
+  // Start at the final value so the server-rendered HTML carries the real number.
+  // Crawlers, AI answer engines, and link-preview scrapers don't scroll, and a
+  // stat that renders as "$0K+" reads as zero to every one of them.
+  const [value, setValue] = useState(target);
   const ref = useRef<HTMLSpanElement>(null);
   const animated = useRef(false);
   const isFloat = !Number.isInteger(target);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Without IntersectionObserver nothing would ever start the animation, so
+    // leave the final value in place rather than zeroing it.
+    if (typeof IntersectionObserver === 'undefined') return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // Zero it before the browser paints, so the count-up runs without the final
+    // value flashing first.
+    animated.current = false;
+    setValue(0);
+
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !animated.current) {
         animated.current = true;

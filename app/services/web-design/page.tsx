@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const deliverables = [
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>, title: 'Custom UI/UX Design', desc: 'Every pixel is intentional — built around your brand and your customer journey, not a template.' },
-  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, title: 'Lightning-Fast Performance', desc: 'Core Web Vitals in the green. Sites that load under 2 seconds on mobile, every time.' },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, title: 'Lightning-Fast Performance', desc: 'Built for Core Web Vitals, with a sub-2-second mobile load time as the target on every build.' },
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>, title: 'Mobile-First Build', desc: 'Over 70% of your visitors are on phones. We build for them first, then scale up to desktop.' },
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>, title: 'SEO-Ready Structure', desc: 'Clean code, proper schema markup, and semantic HTML that search engines actually reward.' },
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>, title: 'E-Commerce Ready', desc: 'Shopify, WooCommerce, or custom — we build stores that convert browsers into buyers.' },
@@ -71,7 +71,7 @@ export default function WebDesign() {
             </Link>
           </div>
           <div className="flex gap-4 flex-wrap mt-10">
-            {[['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Score'], ['3×', 'Avg Lead Increase']].map(([n, l]) => (
+            {[['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['3×', 'Avg Lead Increase']].map(([n, l]) => (
               <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
                 <div className="text-[22px] font-extrabold text-white leading-none">{n}</div>
                 <div className="text-[10px] font-semibold tracking-widest uppercase text-white/70 mt-0.5">{l}</div>
