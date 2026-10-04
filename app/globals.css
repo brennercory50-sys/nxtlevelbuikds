@@ -86,6 +86,7 @@
   line-height: 0.9; letter-spacing: 0.01em; text-transform: uppercase; white-space: nowrap;
 }
 @media (max-width: 640px) { .intro-word { flex-direction: column; align-items: flex-start; font-size: 29vw; line-height: 0.86; } }
+@media (max-width: 359px) { .intro-meta { letter-spacing: 0.14em; } }
 .intro-word > span { display: block; overflow: hidden; padding-top: 0.06em; }
 .intro-word > span > span {
   display: block; transform: translateY(105%); filter: blur(10px);
@@ -104,7 +105,7 @@
   animation: intro-fill 1.15s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards;
 }
 .intro-meta {
-  display: flex; justify-content: space-between; margin-top: 14px;
+  display: flex; justify-content: space-between; gap: 16px; margin-top: 14px;
   font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
   color: rgba(255,255,255,0.55);
   opacity: 0; animation: intro-fade 0.4s ease-out 0.3s forwards;
