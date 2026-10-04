@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { canonical, ogImage } from '@/lib/seo';
 import { posts, getPost, getRelatedPosts } from '@/app/blog/posts';
 import Breadcrumb from '@/components/Breadcrumb';
+import HeroBackdrop from '@/components/HeroBackdrop';
 
 export function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }));
@@ -58,14 +59,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* Hero */}
-      <section className="bg-dark py-20">
-        <div className="container-site max-w-3xl">
+      <section className="relative overflow-hidden bg-dark py-20">
+        <HeroBackdrop />
+        <div className="relative z-10 container-site max-w-3xl">
           <Breadcrumb crumbs={[{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: post.title, href: `/blog/${post.slug}` }]} />
           <Link href="/blog" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← Back to Blog
           </Link>
           <span className="inline-block text-[10px] font-bold tracking-widest uppercase bg-accent/20 text-accent px-3 py-1 rounded-full mb-4">{post.cat}</span>
-          <h1 className="text-[clamp(24px,4vw,44px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
+          <h1 className="text-[clamp(30px,4.4vw,52px)] font-normal text-white leading-[0.95] tracking-[0.01em] mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
             {post.title}
           </h1>
           <div className="flex items-center gap-4 text-[12px] text-white/40 font-medium">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { canonical, ogImage } from '@/lib/seo';
 import ContactForm from '@/components/ContactForm';
+import HeroBackdrop from '@/components/HeroBackdrop';
 export const metadata: Metadata = {
   title: 'Contact | Web Design Agency Daytona Beach FL',
   description: 'Get in touch with NXT Level Builds — Daytona Beach\'s web design and digital marketing agency. Call (386) 316-4008 or send us a message today.',
@@ -25,15 +25,14 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Left — waterfront photo */}
           <div className="relative flex flex-col justify-end p-16 overflow-hidden">
-            <Image fill src="/images/contact-bg.jpg" alt="Contact NXT Level Builds — Daytona Beach digital agency" className="object-cover object-center" priority quality={75} sizes="50vw" />
-            <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-dark/20" />
+            <HeroBackdrop />
             <div className="relative z-10">
-              <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Contact Us</p>
-              <h1 className="text-[clamp(28px,4vw,52px)] font-extrabold text-white leading-tight mb-4" style={{ fontFamily: 'var(--font-bebas)' }}>
-                Let&apos;s Build Something<br /><span className="text-accent">Amazing Together.</span>
+              <p className="hero-eyebrow">Contact Us</p>
+              <h1 className="text-[clamp(36px,4.6vw,64px)] font-normal text-white leading-[0.95] tracking-[0.01em] mb-4" style={{ fontFamily: 'var(--font-bebas)' }}>
+                Let&apos;s Build Something<br /><span className="text-gradient-accent">Amazing Together.</span>
               </h1>
               <p className="text-white/55 text-[15px] leading-relaxed mb-10 max-w-sm">
-                Have a project in mind or want to learn more about how we can help your business scale? Let&apos;s talk.
+                Have a project in mind, or a question about your current site? Tell me what you&apos;re working on and I&apos;ll get back to you personally.
               </p>
               <div className="space-y-5">
                   {[

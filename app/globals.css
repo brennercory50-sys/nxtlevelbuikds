@@ -24,6 +24,37 @@
 
 }
 
+/* Shared page-hero styles (see components/HeroBackdrop.tsx) */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 90% at 75% 20%, #000 0%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 90% at 75% 20%, #000 0%, transparent 75%);
+}
+.hero-glow-main {
+  top: -35%; right: -10%; width: 70vw; max-width: 900px; aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(26,110,255,0.32) 0%, rgba(26,110,255,0.08) 40%, transparent 68%);
+}
+.hero-glow-soft {
+  bottom: -55%; left: -15%; width: 60vw; max-width: 760px; aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(59,140,255,0.12) 0%, transparent 65%);
+}
+.hero-eyebrow {
+  display: flex; width: fit-content; align-items: center; gap: 8px;
+  border: 1px solid rgba(26,110,255,0.5); background: rgba(26,110,255,0.1);
+  border-radius: 9999px; padding: 6px 16px; margin-bottom: 22px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #5b9bff;
+}
+.text-center .hero-eyebrow, .mx-auto > .hero-eyebrow { margin-left: auto; margin-right: auto; }
+@media (max-width: 640px) { .hero-eyebrow { font-size: 10px; letter-spacing: 0.14em; padding: 6px 14px; } }
+.hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 9999px; background: #1a6eff; flex-shrink: 0; }
+.text-gradient-accent {
+  background-image: linear-gradient(90deg, #8ec5ff 0%, #3b8cff 55%, #1a6eff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

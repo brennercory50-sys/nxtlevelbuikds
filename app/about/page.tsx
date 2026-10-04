@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { canonical, ogImage } from '@/lib/seo';
+import HeroBackdrop from '@/components/HeroBackdrop';
+import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
   title: 'About | Web Design Agency Daytona Beach FL',
@@ -32,20 +34,18 @@ export default function About() {
   return (
     <main>
       {/* Hero — full branded office shot */}
-      <section className="relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
-        <Image fill src="/images/about-bg.png" alt="NXT Level Builds workspace — Daytona Beach digital agency" className="object-cover object-[center_25%]" priority quality={75} sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
-        {/* Left edge fade for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+      <section className="relative overflow-hidden py-20 md:py-24">
+        <HeroBackdrop />
 
-        <div className="container-site relative z-10 pb-20 pt-40">
+        <div className="container-site relative z-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] gap-x-14 items-center">
+          <div>
           <div className="max-w-2xl">
-            <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>About NXT Level Builds</p>
-            <h1 className="text-[clamp(36px,5.5vw,72px)] font-extrabold text-white leading-tight mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
-              Built Different.<br />Built to <span className="text-accent">Win.</span>
+            <p className="hero-eyebrow">About NXT Level Builds</p>
+            <h1 className="text-[clamp(44px,6.5vw,84px)] font-normal text-white leading-[0.95] tracking-[0.01em] mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
+              Built Different.<br />Built to <span className="text-gradient-accent">Win.</span>
             </h1>
             <p className="text-white/60 text-[16px] leading-relaxed max-w-lg mb-8">
-              We&apos;re a Daytona Beach digital agency that builds websites, automations, and systems for businesses that want to scale — not just look good online.
+              A Daytona Beach studio run by Cory Brenner — websites, web apps, and the systems behind them, built to bring in work, not just look good online.
             </p>
             <div className="flex gap-4 flex-wrap">
               <div className="bg-black/50 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-center">
@@ -66,6 +66,8 @@ export default function About() {
               </div>
             </div>
           </div>
+          </div>
+          <HeroPhoto src="/images/hero-about-cory.webp" alt="Cory Brenner, founder of NXT Level Builds" aspect="aspect-[4/5]" />
         </div>
       </section>
 

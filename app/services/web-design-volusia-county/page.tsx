@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import { getPost } from '@/app/blog/posts';
+import HeroBackdrop from '@/components/HeroBackdrop';
+import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
   title: 'Volusia County Web Design | Custom Websites for Local Businesses',
@@ -83,18 +84,18 @@ export default function WebDesignVolusiaCounty() {
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Web design Volusia County FL — NXT Level Builds" className="object-cover object-center" priority quality={75} sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
-        <div className="container-site relative z-10">
+        <HeroBackdrop />
+        <div className="container-site relative z-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] gap-x-14 items-center">
+          <div>
           <Breadcrumb crumbs={[
             { name: 'Home', href: '/' },
             { name: 'Services', href: '/services' },
             { name: 'Web Design', href: '/services/web-design' },
             { name: 'Volusia County', href: '/services/web-design-volusia-county' },
           ]} />
-          <p className="eyebrow mt-4" style={{ color: 'rgba(100,160,255,0.9)' }}>Web Design — Volusia County, FL</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
-            Web Design for<br />Volusia County <span className="text-accent">Businesses.</span>
+          <p className="hero-eyebrow mt-4">Web Design — Volusia County, FL</p>
+          <h1 className="text-[clamp(40px,6vw,76px)] font-normal text-white leading-[0.95] tracking-[0.01em] max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
+            Web Design for<br />Volusia County <span className="text-gradient-accent">Businesses.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
             One local team, every Volusia County market — Daytona Beach, South Daytona, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Holly Hill, and Daytona Beach Shores. We build fast, mobile-first websites that rank locally and turn visitors into booked customers.
@@ -103,6 +104,8 @@ export default function WebDesignVolusiaCounty() {
             <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">Start Your Project ↗</Link>
             <Link href="/work" className="inline-flex items-center gap-2 bg-transparent hover:bg-white/10 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg border border-white/30 transition-all">See Our Work ↗</Link>
           </div>
+          </div>
+          <HeroPhoto src="/images/hero-pier-close.webp" alt="The Main Street Pier in Daytona Beach from above" />
         </div>
       </section>
 

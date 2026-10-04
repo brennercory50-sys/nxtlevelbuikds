@@ -1,9 +1,9 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { projects as allProjects } from '@/app/work/projects';
 import { CaseStudyCard } from '@/components/case-studies';
+import HeroBackdrop from '@/components/HeroBackdrop';
 
 const categories = Array.from(new Set(allProjects.map(p => p.cat)));
 const filters = ['All', ...categories];
@@ -31,12 +31,11 @@ export default function Work() {
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/work-bg.jpg" alt="Our work — NXT Level Builds portfolio" className="object-cover object-center" priority quality={75} sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
+        <HeroBackdrop />
         <div className="container-site relative z-10">
-          <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>Our Work</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
-            Projects We&apos;ve<br />Actually <span className="text-accent">Built.</span>
+          <p className="hero-eyebrow">Our Work</p>
+          <h1 className="text-[clamp(40px,6vw,76px)] font-normal text-white leading-[0.95] tracking-[0.01em] max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
+            Projects We&apos;ve<br />Actually <span className="text-gradient-accent">Built.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
             Every project here is real work for a real Florida business — including one of our own.

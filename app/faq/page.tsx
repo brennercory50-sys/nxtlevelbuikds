@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState, type ReactNode } from 'react';
+import HeroBackdrop from '@/components/HeroBackdrop';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -95,11 +96,12 @@ export default function FAQ() {
       />
 
       {/* Hero */}
-      <section className="bg-dark py-20">
-        <div className="container-site text-center max-w-2xl">
-          <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>FAQ</p>
-          <h1 className="text-[clamp(32px,5vw,56px)] font-extrabold text-white leading-tight" style={{ fontFamily: 'var(--font-bebas)' }}>
-            Questions We Get <span className="text-accent">Every Day.</span>
+      <section className="relative overflow-hidden bg-dark py-20">
+        <HeroBackdrop />
+        <div className="relative z-10 container-site text-center max-w-2xl">
+          <p className="hero-eyebrow">FAQ</p>
+          <h1 className="text-[clamp(40px,6vw,72px)] font-normal text-white leading-[0.95] tracking-[0.01em]" style={{ fontFamily: 'var(--font-bebas)' }}>
+            Questions We Get <span className="text-gradient-accent">Every Day.</span>
           </h1>
           <p className="text-white/50 text-[15px] mt-4 max-w-lg mx-auto">
             Straight answers about pricing, timelines, what&apos;s included, and how we work. No fluff.
