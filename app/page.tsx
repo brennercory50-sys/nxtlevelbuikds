@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { canonical, ogImage } from '@/lib/seo';
 import { CaseStudyCard } from '@/components/case-studies';
 import { projects } from '@/app/work/projects';
+import IntroLoader from '@/components/IntroLoader';
 
 export const metadata: Metadata = {
   title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
@@ -33,6 +34,7 @@ const services = [
 export default function Home() {
   return (
     <main>
+      <IntroLoader />
       {/* HERO */}
       <section className="relative min-h-[85vh] md:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#0d0f14]">
         {/* Base layer — static image. Shows while the video loads, if it fails, and for reduced-motion users. */}

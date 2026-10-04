@@ -55,6 +55,76 @@
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 
+/* Homepage intro (see components/IntroLoader.tsx). ~2s, CSS-only timeline. */
+@property --intro-n { syntax: '<integer>'; inherits: false; initial-value: 0; }
+.intro {
+  position: fixed; inset: 0; z-index: 100; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: #0b0e14; color: #fff; cursor: pointer;
+  animation: intro-exit 0.7s cubic-bezier(0.76, 0, 0.24, 1) 1.45s forwards;
+}
+.intro::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, #3b8cff 30%, #8ec5ff 50%, #3b8cff 70%, transparent);
+  box-shadow: 0 0 24px 4px rgba(26,110,255,0.55);
+}
+.intro-seen .intro { display: none; }
+.intro.intro-skip { animation: intro-skip 0.45s cubic-bezier(0.76, 0, 0.24, 1) forwards; }
+.intro-glow {
+  position: absolute; top: 50%; left: 50%; width: 900px; max-width: 140vw; aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(26,110,255,0.28) 0%, rgba(26,110,255,0.06) 40%, transparent 65%);
+  animation: intro-pulse 1.5s ease-out both;
+}
+.intro-inner {
+  position: relative; width: fit-content; max-width: 92vw;
+  animation: intro-lift 0.55s cubic-bezier(0.76, 0, 0.24, 1) 1.4s forwards;
+}
+.intro-word {
+  display: flex; flex-wrap: wrap; justify-content: center; column-gap: 0.22em;
+  font-family: var(--font-bebas), sans-serif; font-size: clamp(64px, 11.5vw, 176px);
+  line-height: 0.9; letter-spacing: 0.01em; text-transform: uppercase; white-space: nowrap;
+}
+@media (max-width: 640px) { .intro-word { flex-direction: column; align-items: flex-start; font-size: 29vw; line-height: 0.86; } }
+@media (max-width: 359px) { .intro-meta { letter-spacing: 0.14em; } }
+.intro-word > span { display: block; overflow: hidden; padding-top: 0.06em; }
+.intro-word > span > span {
+  display: block; transform: translateY(105%); filter: blur(10px);
+  animation: intro-rise 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.intro-word > span:nth-child(2) > span { animation-delay: 0.09s; }
+.intro-word > span:nth-child(3) > span { animation-delay: 0.18s; }
+.intro-bar {
+  position: relative; height: 2px; margin: 28px auto 0; width: 100%;
+  background: rgba(255,255,255,0.1); overflow: hidden;
+}
+.intro-bar > span {
+  position: absolute; inset: 0; transform-origin: left; transform: scaleX(0);
+  background: linear-gradient(90deg, #1a6eff, #8ec5ff);
+  box-shadow: 0 0 12px rgba(59,140,255,0.8);
+  animation: intro-fill 1.15s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards;
+}
+.intro-meta {
+  display: flex; justify-content: space-between; gap: 16px; margin-top: 14px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  opacity: 0; animation: intro-fade 0.4s ease-out 0.3s forwards;
+}
+.intro-count {
+  color: #5b9bff; font-variant-numeric: tabular-nums;
+  counter-reset: intro-n var(--intro-n);
+  animation: intro-count 1.15s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards;
+}
+.intro-count::after { content: counter(intro-n) '%'; }
+@keyframes intro-rise { to { transform: translateY(0); filter: blur(0); } }
+@keyframes intro-fill { to { transform: scaleX(1); } }
+@keyframes intro-count { to { --intro-n: 100; } }
+@keyframes intro-fade { to { opacity: 1; } }
+@keyframes intro-pulse { from { opacity: 0; transform: translate(-50%, -50%) scale(0.6); } }
+@keyframes intro-lift { to { opacity: 0; transform: translateY(-40px); } }
+@keyframes intro-exit { to { transform: translateY(-100%); visibility: hidden; } }
+@keyframes intro-skip { to { transform: translateY(-100%); visibility: hidden; } }
+
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
