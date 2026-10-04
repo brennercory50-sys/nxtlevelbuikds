@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { canonical, ogImage } from '@/lib/seo';
+import HeroBackdrop from '@/components/HeroBackdrop';
 
 export const metadata: Metadata = {
   title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
@@ -43,15 +43,14 @@ export default function Services() {
     <main>
       {/* Hero with photo background */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="NXT Level Builds services — web design, Google Ads, SEO, AI automation" className="object-cover object-center" priority quality={75} sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
+        <HeroBackdrop />
         <div className="container-site relative z-10">
-          <p className="eyebrow" style={{color:'rgba(100,160,255,0.9)'}}>Services</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
-            Everything You Need<br />To <span className="text-accent">Scale & Automate.</span>
+          <p className="hero-eyebrow">Services</p>
+          <h1 className="text-[clamp(40px,6vw,76px)] font-normal text-white leading-[0.95] tracking-[0.01em] max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
+            Websites, Apps &amp;<br /><span className="text-gradient-accent">Local Marketing.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
-            From high-converting websites to advanced automations, we provide end-to-end digital solutions for Florida businesses.
+            Websites, web apps, local SEO, Google Ads, and automation for Daytona Beach and Volusia County businesses — all handled by the person who builds them.
           </p>
         </div>
       </section>

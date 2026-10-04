@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { canonical, ogImage } from '@/lib/seo';
 import { posts } from '@/app/blog/posts';
+import HeroBackdrop from '@/components/HeroBackdrop';
 
 export const metadata: Metadata = {
   title: 'Blog | Web Design, SEO & Digital Marketing Tips | Daytona Beach',
@@ -34,10 +35,11 @@ const rest = posts.filter(p => !p.featured);
 export default function Blog() {
   return (
     <main>
-      <section className="bg-dark py-20 text-center">
-        <div className="container-site">
-          <p className="text-[11px] font-semibold tracking-widest uppercase text-green mb-3">Resources</p>
-          <h1 className="font-extrabold text-[clamp(52px,10vw,96px)] text-white leading-none" style={{ fontFamily: 'var(--font-bebas)' }}>THE <span className="text-accent">BLOG</span></h1>
+      <section className="relative overflow-hidden bg-dark py-20 text-center">
+        <HeroBackdrop />
+        <div className="relative z-10 container-site">
+          <p className="hero-eyebrow">Resources</p>
+          <h1 className="font-normal text-[clamp(56px,10vw,104px)] text-white leading-none" style={{ fontFamily: 'var(--font-bebas)' }}>THE <span className="text-gradient-accent">BLOG</span></h1>
           <p className="text-white/50 text-[16px] mt-4 max-w-md mx-auto">No-fluff insights on digital marketing, web design, and AI — written by people who do the work.</p>
         </div>
       </section>

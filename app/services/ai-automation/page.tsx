@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { canonical, ogImage } from '@/lib/seo';
+import HeroBackdrop from '@/components/HeroBackdrop';
 
 export const metadata: Metadata = {
   title: 'AI Automation Services Florida | Business Workflow Automation',
@@ -41,15 +41,14 @@ export default function AIAutomation() {
     <main>
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="AI automation services — NXT Level Builds Daytona Beach" className="object-cover object-center" priority quality={75} sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
+        <HeroBackdrop />
         <div className="container-site relative z-10">
           <Link href="/services" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← All Services
           </Link>
-          <p className="eyebrow" style={{ color: 'rgba(100,160,255,0.9)' }}>AI Automation</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
-            Automate The Grind.<br /><span className="text-accent">Scale The Business.</span>
+          <p className="hero-eyebrow">AI Automation</p>
+          <h1 className="text-[clamp(40px,6vw,76px)] font-normal text-white leading-[0.95] tracking-[0.01em] max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
+            Automate The Grind.<br /><span className="text-gradient-accent">Scale The Business.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
             Stop doing manually what a system can handle. We design and build AI-powered workflows that follow up on leads, book appointments, update your CRM, and request reviews — while you focus on the actual work.

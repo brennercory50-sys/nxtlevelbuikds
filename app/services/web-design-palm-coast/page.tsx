@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
+import HeroBackdrop from '@/components/HeroBackdrop';
 
 export const metadata: Metadata = {
   title: 'Web Design Palm Coast FL | Custom Websites',
@@ -61,8 +61,7 @@ export default function WebDesignPalmCoast() {
 
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <Image fill src="/images/services-bg.jpg" alt="Web design Palm Coast FL — NXT Level Builds" className="object-cover object-center" priority quality={75} sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/65 to-dark/30" />
+        <HeroBackdrop />
         <div className="container-site relative z-10">
           <Breadcrumb crumbs={[
             { name: 'Home', href: '/' },
@@ -70,9 +69,9 @@ export default function WebDesignPalmCoast() {
             { name: 'Web Design', href: '/services/web-design' },
             { name: 'Palm Coast', href: '/services/web-design-palm-coast' },
           ]} />
-          <p className="eyebrow mt-4" style={{ color: 'rgba(100,160,255,0.9)' }}>Web Design — Palm Coast, FL</p>
-          <h1 className="text-[clamp(32px,5vw,60px)] font-extrabold text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
-            Web Design for<br />Palm Coast <span className="text-accent">Businesses.</span>
+          <p className="hero-eyebrow mt-4">Web Design — Palm Coast, FL</p>
+          <h1 className="text-[clamp(40px,6vw,76px)] font-normal text-white leading-[0.95] tracking-[0.01em] max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
+            Web Design for<br />Palm Coast <span className="text-gradient-accent">Businesses.</span>
           </h1>
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-8">
             Palm Coast is growing faster than almost anywhere in Florida. New residents are searching for every local service category. Get your website and SEO in place now — before your competitors do.
