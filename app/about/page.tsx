@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { canonical, ogImage } from '@/lib/seo';
 import HeroBackdrop from '@/components/HeroBackdrop';
+import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
   title: 'About | Web Design Agency Daytona Beach FL',
@@ -33,10 +34,11 @@ export default function About() {
   return (
     <main>
       {/* Hero — full branded office shot */}
-      <section className="relative overflow-hidden" style={{minHeight:'65vh', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
+      <section className="relative overflow-hidden py-20 md:py-24">
         <HeroBackdrop />
 
-        <div className="container-site relative z-10 pb-20 pt-40">
+        <div className="container-site relative z-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] gap-x-14 items-center">
+          <div>
           <div className="max-w-2xl">
             <p className="hero-eyebrow">About NXT Level Builds</p>
             <h1 className="text-[clamp(44px,6.5vw,84px)] font-normal text-white leading-[0.95] tracking-[0.01em] mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
@@ -64,6 +66,8 @@ export default function About() {
               </div>
             </div>
           </div>
+          </div>
+          <HeroPhoto src="/images/hero-about-cory.webp" alt="Cory Brenner, founder of NXT Level Builds" aspect="aspect-[4/5]" />
         </div>
       </section>
 

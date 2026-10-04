@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { canonical, ogImage } from '@/lib/seo';
 import HeroBackdrop from '@/components/HeroBackdrop';
+import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
   title: 'Web Design & Development Daytona Beach FL | Custom Websites',
@@ -42,7 +43,8 @@ export default function WebDesign() {
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
         <HeroBackdrop />
-        <div className="container-site relative z-10">
+        <div className="container-site relative z-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] gap-x-14 items-center">
+          <div>
           <Link href="/services" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← All Services
           </Link>
@@ -64,14 +66,16 @@ export default function WebDesign() {
               See Our Work ↗
             </Link>
           </div>
-          <div className="flex gap-4 flex-wrap mt-10">
+          <div className="flex gap-3 flex-wrap mt-10">
             {[['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['100%', 'Client Retention']].map(([n, l]) => (
-              <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
+              <div key={l} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3">
                 <div className="text-[22px] font-extrabold text-white leading-none">{n}</div>
                 <div className="text-[10px] font-semibold tracking-widest uppercase text-white/70 mt-0.5">{l}</div>
               </div>
             ))}
           </div>
+          </div>
+          <HeroPhoto src="/images/hero-desk-wide.webp" alt="Desk setup with a website open on the monitor" />
         </div>
       </section>
 

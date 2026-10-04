@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { getPost } from '@/app/blog/posts';
 import HeroBackdrop from '@/components/HeroBackdrop';
+import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
   title: 'Volusia County Web Design | Custom Websites for Local Businesses',
@@ -84,7 +85,8 @@ export default function WebDesignVolusiaCounty() {
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
         <HeroBackdrop />
-        <div className="container-site relative z-10">
+        <div className="container-site relative z-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] gap-x-14 items-center">
+          <div>
           <Breadcrumb crumbs={[
             { name: 'Home', href: '/' },
             { name: 'Services', href: '/services' },
@@ -102,6 +104,8 @@ export default function WebDesignVolusiaCounty() {
             <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(26,110,255,0.4)]">Start Your Project ↗</Link>
             <Link href="/work" className="inline-flex items-center gap-2 bg-transparent hover:bg-white/10 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg border border-white/30 transition-all">See Our Work ↗</Link>
           </div>
+          </div>
+          <HeroPhoto src="/images/hero-pier-close.webp" alt="The Main Street Pier in Daytona Beach from above" />
         </div>
       </section>
 

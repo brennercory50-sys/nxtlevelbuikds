@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { canonical, ogImage } from '@/lib/seo';
 import HeroBackdrop from '@/components/HeroBackdrop';
+import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
   title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
@@ -44,7 +45,8 @@ export default function Services() {
       {/* Hero with photo background */}
       <section className="relative py-28 overflow-hidden">
         <HeroBackdrop />
-        <div className="container-site relative z-10">
+        <div className="container-site relative z-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] gap-x-14 items-center">
+          <div>
           <p className="hero-eyebrow">Services</p>
           <h1 className="text-[clamp(40px,6vw,76px)] font-normal text-white leading-[0.95] tracking-[0.01em] max-w-2xl" style={{ fontFamily: 'var(--font-bebas)' }}>
             Websites, Apps &amp;<br /><span className="text-gradient-accent">Local Marketing.</span>
@@ -52,6 +54,8 @@ export default function Services() {
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5">
             Websites, web apps, local SEO, Google Ads, and automation for Daytona Beach and Volusia County businesses — all handled by the person who builds them.
           </p>
+          </div>
+          <HeroPhoto src="/images/hero-desk-monitor.webp" alt="A website open on a desktop monitor, showing the Daytona Beach pier" />
         </div>
       </section>
 
