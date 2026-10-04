@@ -142,10 +142,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${bebas.variable} ${dmSans.variable}`}>
       <head>
-        <link rel="icon" type="image/png" href="/images/logo-icon.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/images/logo.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
-        <link rel="manifest" href="/manifest" />
+        <link rel="icon" type="image/png" href="/images/icon-32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/images/icon-192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/images/icon-180.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}

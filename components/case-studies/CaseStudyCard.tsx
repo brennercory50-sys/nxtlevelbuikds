@@ -39,7 +39,7 @@ export default function CaseStudyCard({ project }: Props) {
           </svg>
           <span className="text-[10px] text-muted font-medium">{p.location}</span>
         </div>
-        <h4 className="font-bold text-[17px] text-dark mb-2">{p.title}</h4>
+        <h3 className="font-bold text-[17px] text-dark mb-2">{p.title}</h3>
         <p className="text-[13px] text-muted leading-relaxed mb-4 flex-1">{p.desc}</p>
         <div className="flex flex-wrap gap-1.5 mb-4">
           {p.tags.map(t => (

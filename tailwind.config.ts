@@ -11,10 +11,10 @@ const config: Config = {
         sans: ['var(--font-dm)', 'sans-serif'],
       },
       colors: {
-        accent: '#1a6eff',
+        accent: '#1664ec',
         accent2: '#0047cc',
         dark: '#0d0f14',
-        muted: '#6b7280',
+        muted: '#5f6672',
         green: '#00c47a',
       },
     },

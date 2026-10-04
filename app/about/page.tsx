@@ -114,7 +114,7 @@ export default function About() {
             {values.map(v => (
               <div key={v.title} className="bg-white border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg transition-all">
                 <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-accent">{v.icon}</div>
-                <h4 className="font-bold text-[16px] text-dark mb-2 uppercase tracking-wide">{v.title}</h4>
+                <h3 className="font-bold text-[16px] text-dark mb-2 uppercase tracking-wide">{v.title}</h3>
                 <p className="text-[13px] text-muted leading-relaxed">{v.desc}</p>
               </div>
             ))}

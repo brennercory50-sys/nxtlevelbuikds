@@ -66,7 +66,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <Link href="/blog" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-[12px] font-semibold mb-6 transition-colors">
             ← Back to Blog
           </Link>
-          <span className="inline-block text-[10px] font-bold tracking-widest uppercase bg-accent/20 text-accent px-3 py-1 rounded-full mb-4">{post.cat}</span>
+          <span className="inline-block text-[10px] font-bold tracking-widest uppercase bg-accent/20 text-[#8ec5ff] px-3 py-1 rounded-full mb-4">{post.cat}</span>
           <h1 className="text-[clamp(30px,4.4vw,52px)] font-normal text-white leading-[0.95] tracking-[0.01em] mb-5" style={{ fontFamily: 'var(--font-bebas)' }}>
             {post.title}
           </h1>
@@ -149,7 +149,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
           {/* CTA */}
           <div className="mt-14 bg-dark rounded-2xl p-8 text-center">
-            <p className="text-[11px] font-bold tracking-widest uppercase text-accent mb-3">NXT Level Builds</p>
+            <p className="text-[11px] font-bold tracking-widest uppercase text-[#5b9bff] mb-3">NXT Level Builds</p>
             <h3 className="text-[22px] font-extrabold text-white mb-3">Ready to Put This Into Action?</h3>
             <p className="text-white/50 text-[14px] mb-6 max-w-md mx-auto">
               We build websites, run Google Ads, and set up automations for businesses in Daytona Beach and across Florida.
@@ -186,7 +186,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                   </div>
                   <div className="p-5">
                     <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-1.5">{p.cat}</p>
-                    <h4 className="text-[14px] font-bold text-dark leading-snug mb-2">{p.title}</h4>
+                    <h3 className="text-[14px] font-bold text-dark leading-snug mb-2">{p.title}</h3>
                     <div className="flex justify-between items-center mt-3 pt-3 border-t border-[#f0f0f0] text-[11px] text-muted">
                       <span>{p.date}</span>
                       <span className="text-accent font-semibold">{p.readTime} →</span>

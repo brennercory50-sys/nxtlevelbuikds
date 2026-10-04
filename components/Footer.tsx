@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
           <div className="md:col-span-1">
             <Logo variant="dark" size="sm" />
-            <p className="mt-4 text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.35)' }}>
+            <p className="mt-4 text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
               AI Automations, Websites & Systems for businesses ready to scale. Based in Daytona Beach, FL.
             </p>
             <div className="flex gap-3 mt-5">
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Services</h5>
+            <h2 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>Services</h2>
             <ul className="space-y-2.5">
               {services.map(s => (
                 <li key={s.href + s.label}>
@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Company</h5>
+            <h2 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>Company</h2>
             <ul className="space-y-2.5">
               {company.map(c => (
                 <li key={c.href}>
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Locations</h5>
+            <h2 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>Locations</h2>
             <ul className="space-y-2.5">
               {locations.map(l => (
                 <li key={l.href}>
@@ -87,7 +87,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.25)' }}>Contact</h5>
+            <h2 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>Contact</h2>
             <ul className="space-y-2.5 text-[13px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
               <li><a href="mailto:hello@nxtlevelbuilds.com" className="hover:text-white transition-colors">hello@nxtlevelbuilds.com</a></li>
               <li><a href="tel:+13863164008" className="hover:text-white transition-colors">(386) 316-4008</a></li>
@@ -100,8 +100,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-3" style={{ borderColor: 'rgba(255,255,255,0.07)' }}>
-          <p className="text-[11px]" style={{ color: 'rgba(255,255,255,0.22)' }}>© 2026 NXT Level Builds. All rights reserved.</p>
-          <Link href="/contact" className="text-[11px] text-accent hover:underline">Start a project →</Link>
+          <p className="text-[11px]" style={{ color: 'rgba(255,255,255,0.45)' }}>© 2026 NXT Level Builds. All rights reserved.</p>
+          <Link href="/contact" className="text-[11px] text-[#5b9bff] hover:underline">Start a project →</Link>
         </div>
       </div>
     </footer>

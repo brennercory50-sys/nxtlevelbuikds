@@ -20,7 +20,7 @@ export default function MobileBar() {
         href="/contact"
         onClick={() => events.cta_click('mobile_bar_contact')}
         className="flex-1 flex flex-col items-center justify-center py-3 gap-0.5 text-white font-bold"
-        style={{ background: '#1a6eff' }}
+        style={{ background: '#1664ec' }}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>

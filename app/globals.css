@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --accent: #1a6eff;
+    --accent: #1664ec;
     --accent2: #0047cc;
     --green: #00c47a;
     --dark: #0d0f14;
@@ -19,7 +19,7 @@
 
 @layer utilities {
   .container-site { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
-  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #1a6eff; display: block; margin-bottom: 12px; }
+  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #1664ec; display: block; margin-bottom: 12px; }
   .section-title { font-weight: 800; line-height: 1.1; color: #1a1a24; }
 
 }
@@ -54,6 +54,11 @@
   background-image: linear-gradient(90deg, #8ec5ff 0%, #3b8cff 55%, #1a6eff 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+
+/* Decorative "01"-style step numbers. Drawn as generated content so they stay
+   out of the accessibility tree and contrast checks; the step titles carry the meaning. */
+.step-numeral { font-family: var(--font-bebas), sans-serif; font-size: 42px; line-height: 1; margin-bottom: 12px; color: rgba(26,110,255,0.18); }
+.step-numeral::before { content: attr(data-step); }
 
 /* Homepage intro (see components/IntroLoader.tsx). ~2s, CSS-only timeline. */
 @property --intro-n { syntax: '<integer>'; inherits: false; initial-value: 0; }

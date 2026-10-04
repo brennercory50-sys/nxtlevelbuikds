@@ -55,7 +55,7 @@ export default function WebDesign() {
           <p className="text-white/55 text-[16px] leading-relaxed max-w-lg mt-5 mb-4">
             Not another pretty template. Every site we build is custom-designed for your brand, engineered for speed, and optimized to turn visitors into leads and revenue.
           </p>
-          <p className="text-[14px] text-accent/80 font-semibold mb-8">
+          <p className="text-[14px] text-[#5b9bff] font-semibold mb-8">
             Simple sites from <span className="text-white font-extrabold">$599</span><span className="text-white/50 font-normal"> with </span><span className="text-white font-extrabold">$150/mo</span> — custom builds quoted individually
           </p>
           <div className="flex gap-3 flex-wrap">
@@ -90,7 +90,7 @@ export default function WebDesign() {
             {deliverables.map(d => (
               <div key={d.title} className="border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg hover:-translate-y-1 transition-all">
                 <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-accent">{d.icon}</div>
-                <h4 className="font-bold text-[15px] text-dark mb-2">{d.title}</h4>
+                <h3 className="font-bold text-[15px] text-dark mb-2">{d.title}</h3>
                 <p className="text-[13px] text-muted leading-relaxed">{d.desc}</p>
               </div>
             ))}
@@ -108,10 +108,8 @@ export default function WebDesign() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {process.map(p => (
               <div key={p.n} className="bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[42px] font-extrabold leading-none mb-3" style={{ color: 'rgba(26,110,255,0.18)', fontFamily: "'Bebas Neue', sans-serif" }}>
-                  {p.n}
-                </div>
-                <h4 className="font-bold text-[15px] text-dark mb-2">{p.title}</h4>
+                <div aria-hidden="true" data-step={p.n} className="step-numeral" />
+                <h3 className="font-bold text-[15px] text-dark mb-2">{p.title}</h3>
                 <p className="text-[13px] text-muted leading-relaxed">{p.desc}</p>
               </div>
             ))}

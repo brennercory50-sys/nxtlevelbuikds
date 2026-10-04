@@ -115,7 +115,7 @@ export default function WebDesignVolusiaCounty() {
           {([['7 Days', 'Avg Launch Time'], ['90+', 'PageSpeed Target'], ['100%', 'Client Retention']] as [string, string][]).map(([num, label]) => (
             <div key={label}>
               <div className="text-[28px] font-extrabold text-white">{num}</div>
-              <div className="text-[11px] text-white/40 uppercase tracking-wider mt-0.5">{label}</div>
+              <div className="text-[11px] text-white/60 uppercase tracking-wider mt-0.5">{label}</div>
             </div>
           ))}
         </div>
