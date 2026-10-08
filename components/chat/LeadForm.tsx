@@ -140,7 +140,7 @@ export default function LeadForm({ onSubmit, onSkip, loading }: LeadFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="flex-1 bg-[#1a6eff] hover:bg-[#0047cc] disabled:opacity-50 text-white text-sm font-medium rounded-lg py-2.5 transition-colors"
+          className="flex-1 bg-accent hover:bg-accent2 disabled:opacity-50 text-white text-sm font-medium rounded-lg py-2.5 transition-colors"
         >
           {loading ? 'Sending...' : 'Get My Recommendation'}
         </button>

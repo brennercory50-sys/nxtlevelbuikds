@@ -5,7 +5,7 @@ const items = [
 ];
 
 export default function Ticker({ dark = false }: { dark?: boolean }) {
-  const bg = dark ? '#16161a' : '#1a6eff';
+  const bg = dark ? '#16161a' : '#1664ec';
   const baseColor = dark ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.7)';
   const accentColor = '#ffffff';
 

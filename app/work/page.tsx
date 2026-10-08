@@ -52,7 +52,7 @@ export default function Work() {
                 <span className="text-accent opacity-80 flex-shrink-0">{s.icon}</span>
                 <div>
                   <div className="text-[20px] md:text-[26px] font-extrabold text-white leading-none whitespace-nowrap">{s.number}</div>
-                  <div className="text-[10px] md:text-[11px] text-white/40 mt-0.5 font-medium">{s.label}</div>
+                  <div className="text-[10px] md:text-[11px] text-white/60 mt-0.5 font-medium">{s.label}</div>
                 </div>
               </div>
             ))}
@@ -97,7 +97,7 @@ export default function Work() {
           <h2 className="text-[clamp(26px,3.5vw,40px)] font-extrabold text-white text-center leading-tight mb-4" style={{ fontFamily: 'var(--font-bebas)' }}>
             How Every Project Gets Built.
           </h2>
-          <p className="text-white/40 text-[14px] text-center max-w-lg mx-auto mb-14">
+          <p className="text-white/60 text-[14px] text-center max-w-lg mx-auto mb-14">
             No hand-offs, no surprises. You&apos;re involved every step of the way.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -108,10 +108,10 @@ export default function Work() {
               { step:'04', title:'Results & Support', desc:"We track performance after launch and stay available. You're not abandoned post-delivery.", icon: <svg key="d4" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg> },
             ].map(item => (
               <div key={item.step} className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-accent/40 transition-all">
-                <div className="text-[11px] font-bold tracking-widest text-white/25 mb-4">{item.step}</div>
+                <div className="text-[11px] font-bold tracking-widest text-white/50 mb-4">{item.step}</div>
                 <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center mb-4 text-accent">{item.icon}</div>
-                <h4 className="font-bold text-[16px] text-white mb-2">{item.title}</h4>
-                <p className="text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.4)' }}>{item.desc}</p>
+                <h3 className="font-bold text-[16px] text-white mb-2">{item.title}</h3>
+                <p className="text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>{item.desc}</p>
               </div>
             ))}
           </div>

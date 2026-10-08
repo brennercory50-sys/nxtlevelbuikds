@@ -51,7 +51,7 @@ export default function ThankYou() {
               { step: '04', title: 'Custom proposal', desc: "We put together a specific plan and quote for your situation — tailored to your market and your budget." },
             ].map(item => (
               <div key={item.step} className="flex items-start gap-4">
-                <div className="text-[13px] font-extrabold text-accent/40 w-8 flex-shrink-0 mt-0.5" style={{ fontFamily: 'var(--font-bebas)' }}>{item.step}</div>
+                <div className="text-[13px] font-extrabold text-accent w-8 flex-shrink-0 mt-0.5" style={{ fontFamily: 'var(--font-bebas)' }}>{item.step}</div>
                 <div>
                   <p className="font-semibold text-[14px] text-dark">{item.title}</p>
                   <p className="text-[13px] text-muted mt-0.5">{item.desc}</p>

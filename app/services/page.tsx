@@ -66,7 +66,7 @@ export default function Services() {
             <div key={s.n} className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start border-b border-[#e5e7eb] pb-8 last:border-0">
               <div>
                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-3 text-accent">{s.icon}</div>
-                <h3 className="font-bold text-[18px] text-dark mb-2">{s.title}</h3>
+                <h2 className="font-bold text-[18px] text-dark mb-2">{s.title}</h2>
                 <Link href={s.href} className="inline-flex items-center gap-1 text-[13px] font-semibold text-accent hover:text-accent2 transition-colors">
                   View Details →
                 </Link>

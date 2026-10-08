@@ -5,6 +5,7 @@ import { canonical, ogImage } from '@/lib/seo';
 import { CaseStudyCard } from '@/components/case-studies';
 import { projects } from '@/app/work/projects';
 import IntroLoader from '@/components/IntroLoader';
+import HeroVideo from '@/components/HeroVideo';
 
 export const metadata: Metadata = {
   title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
@@ -39,21 +40,13 @@ export default function Home() {
       <section className="relative min-h-[85vh] md:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#0d0f14]">
         {/* Base layer — static image. Shows while the video loads, if it fails, and for reduced-motion users. */}
         <Image fill src="/images/hero-daytona-v2.webp" alt="Aerial view of the Main Street Pier in Daytona Beach" className="object-cover object-center md:object-[center_15%]" priority quality={75} sizes="100vw" />
-        {/* Hero video — autoplay/loop/muted, hidden when the user prefers reduced motion.
-            Portrait source, so desktop shows a horizontal band; 15% keeps the pier in frame. */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] motion-reduce:hidden pointer-events-none [filter:contrast(1.05)]"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster="/images/hero-daytona-v2.webp"
-          aria-hidden="true"
-          tabIndex={-1}
-        >
-          <source src="/videos/hero-daytona-v2.mp4" type="video/mp4" />
-        </video>
+        {/* Hero video — loads after the page finishes loading so it never delays the
+            hero image above; fades in over it once playing. Portrait source, so desktop
+            shows a horizontal band; 15% keeps the pier in frame. */}
+        <HeroVideo
+          src="/videos/hero-daytona-v2.mp4"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] pointer-events-none [filter:contrast(1.05)]"
+        />
         {/* Cinematic gradients — darker behind the left/center text, lighter to the right; bottom fade for readability */}
         {/* Overlays — dark behind the text, opening up to the right on desktop so the pier
             and water stay recognizable. Phones get an even wash since text spans the width. */}
@@ -64,7 +57,7 @@ export default function Home() {
           {/* Pill eyebrow */}
           <div className="inline-flex items-center gap-2 self-start rounded-full border border-accent/50 bg-accent/10 backdrop-blur-sm px-4 py-1.5 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-            <span className="text-[11px] md:text-[12px] font-bold tracking-[0.22em] uppercase text-accent">
+            <span className="text-[11px] md:text-[12px] font-bold tracking-[0.22em] uppercase text-[#5b9bff]">
               Daytona Beach Web Design
             </span>
           </div>
@@ -148,7 +141,7 @@ export default function Home() {
                 ), number:'3 Yrs', label:'Industry Experience' },
               ].map((s, i) => (
                 <div key={s.label} className={`flex flex-col md:flex-row md:items-center md:gap-3 py-1 text-center md:text-left ${i > 0 ? 'border-l border-white/10 md:ml-10 md:pl-10 pl-2' : ''}`}>
-                  <span className="hidden md:block text-accent opacity-80">{s.icon}</span>
+                  <span className="hidden md:block text-[#5b9bff] opacity-80">{s.icon}</span>
                   <div>
                     <div className="text-[20px] md:text-[22px] font-extrabold text-white leading-none">{s.number}</div>
                     <div className="text-[9px] md:text-[11px] text-white/70 mt-0.5 font-medium leading-tight">{s.label}</div>
@@ -265,7 +258,7 @@ export default function Home() {
               { name: 'Zapier', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
               { name: 'Google Ads', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> },
             ].map(t => (
-              <div key={t.name} className="flex items-center gap-2 text-[#9ca3af]">
+              <div key={t.name} className="flex items-center gap-2 text-[#6b7280]">
                 <span>{t.icon}</span>
                 <span className="text-[14px] font-bold tracking-wide">{t.name}</span>
               </div>

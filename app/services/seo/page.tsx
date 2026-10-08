@@ -107,7 +107,7 @@ export default function SEO() {
             {deliverables.map(d => (
               <div key={d.title} className="border border-[#e5e7eb] rounded-2xl p-7 hover:border-accent/30 hover:shadow-lg hover:-translate-y-1 transition-all">
                 <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-accent">{d.icon}</div>
-                <h4 className="font-bold text-[15px] text-dark mb-2">{d.title}</h4>
+                <h3 className="font-bold text-[15px] text-dark mb-2">{d.title}</h3>
                 <p className="text-[13px] text-muted leading-relaxed">{d.desc}</p>
               </div>
             ))}
@@ -125,10 +125,8 @@ export default function SEO() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {process.map(p => (
               <div key={p.n} className="bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="text-[42px] font-extrabold leading-none mb-3" style={{ color: 'rgba(26,110,255,0.18)', fontFamily: "'Bebas Neue', sans-serif" }}>
-                  {p.n}
-                </div>
-                <h4 className="font-bold text-[15px] text-dark mb-2">{p.title}</h4>
+                <div aria-hidden="true" data-step={p.n} className="step-numeral" />
+                <h3 className="font-bold text-[15px] text-dark mb-2">{p.title}</h3>
                 <p className="text-[13px] text-muted leading-relaxed">{p.desc}</p>
               </div>
             ))}

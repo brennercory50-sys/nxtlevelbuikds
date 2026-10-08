@@ -286,7 +286,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
                     </div>
                     <div className="p-5">
                       <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-1">{p.type}</p>
-                      <h4 className="font-bold text-[15px] text-dark mb-1">{p.title}</h4>
+                      <h3 className="font-bold text-[15px] text-dark mb-1">{p.title}</h3>
                       <p className="text-[12px] text-muted">{p.location}</p>
                     </div>
                   </Link>

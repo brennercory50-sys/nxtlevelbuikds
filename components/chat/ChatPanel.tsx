@@ -123,7 +123,7 @@ export default function ChatPanel({
             <div
               className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
                 msg.role === 'user'
-                  ? 'bg-[#1a6eff] text-white rounded-br-md'
+                  ? 'bg-accent text-white rounded-br-md'
                   : 'bg-[#1a1d24] text-[#e5e7eb] rounded-bl-md'
               }`}
             >
@@ -166,7 +166,7 @@ export default function ChatPanel({
               target="_blank"
               rel="noopener noreferrer"
               onClick={onBook}
-              className="inline-block bg-[#1a6eff] hover:bg-[#0047cc] text-white text-sm font-medium rounded-lg px-6 py-2.5 transition-colors"
+              className="inline-block bg-accent hover:bg-accent2 text-white text-sm font-medium rounded-lg px-6 py-2.5 transition-colors"
             >
               Book Free Consultation
             </a>
@@ -188,7 +188,7 @@ export default function ChatPanel({
         <button
           type="submit"
           disabled={!input.trim()}
-          className="w-10 h-10 rounded-xl bg-[#1a6eff] hover:bg-[#0047cc] disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center transition-colors shrink-0"
+          className="w-10 h-10 rounded-xl bg-accent hover:bg-accent2 disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center transition-colors shrink-0"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
