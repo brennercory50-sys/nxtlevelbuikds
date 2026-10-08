@@ -23,6 +23,8 @@ export interface Project {
   relatedService?: 'web-design' | 'seo' | 'google-ads' | 'ai-automation';
   videoUrl?: string;
   url?: string;
+  /** Homepage screenshot, shown as the card thumbnail. Path under /public. */
+  image?: string;
   processSteps?: { step: string; description: string; duration?: string; deliverables?: string[] }[];
   results?: { label: string; before: string; after: string }[];
   roi?: string;
