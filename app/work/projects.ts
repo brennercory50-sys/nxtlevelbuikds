@@ -25,6 +25,10 @@ export interface Project {
   url?: string;
   /** Homepage screenshot, shown as the card thumbnail. Path under /public. */
   image?: string;
+  /** Short muted screen recording of the homepage, looped on the card. Path under /public. */
+  previewVideo?: string;
+  /** Frame the preview is shown in: a desktop browser window (default) or a phone. */
+  previewDevice?: 'desktop' | 'phone';
   processSteps?: { step: string; description: string; duration?: string; deliverables?: string[] }[];
   results?: { label: string; before: string; after: string }[];
   roi?: string;
@@ -38,6 +42,9 @@ export const projects: Project[] = [
     cat: 'Websites',
     title: 'Next Level Detailing',
     url: 'https://www.nextleveldetailingfl.com/',
+    image: '/images/work/detailing-home.webp',
+    previewVideo: '/videos/work/detailing-home.mp4',
+    previewDevice: 'phone',
     type: 'Website Design',
     location: 'Daytona Beach, FL',
     result: 'Custom website build',
@@ -64,6 +71,8 @@ export const projects: Project[] = [
     cat: 'Websites',
     title: 'Next Level Screening',
     url: 'https://www.nxtlevelscreening.com/',
+    image: '/images/work/screening-home.webp',
+    previewVideo: '/videos/work/screening-home.mp4',
     type: 'Website Design',
     location: 'Volusia County, FL',
     result: 'Founder-owned business',
