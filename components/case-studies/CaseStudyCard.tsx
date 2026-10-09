@@ -12,7 +12,20 @@ export default function CaseStudyCard({ project }: Props) {
 
   return (
     <Link href={`/work/${p.slug}`} className="group rounded-2xl overflow-hidden border border-[#e5e7eb] hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 transition-all bg-white flex flex-col">
-      {p.image ? (
+      {p.image && p.previewDevice === 'phone' ? (
+        // Phone recording: a phone rising from the bottom of the header, showing the top of the screen.
+        <div className={`relative aspect-[3/2] bg-gradient-to-br ${p.bg} overflow-hidden flex justify-center`}>
+          <div className="absolute top-5 w-[46%] max-w-[210px] rounded-t-[28px] border-[6px] border-b-0 border-[#1c1f26] bg-[#1c1f26] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.7)] overflow-hidden">
+            <ProjectPreview
+              image={p.image}
+              video={p.previewVideo}
+              alt={`${p.title} homepage on a phone`}
+              className="relative aspect-[540/860] overflow-hidden rounded-t-[22px]"
+              sizes="210px"
+            />
+          </div>
+        </div>
+      ) : p.image ? (
         // Homepage screenshot in a small browser frame, so the card shows the real site.
         <div className={`bg-gradient-to-br ${p.bg} p-4 pb-0`}>
           <div className="rounded-t-lg overflow-hidden shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] bg-[#1c1f26]">
