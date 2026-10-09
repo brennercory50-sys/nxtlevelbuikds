@@ -25,6 +25,8 @@ export interface Project {
   url?: string;
   /** Homepage screenshot, shown as the card thumbnail. Path under /public. */
   image?: string;
+  /** Short muted screen recording of the homepage, looped on the card. Path under /public. */
+  previewVideo?: string;
   processSteps?: { step: string; description: string; duration?: string; deliverables?: string[] }[];
   results?: { label: string; before: string; after: string }[];
   roi?: string;

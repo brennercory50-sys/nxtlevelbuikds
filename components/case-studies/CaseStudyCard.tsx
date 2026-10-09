@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import ProjectPreview from './ProjectPreview';
 import { Project } from '@/app/work/projects';
 
 interface Props {
@@ -26,15 +26,7 @@ export default function CaseStudyCard({ project }: Props) {
                 </span>
               )}
             </div>
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <Image
-                fill
-                src={p.image}
-                alt={`${p.title} homepage`}
-                sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-              />
-            </div>
+            <ProjectPreview image={p.image} video={p.previewVideo} alt={`${p.title} homepage`} />
           </div>
         </div>
       ) : (
