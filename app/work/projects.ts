@@ -66,6 +66,8 @@ export const projects: Project[] = [
     cat: 'Websites',
     title: 'Next Level Screening',
     url: 'https://www.nxtlevelscreening.com/',
+    image: '/images/work/screening-home.webp',
+    previewVideo: '/videos/work/screening-home.mp4',
     type: 'Website Design',
     location: 'Volusia County, FL',
     result: 'Founder-owned business',
