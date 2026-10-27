@@ -5,8 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
 import MobileBar from '@/components/MobileBar';
-import { ChatWidget } from '@/components/chat';
-import ExitIntentPopup from '@/components/ExitIntentPopup';
+import DeferredWidgets from '@/components/DeferredWidgets';
 
 export const viewport: Viewport = {
   themeColor: '#1a6eff',
@@ -156,8 +155,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <MobileBar />
         <Analytics />
-        <ChatWidget />
-        <ExitIntentPopup />
+        <DeferredWidgets />
       </body>
     </html>
   );
