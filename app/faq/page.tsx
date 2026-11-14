@@ -135,8 +135,8 @@ export default function FAQ() {
               <Link href="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent2 text-white font-bold text-[14px] px-7 py-3.5 rounded-lg transition-colors">
                 Book a Free Call →
               </Link>
-              <Link href="/pricing" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-7 py-3.5 rounded-lg transition-all">
-                View Pricing →
+              <Link href="/free-website-audit" className="inline-flex items-center gap-2 border border-[#e5e7eb] hover:border-accent hover:text-accent text-dark font-semibold text-[14px] px-7 py-3.5 rounded-lg transition-all">
+                Get a Free Website Audit →
               </Link>
             </div>
           </div>

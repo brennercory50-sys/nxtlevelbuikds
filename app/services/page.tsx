@@ -5,11 +5,11 @@ import HeroBackdrop from '@/components/HeroBackdrop';
 import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
-  title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
+  title: 'Web Design, SEO & Google Ads Services',
   description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads management, local SEO, and AI automation for local businesses.',
   alternates: { canonical: canonical('/services') },
   openGraph: {
-    title: 'Web Design, Google Ads, SEO & AI Automation Services | Daytona Beach FL',
+    title: 'Web Design, SEO & Google Ads Services',
     description: 'Full-service digital agency in Daytona Beach, FL. Custom websites, Google Ads management, local SEO, and AI automation for local businesses.',
     images: [ogImage()],
   },

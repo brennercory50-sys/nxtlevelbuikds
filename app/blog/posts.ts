@@ -212,7 +212,7 @@ export const posts: Post[] = [
     bg: '#fef2f2',
     relatedService: { label: 'Web Design', href: '/services/web-design' },
     metaTitle: 'Auto Detailing Website Design That Books Jobs',
-    metaDesc: 'Auto detailing website design that books jobs: clear packages and pricing, before-and-after photos, mobile service areas, ceramic coating pages, and fast online booking.',
+    metaDesc: 'Auto detailing website design that books jobs: clear packages and pricing, before-and-after photos, mobile service areas and fast online booking.',
     body: [
       { type: 'p', text: "People don't shop for a detailer the way they shop for a plumber. Nothing is broken. They're deciding whether you're worth it, and they decide mostly with their eyes. That makes detailing one of the few trades where the website really is a portfolio first and a brochure second." },
       { type: 'p', text: "We built the site for Next Level Detailing here in Volusia County, so this isn't theory. Here's what a detailing site needs." },
@@ -706,7 +706,7 @@ export const posts: Post[] = [
     bg: '#fff7ed',
     featured: true,
     relatedService: { label: 'Web Design for Contractors', href: '/services/web-design-for-contractors' },
-    metaTitle: 'What Contractors Need in a Website to Book More Jobs',
+    metaTitle: 'Contractor Website Checklist: What Books Jobs',
     metaDesc: 'A practical checklist for contractor websites: quote forms, service area pages, project galleries, and the local SEO setup that gets you found first.',
     body: [
       { type: 'p', text: "Most contractor websites we audit look fine and do almost nothing. They're a homepage, an about page, and a contact form buried three clicks deep — built like a digital business card instead of a lead-generation tool. If you're a contractor and your site isn't consistently turning visitors into booked estimates, it's usually missing one or more of the items on this list." },
@@ -768,7 +768,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Local SEO', href: '/services/seo' },
-    metaTitle: 'The Google Business Profile Checklist for Florida Service Businesses',
+    metaTitle: 'Google Business Profile Checklist for Florida',
     metaDesc: 'Every field, category, and habit that actually moves the needle for Google Business Profile ranking — built for Florida service businesses.',
     body: [
       { type: 'p', text: "For most local service businesses, the Google Business Profile (GBP) — formerly Google My Business — drives more calls and leads than the website itself. It's also the single most under-optimized asset we see when we audit new clients. Here's the checklist we run on every account." },
@@ -800,7 +800,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Web Design — DeLand', href: '/services/web-design-deland' },
-    metaTitle: 'Web Design in DeLand, FL — What Local Businesses Need to Know',
+    metaTitle: 'DeLand Web Design: A Local Business Guide',
     metaDesc: "Why DeLand's local search competition is lower than Daytona's, which industries have the biggest website gap, and what a properly built local site needs.",
     body: [
       { type: 'p', text: "DeLand is one of the more interesting local markets in Volusia County right now — a growing downtown corridor, a steady stream of Stetson University-driven demand, and a local search landscape that's noticeably less crowded than Daytona Beach or Orlando. That gap won't last forever, which makes it a good time for DeLand businesses to take their website seriously." },
@@ -829,7 +829,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Web Design — New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
-    metaTitle: 'Web Design in New Smyrna Beach, FL — What Local Businesses Need to Know',
+    metaTitle: 'New Smyrna Beach Web Design: A Local Guide',
     metaDesc: 'Why New Smyrna Beach businesses need a website built for both tourist and local search intent, and what a properly optimized site covers.',
     body: [
       { type: 'p', text: "New Smyrna Beach runs on two very different kinds of search traffic at once: tourists searching from out of town for something to do right now, and locals searching for a service business they'll come back to for years. A website that only speaks to one of those audiences is leaving business on the table." },
@@ -858,7 +858,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Web Design — Ormond Beach', href: '/services/web-design-ormond-beach' },
-    metaTitle: 'Web Design in Ormond Beach, FL — What Local Businesses Need to Know',
+    metaTitle: 'Ormond Beach Web Design: A Local Business Guide',
     metaDesc: 'What Ormond Beach businesses need from a website to compete in local search — coverage areas, industries, and the local SEO setup that matters.',
     body: [
       { type: 'p', text: "Ormond Beach sits right next to Daytona Beach's much larger, much more competitive market — which means an Ormond Beach business website has to be sharper about local targeting, not looser. Generic \"Daytona area\" positioning gets lost. Specific, well-optimized Ormond Beach targeting stands out." },
@@ -885,7 +885,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Web Design — Palm Coast', href: '/services/web-design-palm-coast' },
-    metaTitle: 'Web Design in Palm Coast, FL — What Local Businesses Need to Know',
+    metaTitle: 'Palm Coast Web Design: A Local Business Guide',
     metaDesc: 'What Palm Coast businesses need from a website to compete in local search — coverage areas, industries, and the local SEO setup that matters.',
     body: [
       { type: 'p', text: "Palm Coast has been one of the fastest-growing cities in Flagler County for years, and the local business search landscape hasn't caught up to that growth yet. That gap — between how many people are moving in and searching, and how many local businesses have a properly optimized website — is exactly the opportunity worth acting on now." },
@@ -912,7 +912,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Web Design — Port Orange', href: '/services/web-design-port-orange' },
-    metaTitle: 'Web Design in Port Orange, FL — What Local Businesses Need to Know',
+    metaTitle: 'Port Orange Web Design: A Local Business Guide',
     metaDesc: 'What Port Orange and South Daytona businesses need from a website to compete for the same Volusia County customers — the full local SEO checklist.',
     body: [
       { type: 'p', text: "Port Orange doesn't operate as its own isolated market — it competes directly with South Daytona and the rest of Volusia County for the same searches and the same customers. A Port Orange business website that doesn't account for that overlap is competing with one hand tied behind its back." },
@@ -981,7 +981,7 @@ export const posts: Post[] = [
     bg: '#f0fdf6',
     relatedService: { label: 'Local SEO', href: '/services/seo' },
     metaTitle: 'How to Dominate Google Maps in 90 Days',
-    metaDesc: 'A step-by-step Google Business Profile strategy to rank in the local map pack within 90 days — used by NXT Level Builds for clients across Daytona Beach and Volusia County.',
+    metaDesc: 'A step-by-step Google Business Profile plan for local service businesses: categories, photos, reviews, posts and the habits that move you up the map pack.',
     body: [
       { type: 'p', text: "Google Maps ranking (also called the \"local pack\") is the most valuable real estate for any service business. When someone searches \"electrician near me\" or \"web design Daytona Beach,\" the three businesses shown in the map section get the majority of clicks — often 70%+ of all search traffic." },
       { type: 'p', text: "Here's the step-by-step process we follow to move a local business into the map pack." },
@@ -1088,7 +1088,7 @@ export const posts: Post[] = [
     iconColor: '#dc2626',
     bg: '#fff1f0',
     relatedService: { label: 'Google Ads Management', href: '/services/google-ads' },
-    metaTitle: 'LSA vs Google Search Ads: Which Is Right for Your Business?',
+    metaTitle: 'LSA vs Google Search Ads: Which Should You Use?',
     metaDesc: 'Local Services Ads vs Google Search Ads — a plain-English comparison for Florida service businesses. Learn which one drives better ROI and when to use both.',
     body: [
       { type: 'p', text: "If you run a service business in Florida, you've likely heard about both Local Services Ads (LSA) and Google Search Ads — and you might be wondering which one is actually worth your budget. They look similar but they work very differently." },
@@ -1121,7 +1121,7 @@ export const posts: Post[] = [
     iconColor: '#1a6eff',
     bg: '#eef3ff',
     relatedService: { label: 'Local SEO', href: '/services/seo' },
-    metaTitle: 'Link Building in 2026: What Works vs. What Wastes Time',
+    metaTitle: 'Link Building in 2026: What Actually Works',
     metaDesc: "Link building in 2026 is different. Here's what still works for local and small business SEO — and what's a complete waste of time.",
     body: [
       { type: 'p', text: "Link building has evolved more than any other part of SEO over the past 5 years. Tactics that used to work reliably — guest post networks, directory spam, private blog networks — are now either useless or actively harmful. Meanwhile, the tactics that do work are more accessible than ever for local businesses." },
@@ -1150,7 +1150,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'how-much-small-business-spend-marketing',
-    title: 'How Much Should a Small Business Spend on Digital Marketing?',
+    title: 'Small Business Marketing Budget: How Much to Spend',
     desc: 'A practical framework based on revenue, goals, and market competition. No generic percentages — a real answer.',
     cat: 'Business',
     date: 'Feb 14, 2026',
@@ -1159,7 +1159,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Free Strategy Call', href: '/contact' },
-    metaTitle: 'How Much Should a Small Business Spend on Digital Marketing?',
+    metaTitle: 'Small Business Marketing Budget: How Much to Spend',
     metaDesc: 'A practical framework for setting your digital marketing budget — based on revenue goals and competition, not generic percentages.',
     body: [
       { type: 'p', text: "\"What should I budget for digital marketing?\" is the most common question we get on initial calls. And the honest answer is: it depends. But \"it depends\" isn't useful — so here's a real framework." },
@@ -1192,7 +1192,7 @@ export const posts: Post[] = [
     iconColor: '#ea580c',
     bg: '#fff7ed',
     relatedService: { label: 'Custom Web Design', href: '/services/web-design' },
-    metaTitle: 'Web Design vs Web Development: What Do You Actually Need?',
+    metaTitle: 'Web Design vs Web Development: Which You Need',
     metaDesc: "Web design and web development are not the same thing. Here's the plain-English breakdown — and what a small business actually needs to get a site that converts.",
     body: [
       { type: 'p', text: "If you've ever shopped for a website, you've seen both terms: web design and web development. Sometimes they're used interchangeably. Sometimes agencies offer both under one umbrella. And most business owners aren't sure what they actually need or what they're paying for." },
@@ -1222,7 +1222,7 @@ export const posts: Post[] = [
     iconColor: '#ea580c',
     bg: '#fff7ed',
     relatedService: { label: 'Pricing & Packages', href: '/pricing' },
-    metaTitle: 'DIY Website vs Hiring a Web Design Agency | True Cost Comparison',
+    metaTitle: 'DIY Website vs Hiring a Web Designer',
     metaDesc: "Is a DIY website (Squarespace, Wix, GoDaddy) actually cheaper than hiring an agency? Here's the true cost comparison — including what most people don't factor in.",
     body: [
       { type: 'p', text: "\"I'll just build it on Squarespace\" is something we hear from prospective clients all the time. And honestly? For some businesses, it's the right call. But for most small businesses trying to generate leads and rank on Google, the math doesn't add up the way people think." },
@@ -1254,7 +1254,14 @@ export function getPost(slug: string): Post | undefined {
 export function getRelatedPosts(slug: string, count = 3): Post[] {
   const current = getPost(slug);
   if (!current) return posts.slice(0, count);
-  return posts.filter(p => p.slug !== slug && p.cat === current.cat).slice(0, count).concat(
-    posts.filter(p => p.slug !== slug && p.cat !== current.cat)
-  ).slice(0, count);
+  // Take the next posts in the same category, wrapping around, so links spread
+  // evenly: every post is linked from the posts just before it. Fill any gap
+  // with other categories in the same rotating order.
+  const after = (list: Post[]) => {
+    const i = list.findIndex(p => p.slug === slug);
+    return [...list.slice(i + 1), ...list.slice(0, Math.max(i, 0))].filter(p => p.slug !== slug);
+  };
+  const sameCat = after(posts.filter(p => p.cat === current.cat));
+  const others = after(posts).filter(p => p.cat !== current.cat);
+  return [...sameCat, ...others].slice(0, count);
 }

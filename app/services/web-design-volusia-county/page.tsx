@@ -7,17 +7,17 @@ import HeroBackdrop from '@/components/HeroBackdrop';
 import HeroPhoto from '@/components/HeroPhoto';
 
 export const metadata: Metadata = {
-  title: 'Volusia County Web Design | Custom Websites for Local Businesses',
-  description: 'Custom web design and digital marketing across Volusia County, FL — Daytona Beach, South Daytona, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Holly Hill, and Daytona Beach Shores. Launched in 7 days.',
+  title: 'Volusia County Web Design | Local Websites',
+  description: 'Custom web design across Volusia County, FL: Daytona Beach, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Holly Hill and more. Launched in 7 days.',
   alternates: { canonical: canonical('/services/web-design-volusia-county') },
   openGraph: {
-    title: 'Volusia County Web Design | Custom Websites for Local Businesses',
+    title: 'Volusia County Web Design | Local Websites',
     description: 'Custom web design and digital marketing across Volusia County, FL — Daytona Beach, South Daytona, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, and more.',
     images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Volusia County Web Design | Custom Websites for Local Businesses',
+    title: 'Volusia County Web Design | Local Websites',
     description: 'Custom web design and digital marketing across Volusia County, FL — Daytona Beach, South Daytona, Port Orange, Ormond Beach, New Smyrna Beach, DeLand, and more.',
   },
 };

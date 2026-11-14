@@ -186,6 +186,9 @@ export default function SEO() {
           <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-accent font-bold text-[14px] px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">
             Book a Free SEO Consultation →
           </Link>
+          <Link href="/free-seo-audit" className="inline-flex items-center gap-2 text-white text-[14px] font-semibold ml-4 underline underline-offset-4">
+            or get a free SEO audit
+          </Link>
         </div>
       </section>
     </main>
