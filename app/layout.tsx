@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bebas_Neue, DM_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -13,16 +13,18 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const bebas = Bebas_Neue({
+// Fonts are self-hosted (OFL, from Fontsource) so builds never depend on
+// reaching Google Fonts, which intermittently failed CI.
+const bebas = localFont({
+  src: './fonts/BebasNeue-latin-400.woff2',
   weight: '400',
-  subsets: ['latin'],
   display: 'swap',
   variable: '--font-bebas',
 });
 
-const dmSans = DM_Sans({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
+const dmSans = localFont({
+  src: './fonts/DMSans-latin-variable.woff2',
+  weight: '100 1000',
   display: 'swap',
   variable: '--font-dm',
 });
