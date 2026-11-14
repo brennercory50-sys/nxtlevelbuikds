@@ -1,0 +1,32 @@
+name: IndexNow
+
+# After each deploy, tell Bing and other IndexNow engines about the site's
+# pages so new and changed content is crawled quickly. Google does not use
+# IndexNow; it reads the sitemap through Search Console.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    name: Submit sitemap URLs
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # The script waits until /api/version reports this commit, so it never
+      # submits the previous deployment's sitemap.
+      - name: Submit to IndexNow
+        run: node scripts/indexnow.mjs
+        env:
+          EXPECTED_COMMIT: ${{ github.event_name == 'push' && github.sha || '' }}
