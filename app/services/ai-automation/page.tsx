@@ -4,17 +4,17 @@ import { canonical, ogImage } from '@/lib/seo';
 import HeroBackdrop from '@/components/HeroBackdrop';
 
 export const metadata: Metadata = {
-  title: 'AI Automation Services Florida | Business Workflow Automation',
+  title: 'AI Automation for Florida Businesses',
   description: 'AI-powered automation systems for Florida businesses. Lead nurturing, appointment booking, CRM automation, and chatbots built by NXT Level Builds.',
   alternates: { canonical: canonical('/services/ai-automation') },
   openGraph: {
-    title: 'AI Automation Services Florida | Business Workflow Automation',
+    title: 'AI Automation for Florida Businesses',
     description: 'AI-powered automation systems for Florida businesses. Lead nurturing, appointment booking, CRM automation, and chatbots built by NXT Level Builds.',
     images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Automation Services Florida | Business Workflow Automation',
+    title: 'AI Automation for Florida Businesses',
     description: 'AI-powered automation systems for Florida businesses. Lead nurturing, appointment booking, CRM automation, and chatbots.',
   },
 };

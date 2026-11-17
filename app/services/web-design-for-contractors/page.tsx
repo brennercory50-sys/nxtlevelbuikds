@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { canonical, ogImage } from '@/lib/seo';
 import Link from 'next/link';
 import HeroBackdrop from '@/components/HeroBackdrop';
+import TradeGuides from '@/components/TradeGuides';
 
 export const metadata: Metadata = {
   title: 'Web Design for Contractors FL',
@@ -90,6 +91,8 @@ export default function WebDesignForContractors() {
         </div>
       </section>
 
+
+      <TradeGuides title="Website Guides for Contractors" slugs={['contractor-website-checklist', 'roofing-website-design', 'electrician-website-design', 'painting-contractor-website-design', 'plumber-website-design', 'hvac-website-design']} />
 
       <section className="bg-accent py-16">
         <div className="container-site text-center">

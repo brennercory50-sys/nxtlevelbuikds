@@ -3,7 +3,6 @@ import { projects } from '@/app/work/projects';
 import { posts } from '@/app/blog/posts';
 
 const base = 'https://www.nxtlevelbuilds.com';
-const now = new Date().toISOString().split('T')[0];
 
 const staticRoutes = [
   { url: base, priority: 1.0, changeFrequency: 'weekly' as const },
@@ -25,27 +24,33 @@ const staticRoutes = [
   { url: `${base}/about`, priority: 0.7, changeFrequency: 'monthly' as const },
   { url: `${base}/faq`, priority: 0.6, changeFrequency: 'monthly' as const },
   { url: `${base}/blog`, priority: 0.7, changeFrequency: 'weekly' as const },
+  { url: `${base}/free-website-audit`, priority: 0.6, changeFrequency: 'yearly' as const },
+  { url: `${base}/free-seo-audit`, priority: 0.6, changeFrequency: 'yearly' as const },
 ];
-
-const blogSlugs = posts.map(p => p.slug);
 
 const workSlugs = projects.map(p => p.slug);
 
+// lastModified is only set where we know the real date (blog posts). Stamping
+// every URL with the build date teaches Google to ignore the field entirely.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const withDates = <T extends { url: string }>(routes: T[]) =>
-    routes.map(r => ({ ...r, lastModified: now }));
+  const latestPost = posts.map(p => p.isoDate).sort().at(-1);
 
-  const blogRoutes = blogSlugs.map(slug => ({
-    url: `${base}/blog/${slug}`,
-    priority: 0.6 as const,
+  const blogRoutes = posts.map(p => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: p.isoDate,
+    priority: 0.6,
     changeFrequency: 'monthly' as const,
   }));
 
   const workRoutes = workSlugs.map(slug => ({
     url: `${base}/work/${slug}`,
-    priority: 0.6 as const,
+    priority: 0.6,
     changeFrequency: 'monthly' as const,
   }));
 
-  return [...withDates(staticRoutes), ...withDates(blogRoutes), ...withDates(workRoutes)];
+  return [
+    ...staticRoutes.map(r => (r.url === `${base}/blog` ? { ...r, lastModified: latestPost } : r)),
+    ...blogRoutes,
+    ...workRoutes,
+  ];
 }

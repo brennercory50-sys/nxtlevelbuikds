@@ -8,11 +8,11 @@ import IntroLoader from '@/components/IntroLoader';
 import HeroVideo from '@/components/HeroVideo';
 
 export const metadata: Metadata = {
-  title: { absolute: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL' },
-  description: 'Daytona Beach digital agency specializing in custom web design, Google Ads, local SEO, and AI automation. We help Daytona Beach businesses get found and get more calls.',
+  title: { absolute: 'NXT Level Builds | Web Design & SEO in Daytona Beach, FL' },
+  description: 'Custom web design, local SEO, Google Ads and AI automation in Daytona Beach, FL. Fast websites built to get local businesses found and the phone ringing.',
   alternates: { canonical: canonical('') },
   openGraph: {
-    title: 'NXT Level Builds — Web Design & Digital Marketing Agency | Daytona Beach, FL',
+    title: 'NXT Level Builds | Web Design & SEO in Daytona Beach, FL',
     description: 'Custom websites, Google Ads, SEO, and AI automation for Daytona Beach businesses. Built to convert. Launched in 7 days.',
     images: [ogImage()],
   },

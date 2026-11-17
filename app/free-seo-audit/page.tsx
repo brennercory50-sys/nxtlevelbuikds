@@ -4,17 +4,17 @@ import LeadMagnetForm from '@/components/LeadMagnetForm';
 import HeroBackdrop from '@/components/HeroBackdrop';
 
 export const metadata: Metadata = {
-  title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
+  title: 'Free Local SEO Audit: See Where You Rank',
   description: 'Get a free local SEO ranking report for your business. See exactly where you rank vs. competitors in your city and the 3 quick wins to move up fast.',
   alternates: { canonical: canonical('/free-seo-audit') },
   openGraph: {
-    title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
+    title: 'Free Local SEO Audit: See Where You Rank',
     description: 'Get a free local SEO ranking report for your business. See exactly where you rank vs. competitors in your city.',
     images: [ogImage()],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free SEO Audit — See Where You Rank vs. Your Competitors',
+    title: 'Free Local SEO Audit: See Where You Rank',
     description: 'Get a free local SEO ranking report for your business.',
   },
 };

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = getProject(slug);
   if (!project) return {};
   const title = `${project.title} Case Study — ${project.type}`;
-  const description = `${project.desc} ${project.type} for a ${project.industry.toLowerCase()} business in ${project.location}.`;
+  const description = project.desc;
   return {
     title,
     description,
