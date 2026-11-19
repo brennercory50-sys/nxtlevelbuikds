@@ -113,7 +113,7 @@ export const cities: Record<string, City> = {
     slug: 'new-smyrna-beach',
     name: 'New Smyrna Beach',
     county: 'Volusia',
-    metaTitle: 'Web Design New Smyrna Beach FL | Custom Websites',
+    metaTitle: 'Web Design New Smyrna Beach FL | Local Sites',
     metaDescription: 'Custom web design in New Smyrna Beach, FL for vacation rentals, restaurants, shops and local services. Fast, mobile-first sites for locals and visitors.',
     geo: { latitude: 29.0258, longitude: -80.927 },
     zips: ['32168', '32169'],

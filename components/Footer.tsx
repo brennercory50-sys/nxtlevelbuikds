@@ -12,7 +12,8 @@ const services = [
 const company = [
   { label: 'About', href: '/about' },
   { label: 'Our Work', href: '/work' },
-  { label: 'Book a Call', href: '/contact' },
+  { label: 'Free Website Audit', href: '/free-website-audit' },
+  { label: 'Free SEO Audit', href: '/free-seo-audit' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },

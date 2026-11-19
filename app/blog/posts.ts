@@ -82,7 +82,7 @@ export const posts: Post[] = [
     iconColor: '#e11d48',
     bg: '#fff1f2',
     relatedService: { label: 'Web Design for Contractors', href: '/services/web-design-for-contractors' },
-    metaTitle: 'Painting Contractor Website Design That Wins Jobs',
+    metaTitle: 'Painter Website Design That Wins Jobs',
     metaDesc: 'Painting contractor website design that wins better jobs: interior and exterior pages, your prep process, project galleries, warranty details and easy estimates.',
     body: [
       { type: 'p', text: "Every homeowner gets three painting quotes, and the cheapest one usually wins unless the customer can see why the others are worth more. Your website is where you show that difference before you ever walk through the door." },
@@ -120,7 +120,7 @@ export const posts: Post[] = [
     iconColor: '#ea580c',
     bg: '#fff7ed',
     relatedService: { label: 'Web Design for Home Services', href: '/services/web-design-for-home-services' },
-    metaTitle: 'Moving Company Website Design That Builds Trust',
+    metaTitle: 'Moving Company Website Design',
     metaDesc: 'Moving company website design that builds trust: state registration up front, clear pricing, service pages for each move type, real crew photos and fast quotes.',
     body: [
       { type: 'p', text: "Moving is stressful, and the horror stories about moving scams are well known. Customers come to your site skeptical. Your job is to make them feel safe fast: real business, real crew, clear pricing, no surprises." },
@@ -306,7 +306,7 @@ export const posts: Post[] = [
     iconColor: '#0891b2',
     bg: '#ecfeff',
     relatedService: { label: 'Web Design for Home Services', href: '/services/web-design-for-home-services' },
-    metaTitle: 'Pool Service Website Design for Weekly Accounts',
+    metaTitle: 'Pool Service Website Design',
     metaDesc: 'Pool service website design built for recurring accounts: clear weekly plans, a green-pool page, repair and equipment pages, service area maps, and easy sign-up.',
     body: [
       { type: 'p', text: "Pool service is a subscription business. The money isn't in one green-pool cleanup; it's in the customer who stays on a weekly route for years. Most pool company websites are built like a one-time service menu. Yours should be built to sign people up for the route." },
@@ -350,7 +350,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf4',
     relatedService: { label: 'Web Design for Home Services', href: '/services/web-design-for-home-services' },
-    metaTitle: 'Landscaping Website Design That Lands Better Jobs',
+    metaTitle: 'Landscaping Website Design That Wins Jobs',
     metaDesc: 'Landscaping website design that lands better jobs: separate maintenance and install pages, project galleries, Florida plant know-how, service areas, and quote forms.',
     body: [
       { type: 'p', text: "Most landscaping websites look the same: a stock photo of a perfect lawn, a list of services, and a phone number. The result is that customers choose on price, because nothing else is visible. A good site lets you choose your customers instead." },
@@ -434,7 +434,7 @@ export const posts: Post[] = [
     iconColor: '#7c3aed',
     bg: '#f5f3ff',
     relatedService: { label: 'Web Design for Home Services', href: '/services/web-design-for-home-services' },
-    metaTitle: 'Cleaning Service Website Design for Repeat Clients',
+    metaTitle: 'Cleaning Service Website Design',
     metaDesc: 'Cleaning service website design for repeat clients: transparent pricing, what each clean includes, vacation rental turnovers, team trust signals, and online booking.',
     body: [
       { type: 'p', text: "A cleaning business grows on two things: trust and recurring visits. Someone is letting your team into their home, often while they're not there, and the best customers are the ones who book every week or two for years. Your website should be built around both." },
@@ -738,7 +738,7 @@ export const posts: Post[] = [
     iconColor: '#ea580c',
     bg: '#fff7ed',
     relatedService: { label: 'Web Design for Home Services', href: '/services/web-design-for-home-services' },
-    metaTitle: 'The Website Checklist for Home Service Businesses',
+    metaTitle: 'Home Service Website Checklist',
     metaDesc: 'What HVAC, plumbing, cleaning, and pest control businesses need on their website to rank locally and book more jobs — the full checklist.',
     body: [
       { type: 'p', text: "Home service businesses — HVAC, plumbing, lawn care, cleaning, pest control, pressure washing — all compete on the same battlefield: someone with an urgent need, searching on their phone, ready to book whoever answers first and looks most credible. Here's what separates the sites that win that moment from the ones that lose the lead before the phone even rings." },
@@ -858,7 +858,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Web Design — Ormond Beach', href: '/services/web-design-ormond-beach' },
-    metaTitle: 'Ormond Beach Web Design: A Local Business Guide',
+    metaTitle: 'Ormond Beach Web Design: A Local Guide',
     metaDesc: 'What Ormond Beach businesses need from a website to compete in local search — coverage areas, industries, and the local SEO setup that matters.',
     body: [
       { type: 'p', text: "Ormond Beach sits right next to Daytona Beach's much larger, much more competitive market — which means an Ormond Beach business website has to be sharper about local targeting, not looser. Generic \"Daytona area\" positioning gets lost. Specific, well-optimized Ormond Beach targeting stands out." },
@@ -1016,7 +1016,7 @@ export const posts: Post[] = [
     iconColor: '#7c3aed',
     bg: '#f5f3ff',
     relatedService: { label: 'AI Automation', href: '/services/ai-automation' },
-    metaTitle: '5 Things to Automate With AI for Small Businesses',
+    metaTitle: '5 Things to Automate With AI',
     metaDesc: 'Save 10+ hours a week with these 5 AI automation workflows. Lead follow-up, appointment booking, review requests, and more — practical and ready to deploy.',
     body: [
       { type: 'p', text: "\"AI automation\" sounds expensive and complicated. It's not. The workflows we build for clients often take 1–2 days to set up and start saving them 8–15 hours a week immediately." },
@@ -1088,7 +1088,7 @@ export const posts: Post[] = [
     iconColor: '#dc2626',
     bg: '#fff1f0',
     relatedService: { label: 'Google Ads Management', href: '/services/google-ads' },
-    metaTitle: 'LSA vs Google Search Ads: Which Should You Use?',
+    metaTitle: 'LSA vs Google Search Ads: Which to Use',
     metaDesc: 'Local Services Ads vs Google Search Ads — a plain-English comparison for Florida service businesses. Learn which one drives better ROI and when to use both.',
     body: [
       { type: 'p', text: "If you run a service business in Florida, you've likely heard about both Local Services Ads (LSA) and Google Search Ads — and you might be wondering which one is actually worth your budget. They look similar but they work very differently." },
@@ -1159,7 +1159,7 @@ export const posts: Post[] = [
     iconColor: '#16a34a',
     bg: '#f0fdf6',
     relatedService: { label: 'Free Strategy Call', href: '/contact' },
-    metaTitle: 'Small Business Marketing Budget: How Much to Spend',
+    metaTitle: 'Small Business Marketing Budget Guide',
     metaDesc: 'A practical framework for setting your digital marketing budget — based on revenue goals and competition, not generic percentages.',
     body: [
       { type: 'p', text: "\"What should I budget for digital marketing?\" is the most common question we get on initial calls. And the honest answer is: it depends. But \"it depends\" isn't useful — so here's a real framework." },
@@ -1193,7 +1193,7 @@ export const posts: Post[] = [
     bg: '#fff7ed',
     relatedService: { label: 'Custom Web Design', href: '/services/web-design' },
     metaTitle: 'Web Design vs Web Development: Which You Need',
-    metaDesc: "Web design and web development are not the same thing. Here's the plain-English breakdown — and what a small business actually needs to get a site that converts.",
+    metaDesc: "Web design and web development aren't the same thing. A plain-English breakdown of each, and what a small business actually needs.",
     body: [
       { type: 'p', text: "If you've ever shopped for a website, you've seen both terms: web design and web development. Sometimes they're used interchangeably. Sometimes agencies offer both under one umbrella. And most business owners aren't sure what they actually need or what they're paying for." },
       { type: 'p', text: "Here's the clear breakdown." },
@@ -1223,7 +1223,7 @@ export const posts: Post[] = [
     bg: '#fff7ed',
     relatedService: { label: 'Pricing & Packages', href: '/pricing' },
     metaTitle: 'DIY Website vs Hiring a Web Designer',
-    metaDesc: "Is a DIY website (Squarespace, Wix, GoDaddy) actually cheaper than hiring an agency? Here's the true cost comparison — including what most people don't factor in.",
+    metaDesc: "Is a DIY site on Wix or Squarespace really cheaper than hiring a designer? The true cost comparison, including what most people miss.",
     body: [
       { type: 'p', text: "\"I'll just build it on Squarespace\" is something we hear from prospective clients all the time. And honestly? For some businesses, it's the right call. But for most small businesses trying to generate leads and rank on Google, the math doesn't add up the way people think." },
       { type: 'p', text: "Here's a real comparison." },
