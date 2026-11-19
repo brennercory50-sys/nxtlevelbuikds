@@ -110,6 +110,17 @@ export default function AIAutomation() {
         </div>
       </section>
 
+      {/* Further reading */}
+      <section className="bg-white py-14">
+        <div className="container-site max-w-3xl">
+          <p className="eyebrow">Further Reading</p>
+          <Link href="/blog/5-things-automate-with-ai" className="group block rounded-2xl border border-[#e5e7eb] p-6 hover:border-accent/30 hover:shadow-lg transition-all">
+            <h2 className="font-bold text-[18px] text-dark group-hover:text-accent transition-colors">5 Things Small Businesses Can Automate With AI →</h2>
+            <p className="text-[14px] text-muted leading-relaxed mt-2">Where automation saves real hours for a small team, from lead follow-up to review requests.</p>
+          </Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-accent py-16">
         <div className="container-site text-center">

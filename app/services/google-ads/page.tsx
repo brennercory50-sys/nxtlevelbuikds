@@ -110,6 +110,17 @@ export default function GoogleAds() {
         </div>
       </section>
 
+      {/* Further reading */}
+      <section className="bg-white py-14">
+        <div className="container-site max-w-3xl">
+          <p className="eyebrow">Further Reading</p>
+          <Link href="/blog/why-google-ads-arent-converting" className="group block rounded-2xl border border-[#e5e7eb] p-6 hover:border-accent/30 hover:shadow-lg transition-all">
+            <h2 className="font-bold text-[18px] text-dark group-hover:text-accent transition-colors">Why Your Google Ads Aren&apos;t Converting →</h2>
+            <p className="text-[14px] text-muted leading-relaxed mt-2">The most common reasons ad spend turns into clicks but not calls, and how to fix each one.</p>
+          </Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-accent py-16">
         <div className="container-site text-center">
