@@ -25,6 +25,8 @@ const locations = [
   { label: 'Web Design Ormond Beach', href: '/services/web-design-ormond-beach' },
   { label: 'Web Design New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
   { label: 'Web Design DeLand', href: '/services/web-design-deland' },
+  { label: 'Web Design Deltona', href: '/services/web-design-deltona' },
+  { label: 'Web Design Edgewater', href: '/services/web-design-edgewater' },
   { label: 'Web Design Palm Coast', href: '/services/web-design-palm-coast' },
 ];
 

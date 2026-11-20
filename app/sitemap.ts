@@ -16,6 +16,8 @@ const staticRoutes = [
   { url: `${base}/services/web-design-new-smyrna-beach`, priority: 0.8, changeFrequency: 'monthly' as const },
   { url: `${base}/services/web-design-ormond-beach`, priority: 0.8, changeFrequency: 'monthly' as const },
   { url: `${base}/services/web-design-palm-coast`, priority: 0.8, changeFrequency: 'monthly' as const },
+  { url: `${base}/services/web-design-deltona`, priority: 0.8, changeFrequency: 'monthly' as const },
+  { url: `${base}/services/web-design-edgewater`, priority: 0.8, changeFrequency: 'monthly' as const },
   { url: `${base}/services/web-design-port-orange`, priority: 0.8, changeFrequency: 'monthly' as const },
   { url: `${base}/services/web-design-for-contractors`, priority: 0.8, changeFrequency: 'monthly' as const },
   { url: `${base}/services/web-design-for-home-services`, priority: 0.8, changeFrequency: 'monthly' as const },

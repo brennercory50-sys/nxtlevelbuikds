@@ -60,10 +60,12 @@ const cityPages = [
   { label: 'Ormond Beach', sub: '32174, 32176', href: '/services/web-design-ormond-beach' },
   { label: 'New Smyrna Beach', sub: '32168, 32169', href: '/services/web-design-new-smyrna-beach' },
   { label: 'DeLand', sub: '32720, 32724 · West Volusia', href: '/services/web-design-deland' },
+  { label: 'Deltona', sub: '32725, 32738 · Southwest Volusia', href: '/services/web-design-deltona' },
+  { label: 'Edgewater', sub: '32132, 32141', href: '/services/web-design-edgewater' },
 ];
 
 const alsoServed = [
-  'South Daytona', 'Holly Hill', 'Daytona Beach Shores', 'Deltona', 'Edgewater',
+  'South Daytona', 'Holly Hill', 'Daytona Beach Shores', 'DeBary', 'Orange City',
 ];
 
 const relatedSlugs = [
@@ -248,7 +250,7 @@ export default function WebDesignVolusiaCounty() {
             <div className="bg-white rounded-2xl border border-[#e5e7eb] p-7">
               <h3 className="font-bold text-[16px] text-dark mb-3">My city isn&apos;t listed with its own page — can you still help?</h3>
               <p className="text-muted text-[14px] leading-relaxed">
-                Yes. South Daytona, Holly Hill, Daytona Beach Shores, Deltona, and Edgewater are all part of our active service area even though they don&apos;t have a dedicated landing page yet. We build local SEO targeting into every site regardless — including hyper-local areas like the Beville Road corridor and Golf View in South Daytona.
+                Yes. South Daytona, Holly Hill, Daytona Beach Shores, DeBary, and Orange City are all part of our active service area even though they don&apos;t have a dedicated landing page yet. We build local SEO targeting into every site regardless — including hyper-local areas like the Beville Road corridor and Golf View in South Daytona.
               </p>
             </div>
           </div>

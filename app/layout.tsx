@@ -94,6 +94,8 @@ const schemaGraph = {
         { '@type': 'City', name: 'Ormond Beach' },
         { '@type': 'City', name: 'New Smyrna Beach' },
         { '@type': 'City', name: 'DeLand' },
+        { '@type': 'City', name: 'Deltona' },
+        { '@type': 'City', name: 'Edgewater' },
         { '@type': 'City', name: 'Palm Coast' },
         { '@type': 'State', name: 'Florida' },
       ],
