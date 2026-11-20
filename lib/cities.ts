@@ -204,6 +204,70 @@ export const cities: Record<string, City> = {
     ],
     guide: { title: 'Web design in Palm Coast: what local businesses need', href: '/blog/web-design-palm-coast-what-local-businesses-need' },
   },
+
+  deltona: {
+    slug: 'deltona',
+    name: 'Deltona',
+    county: 'Volusia',
+    metaTitle: 'Web Design Deltona FL | Custom Websites',
+    metaDescription: 'Custom web design in Deltona, FL for home services, contractors and local businesses in Southwest Volusia. Fast, mobile-first sites. ZIPs 32725 & 32738.',
+    geo: { latitude: 28.9005, longitude: -81.2637 },
+    zips: ['32725', '32738'],
+    heroTitle: ['Web Design for', 'Deltona'],
+    heroIntro: "Deltona is the biggest city in Volusia County, and almost all of it is homes. Every one of those homes needs a plumber, a pool tech, a lawn crew and an AC company eventually. I build the sites that get those calls.",
+    local: [
+      "Deltona started as a planned community in the 1960s and grew into the largest city in Volusia County by population. It is overwhelmingly residential: block after block of single-family homes, lakes and cul-de-sacs, with the busiest commercial stretches along Howland Boulevard, Providence Boulevard, Deltona Boulevard and up toward Saxon Boulevard and I-4.",
+      "That makes Deltona one of the best home-services markets in the county. Pools, lawns, roofs and AC systems all need regular work, and homeowners find the people who do it by searching on their phone. The companies with a fast site, clear service areas and a strong Google Business Profile get most of those calls.",
+      "Deltona also has a large Spanish-speaking community, and many residents commute along I-4 toward Sanford and Orlando. A site that works in both English and Spanish, and that makes evening and weekend availability obvious, can win customers that competitors miss.",
+    ],
+    areas: ['Howland Blvd', 'Providence Blvd', 'Deltona Blvd', 'Normandy Blvd', 'Saxon Blvd & I-4', 'Elkcam Blvd', 'DeBary', 'Orange City', 'Osteen', 'Enterprise'],
+    industries: [
+      { name: 'HVAC, Plumbing & Electrical', note: 'Florida summers make AC calls urgent. Tap-to-call and clear coverage win them.', guide: guides.homeServices },
+      { name: 'Pool Service', note: 'Thousands of backyard pools mean steady weekly routes. Make signing up easy.', guide: guides.pool },
+      { name: 'Lawn & Landscaping', note: 'Big residential grid, steady recurring work. Show your routes and pricing.', guide: guides.landscaping },
+      { name: 'Roofing & Exteriors', note: 'Storm season sends homeowners searching. Licensing and photos build trust fast.', guide: guides.roofing },
+      { name: 'Pressure Washing', note: 'Driveways, roofs and pool decks need it every year. Before-and-afters sell it.', guide: guides.pressure },
+      { name: 'Auto Services & Detailing', note: 'Commuters want work done at home or at work. Mobile service sells on clarity.', guide: guides.detailing },
+    ],
+    faqs: [
+      { q: 'Do you work with Deltona businesses?', a: "Yes. I'm based in Daytona Beach and work with businesses across Volusia County, including Deltona, DeBary and Orange City. Most of the process happens by phone and email, and I can meet in person when that helps." },
+      { q: 'Can you build my website in English and Spanish?', a: "Yes. For a lot of Deltona businesses a Spanish version is worth having, because it reaches customers your competitors aren't talking to. I'll set it up so Google can show the right language to the right searcher. If you have someone who can check the Spanish copy, even better." },
+      { q: 'What does a website cost?', a: 'Simple sites start at $599 plus $150 a month, which covers hosting, updates and support. Bilingual sites and bigger custom builds are quoted individually after a free call, so you know the price before any work starts.' },
+    ],
+    guide: { title: 'The website checklist for home service businesses', href: '/blog/home-services-website-checklist' },
+  },
+
+  edgewater: {
+    slug: 'edgewater',
+    name: 'Edgewater',
+    county: 'Volusia',
+    metaTitle: 'Web Design Edgewater FL | Custom Websites',
+    metaDescription: 'Custom web design in Edgewater, FL for marine businesses, fishing charters, contractors and home services. Fast, mobile-first sites. ZIPs 32132 & 32141.',
+    geo: { latitude: 28.9886, longitude: -80.9023 },
+    zips: ['32132', '32141'],
+    heroTitle: ['Web Design for', 'Edgewater'],
+    heroIntro: "Edgewater is a working waterfront town on the Indian River. Boat builders, fishing guides, contractors and home-service companies all compete for a small market, and the one with the best website usually gets the call.",
+    local: [
+      "Edgewater sits on the Indian River just south of New Smyrna Beach, with Oak Hill and the Mosquito Lagoon further south. US-1, known locally as Ridgewood Avenue, is the main business corridor, and Indian River Boulevard connects the town to I-95.",
+      "Boats are a big part of the local economy. Edgewater is home to boat builders including Boston Whaler, along with the marine suppliers, mechanics and fishing guides that grow up around them. Charter captains in particular live or die by their website: anglers plan trips from out of town and book whoever looks most professional.",
+      "Most of the rest of Edgewater is homes, including the large Florida Shores neighborhood west of US-1. Homeowners here search for roofers, pool service, lawn care and AC repair the same way they do everywhere, and plenty of Edgewater businesses also serve New Smyrna Beach and Oak Hill. A good site makes that service area clear.",
+    ],
+    areas: ['US-1 / Ridgewood Ave', 'Indian River Blvd', 'Florida Shores', 'Riverside Dr', 'Park Ave', 'Oak Hill', 'New Smyrna Beach', 'Mosquito Lagoon'],
+    industries: [
+      { name: 'Fishing Charters & Guides', note: 'Anglers book from out of town. Real catch photos and online booking fill the calendar.' },
+      { name: 'Marine Services', note: 'Boat repair, storage and detailing customers want to know what you work on and how to reach you.' },
+      { name: 'Contractors & Trades', note: 'Show your projects, licensing and service area so homeowners choose you first.', guide: guides.contractors },
+      { name: 'Home Services', note: 'Pools, lawns, roofs and AC. Be the easy one to find and call.', guide: guides.homeServices },
+      { name: 'Pressure Washing & Exteriors', note: 'River air is hard on homes and docks. Before-and-afters do the selling.', guide: guides.pressure },
+      { name: 'Restaurants & Local Shops', note: 'Current hours, menus and directions turn searches into visits.' },
+    ],
+    faqs: [
+      { q: 'Do you work with Edgewater businesses?', a: "Yes. I'm based in Daytona Beach and work with businesses across Volusia County, including Edgewater, New Smyrna Beach and Oak Hill. Most of the process happens by phone and email, and I can meet in person when that helps." },
+      { q: 'Can you build a website for my fishing charter?', a: "Yes. A charter site needs real photos, clear trip options and prices, and an easy way to book or check dates. I'll also set up your Google Business Profile so you show up when visitors search for charters near New Smyrna and the Mosquito Lagoon." },
+      { q: 'What does a website cost?', a: 'Simple sites start at $599 plus $150 a month, which covers hosting, updates and support. Online booking and bigger custom builds are quoted individually after a free call, so you know the price before any work starts.' },
+    ],
+    guide: { title: 'Google Business Profile checklist for Florida businesses', href: '/blog/google-business-profile-checklist-florida' },
+  },
 };
 
 export const cityLinks = [
@@ -211,6 +275,8 @@ export const cityLinks = [
   { label: 'Ormond Beach', href: '/services/web-design-ormond-beach' },
   { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach' },
   { label: 'DeLand', href: '/services/web-design-deland' },
+  { label: 'Deltona', href: '/services/web-design-deltona' },
+  { label: 'Edgewater', href: '/services/web-design-edgewater' },
   { label: 'Palm Coast', href: '/services/web-design-palm-coast' },
   { label: 'All of Volusia County', href: '/services/web-design-volusia-county' },
 ];

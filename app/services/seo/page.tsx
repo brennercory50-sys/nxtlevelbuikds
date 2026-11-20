@@ -47,7 +47,7 @@ const faqs = [
   { q: 'Do you guarantee rankings?', a: 'No. Google doesn\u2019t sell guarantees, so nobody can honestly offer one. What we commit to is the work itself, plus a plain-English monthly report showing where you rank, what changed, and where your calls and form fills came from.' },
   { q: 'Do I have to sign a long contract?', a: 'No. SEO is month-to-month. If it isn\u2019t earning its keep, you can stop.' },
   { q: 'Do I need a new website before doing SEO?', a: 'Not always. We start by auditing the site you have. If it\u2019s fixable, we fix it. If the platform itself is holding you back \u2014 slow, hard to edit, no room for service pages \u2014 we\u2019ll tell you and quote a rebuild separately.' },
-  { q: 'Do you only work with Daytona Beach businesses?', a: 'We\u2019re based in Daytona Beach and focus on Volusia and Flagler County \u2014 Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Palm Coast. Local SEO works the same way anywhere a business serves a defined area.' },
+  { q: 'Do you only work with Daytona Beach businesses?', a: 'We\u2019re based in Daytona Beach and focus on Volusia and Flagler County \u2014 Port Orange, Ormond Beach, New Smyrna Beach, DeLand, Deltona, Edgewater, Palm Coast. Local SEO works the same way anywhere a business serves a defined area.' },
 ];
 
 const faqSchema = {

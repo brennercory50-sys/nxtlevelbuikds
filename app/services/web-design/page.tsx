@@ -132,6 +132,8 @@ export default function WebDesign() {
               { label: 'Ormond Beach', href: '/services/web-design-ormond-beach', sub: 'Volusia County' },
               { label: 'New Smyrna Beach', href: '/services/web-design-new-smyrna-beach', sub: 'Volusia County' },
               { label: 'DeLand', href: '/services/web-design-deland', sub: 'West Volusia' },
+              { label: 'Deltona', href: '/services/web-design-deltona', sub: 'Southwest Volusia' },
+              { label: 'Edgewater', href: '/services/web-design-edgewater', sub: 'Southeast Volusia' },
               { label: 'Palm Coast', href: '/services/web-design-palm-coast', sub: 'Flagler County' },
             ].map(city => (
               <Link key={city.href} href={city.href}
